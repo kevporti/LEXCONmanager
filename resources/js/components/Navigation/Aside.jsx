@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
 
 
 function Aside() {
     const [open, setOpen] = useState(true);
     const Menus = [
-        { title: "Empresas", src: "business_center" },
-        { title: "Empleados", src: "person" },
-        { title: "Moras", src: "gbadge" },
-        { title: "Escala Salarial", src: "monitoring", gap: true },
-        { title: "Liquidación de Sueldo", src: "request_quote", gap: true},
-        { title: "Liquidación de Deuda", src: "description" },
-        { title: "Cuenta", src: "account_circle", gap: true },
+        { title: "Empresas", src: "business_center", link: "/usuario/empresas" },
+        { title: "Empleados", src: "person", link: "/usuario/empleados" },
+        { title: "Moras", src: "gbadge", link: "/usuario/moras" },
+        { title: "Escala Salarial", src: "monitoring", gap: true, link: "/usuario/escala_salarial" },
+        { title: "Liquidación de Sueldo", src: "request_quote", gap: true, link: "/usuario/liquidacion_sueldos"},
+        { title: "Liquidación de Deuda", src: "description", link: "/usuario/liquidacion_deudas" },
+        { title: "Cuenta", src: "account_circle", gap: true, link: "/usuario/perfil" },
     ];
 
     return (
@@ -46,24 +47,26 @@ function Aside() {
             {/* List of the pages to navigate through the site */}
             <ul className="pt-6">
                 {Menus.map((menu, index) => (
-                    <li 
-                        key={index} 
-                        className={["flex p-2 items-center gap-x-4 cursor-pointer hover:bg-lightwhite rounded-md", 
-                        menu.gap ? "mt-9" : "mt-2"]
-                        .join(" ")}>
-                        <i 
-                            className="material-symbols-outlined"
-                        >
-                            {menu.src}
-                        </i>
-                        <span 
-                            className={["origin-left duration-200",
-                            !open && "hidden"]
-                            .join(" ")}
-                        >
-                            {menu.title}
-                        </span>
-                    </li>
+                    <Link to={menu.link}>
+                        <li 
+                            key={index} 
+                            className={["flex p-2 items-center gap-x-4 cursor-pointer hover:bg-lightwhite rounded-md", 
+                            menu.gap ? "mt-9" : "mt-2"]
+                            .join(" ")}>
+                            <i 
+                                className="material-symbols-outlined"
+                            >
+                                {menu.src}
+                            </i>
+                            <span 
+                                className={["origin-left duration-200",
+                                !open && "hidden"]
+                                .join(" ")}
+                            >
+                                {menu.title}
+                            </span>
+                        </li>
+                    </Link>
                 ))}
             </ul>
 
