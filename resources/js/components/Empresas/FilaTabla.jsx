@@ -3,16 +3,46 @@ import ReactDOM from 'react-dom';
 
 function FilaTabla() {
     const Empresas = [
-        {name: 'Coca-Cola', cuit: '20439831880', contact: 'Claudio Raimundez'},
-        {name: 'Caminos', cuit: '20439831880', contact: 'Pablo Argento'},
-        {name: 'Coca-Cola', cuit: '20439831880', contact: 'Claudio Raimundez'},
-        {name: 'Apple', cuit: '20439831880', contact: 'Mark Zuckerberg'},
-        {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea'},
+        {name: 'Caminos', cuit: '20439831880', contact: 'Pablo Argento', country: "Canada"},
+        {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', country: "Uruguay"},
+        {name: 'Apple', cuit: '20439831880', contact: 'Mark Zuckerberg', country: "Italia"},
+        {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', country: "Uruguay"},
+        {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', country: "Uruguay"},
+        {name: 'Coca-Cola', cuit: '20439831880', contact: 'Claudio Raimundez', country: "Expaña"},
+        {name: 'NASA', cuit: '20439831880', contact: 'Notengoni Idea', country: "Uruguay"},
+        {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', country: "Argentina"},
+        {name: 'Galaxy', cuit: '20439831880', contact: 'Coldplay', country: "Uruguay"},
+        {name: 'Samsung', cuit: '20439831880', contact: 'Agustin', country: "España"},
+        {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', country: "Uruguay"},
+        {name: 'Coca-Cola', cuit: '20439831880', contact: 'Claudio Raimundez', country: "Estados Unidos"},
+        {name: 'Apple', cuit: '20439831880', contact: 'Notengoni Idea', country: "Mexico"},
+        {name: 'Samsung', cuit: '20439831880', contact: 'Michelle ', country: "Uruguay"},
+        {name: 'Notepadd', cuit: '20439831880', contact: 'Pablo Abrate', country: "Uruguay"},
+        {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', country: "Mexico"},
     ];
 
     return (
-        <div className="flex justify-between px-4">
-                <div>
+        <div className="">
+            {Empresas.map((empresa, index) =>(
+                <div key={index} className="grid grid-cols-12 px-4 border-b border-lightwhite p-2">
+                    <div className="col-span-3">
+                        {empresa.cuit}
+                    </div>
+                    <div className="col-span-3">
+                        {empresa.name}
+                    </div>
+                    <div className="col-span-3">
+                        {empresa.contact}
+                    </div>
+                    <div className="grid place-content-end col-span-2">
+                        {empresa.country}
+                    </div>
+                    <div className="grid place-content-end">
+                        <i className="material-symbols-outlined">expand_more</i>
+                    </div>
+                </div>
+            ))}
+                {/* <div>
                     20439831880
                 </div>
                 <div>
@@ -23,7 +53,7 @@ function FilaTabla() {
                 </div>
                 <div>
                     Arrow
-                </div>
+                </div> */}
             </div>
     );
 }

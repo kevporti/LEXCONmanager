@@ -10,6 +10,9 @@ function Flitros() {
                 Filtros
             </div>
             <div>
+                Búsqueda
+            </div>
+            <div>
                 Añadir Empresa
             </div>
         </div>

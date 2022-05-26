@@ -5483,37 +5483,112 @@ __webpack_require__.r(__webpack_exports__);
 
 function FilaTabla() {
   var Empresas = [{
-    name: 'Coca-Cola',
-    cuit: '20439831880',
-    contact: 'Claudio Raimundez'
-  }, {
     name: 'Caminos',
     cuit: '20439831880',
-    contact: 'Pablo Argento'
-  }, {
-    name: 'Coca-Cola',
-    cuit: '20439831880',
-    contact: 'Claudio Raimundez'
-  }, {
-    name: 'Apple',
-    cuit: '20439831880',
-    contact: 'Mark Zuckerberg'
+    contact: 'Pablo Argento',
+    country: "Canada"
   }, {
     name: 'Samsung',
     cuit: '20439831880',
-    contact: 'Notengoni Idea'
+    contact: 'Notengoni Idea',
+    country: "Uruguay"
+  }, {
+    name: 'Apple',
+    cuit: '20439831880',
+    contact: 'Mark Zuckerberg',
+    country: "Italia"
+  }, {
+    name: 'Samsung',
+    cuit: '20439831880',
+    contact: 'Notengoni Idea',
+    country: "Uruguay"
+  }, {
+    name: 'Samsung',
+    cuit: '20439831880',
+    contact: 'Notengoni Idea',
+    country: "Uruguay"
+  }, {
+    name: 'Coca-Cola',
+    cuit: '20439831880',
+    contact: 'Claudio Raimundez',
+    country: "Expaña"
+  }, {
+    name: 'NASA',
+    cuit: '20439831880',
+    contact: 'Notengoni Idea',
+    country: "Uruguay"
+  }, {
+    name: 'Samsung',
+    cuit: '20439831880',
+    contact: 'Notengoni Idea',
+    country: "Argentina"
+  }, {
+    name: 'Galaxy',
+    cuit: '20439831880',
+    contact: 'Coldplay',
+    country: "Uruguay"
+  }, {
+    name: 'Samsung',
+    cuit: '20439831880',
+    contact: 'Agustin',
+    country: "España"
+  }, {
+    name: 'Samsung',
+    cuit: '20439831880',
+    contact: 'Notengoni Idea',
+    country: "Uruguay"
+  }, {
+    name: 'Coca-Cola',
+    cuit: '20439831880',
+    contact: 'Claudio Raimundez',
+    country: "Estados Unidos"
+  }, {
+    name: 'Apple',
+    cuit: '20439831880',
+    contact: 'Notengoni Idea',
+    country: "Mexico"
+  }, {
+    name: 'Samsung',
+    cuit: '20439831880',
+    contact: 'Michelle ',
+    country: "Uruguay"
+  }, {
+    name: 'Notepadd',
+    cuit: '20439831880',
+    contact: 'Pablo Abrate',
+    country: "Uruguay"
+  }, {
+    name: 'Samsung',
+    cuit: '20439831880',
+    contact: 'Notengoni Idea',
+    country: "Mexico"
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "flex justify-between px-4",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      children: "20439831880"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      children: "Coca-Cola"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      children: "Claudio Raimundez"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      children: "Arrow"
-    })]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "",
+    children: Empresas.map(function (empresa, index) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "grid grid-cols-12 px-4 border-b border-lightwhite p-2",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col-span-3",
+          children: empresa.cuit
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col-span-3",
+          children: empresa.name
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col-span-3",
+          children: empresa.contact
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid place-content-end col-span-2",
+          children: empresa.country
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid place-content-end",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+            className: "material-symbols-outlined",
+            children: "expand_more"
+          })
+        })]
+      }, index);
+    })
   });
 }
 
@@ -5545,6 +5620,8 @@ function Flitros() {
     className: "flex w-full justify-between my-8",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       children: "Filtros"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: "B\xFAsqueda"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       children: "A\xF1adir Empresa"
     })]
@@ -5582,7 +5659,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Home() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-    className: "p-7 bg-darklight h-screen w-full",
+    className: "p-8 bg-darklight h-screen w-full px-20",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Filtros__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Tabla__WEBPACK_IMPORTED_MODULE_4__["default"], {})]
   });
 }
@@ -5616,18 +5693,21 @@ function Tabla() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "w-full border border-lightwhite rounded",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "flex justify-between px-4 py-2 border-b border-lightwhite bg-lightwhite",
+      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-12",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "",
+        className: "grid place-content-start col-span-3",
         children: "CUIT"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "",
+        className: "grid place-content-start col-span-3",
         children: "Empresa"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "",
+        className: "grid place-content-start col-span-3",
         children: "Contacto"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "",
+        className: "grid place-content-end col-span-2",
+        children: "Pa\xEDs"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-end",
         children: "Opciones"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
@@ -5913,6 +5993,103 @@ function Aside() {
 
 /***/ }),
 
+/***/ "./resources/js/components/Navigation/Dropdown/Dropdown.jsx":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/Navigation/Dropdown/Dropdown.jsx ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Dropdown)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/menu/menu.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/transitions/transition.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// function Dropdown() {
+//     return (
+//         <button className="flex items-center">
+//             <h1 className="">Administrador</h1>
+//             <i className="material-symbols-outlined py-2 px-4">expand_more</i>
+//         </button>
+//     );
+// }
+// export default Dropdown;
+
+/* This example requires Tailwind CSS v2.0+ */
+
+
+
+
+
+function classNames() {
+  for (var _len = arguments.length, classes = new Array(_len), _key = 0; _key < _len; _key++) {
+    classes[_key] = arguments[_key];
+  }
+
+  return classes.filter(Boolean).join(' ');
+}
+
+function Dropdown() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu, {
+    as: "div",
+    className: "relative inline-block text-left",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Button, {
+        className: "inline-flex items-center px-4 py-2 focus:outline-none",
+        children: ["Administrador", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+          className: "material-symbols-outlined py-2 px-4",
+          "aria-hidden": "true",
+          children: "expand_more"
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Transition, {
+      as: react__WEBPACK_IMPORTED_MODULE_0__.Fragment,
+      enter: "transition ease-out duration-100",
+      enterFrom: "transform opacity-0 scale-95",
+      enterTo: "transform opacity-100 scale-100",
+      leave: "transition ease-in duration-75",
+      leaveFrom: "transform opacity-100 scale-100",
+      leaveTo: "transform opacity-0 scale-95",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Items, {
+        className: "origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-dark ring-1 ring-lightwhite ring-opacity-5 focus:outline-none",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "py-1",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Item, {
+            children: function children(_ref) {
+              var active = _ref.active;
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                href: "#",
+                className: classNames(active ? 'bg-newGray text-dark font-medium' : 'text-white', 'block px-4 py-2 text-sm'),
+                children: "Perfil"
+              });
+            }
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("form", {
+            method: "POST",
+            action: "#",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Item, {
+              children: function children(_ref2) {
+                var active = _ref2.active;
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+                  type: "submit",
+                  className: classNames(active ? 'bg-newGray text-dark font-medium' : 'text-white', 'block w-full text-left px-4 py-2 text-sm'),
+                  children: "Salir"
+                });
+              }
+            })
+          })]
+        })
+      })
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/Navigation/Nav.jsx":
 /*!****************************************************!*\
   !*** ./resources/js/components/Navigation/Nav.jsx ***!
@@ -5977,20 +6154,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Dropdown_Dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Dropdown/Dropdown */ "./resources/js/components/Navigation/Dropdown/Dropdown.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 
 function NavSession() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "flex w-full justify-between",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      children: "Home - Empresas"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      children: "Usuario Options"
-    })]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    className: "flex w-full justify-between items-center pb-8 border-b border-lightwhite",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+        className: "text-2xl",
+        children: "Secci\xF3n Empresas"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Dropdown_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });
 }
 
@@ -61821,6 +62001,549 @@ function _extends() {
 
   return _extends.apply(this, arguments);
 }
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/keyboard.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/keyboard.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Keys": () => (/* binding */ o)
+/* harmony export */ });
+var o=(r=>(r.Space=" ",r.Enter="Enter",r.Escape="Escape",r.Backspace="Backspace",r.Delete="Delete",r.ArrowLeft="ArrowLeft",r.ArrowUp="ArrowUp",r.ArrowRight="ArrowRight",r.ArrowDown="ArrowDown",r.Home="Home",r.End="End",r.PageUp="PageUp",r.PageDown="PageDown",r.Tab="Tab",r))(o||{});
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/menu/menu.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/menu/menu.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Menu": () => (/* binding */ We)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+/* harmony import */ var _utils_disposables_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../utils/disposables.js */ "./node_modules/@headlessui/react/dist/utils/disposables.js");
+/* harmony import */ var _hooks_use_disposables_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../hooks/use-disposables.js */ "./node_modules/@headlessui/react/dist/hooks/use-disposables.js");
+/* harmony import */ var _hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../hooks/use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/use-sync-refs.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js");
+/* harmony import */ var _hooks_use_id_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../hooks/use-id.js */ "./node_modules/@headlessui/react/dist/hooks/use-id.js");
+/* harmony import */ var _keyboard_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../keyboard.js */ "./node_modules/@headlessui/react/dist/components/keyboard.js");
+/* harmony import */ var _utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/calculate-active-index.js */ "./node_modules/@headlessui/react/dist/utils/calculate-active-index.js");
+/* harmony import */ var _utils_bugs_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../utils/bugs.js */ "./node_modules/@headlessui/react/dist/utils/bugs.js");
+/* harmony import */ var _utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/focus-management.js */ "./node_modules/@headlessui/react/dist/utils/focus-management.js");
+/* harmony import */ var _hooks_use_outside_click_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../hooks/use-outside-click.js */ "./node_modules/@headlessui/react/dist/hooks/use-outside-click.js");
+/* harmony import */ var _hooks_use_tree_walker_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../hooks/use-tree-walker.js */ "./node_modules/@headlessui/react/dist/hooks/use-tree-walker.js");
+/* harmony import */ var _internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../internal/open-closed.js */ "./node_modules/@headlessui/react/dist/internal/open-closed.js");
+/* harmony import */ var _hooks_use_resolve_button_type_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../hooks/use-resolve-button-type.js */ "./node_modules/@headlessui/react/dist/hooks/use-resolve-button-type.js");
+/* harmony import */ var _hooks_use_owner_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../hooks/use-owner.js */ "./node_modules/@headlessui/react/dist/hooks/use-owner.js");
+/* harmony import */ var _hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../hooks/use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+var oe=(o=>(o[o.Open=0]="Open",o[o.Closed=1]="Closed",o))(oe||{}),ae=(o=>(o[o.Pointer=0]="Pointer",o[o.Other=1]="Other",o))(ae||{}),ie=(a=>(a[a.OpenMenu=0]="OpenMenu",a[a.CloseMenu=1]="CloseMenu",a[a.GoToItem=2]="GoToItem",a[a.Search=3]="Search",a[a.ClearSearch=4]="ClearSearch",a[a.RegisterItem=5]="RegisterItem",a[a.UnregisterItem=6]="UnregisterItem",a))(ie||{});function k(t,i=o=>o){let o=t.activeItemIndex!==null?t.items[t.activeItemIndex]:null,e=(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.sortByDomNode)(i(t.items.slice()),u=>u.dataRef.current.domRef.current),n=o?e.indexOf(o):null;return n===-1&&(n=null),{items:e,activeItemIndex:n}}let ue={[1](t){return t.menuState===1?t:{...t,activeItemIndex:null,menuState:1}},[0](t){return t.menuState===0?t:{...t,menuState:0}},[2]:(t,i)=>{var n;let o=k(t),e=(0,_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.calculateActiveIndex)(i,{resolveItems:()=>o.items,resolveActiveIndex:()=>o.activeItemIndex,resolveId:u=>u.id,resolveDisabled:u=>u.dataRef.current.disabled});return{...t,...o,searchQuery:"",activeItemIndex:e,activationTrigger:(n=i.trigger)!=null?n:1}},[3]:(t,i)=>{let e=t.searchQuery!==""?0:1,n=t.searchQuery+i.value.toLowerCase(),s=(t.activeItemIndex!==null?t.items.slice(t.activeItemIndex+e).concat(t.items.slice(0,t.activeItemIndex+e)):t.items).find(c=>{var p;return((p=c.dataRef.current.textValue)==null?void 0:p.startsWith(n))&&!c.dataRef.current.disabled}),a=s?t.items.indexOf(s):-1;return a===-1||a===t.activeItemIndex?{...t,searchQuery:n}:{...t,searchQuery:n,activeItemIndex:a,activationTrigger:1}},[4](t){return t.searchQuery===""?t:{...t,searchQuery:"",searchActiveItemIndex:null}},[5]:(t,i)=>{let o=k(t,e=>[...e,{id:i.id,dataRef:i.dataRef}]);return{...t,...o}},[6]:(t,i)=>{let o=k(t,e=>{let n=e.findIndex(u=>u.id===i.id);return n!==-1&&e.splice(n,1),e});return{...t,...o,activationTrigger:1}}},w=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);w.displayName="MenuContext";function C(t){let i=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(w);if(i===null){let o=new Error(`<${t} /> is missing a parent <Menu /> component.`);throw Error.captureStackTrace&&Error.captureStackTrace(o,C),o}return i}function se(t,i){return (0,_utils_match_js__WEBPACK_IMPORTED_MODULE_3__.match)(i.type,ue,t,i)}let le=react__WEBPACK_IMPORTED_MODULE_0__.Fragment,ce=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(i,o){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(se,{menuState:1,buttonRef:(0,react__WEBPACK_IMPORTED_MODULE_0__.createRef)(),itemsRef:(0,react__WEBPACK_IMPORTED_MODULE_0__.createRef)(),items:[],searchQuery:"",activeItemIndex:null,activationTrigger:1}),[{menuState:n,itemsRef:u,buttonRef:s},a]=e,c=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_5__.useSyncRefs)(o);(0,_hooks_use_outside_click_js__WEBPACK_IMPORTED_MODULE_6__.useOutsideClick)([s,u],(M,R)=>{var T;n===0&&(a({type:1}),(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.isFocusableElement)(R,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.FocusableMode.Loose)||(M.preventDefault(),(T=s.current)==null||T.focus()))});let p=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:n===0}),[n]),g=i,f={ref:c};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(w.Provider,{value:e},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.OpenClosedProvider,{value:(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_3__.match)(n,{[0]:_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.State.Open,[1]:_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.State.Closed})},(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:f,theirProps:g,slot:p,defaultTag:le,name:"Menu"})))}),pe="button",de=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(i,o){var T;let[e,n]=C("Menu.Button"),u=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_5__.useSyncRefs)(e.buttonRef,o),s=`headlessui-menu-button-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_8__.useId)()}`,a=(0,_hooks_use_disposables_js__WEBPACK_IMPORTED_MODULE_9__.useDisposables)(),c=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__.useEvent)(l=>{switch(l.key){case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Space:case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Enter:case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.ArrowDown:l.preventDefault(),l.stopPropagation(),n({type:0}),a.nextFrame(()=>n({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.First}));break;case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.ArrowUp:l.preventDefault(),l.stopPropagation(),n({type:0}),a.nextFrame(()=>n({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Last}));break}}),p=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__.useEvent)(l=>{switch(l.key){case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Space:l.preventDefault();break}}),g=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__.useEvent)(l=>{if((0,_utils_bugs_js__WEBPACK_IMPORTED_MODULE_12__.isDisabledReactIssue7711)(l.currentTarget))return l.preventDefault();i.disabled||(e.menuState===0?(n({type:1}),a.nextFrame(()=>{var b;return(b=e.buttonRef.current)==null?void 0:b.focus({preventScroll:!0})})):(l.preventDefault(),l.stopPropagation(),n({type:0})))}),f=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:e.menuState===0}),[e]),M=i,R={ref:u,id:s,type:(0,_hooks_use_resolve_button_type_js__WEBPACK_IMPORTED_MODULE_13__.useResolveButtonType)(i,e.buttonRef),"aria-haspopup":!0,"aria-controls":(T=e.itemsRef.current)==null?void 0:T.id,"aria-expanded":i.disabled?void 0:e.menuState===0,onKeyDown:c,onKeyUp:p,onClick:g};return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:R,theirProps:M,slot:f,defaultTag:pe,name:"Menu.Button"})}),me="div",fe=_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.Features.RenderStrategy|_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.Features.Static,Te=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(i,o){var b,O;let[e,n]=C("Menu.Items"),u=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_5__.useSyncRefs)(e.itemsRef,o),s=(0,_hooks_use_owner_js__WEBPACK_IMPORTED_MODULE_14__.useOwnerDocument)(e.itemsRef),a=`headlessui-menu-items-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_8__.useId)()}`,c=(0,_hooks_use_disposables_js__WEBPACK_IMPORTED_MODULE_9__.useDisposables)(),p=(0,_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.useOpenClosed)(),g=(()=>p!==null?p===_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.State.Open:e.menuState===0)();(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{let r=e.itemsRef.current;!r||e.menuState===0&&r!==(s==null?void 0:s.activeElement)&&r.focus({preventScroll:!0})},[e.menuState,e.itemsRef,s]),(0,_hooks_use_tree_walker_js__WEBPACK_IMPORTED_MODULE_15__.useTreeWalker)({container:e.itemsRef.current,enabled:e.menuState===0,accept(r){return r.getAttribute("role")==="menuitem"?NodeFilter.FILTER_REJECT:r.hasAttribute("role")?NodeFilter.FILTER_SKIP:NodeFilter.FILTER_ACCEPT},walk(r){r.setAttribute("role","none")}});let f=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__.useEvent)(r=>{var m,S;switch(c.dispose(),r.key){case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Space:if(e.searchQuery!=="")return r.preventDefault(),r.stopPropagation(),n({type:3,value:r.key});case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Enter:if(r.preventDefault(),r.stopPropagation(),n({type:1}),e.activeItemIndex!==null){let{dataRef:A}=e.items[e.activeItemIndex];(S=(m=A.current)==null?void 0:m.domRef.current)==null||S.click()}(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_16__.disposables)().nextFrame(()=>{var A;return(A=e.buttonRef.current)==null?void 0:A.focus({preventScroll:!0})});break;case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.ArrowDown:return r.preventDefault(),r.stopPropagation(),n({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Next});case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.ArrowUp:return r.preventDefault(),r.stopPropagation(),n({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Previous});case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Home:case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.PageUp:return r.preventDefault(),r.stopPropagation(),n({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.First});case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.End:case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.PageDown:return r.preventDefault(),r.stopPropagation(),n({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Last});case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Escape:r.preventDefault(),r.stopPropagation(),n({type:1}),(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_16__.disposables)().nextFrame(()=>{var A;return(A=e.buttonRef.current)==null?void 0:A.focus({preventScroll:!0})});break;case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Tab:r.preventDefault(),r.stopPropagation();break;default:r.key.length===1&&(n({type:3,value:r.key}),c.setTimeout(()=>n({type:4}),350));break}}),M=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__.useEvent)(r=>{switch(r.key){case _keyboard_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Space:r.preventDefault();break}}),R=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:e.menuState===0}),[e]),T=i,l={"aria-activedescendant":e.activeItemIndex===null||(b=e.items[e.activeItemIndex])==null?void 0:b.id,"aria-labelledby":(O=e.buttonRef.current)==null?void 0:O.id,id:a,onKeyDown:f,onKeyUp:M,role:"menu",tabIndex:0,ref:u};return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:l,theirProps:T,slot:R,defaultTag:me,features:fe,visible:g,name:"Menu.Items"})}),Ie=react__WEBPACK_IMPORTED_MODULE_0__.Fragment,ye=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(i,o){let{disabled:e=!1,...n}=i,[u,s]=C("Menu.Item"),a=`headlessui-menu-item-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_8__.useId)()}`,c=u.activeItemIndex!==null?u.items[u.activeItemIndex].id===a:!1,p=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),g=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_5__.useSyncRefs)(o,p);(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_17__.useIsoMorphicEffect)(()=>{if(u.menuState!==0||!c||u.activationTrigger===0)return;let r=(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_16__.disposables)();return r.requestAnimationFrame(()=>{var m,S;(S=(m=p.current)==null?void 0:m.scrollIntoView)==null||S.call(m,{block:"nearest"})}),r.dispose},[p,c,u.menuState,u.activationTrigger,u.activeItemIndex]);let f=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({disabled:e,domRef:p});(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_17__.useIsoMorphicEffect)(()=>{f.current.disabled=e},[f,e]),(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_17__.useIsoMorphicEffect)(()=>{var r,m;f.current.textValue=(m=(r=p.current)==null?void 0:r.textContent)==null?void 0:m.toLowerCase()},[f,p]),(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_17__.useIsoMorphicEffect)(()=>(s({type:5,id:a,dataRef:f}),()=>s({type:6,id:a})),[f,a]);let M=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__.useEvent)(r=>{if(e)return r.preventDefault();s({type:1}),(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_16__.disposables)().nextFrame(()=>{var m;return(m=u.buttonRef.current)==null?void 0:m.focus({preventScroll:!0})})}),R=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__.useEvent)(()=>{if(e)return s({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Nothing});s({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Specific,id:a})}),T=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__.useEvent)(()=>{e||c||s({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Specific,id:a,trigger:0})}),l=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_10__.useEvent)(()=>{e||!c||s({type:2,focus:_utils_calculate_active_index_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Nothing})}),b=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({active:c,disabled:e}),[c,e]);return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:{id:a,ref:g,role:"menuitem",tabIndex:e===!0?void 0:-1,"aria-disabled":e===!0?!0:void 0,disabled:void 0,onClick:M,onFocus:R,onPointerMove:T,onMouseMove:T,onPointerLeave:l,onMouseLeave:l},theirProps:n,slot:b,defaultTag:Ie,name:"Menu.Item"})}),We=Object.assign(ce,{Button:de,Items:Te,Item:ye});
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/transitions/transition.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/transitions/transition.js ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Transition": () => (/* binding */ We)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+/* harmony import */ var _internal_open_closed_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../internal/open-closed.js */ "./node_modules/@headlessui/react/dist/internal/open-closed.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _utils_micro_task_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/micro-task.js */ "./node_modules/@headlessui/react/dist/utils/micro-task.js");
+/* harmony import */ var _hooks_use_id_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../hooks/use-id.js */ "./node_modules/@headlessui/react/dist/hooks/use-id.js");
+/* harmony import */ var _hooks_use_is_mounted_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../hooks/use-is-mounted.js */ "./node_modules/@headlessui/react/dist/hooks/use-is-mounted.js");
+/* harmony import */ var _hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../hooks/use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+/* harmony import */ var _hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../hooks/use-server-handoff-complete.js */ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js");
+/* harmony import */ var _hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../hooks/use-sync-refs.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js");
+/* harmony import */ var _hooks_use_transition_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../hooks/use-transition.js */ "./node_modules/@headlessui/react/dist/hooks/use-transition.js");
+/* harmony import */ var _hooks_use_event_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+function m(e=""){return e.split(" ").filter(n=>n.trim().length>1)}let N=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);N.displayName="TransitionContext";var ge=(t=>(t.Visible="visible",t.Hidden="hidden",t))(ge||{});function ve(){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(N);if(e===null)throw new Error("A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.");return e}function Ce(){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(R);if(e===null)throw new Error("A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.");return e}let R=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);R.displayName="NestingContext";function L(e){return"children"in e?L(e.children):e.current.filter(({state:n})=>n==="visible").length>0}function Z(e){let n=(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(e),t=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([]),r=(0,_hooks_use_is_mounted_js__WEBPACK_IMPORTED_MODULE_2__.useIsMounted)(),i=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_3__.useEvent)((o,l=_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.RenderStrategy.Hidden)=>{let s=t.current.findIndex(({id:d})=>d===o);s!==-1&&((0,_utils_match_js__WEBPACK_IMPORTED_MODULE_5__.match)(l,{[_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.RenderStrategy.Unmount](){t.current.splice(s,1)},[_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.RenderStrategy.Hidden](){t.current[s].state="hidden"}}),(0,_utils_micro_task_js__WEBPACK_IMPORTED_MODULE_6__.microTask)(()=>{var d;!L(t)&&r.current&&((d=n.current)==null||d.call(n))}))}),c=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_3__.useEvent)(o=>{let l=t.current.find(({id:s})=>s===o);return l?l.state!=="visible"&&(l.state="visible"):t.current.push({id:o,state:"visible"}),()=>i(o,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.RenderStrategy.Unmount)});return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({children:t,register:c,unregister:i}),[c,i,t])}function be(){}let Se=["beforeEnter","afterEnter","beforeLeave","afterLeave"];function $(e){var t;let n={};for(let r of Se)n[r]=(t=e[r])!=null?t:be;return n}function Ee(e){let n=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)($(e));return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{n.current=$(e)},[e]),n}let xe="div",ee=_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.Features.RenderStrategy,te=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(n,t){let{beforeEnter:r,afterEnter:i,beforeLeave:c,afterLeave:o,enter:l,enterFrom:s,enterTo:d,entered:b,leave:S,leaveFrom:E,leaveTo:A,...p}=n,h=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),x=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_7__.useSyncRefs)(h,t),[f,D]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("visible"),F=p.unmount?_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.RenderStrategy.Unmount:_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.RenderStrategy.Hidden,{show:g,appear:re,initial:ne}=ve(),{register:y,unregister:H}=Ce(),w=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),a=(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_8__.useId)();(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{if(!!a)return y(a)},[y,a]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{if(F===_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.RenderStrategy.Hidden&&!!a){if(g&&f!=="visible"){D("visible");return}(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_5__.match)(f,{["hidden"]:()=>H(a),["visible"]:()=>y(a)})}},[f,a,y,H,g,F]);let ie=(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)({enter:m(l),enterFrom:m(s),enterTo:m(d),entered:m(b),leave:m(S),leaveFrom:m(E),leaveTo:m(A)}),se=Ee({beforeEnter:r,afterEnter:i,beforeLeave:c,afterLeave:o}),O=(0,_hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_9__.useServerHandoffComplete)();(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{if(O&&f==="visible"&&h.current===null)throw new Error("Did you forget to passthrough the `ref` to the actual DOM node?")},[h,f,O]);let M=ne&&!re,oe=(()=>!O||M||w.current===g?"idle":g?"enter":"leave")(),_=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!1),B=Z(()=>{_.current||(D("hidden"),H(a))});(0,_hooks_use_transition_js__WEBPACK_IMPORTED_MODULE_10__.useTransition)({container:h,classes:ie,events:se,direction:oe,onStart:(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(()=>{_.current=!0}),onStop:(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(ue=>{_.current=!1,ue==="leave"&&!L(B)&&(D("hidden"),H(a))})}),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{!M||(F===_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.RenderStrategy.Hidden?w.current=null:w.current=g)},[g,M,f]);let le=p,ae={ref:x};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(R.Provider,{value:B},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_11__.OpenClosedProvider,{value:(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_5__.match)(f,{["visible"]:_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_11__.State.Open,["hidden"]:_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_11__.State.Closed})},(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:ae,theirProps:le,defaultTag:xe,features:ee,visible:f==="visible",name:"Transition.Child"})))}),G=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(n,t){let{show:r,appear:i=!1,unmount:c,...o}=n,l=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_7__.useSyncRefs)(t);(0,_hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_9__.useServerHandoffComplete)();let s=(0,_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_11__.useOpenClosed)();if(r===void 0&&s!==null&&(r=(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_5__.match)(s,{[_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_11__.State.Open]:!0,[_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_11__.State.Closed]:!1})),![!0,!1].includes(r))throw new Error("A <Transition /> is used but it is missing a `show={true | false}` prop.");let[d,b]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(r?"visible":"hidden"),S=Z(()=>{b("hidden")}),[E,A]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(!0),p=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([r]);(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_12__.useIsoMorphicEffect)(()=>{E!==!1&&p.current[p.current.length-1]!==r&&(p.current.push(r),A(!1))},[p,r]);let h=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({show:r,appear:i,initial:E}),[r,i,E]);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{r?b("visible"):L(S)||b("hidden")},[r,S]);let x={unmount:c};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(R.Provider,{value:S},react__WEBPACK_IMPORTED_MODULE_0__.createElement(N.Provider,{value:h},(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:{...x,as:react__WEBPACK_IMPORTED_MODULE_0__.Fragment,children:react__WEBPACK_IMPORTED_MODULE_0__.createElement(te,{ref:l,...x,...o})},theirProps:{},defaultTag:react__WEBPACK_IMPORTED_MODULE_0__.Fragment,features:ee,visible:d==="visible",name:"Transition"})))}),ye=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(n,t){let r=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(N)!==null,i=(0,_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_11__.useOpenClosed)()!==null;return react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment,null,!r&&i?react__WEBPACK_IMPORTED_MODULE_0__.createElement(G,{ref:t,...n}):react__WEBPACK_IMPORTED_MODULE_0__.createElement(te,{ref:t,...n}))}),We=Object.assign(G,{Child:ye,Root:G});
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/transitions/utils/transition.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/transitions/utils/transition.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Reason": () => (/* binding */ g),
+/* harmony export */   "transition": () => (/* binding */ C)
+/* harmony export */ });
+/* harmony import */ var _utils_once_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/once.js */ "./node_modules/@headlessui/react/dist/utils/once.js");
+/* harmony import */ var _utils_disposables_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../utils/disposables.js */ "./node_modules/@headlessui/react/dist/utils/disposables.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+function p(t,...e){t&&e.length>0&&t.classList.add(...e)}function v(t,...e){t&&e.length>0&&t.classList.remove(...e)}var g=(n=>(n.Ended="ended",n.Cancelled="cancelled",n))(g||{});function T(t,e){let n=(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_0__.disposables)();if(!t)return n.dispose;let{transitionDuration:l,transitionDelay:a}=getComputedStyle(t),[d,s]=[l,a].map(i=>{let[r=0]=i.split(",").filter(Boolean).map(o=>o.includes("ms")?parseFloat(o):parseFloat(o)*1e3).sort((o,E)=>E-o);return r});if(d+s!==0){let i=[];i.push(n.addEventListener(t,"transitionrun",()=>{i.splice(0).forEach(r=>r()),i.push(n.addEventListener(t,"transitionend",()=>{e("ended"),i.splice(0).forEach(r=>r())},{once:!0}),n.addEventListener(t,"transitioncancel",()=>{e("cancelled"),i.splice(0).forEach(r=>r())},{once:!0}))},{once:!0}))}else e("ended");return n.add(()=>e("cancelled")),n.dispose}function C(t,e,n,l){let a=n?"enter":"leave",d=(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_0__.disposables)(),s=l!==void 0?(0,_utils_once_js__WEBPACK_IMPORTED_MODULE_1__.once)(l):()=>{},m=(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_2__.match)(a,{enter:()=>e.enter,leave:()=>e.leave}),i=(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_2__.match)(a,{enter:()=>e.enterTo,leave:()=>e.leaveTo}),r=(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_2__.match)(a,{enter:()=>e.enterFrom,leave:()=>e.leaveFrom});return v(t,...e.enter,...e.enterTo,...e.enterFrom,...e.leave,...e.leaveFrom,...e.leaveTo,...e.entered),p(t,...m,...r),d.nextFrame(()=>{v(t,...r),p(t,...i),T(t,o=>(o==="ended"&&(v(t,...m),p(t,...e.entered)),s(o)))}),d.dispose}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-disposables.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-disposables.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useDisposables": () => (/* binding */ p)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_disposables_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/disposables.js */ "./node_modules/@headlessui/react/dist/utils/disposables.js");
+function p(){let[e]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(_utils_disposables_js__WEBPACK_IMPORTED_MODULE_1__.disposables);return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>()=>e.dispose(),[e]),e}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-event.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-event.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useEvent": () => (/* binding */ o)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+let o=function(t){let e=(0,_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(t);return react__WEBPACK_IMPORTED_MODULE_0__.useCallback((...r)=>e.current(...r),[e])};
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-id.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-id.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useId": () => (/* binding */ I)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-server-handoff-complete.js */ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js");
+var u;let l=0;function r(){return++l}let I=(u=react__WEBPACK_IMPORTED_MODULE_0__.useId)!=null?u:function(){let n=(0,_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_1__.useServerHandoffComplete)(),[e,o]=react__WEBPACK_IMPORTED_MODULE_0__.useState(n?r:null);return (0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_2__.useIsoMorphicEffect)(()=>{e===null&&o(r())},[e]),e!=null?""+e:void 0};
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-is-mounted.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-is-mounted.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useIsMounted": () => (/* binding */ f)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+function f(){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!1);return (0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(()=>(e.current=!0,()=>{e.current=!1}),[]),e}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useIsoMorphicEffect": () => (/* binding */ t)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+let t=typeof window!="undefined"?react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect:react__WEBPACK_IMPORTED_MODULE_0__.useEffect;
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-latest-value.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useLatestValue": () => (/* binding */ s)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+function s(e){let r=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(e);return (0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(()=>{r.current=e},[e]),r}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-outside-click.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-outside-click.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Features": () => (/* binding */ C),
+/* harmony export */   "useOutsideClick": () => (/* binding */ w)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_micro_task_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/micro-task.js */ "./node_modules/@headlessui/react/dist/utils/micro-task.js");
+/* harmony import */ var _use_event_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+/* harmony import */ var _use_window_event_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./use-window-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-window-event.js");
+var C=(n=>(n[n.None=1]="None",n[n.IgnoreScrollbars=2]="IgnoreScrollbars",n))(C||{});function w(c,f,n=1){let i=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!1),l=(0,_use_event_js__WEBPACK_IMPORTED_MODULE_1__.useEvent)(r=>{if(i.current)return;i.current=!0,(0,_utils_micro_task_js__WEBPACK_IMPORTED_MODULE_2__.microTask)(()=>{i.current=!1});let a=function t(e){return typeof e=="function"?t(e()):Array.isArray(e)||e instanceof Set?e:[e]}(c),o=r.target;if(!!o.ownerDocument.documentElement.contains(o)){if((n&2)===2){let t=20,e=o.ownerDocument.documentElement;if(r.clientX>e.clientWidth-t||r.clientX<t||r.clientY>e.clientHeight-t||r.clientY<t)return}for(let t of a){if(t===null)continue;let e=t instanceof HTMLElement?t:t.current;if(e!=null&&e.contains(o))return}return f(r,o)}});(0,_use_window_event_js__WEBPACK_IMPORTED_MODULE_3__.useWindowEvent)("pointerdown",l),(0,_use_window_event_js__WEBPACK_IMPORTED_MODULE_3__.useWindowEvent)("mousedown",l)}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-owner.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-owner.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useOwnerDocument": () => (/* binding */ n)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_owner_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/owner.js */ "./node_modules/@headlessui/react/dist/utils/owner.js");
+function n(...e){return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>(0,_utils_owner_js__WEBPACK_IMPORTED_MODULE_1__.getOwnerDocument)(...e),[...e])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-resolve-button-type.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-resolve-button-type.js ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useResolveButtonType": () => (/* binding */ s)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+function i(t){var n;if(t.type)return t.type;let e=(n=t.as)!=null?n:"button";if(typeof e=="string"&&e.toLowerCase()==="button")return"button"}function s(t,e){let[n,u]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(()=>i(t));return (0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(()=>{u(i(t))},[t.type,t.as]),(0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(()=>{n||!e.current||e.current instanceof HTMLButtonElement&&!e.current.hasAttribute("type")&&u("button")},[n,e]),n}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useServerHandoffComplete": () => (/* binding */ a)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+let r={serverHandoffComplete:!1};function a(){let[e,f]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(r.serverHandoffComplete);return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{e!==!0&&f(!0)},[e]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{r.serverHandoffComplete===!1&&(r.serverHandoffComplete=!0)},[]),e}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "optionalRef": () => (/* binding */ T),
+/* harmony export */   "useSyncRefs": () => (/* binding */ y)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_event_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+let u=Symbol();function T(t,n=!0){return Object.assign(t,{[u]:n})}function y(...t){let n=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(t);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{n.current=t},[t]);let c=(0,_use_event_js__WEBPACK_IMPORTED_MODULE_1__.useEvent)(e=>{for(let o of n.current)o!=null&&(typeof o=="function"?o(e):o.current=e)});return t.every(e=>e==null||(e==null?void 0:e[u]))?void 0:c}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-transition.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-transition.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useTransition": () => (/* binding */ y)
+/* harmony export */ });
+/* harmony import */ var _components_transitions_utils_transition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/transitions/utils/transition.js */ "./node_modules/@headlessui/react/dist/components/transitions/utils/transition.js");
+/* harmony import */ var _utils_disposables_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/disposables.js */ "./node_modules/@headlessui/react/dist/utils/disposables.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _use_disposables_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-disposables.js */ "./node_modules/@headlessui/react/dist/hooks/use-disposables.js");
+/* harmony import */ var _use_event_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+/* harmony import */ var _use_is_mounted_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./use-is-mounted.js */ "./node_modules/@headlessui/react/dist/hooks/use-is-mounted.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _use_latest_value_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+function y({container:d,direction:s,classes:l,events:n,onStart:f,onStop:a}){let m=(0,_use_is_mounted_js__WEBPACK_IMPORTED_MODULE_0__.useIsMounted)(),b=(0,_use_disposables_js__WEBPACK_IMPORTED_MODULE_1__.useDisposables)(),e=(0,_use_latest_value_js__WEBPACK_IMPORTED_MODULE_2__.useLatestValue)(s),p=(0,_use_event_js__WEBPACK_IMPORTED_MODULE_3__.useEvent)(()=>(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_4__.match)(e.current,{enter:()=>n.current.beforeEnter(),leave:()=>n.current.beforeLeave(),idle:()=>{}})),v=(0,_use_event_js__WEBPACK_IMPORTED_MODULE_3__.useEvent)(()=>(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_4__.match)(e.current,{enter:()=>n.current.afterEnter(),leave:()=>n.current.afterLeave(),idle:()=>{}}));(0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_5__.useIsoMorphicEffect)(()=>{let r=(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_6__.disposables)();b.add(r.dispose);let i=d.current;if(!!i&&e.current!=="idle"&&!!m.current)return r.add(()=>{if(!i)return;let t=i.getBoundingClientRect();t.x===0&&t.y===0&&t.width===0&&t.height===0&&a.current(e.current)}),r.dispose(),p(),f.current(e.current),r.add((0,_components_transitions_utils_transition_js__WEBPACK_IMPORTED_MODULE_7__.transition)(i,l.current,e.current==="enter",t=>{r.dispose(),(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_4__.match)(t,{[_components_transitions_utils_transition_js__WEBPACK_IMPORTED_MODULE_7__.Reason.Ended](){v(),a.current(e.current)},[_components_transitions_utils_transition_js__WEBPACK_IMPORTED_MODULE_7__.Reason.Cancelled]:()=>{}})})),r.dispose},[s])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-tree-walker.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-tree-walker.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useTreeWalker": () => (/* binding */ F)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _utils_owner_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/owner.js */ "./node_modules/@headlessui/react/dist/utils/owner.js");
+function F({container:e,accept:t,walk:r,enabled:c=!0}){let o=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(t),l=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(r);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{o.current=t,l.current=r},[t,r]),(0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(()=>{if(!e||!c)return;let n=(0,_utils_owner_js__WEBPACK_IMPORTED_MODULE_2__.getOwnerDocument)(e);if(!n)return;let f=o.current,p=l.current,d=Object.assign(i=>f(i),{acceptNode:f}),u=n.createTreeWalker(e,NodeFilter.SHOW_ELEMENT,d,!1);for(;u.nextNode();)p(u.currentNode)},[e,c,o,l])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-window-event.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-window-event.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useWindowEvent": () => (/* binding */ s)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+function s(e,r,n){let o=(0,_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(r);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{function t(i){o.current(i)}return window.addEventListener(e,t,n),()=>window.removeEventListener(e,t,n)},[e,n])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/internal/open-closed.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/internal/open-closed.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "OpenClosedProvider": () => (/* binding */ C),
+/* harmony export */   "State": () => (/* binding */ p),
+/* harmony export */   "useOpenClosed": () => (/* binding */ s)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+let o=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);o.displayName="OpenClosedContext";var p=(e=>(e[e.Open=0]="Open",e[e.Closed=1]="Closed",e))(p||{});function s(){return (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(o)}function C({value:t,children:n}){return react__WEBPACK_IMPORTED_MODULE_0__.createElement(o.Provider,{value:t},n)}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/bugs.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/bugs.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isDisabledReactIssue7711": () => (/* binding */ r)
+/* harmony export */ });
+function r(n){let e=n.parentElement,l=null;for(;e&&!(e instanceof HTMLFieldSetElement);)e instanceof HTMLLegendElement&&(l=e),e=e.parentElement;let t=(e==null?void 0:e.getAttribute("disabled"))==="";return t&&i(l)?!1:t}function i(n){if(!n)return!1;let e=n.previousElementSibling;for(;e!==null;){if(e instanceof HTMLLegendElement)return!1;e=e.previousElementSibling}return!0}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/calculate-active-index.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/calculate-active-index.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Focus": () => (/* binding */ a),
+/* harmony export */   "calculateActiveIndex": () => (/* binding */ x)
+/* harmony export */ });
+function f(r){throw new Error("Unexpected object: "+r)}var a=(e=>(e[e.First=0]="First",e[e.Previous=1]="Previous",e[e.Next=2]="Next",e[e.Last=3]="Last",e[e.Specific=4]="Specific",e[e.Nothing=5]="Nothing",e))(a||{});function x(r,n){let t=n.resolveItems();if(t.length<=0)return null;let l=n.resolveActiveIndex(),s=l!=null?l:-1,d=(()=>{switch(r.focus){case 0:return t.findIndex(e=>!n.resolveDisabled(e));case 1:{let e=t.slice().reverse().findIndex((i,c,u)=>s!==-1&&u.length-c-1>=s?!1:!n.resolveDisabled(i));return e===-1?e:t.length-1-e}case 2:return t.findIndex((e,i)=>i<=s?!1:!n.resolveDisabled(e));case 3:{let e=t.slice().reverse().findIndex(i=>!n.resolveDisabled(i));return e===-1?e:t.length-1-e}case 4:return t.findIndex(e=>n.resolveId(e)===r.id);case 5:return null;default:f(r)}})();return d===-1?l:d}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/disposables.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/disposables.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "disposables": () => (/* binding */ o)
+/* harmony export */ });
+function o(){let a=[],i=[],n={enqueue(e){i.push(e)},addEventListener(e,t,r,s){return e.addEventListener(t,r,s),n.add(()=>e.removeEventListener(t,r,s))},requestAnimationFrame(...e){let t=requestAnimationFrame(...e);return n.add(()=>cancelAnimationFrame(t))},nextFrame(...e){return n.requestAnimationFrame(()=>n.requestAnimationFrame(...e))},setTimeout(...e){let t=setTimeout(...e);return n.add(()=>clearTimeout(t))},add(e){return a.push(e),()=>{let t=a.indexOf(e);if(t>=0){let[r]=a.splice(t,1);r()}}},dispose(){for(let e of a.splice(0))e()},async workQueue(){for(let e of i.splice(0))await e()}};return n}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/focus-management.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/focus-management.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Focus": () => (/* binding */ p),
+/* harmony export */   "FocusResult": () => (/* binding */ L),
+/* harmony export */   "FocusableMode": () => (/* binding */ b),
+/* harmony export */   "focusElement": () => (/* binding */ F),
+/* harmony export */   "focusIn": () => (/* binding */ H),
+/* harmony export */   "getFocusableElements": () => (/* binding */ T),
+/* harmony export */   "isFocusableElement": () => (/* binding */ S),
+/* harmony export */   "sortByDomNode": () => (/* binding */ v)
+/* harmony export */ });
+/* harmony import */ var _match_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _owner_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./owner.js */ "./node_modules/@headlessui/react/dist/utils/owner.js");
+let f=["[contentEditable=true]","[tabindex]","a[href]","area[href]","button:not([disabled])","iframe","input:not([disabled])","select:not([disabled])","textarea:not([disabled])"].map(e=>`${e}:not([tabindex='-1'])`).join(",");var p=(o=>(o[o.First=1]="First",o[o.Previous=2]="Previous",o[o.Next=4]="Next",o[o.Last=8]="Last",o[o.WrapAround=16]="WrapAround",o[o.NoScroll=32]="NoScroll",o))(p||{}),L=(n=>(n[n.Error=0]="Error",n[n.Overflow=1]="Overflow",n[n.Success=2]="Success",n[n.Underflow=3]="Underflow",n))(L||{}),N=(t=>(t[t.Previous=-1]="Previous",t[t.Next=1]="Next",t))(N||{});function T(e=document.body){return e==null?[]:Array.from(e.querySelectorAll(f))}var b=(t=>(t[t.Strict=0]="Strict",t[t.Loose=1]="Loose",t))(b||{});function S(e,r=0){var t;return e===((t=(0,_owner_js__WEBPACK_IMPORTED_MODULE_0__.getOwnerDocument)(e))==null?void 0:t.body)?!1:(0,_match_js__WEBPACK_IMPORTED_MODULE_1__.match)(r,{[0](){return e.matches(f)},[1](){let l=e;for(;l!==null;){if(l.matches(f))return!0;l=l.parentElement}return!1}})}function F(e){e==null||e.focus({preventScroll:!0})}let M=["textarea","input"].join(",");function h(e){var r,t;return(t=(r=e==null?void 0:e.matches)==null?void 0:r.call(e,M))!=null?t:!1}function v(e,r=t=>t){return e.slice().sort((t,l)=>{let n=r(t),i=r(l);if(n===null||i===null)return 0;let o=n.compareDocumentPosition(i);return o&Node.DOCUMENT_POSITION_FOLLOWING?-1:o&Node.DOCUMENT_POSITION_PRECEDING?1:0})}function H(e,r,t=!0){let l=Array.isArray(e)?e.length>0?e[0].ownerDocument:document:e.ownerDocument,n=Array.isArray(e)?t?v(e):e:T(e),i=l.activeElement,o=(()=>{if(r&5)return 1;if(r&10)return-1;throw new Error("Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last")})(),d=(()=>{if(r&1)return 0;if(r&2)return Math.max(0,n.indexOf(i))-1;if(r&4)return Math.max(0,n.indexOf(i))+1;if(r&8)return n.length-1;throw new Error("Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last")})(),m=r&32?{preventScroll:!0}:{},c=0,s=n.length,u;do{if(c>=s||c+s<=0)return 0;let a=d+c;if(r&16)a=(a+s)%s;else{if(a<0)return 3;if(a>=s)return 1}u=n[a],u==null||u.focus(m),c+=o}while(u!==l.activeElement);return r&6&&h(u)&&u.select(),u.hasAttribute("tabindex")||u.setAttribute("tabindex","0"),2}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/match.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/match.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "match": () => (/* binding */ u)
+/* harmony export */ });
+function u(r,n,...a){if(r in n){let e=n[r];return typeof e=="function"?e(...a):e}let t=new Error(`Tried to handle "${r}" but there is no handler defined. Only defined handlers are: ${Object.keys(n).map(e=>`"${e}"`).join(", ")}.`);throw Error.captureStackTrace&&Error.captureStackTrace(t,u),t}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/micro-task.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/micro-task.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "microTask": () => (/* binding */ t)
+/* harmony export */ });
+function t(e){typeof queueMicrotask=="function"?queueMicrotask(e):Promise.resolve().then(e).catch(o=>setTimeout(()=>{throw o}))}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/once.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/once.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "once": () => (/* binding */ l)
+/* harmony export */ });
+function l(r){let e={called:!1};return(...t)=>{if(!e.called)return e.called=!0,r(...t)}}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/owner.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/owner.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getOwnerDocument": () => (/* binding */ t)
+/* harmony export */ });
+function t(n){return typeof window=="undefined"?null:n instanceof Node?n.ownerDocument:n!=null&&n.hasOwnProperty("current")&&n.current instanceof Node?n.current.ownerDocument:document}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/render.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/render.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Features": () => (/* binding */ x),
+/* harmony export */   "RenderStrategy": () => (/* binding */ R),
+/* harmony export */   "compact": () => (/* binding */ T),
+/* harmony export */   "forwardRefWithAs": () => (/* binding */ H),
+/* harmony export */   "render": () => (/* binding */ _)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _match_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+var x=(n=>(n[n.None=0]="None",n[n.RenderStrategy=1]="RenderStrategy",n[n.Static=2]="Static",n))(x||{}),R=(e=>(e[e.Unmount=0]="Unmount",e[e.Hidden=1]="Hidden",e))(R||{});function _({ourProps:r,theirProps:t,slot:e,defaultTag:n,features:a,visible:s=!0,name:l}){let o=y(t,r);if(s)return f(o,e,n,l);let u=a!=null?a:0;if(u&2){let{static:i=!1,...d}=o;if(i)return f(d,e,n,l)}if(u&1){let{unmount:i=!0,...d}=o;return (0,_match_js__WEBPACK_IMPORTED_MODULE_1__.match)(i?0:1,{[0](){return null},[1](){return f({...d,hidden:!0,style:{display:"none"}},e,n,l)}})}return f(o,e,n,l)}function f(r,t={},e,n){let{as:a=e,children:s,refName:l="ref",...o}=m(r,["unmount","static"]),u=r.ref!==void 0?{[l]:r.ref}:{},i=typeof s=="function"?s(t):s;o.className&&typeof o.className=="function"&&(o.className=o.className(t));let d={};if(a===react__WEBPACK_IMPORTED_MODULE_0__.Fragment&&Object.keys(T(o)).length>0){if(!(0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(i)||Array.isArray(i)&&i.length>1)throw new Error(['Passing props on "Fragment"!',"",`The current component <${n} /> is rendering a "Fragment".`,"However we need to passthrough the following props:",Object.keys(o).map(p=>`  - ${p}`).join(`
+`),"","You can apply a few solutions:",['Add an `as="..."` prop, to ensure that we render an actual element instead of a "Fragment".',"Render a single element as the child so that we can forward the props onto that element."].map(p=>`  - ${p}`).join(`
+`)].join(`
+`));return (0,react__WEBPACK_IMPORTED_MODULE_0__.cloneElement)(i,Object.assign({},y(i.props,T(m(o,["ref"]))),d,u))}return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(a,Object.assign({},m(o,["ref"]),a!==react__WEBPACK_IMPORTED_MODULE_0__.Fragment&&u,a!==react__WEBPACK_IMPORTED_MODULE_0__.Fragment&&d),i)}function y(...r){var n;if(r.length===0)return{};if(r.length===1)return r[0];let t={},e={};for(let a of r)for(let s in a)s.startsWith("on")&&typeof a[s]=="function"?((n=e[s])!=null||(e[s]=[]),e[s].push(a[s])):t[s]=a[s];if(t.disabled||t["aria-disabled"])return Object.assign(t,Object.fromEntries(Object.keys(e).map(a=>[a,void 0])));for(let a in e)Object.assign(t,{[a](s){let l=e[a];for(let o of l){if(s.defaultPrevented)return;o(s)}}});return t}function H(r){var t;return Object.assign((0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(r),{displayName:(t=r.displayName)!=null?t:r.name})}function T(r){let t=Object.assign({},r);for(let e in t)t[e]===void 0&&delete t[e];return t}function m(r,t=[]){let e=Object.assign({},r);for(let n of t)n in e&&delete e[n];return e}
+
 
 /***/ })
 

@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Dropdown from './Dropdown/Dropdown';
 
 
 function NavSession() {
 
     return (
-        <div className="flex w-full justify-between">
+        <div className="flex w-full justify-between items-center pb-8 border-b border-lightwhite">
             <div>
-                Home - Empresas
+                <h1 className="text-2xl">
+                Sección Empresas
+                </h1>
             </div>
-            <div>
-                Usuario Options
-            </div>
+            <Dropdown />
         </div>
     );
 }
