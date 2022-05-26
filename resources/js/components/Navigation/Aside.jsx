@@ -40,7 +40,7 @@ function Aside() {
                     className={["text-white origin-left font-medium text-xl duration-300", 
                     !open && "scale-0"]
                     .join(" ")}
-                    >Grupo Alear SRL
+                    >LEXCON
                 </h1>
             </div>
             
