@@ -5565,11 +5565,13 @@ function Input(props) {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+      id: props.name,
       name: props.name,
       onChange: handleActivation,
       className: ["grow text-white bg-transparent my-1 py-1 transition-all duration-300 peer", active ? "border-b-2 border-green-800" : "border-b border-white"].join(" "),
       type: props.type
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+      "for": props.name,
       className: ["absolute left-1 cursor-text transition-all duration-300", active ? "-top-4 text-green-800 text-xs" : "top-1 "].join(" "),
       children: props.name
     })]

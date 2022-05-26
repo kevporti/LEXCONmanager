@@ -614,13 +614,13 @@ button:focus, input:focus {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
-.bg-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 25 26 / var(--tw-bg-opacity));
-}
 .bg-darklight {
   --tw-bg-opacity: 1;
   background-color: rgb(36 37 38 / var(--tw-bg-opacity));
+}
+.bg-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 25 26 / var(--tw-bg-opacity));
 }
 .bg-transparent {
   background-color: transparent;
@@ -684,6 +684,10 @@ button:focus, input:focus {
 .text-green-800 {
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity));
+}
+.text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 .transition-all {
   transition-property: all;

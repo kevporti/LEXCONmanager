@@ -12,6 +12,7 @@ function Input(props) {
     return (
         <>
             <input 
+                id={props.name}
                 name={props.name}
                 onChange={handleActivation}
                 className={["grow text-white bg-transparent my-1 py-1 transition-all duration-300 peer", 
@@ -20,6 +21,7 @@ function Input(props) {
                 type={props.type} 
             />
             <label  
+                for={props.name}
                 className={["absolute left-1 cursor-text transition-all duration-300", 
                     active ? "-top-4 text-green-800 text-xs" : "top-1 "
                     ].join(" ")}
