@@ -32,16 +32,10 @@ function Aside() {
             </i>
 
             {/* Name of the company */}
-            <div className="flex gap-x-4 items-center">
+            <div className="flex items-center">
                 <img 
-                    className={["bg-green-800 h-12 w-12 cursor-pointer duration-500"]
-                    .join(" ")} src="" />
-                <h1 
-                    className={["text-white origin-left font-medium text-xl duration-300", 
-                    !open && "scale-0"]
-                    .join(" ")}
-                    >LEXCON
-                </h1>
+                    className={[" cursor-pointer duration-500"]
+                    .join(" ")} src="/storage/icono.png" />
             </div>
             
             {/* List of the pages to navigate through the site */}
