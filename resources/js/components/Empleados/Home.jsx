@@ -6,14 +6,14 @@ import Tabla from './Tabla';
 
 function Home() {
 
-    return (
+    return(
         <div className="p-8 bg-darklight h-full w-full px-20">
             <NavSession />
             <Filtros />
             <Tabla />
         </div>
     );
-
 }
+
 
 export default Home;

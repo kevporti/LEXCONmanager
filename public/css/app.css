@@ -467,6 +467,9 @@ button:focus, input:focus {
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -499,11 +502,11 @@ button:focus, input:focus {
 .mt-2 {
   margin-top: 0.5rem;
 }
-.-mr-1 {
-  margin-right: -0.25rem;
+.mr-4 {
+  margin-right: 1rem;
 }
-.ml-2 {
-  margin-left: 0.5rem;
+.ml-4 {
+  margin-left: 1rem;
 }
 .block {
   display: block;
@@ -532,8 +535,14 @@ button:focus, input:focus {
 .h-8 {
   height: 2rem;
 }
-.h-5 {
-  height: 1.25rem;
+.h-full {
+  height: 100%;
+}
+.h-1 {
+  height: 0.25rem;
+}
+.h-2 {
+  height: 0.5rem;
 }
 .w-full {
   width: 100%;
@@ -553,11 +562,14 @@ button:focus, input:focus {
 .w-8 {
   width: 2rem;
 }
-.w-5 {
-  width: 1.25rem;
-}
 .w-56 {
   width: 14rem;
+}
+.w-1 {
+  width: 0.25rem;
+}
+.w-2 {
+  width: 0.5rem;
 }
 .max-w-lg {
   max-width: 32rem;
@@ -610,6 +622,12 @@ button:focus, input:focus {
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
+.grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+.grid-cols-11 {
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
 .place-content-start {
   place-content: start;
 }
@@ -647,6 +665,12 @@ button:focus, input:focus {
 .rounded-sm {
   border-radius: 0.125rem;
 }
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
 .border {
   border-width: 1px;
 }
@@ -682,16 +706,9 @@ button:focus, input:focus {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
-.border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
 .bg-darklight {
   --tw-bg-opacity: 1;
   background-color: rgb(36 37 38 / var(--tw-bg-opacity));
-}
-.bg-lightwhite {
-  background-color: rgba(255,255,255,0.17);
 }
 .bg-dark {
   --tw-bg-opacity: 1;
@@ -704,17 +721,20 @@ button:focus, input:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(22 101 52 / var(--tw-bg-opacity));
 }
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
 .bg-newGray {
   --tw-bg-opacity: 1;
   background-color: rgb(235 234 235 / var(--tw-bg-opacity));
+}
+.bg-lightwhite {
+  background-color: rgba(255,255,255,0.17);
+}
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 .p-2 {
   padding: 0.5rem;
@@ -724,6 +744,9 @@ button:focus, input:focus {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-1 {
+  padding: 0.25rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -791,31 +814,19 @@ button:focus, input:focus {
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity));
 }
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-.text-lightwhite {
-  color: rgba(255,255,255,0.17);
-}
 .text-dark {
   --tw-text-opacity: 1;
   color: rgb(24 25 26 / var(--tw-text-opacity));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 .opacity-0 {
   opacity: 0;
 }
 .opacity-100 {
   opacity: 1;
-}
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -826,10 +837,6 @@ button:focus, input:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-.ring-black {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
 }
 .ring-lightwhite {
   --tw-ring-color: rgba(255,255,255,0.17);
@@ -890,31 +897,7 @@ button:focus, input:focus {
   background-color: rgba(255,255,255,0.17);
 }
 
-.hover\:bg-gray-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.focus\:ring-2:focus {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.focus\:ring-indigo-500:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
-}
-
-.focus\:ring-offset-2:focus {
-  --tw-ring-offset-width: 2px;
-}
-
-.focus\:ring-offset-gray-100:focus {
-  --tw-ring-offset-color: #f3f4f6;
 }

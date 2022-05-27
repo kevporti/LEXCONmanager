@@ -1,21 +1,3 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-
-
-// function Dropdown() {
-
-//     return (
-//         <button className="flex items-center">
-//             <h1 className="">Administrador</h1>
-//             <i className="material-symbols-outlined py-2 px-4">expand_more</i>
-//         </button>
-//     );
-// }
-
-
-// export default Dropdown;
-
-
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
@@ -50,7 +32,7 @@ export default function Dropdown() {
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-newGray text-dark font-medium' : 'text-white',
+                    active ? 'bg-lightwhite text-white font-medium' : 'text-white',
                     'block px-4 py-2 text-sm'
                   )}
                 >
@@ -64,7 +46,7 @@ export default function Dropdown() {
                   <button
                     type="submit"
                     className={classNames(
-                      active ? 'bg-newGray text-dark font-medium' : 'text-white',
+                      active ? 'bg-lightwhite text-white font-medium' : 'text-white',
                       'block w-full text-left px-4 py-2 text-sm'
                     )}
                   >

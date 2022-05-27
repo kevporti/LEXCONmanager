@@ -42,18 +42,6 @@ function FilaTabla() {
                     </div>
                 </div>
             ))}
-                {/* <div>
-                    20439831880
-                </div>
-                <div>
-                    Coca-Cola
-                </div>
-                <div>
-                    Claudio Raimundez
-                </div>
-                <div>
-                    Arrow
-                </div> */}
             </div>
     );
 }
