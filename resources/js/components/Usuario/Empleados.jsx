@@ -6,7 +6,7 @@ import Home from '../Empleados/Home';
 function Empleados() {
 
     return (
-        <div className="flex text-white bg-darklight h-screen">
+        <div className="flex text-white bg-darklight h-full">
             <Aside />
             <Home />
         </div>

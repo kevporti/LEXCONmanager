@@ -431,6 +431,9 @@ button:focus, input:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+.fixed {
+  position: fixed;
+}
 .absolute {
   position: absolute;
 }
@@ -505,6 +508,9 @@ button:focus, input:focus {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mr-2 {
+  margin-right: 0.5rem;
+}
 .block {
   display: block;
 }
@@ -538,6 +544,11 @@ button:focus, input:focus {
 .h-8 {
   height: 2rem;
 }
+.h-max {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
 .w-2 {
   width: 0.5rem;
 }
@@ -561,6 +572,9 @@ button:focus, input:focus {
 }
 .w-56 {
   width: 14rem;
+}
+.w-3\/4 {
+  width: 75%;
 }
 .max-w-lg {
   max-width: 32rem;
@@ -653,6 +667,14 @@ button:focus, input:focus {
 .rounded-sm {
   border-radius: 0.125rem;
 }
+.rounded-r-sm {
+  border-top-right-radius: 0.125rem;
+  border-bottom-right-radius: 0.125rem;
+}
+.rounded-r {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
 .border {
   border-width: 1px;
 }
@@ -664,6 +686,18 @@ button:focus, input:focus {
 }
 .border-b-2 {
   border-bottom-width: 2px;
+}
+.border-t {
+  border-top-width: 1px;
+}
+.border-l {
+  border-left-width: 1px;
+}
+.border-t-2 {
+  border-top-width: 2px;
+}
+.border-l-2 {
+  border-left-width: 2px;
 }
 .border-lightwhite {
   border-color: rgba(255,255,255,0.17);
@@ -714,6 +748,9 @@ button:focus, input:focus {
 .bg-lightwhite {
   background-color: rgba(255,255,255,0.17);
 }
+.bg-none {
+  background-image: none;
+}
 .p-2 {
   padding: 0.5rem;
 }
@@ -722,6 +759,9 @@ button:focus, input:focus {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-1 {
+  padding: 0.25rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -746,6 +786,10 @@ button:focus, input:focus {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -792,6 +836,10 @@ button:focus, input:focus {
 .text-green-800 {
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 .opacity-0 {
   opacity: 0;
@@ -866,6 +914,11 @@ button:focus, input:focus {
 
 .hover\:bg-lightwhite:hover {
   background-color: rgba(255,255,255,0.17);
+}
+
+.focus\:bg-dark:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 25 26 / var(--tw-bg-opacity));
 }
 
 .focus\:outline-none:focus {

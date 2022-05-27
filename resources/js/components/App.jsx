@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Inicio from "./Login/Inicio";
 import Empresas from "./Usuario/Empresas";
 import Empleados from "./Usuario/Empleados";
+import Moras from "./Usuario/Moras";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Route exact path="/" element={<Inicio />} />
                 <Route exact path="/usuario/empresas" element={<Empresas />} />
                 <Route exact path="/usuario/empleados" element={<Empleados />} />
+                <Route exact path="/usuario/moras" element={<Moras />} />
             </Routes>
         </BrowserRouter>
     );

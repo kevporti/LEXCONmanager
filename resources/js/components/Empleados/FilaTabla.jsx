@@ -18,7 +18,6 @@ function FilaTabla() {
         {company: 'Apple', dni: '43983188', name: 'Notengoni Idea', state: "Inactivo", moras: '18'},
         {company: 'Samsung', dni: '43983188', name: 'Michelle ', state: "Activo", moras: '17'},
         {company: 'Notepadd', dni: '43983188', name: 'Pablo Abrate', state: "Activo", moras: '7'},
-        {company: 'Samsung', dni: '43983188', name: 'Notengoni Idea', state: "Inactivo", moras: '2'},
     ];
 
     return (

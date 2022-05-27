@@ -13,12 +13,6 @@ function FilaTabla() {
         {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', country: "Argentina"},
         {name: 'Galaxy', cuit: '20439831880', contact: 'Coldplay', country: "Uruguay"},
         {name: 'Samsung', cuit: '20439831880', contact: 'Agustin', country: "España"},
-        {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', country: "Uruguay"},
-        {name: 'Coca-Cola', cuit: '20439831880', contact: 'Claudio Raimundez', country: "Estados Unidos"},
-        {name: 'Apple', cuit: '20439831880', contact: 'Notengoni Idea', country: "Mexico"},
-        {name: 'Samsung', cuit: '20439831880', contact: 'Michelle ', country: "Uruguay"},
-        {name: 'Notepadd', cuit: '20439831880', contact: 'Pablo Abrate', country: "Uruguay"},
-        {name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', country: "Mexico"},
     ];
 
     return (
@@ -38,7 +32,7 @@ function FilaTabla() {
                         {empresa.country}
                     </div>
                     <div className="grid place-content-end">
-                        <i className="material-symbols-outlined">expand_more</i>
+                        <i className="material-symbols-outlined cursor-pointer">expand_more</i>
                     </div>
                 </div>
             ))}

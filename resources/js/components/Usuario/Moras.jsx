@@ -1,8 +1,9 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Aside from '../Navigation/Aside';
-import Home from '../Empresas/Home';
+import Home from '../Moras/Home';
 
-function Empresas() {
+function Moras() {
 
     return (
         <div className="flex text-white bg-darklight h-full">
@@ -12,4 +13,4 @@ function Empresas() {
     );
 }
 
-export default Empresas;
+export default Moras;
