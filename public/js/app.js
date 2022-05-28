@@ -5592,7 +5592,7 @@ function FilaTabla() {
     moras: '7'
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "",
+    className: "h-96 overflow-auto scrollbar",
     children: Empleados.map(function (empleado, index) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "grid grid-cols-11 px-4 border-b border-lightwhite p-2",
@@ -5849,7 +5849,7 @@ function FilaTabla() {
     country: "España"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "",
+    className: "h-96 overflow-auto scrollbar",
     children: Empresas.map(function (empresa, index) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "grid grid-cols-12 px-4 border-b border-lightwhite p-2",
@@ -6512,7 +6512,7 @@ function FilaTabla() {
     date: "12/20"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "",
+    className: "h-96 overflow-auto scrollbar",
     children: Moras.map(function (empresa, index) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "grid grid-cols-12 px-4 border-b border-lightwhite p-2",
