@@ -6016,10 +6016,10 @@ function Tabla() {
 
 /***/ }),
 
-/***/ "./resources/js/components/EscalasSalariales/FilaTabla.jsx":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/EscalasSalariales/FilaTabla.jsx ***!
-  \*****************************************************************/
+/***/ "./resources/js/components/EscalasSalariales/DatosEscala.jsx":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/EscalasSalariales/DatosEscala.jsx ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6035,83 +6035,115 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function DatosEscala(index) {
+  var Datos = [{
+    id: "1",
+    rama: "Conductor",
+    firma_usuario: "Claudio"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "grid grid-cols-4",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: "Rama/Categor\xEDa: Conductor Primera Categoria"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: index.index
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: index.index
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: "Modificado por: Claudio"
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DatosEscala);
+
+/***/ }),
+
+/***/ "./resources/js/components/EscalasSalariales/FilaTabla.jsx":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/EscalasSalariales/FilaTabla.jsx ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js");
+/* harmony import */ var _DatosEscala__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatosEscala */ "./resources/js/components/EscalasSalariales/DatosEscala.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
 function FilaTabla() {
   var Moras = [{
-    company: 'Caminos',
-    idMora: '1',
-    name: 'Pablo Argento',
-    date: "10/20"
+    id: "10",
+    date: "04/22"
   }, {
-    company: 'Samsung',
-    idMora: '2',
-    name: 'Notengoni Idea',
-    date: "11/20"
+    id: "9",
+    date: "01/22"
   }, {
-    company: 'Apple',
-    idMora: '3',
-    name: 'Mark Zuckerberg',
-    date: "12/20"
+    id: "8",
+    date: "10/21"
   }, {
-    company: 'Samsung',
-    idMora: '4',
-    name: 'Notengoni Idea',
+    id: "7",
+    date: "07/21"
+  }, {
+    id: "6",
+    date: "04/21"
+  }, {
+    id: "5",
     date: "01/21"
   }, {
-    company: 'Samsung',
-    idMora: '5',
-    name: 'Notengoni Idea',
-    date: "02/21"
-  }, {
-    company: 'Coca-Cola',
-    idMora: '6',
-    name: 'Claudio Raimundez',
-    date: "03/21"
-  }, {
-    company: 'NASA',
-    idMora: '7',
-    name: 'Notengoni Idea',
-    date: "09/20"
-  }, {
-    company: 'Samsung',
-    idMora: '8',
-    name: 'Notengoni Idea',
+    id: "4",
     date: "10/20"
   }, {
-    company: 'Galaxy',
-    idMora: '9',
-    name: 'Coldplay',
-    date: "11/20"
+    id: "3",
+    date: "07/20"
   }, {
-    company: 'Samsung',
-    idMora: '10',
-    name: 'Agustin',
-    date: "12/20"
+    id: "2",
+    date: "04/20"
+  }, {
+    id: "1",
+    date: "01/20"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "",
-    children: Moras.map(function (empresa, index) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "grid grid-cols-12 px-4 border-b border-lightwhite p-2",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-2",
-          children: empresa.date
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-3",
-          children: empresa.name
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-3",
-          children: empresa.company
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid place-content-start col-span-3",
-          children: empresa.idMora
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid place-content-end",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-            className: "material-symbols-outlined cursor-pointer",
-            children: "expand_more"
-          })
-        })]
-      }, index);
+    className: "h-96 overflow-auto scrollbar",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "",
+      children: Moras.map(function (mora) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure, {
+          as: "div",
+          className: "",
+          children: function children(_ref) {
+            var open = _ref.open;
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Button, {
+                as: "div",
+                className: "flex justify-between items-center p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? 'bg-green-900 rounded-t' : ''),
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                  className: "",
+                  children: mora.date
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "material-symbols-outlined ".concat(open ? 'rotate-180 transform' : '', " h-5 w-5"),
+                  children: "expand_more"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Panel, {
+                className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_DatosEscala__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                  index: mora.id
+                })
+              })]
+            });
+          }
+        }, mora.id);
+      })
     })
   });
 }
@@ -6230,19 +6262,10 @@ function Tabla() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "w-full border border-lightwhite rounded",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-12",
+      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-4",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-start col-span-2",
-        children: "Fecha"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-3",
-        children: "Empleado"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
-        children: "Empresa"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
-        children: "Nro de Mora"
+        children: "Fecha de vigencia"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-end",
         children: "Opciones"
@@ -62866,6 +62889,33 @@ function _extends() {
 
   return _extends.apply(this, arguments);
 }
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Disclosure": () => (/* binding */ ke)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+/* harmony import */ var _hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/use-sync-refs.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js");
+/* harmony import */ var _hooks_use_id_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/use-id.js */ "./node_modules/@headlessui/react/dist/hooks/use-id.js");
+/* harmony import */ var _keyboard_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../keyboard.js */ "./node_modules/@headlessui/react/dist/components/keyboard.js");
+/* harmony import */ var _utils_bugs_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utils/bugs.js */ "./node_modules/@headlessui/react/dist/utils/bugs.js");
+/* harmony import */ var _internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../internal/open-closed.js */ "./node_modules/@headlessui/react/dist/internal/open-closed.js");
+/* harmony import */ var _hooks_use_resolve_button_type_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../hooks/use-resolve-button-type.js */ "./node_modules/@headlessui/react/dist/hooks/use-resolve-button-type.js");
+/* harmony import */ var _utils_owner_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/owner.js */ "./node_modules/@headlessui/react/dist/utils/owner.js");
+/* harmony import */ var _hooks_use_event_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+var Q=(o=>(o[o.Open=0]="Open",o[o.Closed=1]="Closed",o))(Q||{}),V=(l=>(l[l.ToggleDisclosure=0]="ToggleDisclosure",l[l.CloseDisclosure=1]="CloseDisclosure",l[l.SetButtonId=2]="SetButtonId",l[l.SetPanelId=3]="SetPanelId",l[l.LinkPanel=4]="LinkPanel",l[l.UnlinkPanel=5]="UnlinkPanel",l))(V||{});let X={[0]:e=>({...e,disclosureState:(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_1__.match)(e.disclosureState,{[0]:1,[1]:0})}),[1]:e=>e.disclosureState===1?e:{...e,disclosureState:1},[4](e){return e.linkedPanel===!0?e:{...e,linkedPanel:!0}},[5](e){return e.linkedPanel===!1?e:{...e,linkedPanel:!1}},[2](e,t){return e.buttonId===t.buttonId?e:{...e,buttonId:t.buttonId}},[3](e,t){return e.panelId===t.panelId?e:{...e,panelId:t.panelId}}},h=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);h.displayName="DisclosureContext";function H(e){let t=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(h);if(t===null){let o=new Error(`<${e} /> is missing a parent <Disclosure /> component.`);throw Error.captureStackTrace&&Error.captureStackTrace(o,H),o}return t}let U=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);U.displayName="DisclosureAPIContext";function K(e){let t=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(U);if(t===null){let o=new Error(`<${e} /> is missing a parent <Disclosure /> component.`);throw Error.captureStackTrace&&Error.captureStackTrace(o,K),o}return t}let w=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);w.displayName="DisclosurePanelContext";function Y(){return (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(w)}function Z(e,t){return (0,_utils_match_js__WEBPACK_IMPORTED_MODULE_1__.match)(t.type,X,e,t)}let ee=react__WEBPACK_IMPORTED_MODULE_0__.Fragment,te=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.forwardRefWithAs)(function(t,o){let{defaultOpen:n=!1,...s}=t,i=`headlessui-disclosure-button-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_3__.useId)()}`,l=`headlessui-disclosure-panel-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_3__.useId)()}`,u=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),D=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.useSyncRefs)(o,(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.optionalRef)(f=>{u.current=f},t.as===void 0||t.as===react__WEBPACK_IMPORTED_MODULE_0__.Fragment)),P=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),m=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),p=(0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(Z,{disclosureState:n?0:1,linkedPanel:!1,buttonRef:m,panelRef:P,buttonId:i,panelId:l}),[{disclosureState:a},c]=p;(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>c({type:2,buttonId:i}),[i,c]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>c({type:3,panelId:l}),[l,c]);let T=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_5__.useEvent)(f=>{c({type:1});let A=(0,_utils_owner_js__WEBPACK_IMPORTED_MODULE_6__.getOwnerDocument)(u);if(!A)return;let I=(()=>f?f instanceof HTMLElement?f:f.current instanceof HTMLElement?f.current:A.getElementById(i):A.getElementById(i))();I==null||I.focus()}),C=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({close:T}),[T]),r=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:a===0,close:T}),[a,T]),d={ref:D};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(h.Provider,{value:p},react__WEBPACK_IMPORTED_MODULE_0__.createElement(U.Provider,{value:C},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.OpenClosedProvider,{value:(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_1__.match)(a,{[0]:_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.State.Open,[1]:_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.State.Closed})},(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.render)({ourProps:d,theirProps:s,slot:r,defaultTag:ee,name:"Disclosure"}))))}),ne="button",le=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.forwardRefWithAs)(function(t,o){let[n,s]=H("Disclosure.Button"),i=Y(),l=i===null?!1:i===n.panelId,u=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),D=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.useSyncRefs)(u,o,l?null:n.buttonRef),P=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_5__.useEvent)(r=>{var d;if(l){if(n.disclosureState===1)return;switch(r.key){case _keyboard_js__WEBPACK_IMPORTED_MODULE_8__.Keys.Space:case _keyboard_js__WEBPACK_IMPORTED_MODULE_8__.Keys.Enter:r.preventDefault(),r.stopPropagation(),s({type:0}),(d=n.buttonRef.current)==null||d.focus();break}}else switch(r.key){case _keyboard_js__WEBPACK_IMPORTED_MODULE_8__.Keys.Space:case _keyboard_js__WEBPACK_IMPORTED_MODULE_8__.Keys.Enter:r.preventDefault(),r.stopPropagation(),s({type:0});break}}),m=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_5__.useEvent)(r=>{switch(r.key){case _keyboard_js__WEBPACK_IMPORTED_MODULE_8__.Keys.Space:r.preventDefault();break}}),p=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_5__.useEvent)(r=>{var d;(0,_utils_bugs_js__WEBPACK_IMPORTED_MODULE_9__.isDisabledReactIssue7711)(r.currentTarget)||t.disabled||(l?(s({type:0}),(d=n.buttonRef.current)==null||d.focus()):s({type:0}))}),a=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:n.disclosureState===0}),[n]),c=(0,_hooks_use_resolve_button_type_js__WEBPACK_IMPORTED_MODULE_10__.useResolveButtonType)(t,u),T=t,C=l?{ref:D,type:c,onKeyDown:P,onClick:p}:{ref:D,id:n.buttonId,type:c,"aria-expanded":t.disabled?void 0:n.disclosureState===0,"aria-controls":n.linkedPanel?n.panelId:void 0,onKeyDown:P,onKeyUp:m,onClick:p};return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.render)({ourProps:C,theirProps:T,slot:a,defaultTag:ne,name:"Disclosure.Button"})}),oe="div",re=_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.Features.RenderStrategy|_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.Features.Static,se=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.forwardRefWithAs)(function(t,o){let[n,s]=H("Disclosure.Panel"),{close:i}=K("Disclosure.Panel"),l=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.useSyncRefs)(o,n.panelRef,()=>{n.linkedPanel||s({type:4})}),u=(0,_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.useOpenClosed)(),D=(()=>u!==null?u===_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_7__.State.Open:n.disclosureState===0)();(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>()=>s({type:5}),[s]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{var a;n.disclosureState===1&&((a=t.unmount)!=null?a:!0)&&s({type:5})},[n.disclosureState,t.unmount,s]);let P=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:n.disclosureState===0,close:i}),[n,i]),m=t,p={ref:l,id:n.panelId};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(w.Provider,{value:n.panelId},(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.render)({ourProps:p,theirProps:m,slot:P,defaultTag:oe,features:re,visible:D,name:"Disclosure.Panel"}))}),ke=Object.assign(te,{Button:le,Panel:se});
+
 
 /***/ }),
 

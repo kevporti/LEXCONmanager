@@ -6,4 +6,19 @@
     button, input {
         @apply focus:outline-none rounded-sm;
     }
+    .scrollbar::-webkit-scrollbar {
+        width: 15px;
+        height: 10px;
+      }
+      
+    .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #242526;
+    }
+    
+    .scrollbar::-webkit-scrollbar-thumb {
+    background: #18191A;
+    border-radius: 100vh;
+    border: 3px solid #242526;
+    }
 }

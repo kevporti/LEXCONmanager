@@ -1,43 +1,48 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { Disclosure } from '@headlessui/react'
+import DatosEscala from './DatosEscala';
 
 function FilaTabla() {
     const Moras = [
-        {company: 'Caminos', idMora: '1', name: 'Pablo Argento', date: "10/20"},
-        {company: 'Samsung', idMora: '2', name: 'Notengoni Idea', date: "11/20"},
-        {company: 'Apple', idMora: '3', name: 'Mark Zuckerberg', date: "12/20"},
-        {company: 'Samsung', idMora: '4', name: 'Notengoni Idea', date: "01/21"},
-        {company: 'Samsung', idMora: '5', name: 'Notengoni Idea', date: "02/21"},
-        {company: 'Coca-Cola', idMora: '6', name: 'Claudio Raimundez', date: "03/21"},
-        {company: 'NASA', idMora: '7', name: 'Notengoni Idea', date: "09/20"},
-        {company: 'Samsung', idMora: '8', name: 'Notengoni Idea', date: "10/20"},
-        {company: 'Galaxy', idMora: '9', name: 'Coldplay', date: "11/20"},
-        {company: 'Samsung', idMora: '10', name: 'Agustin', date: "12/20"},
-    ];
-
-    return(
-        <div className="">
-            {Moras.map((empresa, index) =>(
-                <div key={index} className="grid grid-cols-12 px-4 border-b border-lightwhite p-2">
-                    <div className="col-span-2">
-                        {empresa.date}
-                    </div>
-                    <div className="col-span-3">
-                        {empresa.name}
-                    </div>
-                    <div className="col-span-3">
-                        {empresa.company}
-                    </div>
-                    <div className="grid place-content-start col-span-3">
-                        {empresa.idMora}
-                    </div>
-                    <div className="grid place-content-end">
-                        <i className="material-symbols-outlined cursor-pointer">expand_more</i>
-                    </div>
-                </div>
-            ))}
-        </div>
-    );
+        {id: "10", date: "04/22"},
+        {id: "9", date: "01/22"},
+        {id: "8", date: "10/21"},
+        {id: "7", date: "07/21"},
+        {id: "6", date: "04/21"},
+        {id: "5", date: "01/21"},
+        {id: "4", date: "10/20"},
+        {id: "3", date: "07/20"},
+        {id: "2", date: "04/20"},
+        {id: "1", date: "01/20"},
+     ];
+  return (
+    <div className="h-96 overflow-auto scrollbar">
+      <div className="">
+        {Moras.map((mora) => (
+            <Disclosure key={mora.id} as="div" className="">
+            {({ open }) => (
+                <>
+                    <Disclosure.Button as="div" className={`flex justify-between items-center p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ${
+                        open ? 'bg-green-900 rounded-t' : ''
+                    }`}>
+                        <span className="">{mora.date}</span>
+                        <i
+                            className={`material-symbols-outlined ${
+                            open ? 'rotate-180 transform' : ''
+                            } h-5 w-5`}
+                        >expand_more
+                        </i>
+                    </Disclosure.Button>
+                    <Disclosure.Panel className="px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b">
+                        <DatosEscala index={mora.id} />
+                    </Disclosure.Panel>
+                </>
+            )}
+          </Disclosure>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default FilaTabla;
