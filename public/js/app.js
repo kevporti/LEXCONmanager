@@ -6726,7 +6726,12 @@ function Aside() {
     src: "account_circle",
     gap: true,
     link: "/usuario/perfil"
-  }];
+  }]; // const location = useLocation();
+  // React.useEffect(() => {
+  //     }, [location]);
+
+  var gap = "flex p-2 items-center gap-x-4 cursor-pointer rounded-md mt-9 hover:bg-lightwhite";
+  var noGap = "flex p-2 items-center gap-x-4 cursor-pointer rounded-md mt-2 hover:bg-lightwhite";
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: ["relative w-72 h-screen p-4 pt-8 bg-dark duration-300", open ? "w-72" : "w-20"].join(" "),
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
@@ -6744,19 +6749,19 @@ function Aside() {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
       className: "pt-6",
       children: Menus.map(function (menu, index) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
           to: menu.link,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
-            className: ["flex p-2 items-center gap-x-4 cursor-pointer hover:bg-lightwhite rounded-md", menu.gap ? "mt-9" : "mt-2"].join(" "),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: menu.gap ? gap : noGap,
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
               className: "material-symbols-outlined",
               children: menu.src
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-              className: ["origin-left duration-200", !open && "hidden"].join(" "),
+              className: "origin-left duration-200\n                                    ".concat(!open && "hidden"),
               children: menu.title
             })]
-          }, index)
-        });
+          })
+        }, index);
       })
     })]
   });

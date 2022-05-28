@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import {Link} from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 
 function Aside() {
@@ -14,6 +14,12 @@ function Aside() {
         { title: "Liquidación de Deuda", src: "description", link: "/usuario/liquidacion_deudas" },
         { title: "Cuenta", src: "account_circle", gap: true, link: "/usuario/perfil" },
     ];
+    // const location = useLocation();
+    // React.useEffect(() => {
+    //     }, [location]);
+
+    let gap = `flex p-2 items-center gap-x-4 cursor-pointer rounded-md mt-9 hover:bg-lightwhite`;
+    let noGap = `flex p-2 items-center gap-x-4 cursor-pointer rounded-md mt-2 hover:bg-lightwhite`;
 
     return (
         <div 
@@ -41,26 +47,24 @@ function Aside() {
             {/* List of the pages to navigate through the site */}
             <ul className="pt-6">
                 {Menus.map((menu, index) => (
-                    <Link to={menu.link}>
-                        <li 
-                            key={index} 
-                            className={["flex p-2 items-center gap-x-4 cursor-pointer hover:bg-lightwhite rounded-md", 
-                            menu.gap ? "mt-9" : "mt-2"]
-                            .join(" ")}>
-                            <i 
-                                className="material-symbols-outlined"
-                            >
-                                {menu.src}
-                            </i>
-                            <span 
-                                className={["origin-left duration-200",
-                                !open && "hidden"]
-                                .join(" ")}
-                            >
-                                {menu.title}
-                            </span>
-                        </li>
-                    </Link>
+                    <NavLink
+                        to={menu.link}
+                        key={index} 
+                        >
+                            <div className={menu.gap ? gap : noGap}>
+                                <i 
+                                    className="material-symbols-outlined"
+                                >
+                                    {menu.src}
+                                </i>
+                                <span 
+                                    className={`origin-left duration-200
+                                    ${!open && "hidden"}`}
+                                >
+                                    {menu.title}
+                                </span>
+                            </div>
+                    </NavLink>
                 ))}
             </ul>
 
