@@ -539,6 +539,9 @@ button:focus, input:focus {
 .hidden {
   display: none;
 }
+.h-96 {
+  height: 24rem;
+}
 .h-2 {
   height: 0.5rem;
 }
@@ -548,11 +551,11 @@ button:focus, input:focus {
 .h-5 {
   height: 1.25rem;
 }
-.h-96 {
-  height: 24rem;
-}
 .h-screen {
   height: 100vh;
+}
+.h-80 {
+  height: 20rem;
 }
 .w-2 {
   width: 0.5rem;

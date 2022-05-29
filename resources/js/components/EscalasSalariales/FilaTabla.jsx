@@ -1,5 +1,5 @@
 import React from 'react';
-import { Disclosure } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react';
 import DatosEscala from './DatosEscala';
 
 function FilaTabla() {
@@ -16,7 +16,7 @@ function FilaTabla() {
         {id: "1", date: "01/20"},
      ];
   return (
-    <div className="h-96 overflow-auto scrollbar">
+    <div className="h-80 overflow-auto scrollbar">
       <div className="">
         {Moras.map((mora) => (
             <Disclosure key={mora.id} as="div" className="">

@@ -16,7 +16,7 @@ function FilaTabla() {
     ];
 
     return(
-        <div className="h-96 overflow-auto scrollbar">
+        <div className="h-80 overflow-auto scrollbar">
             {Moras.map((empresa, index) =>(
                 <div key={index} className="grid grid-cols-12 px-4 border-b border-lightwhite p-2">
                     <div className="col-span-2">
