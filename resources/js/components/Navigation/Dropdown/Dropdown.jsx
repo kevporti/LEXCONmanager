@@ -1,6 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
+import { NavLink } from 'react-router-dom';
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -30,7 +32,7 @@ export default function Dropdown() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="#"
+                  href="/usuario/perfil"
                   className={classNames(
                     active ? 'bg-lightwhite text-white font-medium' : 'text-white',
                     'block px-4 py-2 text-sm'

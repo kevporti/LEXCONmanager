@@ -8,6 +8,7 @@ import Moras from "./Usuario/Moras";
 import EscalasSalariales from "./Usuario/EscalasSalariales";
 import LiqSueldos from "./Usuario/LiqSueldos";
 import LiqDeudas from "./Usuario/LiqDeudas";
+import Cuenta from "./Usuario/Cuenta";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                 <Route exact path="/usuario/escala_salarial" element={<EscalasSalariales />} />
                 <Route exact path="/usuario/liquidacion_sueldos" element={<LiqSueldos />} />
                 <Route exact path="/usuario/liquidacion_deudas" element={<LiqDeudas />} />
+                <Route exact path="/usuario/perfil" element={<Cuenta />} />
             </Routes>
         </BrowserRouter>
     );
