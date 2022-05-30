@@ -4,23 +4,41 @@ import ReactDOM from 'react-dom';
 function DatosEscala(index) {
 
     const Datos = [
-        {id: "1", rama: "Conductor", firma_usuario: "Claudio"}
+        {id: "6", rama: "Conductor", firma_usuario: "Claudio", basico: "50000", extra50: "750", extra100: "1000", presencia: "1500", resid: "1500"},
+        {id: "5", rama: "Conductor", firma_usuario: "Claudio", basico: "50000", extra50: "750", extra100: "1000", presencia: "1500", resid: "1500"},
+        {id: "4", rama: "Conductor", firma_usuario: "Claudio", basico: "50000", extra50: "750", extra100: "1000", presencia: "1500", resid: "1500"},
+        {id: "3", rama: "Conductor", firma_usuario: "Claudio", basico: "50000", extra50: "750", extra100: "1000", presencia: "1500", resid: "1500"},
+        {id: "2", rama: "Conductor", firma_usuario: "Claudio", basico: "50000", extra50: "750", extra100: "1000", presencia: "1500", resid: "1500"},
+        {id: "1", rama: "Conductor", firma_usuario: "Claudio", basico: "50000", extra50: "750", extra100: "1000", presencia: "1500", resid: "1500"},
     ]
 
     return(
-        <div className="grid grid-cols-4">
-            <div>
-                Rama/Categoría: Conductor Primera Categoria
-            </div>
-            <div>
-                {index.index}
-            </div>
-            <div>
-                {index.index}
-            </div>
-            <div>
-                Modificado por: Claudio
-            </div>
+        <div>
+            {Datos.map((dato) => (
+                <div className="grid grid-cols-3 gap-y-2 p-4 border-b border-lightwhite whitespace-pre">
+                    <div>
+                        Rama/Categoría:  {dato.rama}
+                    </div>
+                    <div>
+                        Simple Presencia:  ${dato.presencia}
+                    </div>
+                    <div>
+                        Permanencia fuera Residencia:  ${dato.resid}
+                    </div>
+                    <div>
+                        Sueldo Básico:  ${dato.basico}
+                    </div>
+                    <div>
+                        Hs Extra 50%:  ${dato.extra50}
+                    </div>
+                    <div>
+                        Hs Extra 100%:  ${dato.extra100}
+                    </div>
+                    <div className="grid place-content-start pt-4">
+                        Creado por:  {dato.firma_usuario}
+                    </div>
+                </div>
+            ))}
         </div>
     );
 }

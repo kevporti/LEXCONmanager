@@ -4,16 +4,16 @@ import DatosEscala from './DatosEscala';
 
 function FilaTabla() {
     const Moras = [
-        {id: "10", date: "04/22"},
-        {id: "9", date: "01/22"},
-        {id: "8", date: "10/21"},
-        {id: "7", date: "07/21"},
-        {id: "6", date: "04/21"},
-        {id: "5", date: "01/21"},
-        {id: "4", date: "10/20"},
-        {id: "3", date: "07/20"},
-        {id: "2", date: "04/20"},
-        {id: "1", date: "01/20"},
+        {id: "10", date: "Abril 2022"},
+        {id: "9", date: "Enero 2022"},
+        {id: "8", date: "Octubre 2021"},
+        {id: "7", date: "Julio 2021"},
+        {id: "6", date: "Abril 2021"},
+        {id: "5", date: "Enero 2021"},
+        {id: "4", date: "Octubre 2020"},
+        {id: "3", date: "Junio 2020"},
+        {id: "2", date: "Abril 2020"},
+        {id: "1", date: "Enero 2020"},
      ];
   return (
     <div className="h-80 overflow-auto scrollbar">
@@ -25,7 +25,7 @@ function FilaTabla() {
                     <Disclosure.Button as="div" className={`flex justify-between items-center p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ${
                         open ? 'bg-green-900 rounded-t' : ''
                     }`}>
-                        <span className="">{mora.date}</span>
+                        <span className="font-medium">{mora.date}</span>
                         <i
                             className={`material-symbols-outlined ${
                             open ? 'rotate-180 transform' : ''
