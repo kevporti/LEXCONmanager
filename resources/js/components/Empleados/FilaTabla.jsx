@@ -45,7 +45,7 @@ function FilaTabla() {
                         </div>
                     </div>
                     <div className="grid place-content-end col-span-1">
-                        <i className="material-symbols-outlined cursor-pointer">delete</i>
+                        <i className="material-symbols-outlined cursor-pointer text-red-500">delete</i>
                     </div>
                 </div>
             ))}

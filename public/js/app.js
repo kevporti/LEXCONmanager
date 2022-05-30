@@ -5636,7 +5636,7 @@ function FilaTabla() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "grid place-content-end col-span-1",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-            className: "material-symbols-outlined cursor-pointer",
+            className: "material-symbols-outlined cursor-pointer text-red-500",
             children: "delete"
           })
         })]
