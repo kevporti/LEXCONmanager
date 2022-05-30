@@ -519,6 +519,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: 2rem;
   margin-right: 2rem;
 }
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .ml-4 {
   margin-left: 1rem;
 }
@@ -578,6 +582,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .h-screen {
   height: 100vh;
+}
+.h-72 {
+  height: 18rem;
 }
 .min-h-full {
   min-height: 100%;
@@ -669,6 +676,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+.grid-cols-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 .place-content-start {
   place-content: start;
