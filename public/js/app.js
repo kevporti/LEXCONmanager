@@ -6651,6 +6651,46 @@ function Tabla() {
 
 /***/ }),
 
+/***/ "./resources/js/components/LiqDeudas/FilaTabla.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/LiqDeudas/FilaTabla.jsx ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+function FilaTabla(posts) {
+  {
+    console.log(posts);
+  }
+  return (
+    /*#__PURE__*/
+    // {posts.map((post) => (
+    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      // key={post.id}
+      className: "relative p-3",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+        className: "text-sm leading-5"
+      })
+    }) // ))}
+
+  );
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FilaTabla);
+
+/***/ }),
+
 /***/ "./resources/js/components/LiqDeudas/Filtros.jsx":
 /*!*******************************************************!*\
   !*** ./resources/js/components/LiqDeudas/Filtros.jsx ***!
@@ -6745,34 +6785,115 @@ function Home() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ Example)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/tabs/tabs.js");
+/* harmony import */ var _FilaTabla__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FilaTabla */ "./resources/js/components/LiqDeudas/FilaTabla.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
- // import FilaTabla from './FilaTabla';
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
-function Tabla() {
+
+
+
+function classNames() {
+  for (var _len = arguments.length, classes = new Array(_len), _key = 0; _key < _len; _key++) {
+    classes[_key] = arguments[_key];
+  }
+
+  return classes.filter(Boolean).join(' ');
+}
+
+function Example() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    "Obra Social": [{
+      id: 1,
+      title: 'Does drinking coffee make you smarter?',
+      date: '5h ago',
+      commentCount: 5,
+      shareCount: 2
+    }, {
+      id: 2,
+      title: "So you've bought coffee... now what?",
+      date: '2h ago',
+      commentCount: 3,
+      shareCount: 2
+    }],
+    "Aporte Sindical": [{
+      id: 1,
+      title: 'Is tech making coffee better or worse?',
+      date: 'Jan 7',
+      commentCount: 29,
+      shareCount: 16
+    }, {
+      id: 2,
+      title: 'The most innovative things happening in coffee',
+      date: 'Mar 19',
+      commentCount: 24,
+      shareCount: 12
+    }]
+  }),
+      _useState2 = _slicedToArray(_useState, 1),
+      categories = _useState2[0];
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "w-full border border-lightwhite rounded",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-4",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
-        children: "Fecha de vigencia"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "grid place-content-end",
-        children: "Opciones"
+    className: "w-full px-2 sm:px-0",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab.Group, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab.List, {
+        className: "flex space-x-1 rounded-sm bg-dark p-1",
+        children: Object.keys(categories).map(function (category) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab, {
+            className: function className(_ref) {
+              var selected = _ref.selected;
+              return classNames('w-full rounded-sm py-2.5 text-sm font-bold leading-5 text-white', selected ? 'bg-lightwhite shadow' : 'text-blue-100 hover:bg-white/[0.12] hover:text-white');
+            },
+            children: category
+          }, category);
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab.Panels, {
+        className: "mt-2",
+        children: Object.values(categories).map(function (posts, idx) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab.Panel, {
+            className: "rounded-sm bg-darklight border border-lightwhite",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                className: "px-4 py-2 border-b border-lightwhite bg-dark grid grid-cols-4",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "grid place-content-start",
+                  children: "Fecha"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "grid place-content-start",
+                  children: "Empleado"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "grid place-content-start",
+                  children: "Empresa"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "grid place-content-end",
+                  children: "Opciones"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                posts: posts
+              })]
+            })
+          }, idx);
+        })
       })]
     })
   });
 }
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tabla);
 
 /***/ }),
 
@@ -63936,6 +64057,34 @@ function H(i){let u=(0,_internal_portal_force_root_js__WEBPACK_IMPORTED_MODULE_2
 
 /***/ }),
 
+/***/ "./node_modules/@headlessui/react/dist/components/tabs/tabs.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/tabs/tabs.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Tab": () => (/* binding */ we)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+/* harmony import */ var _hooks_use_id_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../hooks/use-id.js */ "./node_modules/@headlessui/react/dist/hooks/use-id.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/keyboard.js */ "./node_modules/@headlessui/react/dist/components/keyboard.js");
+/* harmony import */ var _utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/focus-management.js */ "./node_modules/@headlessui/react/dist/utils/focus-management.js");
+/* harmony import */ var _hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../hooks/use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/use-sync-refs.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js");
+/* harmony import */ var _hooks_use_resolve_button_type_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../hooks/use-resolve-button-type.js */ "./node_modules/@headlessui/react/dist/hooks/use-resolve-button-type.js");
+/* harmony import */ var _hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+/* harmony import */ var _internal_focus_sentinel_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../internal/focus-sentinel.js */ "./node_modules/@headlessui/react/dist/internal/focus-sentinel.js");
+/* harmony import */ var _hooks_use_event_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../hooks/use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+var re=(n=>(n[n.SetSelectedIndex=0]="SetSelectedIndex",n[n.RegisterTab=1]="RegisterTab",n[n.UnregisterTab=2]="UnregisterTab",n[n.RegisterPanel=3]="RegisterPanel",n[n.UnregisterPanel=4]="UnregisterPanel",n[n.ForceRerender=5]="ForceRerender",n))(re||{});let ne={[0](e,t){let r=e.tabs.filter(n=>{var l;return!((l=n.current)!=null&&l.hasAttribute("disabled"))});if(t.index<0)return{...e,selectedIndex:e.tabs.indexOf(r[0])};if(t.index>e.tabs.length)return{...e,selectedIndex:e.tabs.indexOf(r[r.length-1])};let s=e.tabs.slice(0,t.index),d=[...e.tabs.slice(t.index),...s].find(n=>r.includes(n));return d?{...e,selectedIndex:e.tabs.indexOf(d)}:e},[1](e,t){return e.tabs.includes(t.tab)?e:{...e,tabs:(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.sortByDomNode)([...e.tabs,t.tab],r=>r.current)}},[2](e,t){return{...e,tabs:(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.sortByDomNode)(e.tabs.filter(r=>r!==t.tab),r=>r.current)}},[3](e,t){return e.panels.includes(t.panel)?e:{...e,panels:[...e.panels,t.panel]}},[4](e,t){return{...e,panels:e.panels.filter(r=>r!==t.panel)}},[5](e){return{...e}}},N=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);N.displayName="TabsSSRContext";function B(e){let t=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(N);if(t===null){let r=new Error(`<${e} /> is missing a parent <Tab.Group /> component.`);throw Error.captureStackTrace&&Error.captureStackTrace(r,B),r}return t}let K=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);K.displayName="TabsDataContext";function C(e){let t=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(K);if(t===null){let r=new Error(`<${e} /> is missing a parent <Tab.Group /> component.`);throw Error.captureStackTrace&&Error.captureStackTrace(r,C),r}return t}let $=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);$.displayName="TabsActionsContext";function z(e){let t=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)($);if(t===null){let r=new Error(`<${e} /> is missing a parent <Tab.Group /> component.`);throw Error.captureStackTrace&&Error.captureStackTrace(r,z),r}return t}function ae(e,t){return (0,_utils_match_js__WEBPACK_IMPORTED_MODULE_2__.match)(t.type,ne,e,t)}let le=react__WEBPACK_IMPORTED_MODULE_0__.Fragment,oe=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.forwardRefWithAs)(function(t,r){let{defaultIndex:s=0,vertical:b=!1,manual:d=!1,onChange:n,selectedIndex:l=null,...P}=t;const u=b?"vertical":"horizontal",y=d?"manual":"auto";let c=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.useSyncRefs)(r),[p,o]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(ae,{selectedIndex:l!=null?l:s,tabs:[],panels:[]}),T=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({selectedIndex:p.selectedIndex}),[p.selectedIndex]),g=(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_5__.useLatestValue)(n||(()=>{})),L=(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_5__.useLatestValue)(p.tabs),x=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({orientation:u,activation:y,...p}),[u,y,p]),R=(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_5__.useLatestValue)(p.selectedIndex),h=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({registerTab(i){return o({type:1,tab:i}),()=>o({type:2,tab:i})},registerPanel(i){return o({type:3,panel:i}),()=>o({type:4,panel:i})},forceRerender(){o({type:5})},change(i){R.current!==i&&g.current(i),R.current=i,o({type:0,index:i})}}),[o]);(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_6__.useIsoMorphicEffect)(()=>{o({type:0,index:l!=null?l:s})},[l]);let H=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({tabs:[],panels:[]}),w={ref:c};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(N.Provider,{value:H},react__WEBPACK_IMPORTED_MODULE_0__.createElement($.Provider,{value:h},react__WEBPACK_IMPORTED_MODULE_0__.createElement(K.Provider,{value:x},x.tabs.length<=0&&react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_focus_sentinel_js__WEBPACK_IMPORTED_MODULE_7__.FocusSentinel,{onFocus:()=>{var i,I;for(let M of L.current)if(((i=M.current)==null?void 0:i.tabIndex)===0)return(I=M.current)==null||I.focus(),!0;return!1}}),(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.render)({ourProps:w,theirProps:P,slot:T,defaultTag:le,name:"Tabs"}))))}),se="div",ie=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.forwardRefWithAs)(function(t,r){let{orientation:s,selectedIndex:b}=C("Tab.List"),d=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.useSyncRefs)(r);return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.render)({ourProps:{ref:d,role:"tablist","aria-orientation":s},theirProps:t,slot:{selectedIndex:b},defaultTag:se,name:"Tabs.List"})}),ue="button",ce=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.forwardRefWithAs)(function(t,r){var I,M;let s=`headlessui-tabs-tab-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_8__.useId)()}`,{orientation:b,activation:d,selectedIndex:n,tabs:l,panels:P}=C("Tab"),u=z("Tab"),y=B("Tab"),c=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),p=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.useSyncRefs)(c,r,a=>{!a||u.forceRerender()});(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_6__.useIsoMorphicEffect)(()=>u.registerTab(c),[u,c]);let o=y.current.tabs.indexOf(s);o===-1&&(o=y.current.tabs.push(s)-1);let T=l.indexOf(c);T===-1&&(T=o);let g=T===n,L=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_9__.useEvent)(a=>{let A=l.map(X=>X.current).filter(Boolean);if(a.key===_components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.Space||a.key===_components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.Enter){a.preventDefault(),a.stopPropagation(),u.change(T);return}switch(a.key){case _components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.Home:case _components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.PageUp:return a.preventDefault(),a.stopPropagation(),(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.focusIn)(A,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.First);case _components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.End:case _components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.PageDown:return a.preventDefault(),a.stopPropagation(),(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.focusIn)(A,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.Last)}return (0,_utils_match_js__WEBPACK_IMPORTED_MODULE_2__.match)(b,{vertical(){if(a.key===_components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.ArrowUp)return (0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.focusIn)(A,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.Previous|_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.WrapAround);if(a.key===_components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.ArrowDown)return (0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.focusIn)(A,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.Next|_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.WrapAround)},horizontal(){if(a.key===_components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.ArrowLeft)return (0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.focusIn)(A,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.Previous|_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.WrapAround);if(a.key===_components_keyboard_js__WEBPACK_IMPORTED_MODULE_10__.Keys.ArrowRight)return (0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.focusIn)(A,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.Next|_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.Focus.WrapAround)}})}),x=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_9__.useEvent)(()=>{var a;(a=c.current)==null||a.focus()}),R=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_9__.useEvent)(()=>{var a;(a=c.current)==null||a.focus(),u.change(T)}),h=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_9__.useEvent)(a=>{a.preventDefault()}),H=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({selected:g}),[g]),w=t,i={ref:p,onKeyDown:L,onFocus:d==="manual"?x:R,onMouseDown:h,onClick:R,id:s,role:"tab",type:(0,_hooks_use_resolve_button_type_js__WEBPACK_IMPORTED_MODULE_11__.useResolveButtonType)(t,c),"aria-controls":(M=(I=P[T])==null?void 0:I.current)==null?void 0:M.id,"aria-selected":g,tabIndex:g?0:-1};return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.render)({ourProps:i,theirProps:w,slot:H,defaultTag:ue,name:"Tabs.Tab"})}),pe="div",de=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.forwardRefWithAs)(function(t,r){let{selectedIndex:s}=C("Tab.Panels"),b=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.useSyncRefs)(r),d=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({selectedIndex:s}),[s]);return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.render)({ourProps:{ref:b},theirProps:t,slot:d,defaultTag:pe,name:"Tabs.Panels"})}),be="div",Te=_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.Features.RenderStrategy|_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.Features.Static,fe=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.forwardRefWithAs)(function(t,r){var x,R;let{selectedIndex:s,tabs:b,panels:d}=C("Tab.Panel"),n=z("Tab.Panel"),l=B("Tab.Panel"),P=`headlessui-tabs-panel-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_8__.useId)()}`,u=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),y=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.useSyncRefs)(u,r,h=>{!h||n.forceRerender()});(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_6__.useIsoMorphicEffect)(()=>n.registerPanel(u),[n,u]);let c=l.current.panels.indexOf(P);c===-1&&(c=l.current.panels.push(P)-1);let p=d.indexOf(u);p===-1&&(p=c);let o=p===s,T=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({selected:o}),[o]),g=t,L={ref:y,id:P,role:"tabpanel","aria-labelledby":(R=(x=b[p])==null?void 0:x.current)==null?void 0:R.id,tabIndex:o?0:-1};return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.render)({ourProps:L,theirProps:g,slot:T,defaultTag:be,features:Te,visible:o,name:"Tabs.Panel"})}),we=Object.assign(ce,{Group:oe,List:ie,Panels:de,Panel:fe});
+
+
+/***/ }),
+
 /***/ "./node_modules/@headlessui/react/dist/components/transitions/transition.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/@headlessui/react/dist/components/transitions/transition.js ***!
@@ -64316,6 +64465,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
 function s(e,r,n){let o=(0,_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(r);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{function t(i){o.current(i)}return window.addEventListener(e,t,n),()=>window.removeEventListener(e,t,n)},[e,n])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/internal/focus-sentinel.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/internal/focus-sentinel.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "FocusSentinel": () => (/* binding */ p)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _hidden_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hidden.js */ "./node_modules/@headlessui/react/dist/internal/hidden.js");
+function p({onFocus:n}){let[r,o]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(!0);return r?react__WEBPACK_IMPORTED_MODULE_0__.createElement(_hidden_js__WEBPACK_IMPORTED_MODULE_1__.Hidden,{as:"button",type:"button",features:_hidden_js__WEBPACK_IMPORTED_MODULE_1__.Features.Focusable,onFocus:a=>{a.preventDefault();let e,u=50;function t(){if(u--<=0){e&&cancelAnimationFrame(e);return}if(n()){o(!1),cancelAnimationFrame(e);return}e=requestAnimationFrame(t)}e=requestAnimationFrame(t)}}):null}
 
 
 /***/ }),
