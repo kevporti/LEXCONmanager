@@ -6583,7 +6583,7 @@ function Filtros() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
         className: "bg-dark p-2",
         type: "text",
-        placeholder: "Buscar escala salarial"
+        placeholder: "Buscar deuda"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
         className: "material-symbols-outlined p-2 rounded-r bg-dark cursor-pointer",
         children: "search"
@@ -6592,7 +6592,7 @@ function Filtros() {
       className: "flex items-center justify-center px-4 py-2 cursor-pointer border rounded-sm border-green-800 hover:bg-green-800 transition-colors duration-300",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
         className: "mr-2",
-        children: "Agregar Deuda"
+        children: "Liquidar Deuda"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
         className: "material-symbols-outlined",
         children: "add"
@@ -6827,7 +6827,7 @@ function Filtros() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
         className: "bg-dark p-2",
         type: "text",
-        placeholder: "Buscar escala salarial"
+        placeholder: "Buscar sueldo"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
         className: "material-symbols-outlined p-2 rounded-r bg-dark cursor-pointer",
         children: "search"
@@ -6836,7 +6836,7 @@ function Filtros() {
       className: "flex items-center justify-center px-4 py-2 cursor-pointer border rounded-sm border-green-800 hover:bg-green-800 transition-colors duration-300",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
         className: "mr-2",
-        children: "Agregar Sueldo"
+        children: "Liquidar Sueldo"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
         className: "material-symbols-outlined",
         children: "add"
