@@ -683,6 +683,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .grid-cols-9 {
   grid-template-columns: repeat(9, minmax(0, 1fr));
 }
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
 .place-content-start {
   place-content: start;
 }
