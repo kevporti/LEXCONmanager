@@ -12,11 +12,12 @@ function Aside() {
         { title: "Escala Salarial", src: "monitoring", gap: true, link: "/usuario/escala_salarial" },
         { title: "Liquidación de Sueldo", src: "request_quote", gap: true, link: "/usuario/liquidacion_sueldos"},
         { title: "Liquidación de Deuda", src: "description", link: "/usuario/liquidacion_deudas" },
-        { title: "Cuenta", src: "account_circle", gap: true, link: "/usuario/perfil" },
+        { title: "Actividades", src: "apps", gap: true, link: "/usuario/actividades" },
+        { title: "Cuenta", src: "account_circle", link: "/usuario/perfil" },
     ];
-    // const location = useLocation();
-    // React.useEffect(() => {
-    //     }, [location]);
+    const location = useLocation();
+    React.useEffect(() => {
+        }, [location]);
 
     let gap = `flex p-2 items-center gap-x-4 cursor-pointer rounded-md mt-9 hover:bg-lightwhite`;
     let noGap = `flex p-2 items-center gap-x-4 cursor-pointer rounded-md mt-2 hover:bg-lightwhite`;
@@ -51,7 +52,7 @@ function Aside() {
                         to={menu.link}
                         key={index} 
                         >
-                            <div className={menu.gap ? gap : noGap}>
+                            <div className={`${menu.gap ? gap : noGap} ${(location.pathname == menu.link) ? "bg-lightwhite" : undefined}`}>
                                 <i 
                                     className="material-symbols-outlined"
                                 >
