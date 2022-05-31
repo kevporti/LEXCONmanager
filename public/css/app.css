@@ -722,6 +722,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .place-content-between {
   place-content: space-between;
 }
+.place-items-center {
+  place-items: center;
+}
 .content-start {
   align-content: flex-start;
 }
@@ -751,6 +754,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.place-self-center {
+  place-self: center;
 }
 .overflow-auto {
   overflow: auto;

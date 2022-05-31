@@ -6435,10 +6435,10 @@ function Tabla() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Empresas/FilaTabla.jsx":
-/*!********************************************************!*\
-  !*** ./resources/js/components/Empresas/FilaTabla.jsx ***!
-  \********************************************************/
+/***/ "./resources/js/components/Empresas/DatosEscala.jsx":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/Empresas/DatosEscala.jsx ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6454,83 +6454,284 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function DatosEscala(id) {
+  var Datos = [{
+    id: "10",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "9",
+    tel_contacto: '+54 9 341 3349587',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "8",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "7",
+    tel_contacto: '+54 9 341 4456789',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "6",
+    tel_contacto: '+54 9 341 5678495',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "5",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "4",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "3",
+    tel_contacto: '+54 9 341 2264895',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "2",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "1",
+    tel_contacto: '+54 9 341 6657489',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    domicilio: "Ituzaingo 1963",
+    postal_code: "2000",
+    localidad: "Rosario",
+    prov: "Santa Fe",
+    razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: Datos.filter(function (dato) {
+      return dato.id == id.id;
+    }).map(function (dato) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "grid grid-cols-1 gap-y-2 p-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-3 border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: ["Domicilio:  ", dato.domicilio]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: ["Cod. Postal:  ", dato.postal_code]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: ["Localidad y provincia:  ", dato.localidad, ", ", dato.prov, "."]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "white-space-pre-line border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            className: "font-medium mb-1",
+            children: "Raz\xF3n Social:"
+          }), " ", dato.razon_social]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-3 pt-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["Tel\xE9fono:  ", dato.tel_contacto]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["Editado:  ", dato.firma_usuario, ", ", dato.edited_time, "."]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "grid place-content-end",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+              className: "flex items-center justify-center py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
+              children: ["Editar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                className: "material-symbols-outlined ml-2 cursor-pointer",
+                children: "edit"
+              })]
+            })
+          })]
+        })]
+      }, dato.id);
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DatosEscala);
+
+/***/ }),
+
+/***/ "./resources/js/components/Empresas/FilaTabla.jsx":
+/*!********************************************************!*\
+  !*** ./resources/js/components/Empresas/FilaTabla.jsx ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js");
+/* harmony import */ var _DatosEscala__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DatosEscala */ "./resources/js/components/Empresas/DatosEscala.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
 function FilaTabla() {
   var Empresas = [{
+    id: "10",
     name: 'Caminos',
     cuit: '20439831880',
     contact: 'Pablo Argento',
     country: "Canada"
   }, {
+    id: "9",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
     country: "Uruguay"
   }, {
+    id: "8",
     name: 'Apple',
     cuit: '20439831880',
     contact: 'Mark Zuckerberg',
     country: "Italia"
   }, {
+    id: "7",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
     country: "Uruguay"
   }, {
+    id: "6",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
     country: "Uruguay"
   }, {
+    id: "5",
     name: 'Coca-Cola',
     cuit: '20439831880',
     contact: 'Claudio Raimundez',
-    country: "Expaña"
+    country: "España"
   }, {
+    id: "4",
     name: 'NASA',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
     country: "Uruguay"
   }, {
+    id: "3",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
     country: "Argentina"
   }, {
+    id: "2",
     name: 'Galaxy',
     cuit: '20439831880',
     contact: 'Coldplay',
     country: "Uruguay"
   }, {
+    id: "1",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Agustin',
     country: "España"
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "h-80 overflow-auto scrollbar",
-    children: Empresas.map(function (empresa, index) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "grid grid-cols-12 px-4 border-b border-lightwhite p-2",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-3",
-          children: empresa.cuit
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-3",
-          children: empresa.name
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-3",
-          children: empresa.contact
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid place-content-end col-span-2",
-          children: empresa.country
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid place-content-end",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-            className: "material-symbols-outlined cursor-pointer",
-            children: "expand_more"
-          })
-        })]
-      }, index);
+    children: Empresas.map(function (empresa) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure, {
+        as: "div",
+        className: "",
+        children: function children(_ref) {
+          var open = _ref.open;
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Button, {
+              as: "div",
+              className: "grid grid-cols-12 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 \n                                ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "col-span-3",
+                children: empresa.cuit
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "col-span-3",
+                children: empresa.name
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "col-span-3",
+                children: empresa.contact
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "grid col-span-2 place-content-end",
+                children: empresa.country
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "grid place-content-end",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+                  className: "material-symbols-outlined grid place-content-end ".concat(open ? 'rotate-180 transform' : '', " h-5 w-5"),
+                  children: "expand_more"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Panel, {
+              className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_DatosEscala__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                id: empresa.id
+              })
+            })]
+          });
+        }
+      }, empresa.id);
     })
   });
 }
