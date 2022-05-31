@@ -7249,7 +7249,7 @@ function FilaTabla() {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Button, {
                 as: "div",
-                className: "flex justify-between items-center p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? 'bg-green-900 rounded-t' : ''),
+                className: "flex justify-between items-center p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                   className: "font-medium",
                   children: mora.date

@@ -23,7 +23,7 @@ function FilaTabla() {
             {({ open }) => (
                 <>
                     <Disclosure.Button as="div" className={`flex justify-between items-center p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ${
-                        open ? 'bg-green-900 rounded-t' : ''
+                        open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'
                     }`}>
                         <span className="font-medium">{mora.date}</span>
                         <i
