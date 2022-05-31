@@ -5416,6 +5416,365 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/Actividades/DatosEscala.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/Actividades/DatosEscala.jsx ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function DatosEscala(id) {
+  var Datos = [{
+    id: "10",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "9",
+    tel_contacto: '+54 9 341 3349587',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "8",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "7",
+    tel_contacto: '+54 9 341 4456789',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "6",
+    tel_contacto: '+54 9 341 5678495',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "5",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "4",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "3",
+    tel_contacto: '+54 9 341 2264895',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "2",
+    tel_contacto: '+54 9 341 3349561',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }, {
+    id: "1",
+    tel_contacto: '+54 9 341 6657489',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    deuda: "50000",
+    date: "Agosto 2022",
+    forma: "12 cuotas sin interes",
+    email: "challengerenlol@gmail.com",
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: Datos.filter(function (dato) {
+      return dato.id == id.id;
+    }).map(function (dato) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "grid grid-cols-1 gap-y-2 p-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-3 border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: ["Tel\xE9fono:  ", dato.tel_contacto]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: ["Email:  ", dato.email]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: ["Editado:  ", dato.firma_usuario, ", ", dato.edited_time, "."]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "white-space-pre-line border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            className: "font-medium mb-1",
+            children: "Observaciones:"
+          }), " ", dato.obs]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-3 pt-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["Deuda pactada:  $", dato.deuda]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["Fecha de pago:  ", dato.date]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["Forma de pago:  ", dato.forma]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid grid-cols-12 mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+            className: "flex items-center justify-center py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
+            children: ["Editar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+              className: "material-symbols-outlined ml-2 cursor-pointer",
+              children: "edit"
+            })]
+          })
+        })]
+      }, dato.id);
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DatosEscala);
+
+/***/ }),
+
+/***/ "./resources/js/components/Actividades/FilaTabla.jsx":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/Actividades/FilaTabla.jsx ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js");
+/* harmony import */ var _DatosEscala__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DatosEscala */ "./resources/js/components/Actividades/DatosEscala.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+function FilaTabla() {
+  var Actividades = [{
+    id: "10",
+    name: 'Samsung',
+    state: 'Intimado',
+    contact: 'Agustin',
+    date: "15 Abril 2022"
+  }, {
+    id: "9",
+    name: 'Galaxy',
+    state: '',
+    contact: 'Coldplay',
+    date: "8 Marzo 2022"
+  }, {
+    id: "8",
+    name: 'Samsung',
+    state: 'Intimado',
+    contact: 'Notengoni Idea',
+    date: "18 Abril 2022"
+  }, {
+    id: "7",
+    name: 'NASA',
+    state: 'Intimado',
+    contact: 'Notengoni Idea',
+    date: "8 Marzo 2022"
+  }, {
+    id: "6",
+    name: 'Coca-Cola',
+    state: '',
+    contact: 'Claudio Raimundez',
+    date: "15 Abril 2022"
+  }, {
+    id: "5",
+    name: 'Samsung',
+    state: 'Intimado',
+    contact: 'Notengoni Idea',
+    date: "8 Marzo 2022"
+  }, {
+    id: "4",
+    name: 'Samsung',
+    state: '',
+    contact: 'Notengoni Idea',
+    date: "8 Marzo 2022"
+  }, {
+    id: "3",
+    name: 'Apple',
+    state: 'Intimado',
+    contact: 'Mark Zuckerberg',
+    date: "24 Abril 2022"
+  }, {
+    id: "2",
+    name: 'Samsung',
+    state: '',
+    contact: 'Notengoni Idea',
+    date: "8 Marzo 2022"
+  }, {
+    id: "1",
+    name: 'Caminos',
+    state: 'Intimado',
+    contact: 'Pablo Argento',
+    date: "9 Marzo 2022"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    className: "h-80 overflow-auto scrollbar",
+    children: Actividades.map(function (actividad) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure, {
+        as: "div",
+        className: "",
+        children: function children(_ref) {
+          var open = _ref.open;
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Button, {
+              as: "div",
+              className: "grid grid-cols-11 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "grid place-content-start col-span-3",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                  className: "",
+                  children: actividad.name
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "grid place-content-start col-span-3",
+                children: actividad.contact
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "grid place-content-start col-span-3",
+                children: actividad.state
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "grid place-content-end",
+                children: actividad.date
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "grid place-content-end",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+                  className: "material-symbols-outlined grid place-content-end ".concat(open ? 'rotate-180 transform' : '', " h-5 w-5"),
+                  children: "expand_more"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Panel, {
+              className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_DatosEscala__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                id: actividad.id
+              })
+            })]
+          });
+        }
+      }, actividad.id);
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FilaTabla);
+
+/***/ }),
+
+/***/ "./resources/js/components/Actividades/Filtros.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/Actividades/Filtros.jsx ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function Filtros() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "flex w-full justify-between my-8",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "flex items-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+        className: "bg-dark p-2",
+        type: "text",
+        placeholder: "Buscar por empresa"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+        className: "material-symbols-outlined p-2 rounded-r bg-dark cursor-pointer",
+        children: "search"
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "flex items-center justify-center px-4 py-2 cursor-pointer border rounded-sm border-green-800 hover:bg-green-800 transition-colors duration-300",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+        className: "mr-2",
+        children: "Agregar Actividad"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+        className: "material-symbols-outlined",
+        children: "add"
+      })]
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Filtros);
+
+/***/ }),
+
 /***/ "./resources/js/components/Actividades/Home.jsx":
 /*!******************************************************!*\
   !*** ./resources/js/components/Actividades/Home.jsx ***!
@@ -5430,20 +5789,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Navigation/NavSession */ "./resources/js/components/Navigation/NavSession.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Filtros__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Filtros */ "./resources/js/components/Actividades/Filtros.jsx");
+/* harmony import */ var _Tabla__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Tabla */ "./resources/js/components/Actividades/Tabla.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
 
 
 
 
 
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "p-8 bg-darklight h-full w-full px-20",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Filtros__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Tabla__WEBPACK_IMPORTED_MODULE_4__["default"], {})]
   });
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
+
+/***/ }),
+
+/***/ "./resources/js/components/Actividades/Tabla.jsx":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/Actividades/Tabla.jsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _FilaTabla__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FilaTabla */ "./resources/js/components/Actividades/FilaTabla.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+function Tabla() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    className: "w-full border border-lightwhite rounded",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-11",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-start col-span-3",
+        children: "Empresa"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-start col-span-3",
+        children: "Contacto"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-start col-span-3",
+        children: "Estado"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-end mr-4",
+        children: "Fecha"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-end",
+        children: "Opciones"
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tabla);
 
 /***/ }),
 
@@ -6541,7 +6955,7 @@ function DatosEscala(index) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     children: Datos.map(function (dato) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "grid grid-cols-3 gap-y-2 p-4 border-b border-lightwhite whitespace-pre",
+        className: "grid grid-cols-3 gap-y-2 p-4 border-b border-lightwhite whitespace-pre-line",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           children: ["Rama/Categor\xEDa:  ", dato.rama]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -6558,7 +6972,7 @@ function DatosEscala(index) {
           className: "grid place-content-start pt-4",
           children: ["Creado por:  ", dato.firma_usuario]
         })]
-      });
+      }, dato.id);
     })
   });
 }
@@ -7998,11 +8412,11 @@ function NavSession() {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       children: Titulos.filter(function (titulo) {
         return titulo.link == location.pathname ? titulo.title : undefined;
-      }).map(function (filteredTitles) {
+      }).map(function (filteredTitles, index) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("h1", {
           className: "text-2xl",
           children: ["Secci\xF3n ", filteredTitles.title]
-        });
+        }, index);
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Dropdown_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });

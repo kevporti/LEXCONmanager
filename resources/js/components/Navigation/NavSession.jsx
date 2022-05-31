@@ -23,8 +23,8 @@ function NavSession() {
     return (
         <div className="flex w-full justify-between items-center pb-8 border-b border-lightwhite">
             <div>
-                {Titulos.filter(titulo => ((titulo.link == location.pathname) ? titulo.title : undefined)).map((filteredTitles) => (
-                        <h1 className="text-2xl">
+                {Titulos.filter(titulo => ((titulo.link == location.pathname) ? titulo.title : undefined)).map((filteredTitles, index) => (
+                        <h1 className="text-2xl" key={index}>
                             Sección {filteredTitles.title}
                         </h1>
                     ))}

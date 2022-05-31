@@ -15,7 +15,7 @@ function DatosEscala(index) {
     return(
         <div>
             {Datos.map((dato) => (
-                <div className="grid grid-cols-3 gap-y-2 p-4 border-b border-lightwhite whitespace-pre">
+                <div key={dato.id} className="grid grid-cols-3 gap-y-2 p-4 border-b border-lightwhite whitespace-pre-line">
                     <div>
                         Rama/Categoría:  {dato.rama}
                     </div>
