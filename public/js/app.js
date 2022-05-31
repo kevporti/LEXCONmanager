@@ -7652,6 +7652,219 @@ function Example() {
 
 /***/ }),
 
+/***/ "./resources/js/components/LiqSueldos/DatosEscala.jsx":
+/*!************************************************************!*\
+  !*** ./resources/js/components/LiqSueldos/DatosEscala.jsx ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function DatosEscala(id) {
+  var Datos = [{
+    id: "10",
+    sueldo_basico: 0,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 12000,
+    simple_presencia: 5240
+  }, {
+    id: "9",
+    sueldo_basico: 50000,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 0,
+    simple_presencia: 5240
+  }, {
+    id: "8",
+    sueldo_basico: 0,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 12000,
+    simple_presencia: 5240
+  }, {
+    id: "7",
+    sueldo_basico: 50000,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 12000,
+    simple_presencia: 5240
+  }, {
+    id: "6",
+    sueldo_basico: 50000,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 0,
+    simple_presencia: 5240
+  }, {
+    id: "5",
+    sueldo_basico: 50000,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 0,
+    simple_presencia: 5240
+  }, {
+    id: "4",
+    sueldo_basico: 0,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 12000,
+    simple_presencia: 5240
+  }, {
+    id: "3",
+    sueldo_basico: 50000,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 0,
+    simple_presencia: 5240
+  }, {
+    id: "2",
+    sueldo_basico: 0,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 12000,
+    simple_presencia: 5240
+  }, {
+    id: "1",
+    sueldo_basico: 50000,
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    adicional_rama: 7750,
+    antiguo: 2,
+    extra50: 8450,
+    extra100: 14250,
+    carga_descarga: 12000,
+    simple_presencia: 5240
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: Datos.filter(function (dato) {
+      return dato.id == id.id;
+    }).map(function (dato) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "grid grid-cols-1 gap-y-2 p-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "Sueldo b\xE1sico:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["$", dato.sueldo_basico]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "Adicional por rama:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["$", dato.adicional_rama]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "Horas extra al 50%:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["$", dato.extra50]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "Horas extra al 100%:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["$", dato.extra100]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "Carga y Descarga:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["$", dato.carga_descarga]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "Simple Presencia:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["$", dato.simple_presencia]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "A\xF1os de Antig\xFCedad:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["$", dato.antiguo]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "Extra por antig\xFCedad:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["$", dato.sueldo_basico * dato.antiguo / 100, " (", dato.antiguo, "%)"]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "grid col-start-3",
+            children: "Total Remunerativo:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["$", dato.sueldo_basico + dato.adicional_rama + dato.extra50 + dato.extra100 + dato.carga_descarga + dato.simple_presencia + dato.sueldo_basico * dato.antiguo / 100]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-2 mt-2",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: ["Creado:  ", dato.firma_usuario, ", ", dato.edited_time, "."]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "grid place-content-end",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+              className: "flex items-center justify-center py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
+              children: ["Descargar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                className: "material-symbols-outlined ml-2 cursor-pointer",
+                children: "download"
+              })]
+            })
+          })]
+        })]
+      }, dato.id);
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DatosEscala);
+
+/***/ }),
+
 /***/ "./resources/js/components/LiqSueldos/FilaTabla.jsx":
 /*!**********************************************************!*\
   !*** ./resources/js/components/LiqSueldos/FilaTabla.jsx ***!
@@ -7664,10 +7877,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js");
+/* harmony import */ var _DatosEscala__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatosEscala */ "./resources/js/components/LiqSueldos/DatosEscala.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
- // import DatosEscala from './DatosEscala';
+
 
 
 
@@ -7677,87 +7891,99 @@ function FilaTabla() {
   var Sueldos = [{
     id: "10",
     name: "Josesito",
+    reajuste: "Si",
     company: "Samsung",
     date: "04/22"
   }, {
     id: "9",
     name: "Josesito",
+    reajuste: "No",
     company: "Samsung",
     date: "01/22"
   }, {
     id: "8",
     name: "Josesito",
+    reajuste: "Si",
     company: "Samsung",
     date: "10/21"
   }, {
     id: "7",
     name: "Josesito",
+    reajuste: "No",
     company: "Samsung",
     date: "07/21"
   }, {
     id: "6",
     name: "Josesito",
+    reajuste: "No",
     company: "Samsung",
     date: "04/21"
   }, {
     id: "5",
     name: "Josesito",
+    reajuste: "No",
     company: "Samsung",
     date: "01/21"
   }, {
     id: "4",
     name: "Josesito",
+    reajuste: "Si",
     company: "Samsung",
     date: "10/20"
   }, {
     id: "3",
     name: "Josesito",
+    reajuste: "No",
     company: "Samsung",
     date: "07/20"
   }, {
     id: "2",
     name: "Josesito",
+    reajuste: "Si",
     company: "Samsung",
     date: "04/20"
   }, {
     id: "1",
     name: "Josesito",
+    reajuste: "No",
     company: "Samsung",
     date: "01/20"
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "h-80 overflow-auto scrollbar",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "",
       children: Sueldos.map(function (sueldo) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Disclosure, {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure, {
           as: "div",
           className: "",
           children: function children(_ref) {
             var open = _ref.open;
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Disclosure.Button, {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Button, {
                 as: "div",
-                className: "grid grid-cols-4 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? 'bg-green-900 rounded-t' : ''),
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                    className: "",
-                    children: sueldo.date
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                  children: sueldo.name
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                className: "grid grid-cols-5 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                   children: sueldo.company
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  children: sueldo.name
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  children: sueldo.reajuste
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                   className: "grid place-content-end",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                  children: sueldo.date
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "grid place-content-end",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                     className: "material-symbols-outlined grid place-content-end ".concat(open ? 'rotate-180 transform' : '', " h-5 w-5"),
                     children: "expand_more"
                   })
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Disclosure.Panel, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Panel, {
                 className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
-                children: "hola"
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_DatosEscala__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                  id: sueldo.id
+                })
               })]
             });
           }
@@ -7881,16 +8107,19 @@ function Tabla() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "w-full border border-lightwhite rounded",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-4",
+      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-5",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start",
-        children: "Fecha"
+        children: "Empresa"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start",
         children: "Empleado"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start",
-        children: "Empresa"
+        children: "Reajuste"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-end",
+        children: "Fecha"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-end",
         children: "Opciones"

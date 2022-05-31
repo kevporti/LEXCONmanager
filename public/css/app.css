@@ -737,6 +737,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .justify-between {
   justify-content: space-between;
 }
+.justify-evenly {
+  justify-content: space-evenly;
+}
 .gap-4 {
   gap: 1rem;
 }

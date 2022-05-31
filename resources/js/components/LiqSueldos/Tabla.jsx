@@ -6,15 +6,18 @@ function Tabla() {
 
     return (
         <div className="w-full border border-lightwhite rounded">
-            <div className="px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-4">
+            <div className="px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-5">
                 <div className="grid place-content-start">
-                    Fecha
+                    Empresa
                 </div>
                 <div className="grid place-content-start">
                     Empleado
                 </div>
                 <div className="grid place-content-start">
-                    Empresa
+                    Reajuste
+                </div>
+                <div className="grid place-content-end">
+                    Fecha
                 </div>
                 <div className="grid place-content-end">
                     Opciones
