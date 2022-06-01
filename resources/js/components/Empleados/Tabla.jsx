@@ -8,23 +8,20 @@ function Tabla() {
         <div>
             <div className="w-full border border-lightwhite rounded">
                 <div className="px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-11">
-                    <div className="grid place-content-start col-span-2">
-                        DNI
+                    <div className="grid place-content-start col-span-3">
+                        Empresa
                     </div>
                     <div className="grid place-content-start col-span-3">
                         Nombre Empleado
                     </div>
-                    <div className="grid place-content-start col-span-1">
-                        Empresa
+                    <div className="grid place-content-start col-span-2">
+                        DNI
                     </div>
-                    <div className="grid place-content-end col-span-2">
-                        Moras Vigentes
-                    </div>
-                    <div className="grid place-content-end col-span-2">
-                        Estado
+                    <div className="grid col-span-2">
+                        Teléfono
                     </div>
                     <div className="grid place-content-end col-span-1">
-                        Eliminar
+                        Opciones
                     </div>
                 </div>
                 <FilaTabla />

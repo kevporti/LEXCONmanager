@@ -18,8 +18,3 @@ function Filtros() {
 }
 
 export default Filtros;
-
-{/* <h1 className="mr-2">
-                    Agregar Escala
-                </h1>
-                <i className="material-symbols-outlined">add</i> */}

@@ -8,7 +8,7 @@ function Aside() {
     const Menus = [
         { title: "Empresas", src: "business_center", link: "/usuario/empresas" },
         { title: "Empleados", src: "person", link: "/usuario/empleados" },
-        { title: "Moras", src: "gbadge", link: "/usuario/moras" },
+        { title: "Moras", src: "badge", link: "/usuario/moras" },
         { title: "Escala Salarial", src: "monitoring", gap: true, link: "/usuario/escala_salarial" },
         { title: "Liquidación de Sueldo", src: "request_quote", gap: true, link: "/usuario/liquidacion_sueldos"},
         { title: "Liquidación de Deuda", src: "description", link: "/usuario/liquidacion_deudas" },

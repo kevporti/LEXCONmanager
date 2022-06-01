@@ -17,25 +17,46 @@ function DatosEscala(index) {
             {Datos.map((dato) => (
                 <div key={dato.id} className="grid grid-cols-3 gap-y-2 p-4 border-b border-lightwhite whitespace-pre-line">
                     <div>
-                        Rama/Categoría:  {dato.rama}
+                        <div className="flex">
+                            <p>Sueldo Básico:</p>
+                            <p className="ml-2 font-light">${dato.basico}</p>
+                        </div>
                     </div>
                     <div>
-                        Simple Presencia:  ${dato.presencia}
+                        <div className="flex">
+                            <p>Hs Extra 50%:</p>
+                            <p className="ml-2 font-light">${dato.extra50}</p>
+                        </div>
                     </div>
                     <div>
-                        Permanencia fuera Residencia:  ${dato.resid}
+                        <div className="flex">
+                            <p>Hs Extra 100%:</p>
+                            <p className="ml-2 font-light">${dato.extra100}</p>
+                        </div>
                     </div>
                     <div>
-                        Sueldo Básico:  ${dato.basico}
+                        <div className="flex">
+                            <p>Rama/Categoría:</p>
+                            <p className="ml-2 font-light">{dato.rama}</p>
+                        </div>
                     </div>
                     <div>
-                        Hs Extra 50%:  ${dato.extra50}
+                        <div className="flex">
+                            <p>Simple Presencia:</p>
+                            <p className="ml-2 font-light">${dato.presencia}</p>
+                        </div>
                     </div>
                     <div>
-                        Hs Extra 100%:  ${dato.extra100}
+                        <div className="flex">
+                            <p>Permanencia fuera Residencia:</p>
+                            <p className="ml-2 font-light">${dato.resid}</p>
+                        </div>
                     </div>
                     <div className="grid place-content-start pt-4">
-                        Creado por:  {dato.firma_usuario}
+                        <div className="flex">
+                            <p>Creado por:</p>
+                            <p className="ml-2 font-light">{dato.firma_usuario}</p>
+                        </div>
                     </div>
                 </div>
             ))}

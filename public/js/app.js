@@ -6138,10 +6138,10 @@ function Home() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Empleados/FilaTabla.jsx":
-/*!*********************************************************!*\
-  !*** ./resources/js/components/Empleados/FilaTabla.jsx ***!
-  \*********************************************************/
+/***/ "./resources/js/components/Empleados/DatosEmpleado.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/Empleados/DatosEmpleado.jsx ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6157,136 +6157,308 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function DatosEmpleado(id) {
+  var Datos = [{
+    id: "10",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "Nulo",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }, {
+    id: "9",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "24/05/2020",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }, {
+    id: "8",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "Nulo",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }, {
+    id: "7",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "24/05/2020",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }, {
+    id: "6",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "24/05/2020",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }, {
+    id: "5",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "Nulo",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }, {
+    id: "4",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "24/05/2020",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }, {
+    id: "3",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "Nulo",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }, {
+    id: "2",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "Nulo",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }, {
+    id: "1",
+    categoria: 'Conductor 1ra',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha_alta: "14/10/2005",
+    fecha_baja: "24/05/2020",
+    motivo_reclamo: "Acá va a ir el motivo del reclamo del empleado por la mora, y este texto podría ser muy corto como también largo, estoy escribiendo esto largo para poder ver cómo encaja el contenido dentro de la tabla."
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: Datos.filter(function (dato) {
+      return dato.id == id.id;
+    }).map(function (dato) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "grid grid-cols-1 gap-y-2 p-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-3 border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Fecha de Alta:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "font-light",
+              children: dato.fecha_alta
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Fecha de Baja:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "font-light",
+              children: dato.fecha_baja
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Rama/Categor\xEDa:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "font-light",
+              children: dato.categoria
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "white-space-pre-line border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            className: "mb-1",
+            children: "Motivo Reclamo:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            className: "font-light",
+            children: dato.motivo_reclamo
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-3 pt-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Editado:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "font-light ml-2",
+              children: [dato.firma_usuario, ", ", dato.edited_time, "."]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "grid col-start-3 grid-cols-4",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "grid col-start-2",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-red-900 transition-colors duration-300",
+                children: ["Eliminar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "material-symbols-outlined ml-2 cursor-pointer",
+                  children: "delete"
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "grid col-start-4",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
+                children: ["Editar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "material-symbols-outlined ml-2 cursor-pointer",
+                  children: "edit"
+                })]
+              })
+            })]
+          })]
+        })]
+      }, dato.id);
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DatosEmpleado);
+
+/***/ }),
+
+/***/ "./resources/js/components/Empleados/FilaTabla.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/Empleados/FilaTabla.jsx ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js");
+/* harmony import */ var _DatosEmpleado__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DatosEmpleado */ "./resources/js/components/Empleados/DatosEmpleado.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
 function FilaTabla() {
   var Empleados = [{
-    company: 'Caminos',
-    dni: '43983188',
-    name: 'Pablo Argento',
-    state: "Inactivo",
-    moras: '16'
-  }, {
-    company: 'Samsung',
-    dni: '43983188',
-    name: 'Notengoni Idea',
-    state: "Activo",
-    moras: '8'
-  }, {
-    company: 'Apple',
-    dni: '43983188',
-    name: 'Mark Zuckerberg',
-    state: "Inactivo",
-    moras: '24'
-  }, {
-    company: 'Samsung',
-    dni: '43983188',
-    name: 'Notengoni Idea',
-    state: "Activo",
-    moras: '2'
-  }, {
-    company: 'Samsung',
-    dni: '43983188',
-    name: 'Notengoni Idea',
-    state: "Activo",
-    moras: '26'
-  }, {
+    id: 10,
     company: 'Coca-Cola',
     dni: '43983188',
     name: 'Claudio Raimundez',
-    state: "Inactivo",
+    tel: "+54 9 341 3349561",
     moras: '1'
   }, {
+    id: 9,
     company: 'NASA',
     dni: '43983188',
     name: 'Notengoni Idea',
-    state: "Activo",
+    tel: "+54 9 341 3349561",
     moras: '15'
   }, {
+    id: 8,
     company: 'Samsung',
     dni: '43983188',
     name: 'Notengoni Idea',
-    state: "Inactivo",
+    tel: "+54 9 341 3349561",
     moras: '22'
   }, {
+    id: 7,
     company: 'Galaxy',
     dni: '43983188',
     name: 'Coldplay',
-    state: "Activo",
+    tel: "+54 9 341 3349561",
     moras: '2'
   }, {
+    id: 6,
     company: 'Samsung',
     dni: '43983188',
     name: 'Agustin',
-    state: "Inactivo",
+    tel: "+54 9 341 3349561",
     moras: '12'
   }, {
+    id: 5,
     company: 'Samsung',
     dni: '43983188',
     name: 'Notengoni Idea',
-    state: "Activo",
+    tel: "+54 9 341 3349561",
     moras: '2'
   }, {
+    id: 4,
     company: 'Coca-Cola',
     dni: '43983188',
     name: 'Claudio Raimundez',
-    state: "Inactivo",
+    tel: "+54 9 341 3349561",
     moras: '14'
   }, {
+    id: 3,
     company: 'Apple',
     dni: '43983188',
     name: 'Notengoni Idea',
-    state: "Inactivo",
+    tel: "+54 9 341 3349561",
     moras: '18'
   }, {
+    id: 2,
     company: 'Samsung',
     dni: '43983188',
     name: 'Michelle ',
-    state: "Activo",
+    tel: "+54 9 341 3349561",
     moras: '17'
   }, {
+    id: 1,
     company: 'Notepadd',
     dni: '43983188',
     name: 'Pablo Abrate',
-    state: "Activo",
+    tel: "+54 9 341 3349561",
     moras: '7'
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "h-80 overflow-auto scrollbar",
     children: Empleados.map(function (empleado, index) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "grid grid-cols-11 px-4 border-b border-lightwhite p-2",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-2",
-          children: empleado.dni
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-3",
-          children: empleado.name
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-1",
-          children: empleado.company
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid place-content-end col-span-2",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-            className: "",
-            children: empleado.moras
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid place-content-end col-span-2",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "flex items-center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              children: empleado.state
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: ["w-2 h-2 rounded-full ml-4", empleado.state == "Activo" ? "bg-green-500" : "bg-red-500"].join(" ")
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure, {
+        as: "div",
+        className: "",
+        children: function children(_ref) {
+          var open = _ref.open;
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Button, {
+              as: "div",
+              className: "grid grid-cols-11 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900\n                            ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "col-span-3",
+                children: empleado.company
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "col-span-3",
+                children: empleado.name
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "col-span-2",
+                children: empleado.dni
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "grid col-span-2",
+                children: empleado.tel
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "grid place-content-end",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+                  className: "material-symbols-outlined grid place-content-end ".concat(open ? 'rotate-180 transform' : '', " h-5 w-5"),
+                  children: "expand_more"
+                })
+              })]
+            }, index), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Panel, {
+              className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_DatosEmpleado__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                id: empleado.id
+              })
             })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid place-content-end col-span-1",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-            className: "material-symbols-outlined cursor-pointer text-red-500",
-            children: "delete"
-          })
-        })]
-      }, index);
+          });
+        }
+      }, empleado.id);
     })
   });
 }
@@ -6408,23 +6580,20 @@ function Tabla() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-11",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "grid place-content-start col-span-2",
-          children: "DNI"
+          className: "grid place-content-start col-span-3",
+          children: "Empresa"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "grid place-content-start col-span-3",
           children: "Nombre Empleado"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "grid place-content-start col-span-1",
-          children: "Empresa"
+          className: "grid place-content-start col-span-2",
+          children: "DNI"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "grid place-content-end col-span-2",
-          children: "Moras Vigentes"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "grid place-content-end col-span-2",
-          children: "Estado"
+          className: "grid col-span-2",
+          children: "Tel\xE9fono"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "grid place-content-end col-span-1",
-          children: "Eliminar"
+          children: "Opciones"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
     })
@@ -6432,6 +6601,219 @@ function Tabla() {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tabla);
+
+/***/ }),
+
+/***/ "./resources/js/components/Empresas/Agregar.jsx":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Empresas/Agregar.jsx ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Agregar)
+/* harmony export */ });
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/transitions/transition.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/dialog/dialog.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _InputCountries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InputCountries */ "./resources/js/components/Empresas/InputCountries.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+function Agregar() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isOpen = _useState2[0],
+      setIsOpen = _useState2[1];
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "flex items-center justify-center",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+        type: "button",
+        onClick: openModal,
+        className: "flex items-center",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+          className: "mr-2",
+          children: "Agregar Empresa"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+          className: "material-symbols-outlined",
+          children: "add"
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Transition, {
+      appear: true,
+      show: isOpen,
+      as: react__WEBPACK_IMPORTED_MODULE_0__.Fragment,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Dialog, {
+        as: "div",
+        className: "relative z-10",
+        onClose: closeModal,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Transition.Child, {
+          as: react__WEBPACK_IMPORTED_MODULE_0__.Fragment,
+          enter: "ease-out duration-300",
+          enterFrom: "opacity-0",
+          enterTo: "opacity-100",
+          leave: "ease-in duration-200",
+          leaveFrom: "opacity-100",
+          leaveTo: "opacity-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "fixed inset-0 bg-black bg-opacity-25"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "fixed inset-0 overflow-y-auto",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "flex min-h-full items-center justify-center p-4 text-center",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Transition.Child, {
+              as: react__WEBPACK_IMPORTED_MODULE_0__.Fragment,
+              enter: "ease-out duration-300",
+              enterFrom: "opacity-0 scale-95",
+              enterTo: "opacity-100 scale-100",
+              leave: "ease-in duration-200",
+              leaveFrom: "opacity-100 scale-100",
+              leaveTo: "opacity-0 scale-95",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Dialog.Panel, {
+                className: "w-full text-white max-w-2xl transform overflow-hidden rounded border-2 border-lightwhite bg-dark p-6 text-left align-middle shadow-xl transition-all",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Dialog.Title, {
+                  as: "h3",
+                  className: "text-lg font-medium leading-6 mb-4",
+                  children: "Agregar Empresa"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "mt-2",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
+                    className: "text-sm text-gray-400 grid grid-cols-2 gap-4",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid grid-cols-1 gap-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Nombre:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                        type: "text",
+                        className: "bg-darklight py-1 px-2",
+                        placeholder: "Ingrese un nombre"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
+                        children: "CUIT:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                        type: "number",
+                        className: "bg-darklight py-1 px-2 rounded-sm",
+                        placeholder: "Ingrese un n\xFAmero de cuit"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid col-span-2 grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Raz\xF3n Social:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("textarea", {
+                        rows: "4",
+                        cols: "40",
+                        placeholder: "Ingrese un texto",
+                        className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Cod. Postal:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                        type: "text",
+                        placeholder: "Ingrese un c\xF3digo postal",
+                        className: "bg-darklight py-1 px-2"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Pa\xEDs:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_InputCountries__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Provincia:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                        type: "text",
+                        placeholder: "Ingrese la provincia",
+                        className: "bg-darklight py-1 px-2"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Localidad:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                        type: "text",
+                        placeholder: "Ingrese la localidad",
+                        className: "bg-darklight py-1 px-2"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Domicilio:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                        type: "text",
+                        placeholder: "Ingrese el domicilio",
+                        className: "bg-darklight py-1 px-2"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Creado por:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                        type: "text",
+                        placeholder: "Ingrese su nombre",
+                        className: "bg-darklight py-1 px-2"
+                      })]
+                    })]
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "mt-4",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+                    type: "submit",
+                    className: "inline-flex justify-center rounded-sm bg-green-800 hover:bg-green-900 px-4 py-2 text-sm font-medium text-white",
+                    onClick: closeModal,
+                    children: "Agregar"
+                  })
+                })]
+              })
+            })
+          })
+        })]
+      })
+    })]
+  });
+}
 
 /***/ }),
 
@@ -6457,7 +6839,7 @@ __webpack_require__.r(__webpack_exports__);
 function DatosEscala(id) {
   var Datos = [{
     id: "10",
-    tel_contacto: '+54 9 341 3349561',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6467,7 +6849,7 @@ function DatosEscala(id) {
     razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "9",
-    tel_contacto: '+54 9 341 3349587',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6477,7 +6859,7 @@ function DatosEscala(id) {
     razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "8",
-    tel_contacto: '+54 9 341 3349561',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6487,7 +6869,7 @@ function DatosEscala(id) {
     razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "7",
-    tel_contacto: '+54 9 341 4456789',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6497,7 +6879,7 @@ function DatosEscala(id) {
     razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "6",
-    tel_contacto: '+54 9 341 5678495',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6507,7 +6889,7 @@ function DatosEscala(id) {
     razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "5",
-    tel_contacto: '+54 9 341 3349561',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6517,7 +6899,7 @@ function DatosEscala(id) {
     razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "4",
-    tel_contacto: '+54 9 341 3349561',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6527,7 +6909,7 @@ function DatosEscala(id) {
     razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "3",
-    tel_contacto: '+54 9 341 2264895',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6537,7 +6919,7 @@ function DatosEscala(id) {
     razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "2",
-    tel_contacto: '+54 9 341 3349561',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6547,7 +6929,7 @@ function DatosEscala(id) {
     razon_social: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "1",
-    tel_contacto: '+54 9 341 6657489',
+    country: 'Argentina',
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     domicilio: "Ituzaingo 1963",
@@ -6563,38 +6945,72 @@ function DatosEscala(id) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "grid grid-cols-1 gap-y-2 p-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "grid grid-cols-3 border-b pb-4 border-lightwhite",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "",
-            children: ["Domicilio:  ", dato.domicilio]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "",
-            children: ["Cod. Postal:  ", dato.postal_code]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "",
-            children: ["Localidad y provincia:  ", dato.localidad, ", ", dato.prov, "."]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "white-space-pre-line border-b pb-4 border-lightwhite",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
             className: "font-medium mb-1",
             children: "Raz\xF3n Social:"
-          }), " ", dato.razon_social]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            className: "font-light",
+            children: dato.razon_social
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-3 border-b pb-4 border-lightwhite",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Domicilio:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "font-light",
+              children: dato.domicilio
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Cod. Postal:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "font-light",
+              children: dato.postal_code
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Localidad, provincia y pa\xEDs:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "font-light",
+              children: [dato.localidad, ", ", dato.prov, ", ", dato.country, "."]
+            })]
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-3 pt-4",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["Tel\xE9fono:  ", dato.tel_contacto]
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Editado:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "font-light ml-2",
+              children: [dato.firma_usuario, ", ", dato.edited_time, "."]
+            })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["Editado:  ", dato.firma_usuario, ", ", dato.edited_time, "."]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "grid place-content-end",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
-              className: "flex items-center justify-center py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
-              children: ["Editar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-                className: "material-symbols-outlined ml-2 cursor-pointer",
-                children: "edit"
-              })]
-            })
+            className: "grid col-start-3 grid-cols-4",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "grid col-start-2",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-red-900 transition-colors duration-300",
+                children: ["Eliminar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "material-symbols-outlined ml-2 cursor-pointer",
+                  children: "delete"
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "grid col-start-4",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
+                children: ["Editar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "material-symbols-outlined ml-2 cursor-pointer",
+                  children: "edit"
+                })]
+              })
+            })]
           })]
         })]
       }, dato.id);
@@ -6636,61 +7052,61 @@ function FilaTabla() {
     name: 'Caminos',
     cuit: '20439831880',
     contact: 'Pablo Argento',
-    country: "Canada"
+    tel: "+54 9 341 3349561"
   }, {
     id: "9",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
-    country: "Uruguay"
+    tel: "+54 9 341 3349561"
   }, {
     id: "8",
     name: 'Apple',
     cuit: '20439831880',
     contact: 'Mark Zuckerberg',
-    country: "Italia"
+    tel: "+54 9 341 3349561"
   }, {
     id: "7",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
-    country: "Uruguay"
+    tel: "+54 9 341 3349561"
   }, {
     id: "6",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
-    country: "Uruguay"
+    tel: "+54 9 341 3349561"
   }, {
     id: "5",
     name: 'Coca-Cola',
     cuit: '20439831880',
     contact: 'Claudio Raimundez',
-    country: "España"
+    tel: "+54 9 341 3349561"
   }, {
     id: "4",
     name: 'NASA',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
-    country: "Uruguay"
+    tel: "+54 9 341 3349561"
   }, {
     id: "3",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Notengoni Idea',
-    country: "Argentina"
+    tel: "+54 9 341 3349561"
   }, {
     id: "2",
     name: 'Galaxy',
     cuit: '20439831880',
     contact: 'Coldplay',
-    country: "Uruguay"
+    tel: "+54 9 341 3349561"
   }, {
     id: "1",
     name: 'Samsung',
     cuit: '20439831880',
     contact: 'Agustin',
-    country: "España"
+    tel: "+54 9 341 3349561"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "h-80 overflow-auto scrollbar",
@@ -6706,16 +7122,16 @@ function FilaTabla() {
               className: "grid grid-cols-12 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 \n                                ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "col-span-3",
-                children: empresa.cuit
+                children: empresa.name
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "col-span-3",
-                children: empresa.name
+                children: empresa.cuit
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "col-span-3",
                 children: empresa.contact
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                className: "grid col-span-2 place-content-end",
-                children: empresa.country
+                className: "grid col-span-2",
+                children: empresa.tel
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "grid place-content-end",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
@@ -6753,34 +7169,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Agregar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Agregar */ "./resources/js/components/Empresas/Agregar.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 
 function Flitros() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "flex w-full justify-between my-8",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "flex items-center",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
         className: "bg-dark p-2",
         type: "text",
         placeholder: "Buscar empresa"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
         className: "material-symbols-outlined p-2 rounded-r bg-dark cursor-pointer",
         children: "search"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "flex items-center justify-center px-4 py-2 cursor-pointer border rounded-sm border-green-800 hover:bg-green-800 transition-colors duration-300",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-        className: "mr-2",
-        children: "Agregar Empresa"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-        className: "material-symbols-outlined",
-        children: "add"
-      })]
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Agregar__WEBPACK_IMPORTED_MODULE_2__["default"], {})
     })]
   });
 }
@@ -6825,6 +7237,1022 @@ function Home() {
 
 /***/ }),
 
+/***/ "./resources/js/components/Empresas/InputCountries.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/Empresas/InputCountries.jsx ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function InputCountries() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("select", {
+    id: "country",
+    name: "country",
+    className: "bg-darklight py-1 px-2 scrollbar rounded-sm",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Afganistan",
+      children: "Afghanistan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Albania",
+      children: "Albania"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Algeria",
+      children: "Algeria"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "American Samoa",
+      children: "American Samoa"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Andorra",
+      children: "Andorra"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Angola",
+      children: "Angola"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Anguilla",
+      children: "Anguilla"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Antigua & Barbuda",
+      children: "Antigua & Barbuda"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Argentina",
+      children: "Argentina"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Armenia",
+      children: "Armenia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Aruba",
+      children: "Aruba"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Australia",
+      children: "Australia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Austria",
+      children: "Austria"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Azerbaijan",
+      children: "Azerbaijan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Bahamas",
+      children: "Bahamas"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Bahrain",
+      children: "Bahrain"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Bangladesh",
+      children: "Bangladesh"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Barbados",
+      children: "Barbados"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Belarus",
+      children: "Belarus"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Belgium",
+      children: "Belgium"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Belize",
+      children: "Belize"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Benin",
+      children: "Benin"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Bermuda",
+      children: "Bermuda"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Bhutan",
+      children: "Bhutan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Bolivia",
+      children: "Bolivia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Bonaire",
+      children: "Bonaire"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Bosnia & Herzegovina",
+      children: "Bosnia & Herzegovina"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Botswana",
+      children: "Botswana"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Brazil",
+      children: "Brazil"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "British Indian Ocean Ter",
+      children: "British Indian Ocean Ter"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Brunei",
+      children: "Brunei"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Bulgaria",
+      children: "Bulgaria"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Burkina Faso",
+      children: "Burkina Faso"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Burundi",
+      children: "Burundi"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Cambodia",
+      children: "Cambodia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Cameroon",
+      children: "Cameroon"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Canada",
+      children: "Canada"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Canary Islands",
+      children: "Canary Islands"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Cape Verde",
+      children: "Cape Verde"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Cayman Islands",
+      children: "Cayman Islands"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Central African Republic",
+      children: "Central African Republic"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Chad",
+      children: "Chad"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Channel Islands",
+      children: "Channel Islands"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Chile",
+      children: "Chile"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "China",
+      children: "China"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Christmas Island",
+      children: "Christmas Island"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Cocos Island",
+      children: "Cocos Island"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Colombia",
+      children: "Colombia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Comoros",
+      children: "Comoros"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Congo",
+      children: "Congo"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Cook Islands",
+      children: "Cook Islands"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Costa Rica",
+      children: "Costa Rica"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Cote DIvoire",
+      children: "Cote DIvoire"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Croatia",
+      children: "Croatia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Cuba",
+      children: "Cuba"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Curaco",
+      children: "Curacao"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Cyprus",
+      children: "Cyprus"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Czech Republic",
+      children: "Czech Republic"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Denmark",
+      children: "Denmark"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Djibouti",
+      children: "Djibouti"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Dominica",
+      children: "Dominica"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Dominican Republic",
+      children: "Dominican Republic"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "East Timor",
+      children: "East Timor"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Ecuador",
+      children: "Ecuador"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Egypt",
+      children: "Egypt"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "El Salvador",
+      children: "El Salvador"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Equatorial Guinea",
+      children: "Equatorial Guinea"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Eritrea",
+      children: "Eritrea"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Estonia",
+      children: "Estonia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Ethiopia",
+      children: "Ethiopia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Falkland Islands",
+      children: "Falkland Islands"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Faroe Islands",
+      children: "Faroe Islands"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Fiji",
+      children: "Fiji"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Finland",
+      children: "Finland"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "France",
+      children: "France"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "French Guiana",
+      children: "French Guiana"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "French Polynesia",
+      children: "French Polynesia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "French Southern Ter",
+      children: "French Southern Ter"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Gabon",
+      children: "Gabon"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Gambia",
+      children: "Gambia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Georgia",
+      children: "Georgia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Germany",
+      children: "Germany"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Ghana",
+      children: "Ghana"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Gibraltar",
+      children: "Gibraltar"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Great Britain",
+      children: "Great Britain"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Greece",
+      children: "Greece"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Greenland",
+      children: "Greenland"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Grenada",
+      children: "Grenada"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Guadeloupe",
+      children: "Guadeloupe"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Guam",
+      children: "Guam"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Guatemala",
+      children: "Guatemala"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Guinea",
+      children: "Guinea"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Guyana",
+      children: "Guyana"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Haiti",
+      children: "Haiti"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Hawaii",
+      children: "Hawaii"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Honduras",
+      children: "Honduras"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Hong Kong",
+      children: "Hong Kong"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Hungary",
+      children: "Hungary"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Iceland",
+      children: "Iceland"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Indonesia",
+      children: "Indonesia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "India",
+      children: "India"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Iran",
+      children: "Iran"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Iraq",
+      children: "Iraq"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Ireland",
+      children: "Ireland"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Isle of Man",
+      children: "Isle of Man"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Israel",
+      children: "Israel"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Italy",
+      children: "Italy"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Jamaica",
+      children: "Jamaica"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Japan",
+      children: "Japan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Jordan",
+      children: "Jordan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Kazakhstan",
+      children: "Kazakhstan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Kenya",
+      children: "Kenya"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Kiribati",
+      children: "Kiribati"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Korea North",
+      children: "Korea North"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Korea Sout",
+      children: "Korea South"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Kuwait",
+      children: "Kuwait"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Kyrgyzstan",
+      children: "Kyrgyzstan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Laos",
+      children: "Laos"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Latvia",
+      children: "Latvia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Lebanon",
+      children: "Lebanon"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Lesotho",
+      children: "Lesotho"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Liberia",
+      children: "Liberia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Libya",
+      children: "Libya"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Liechtenstein",
+      children: "Liechtenstein"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Lithuania",
+      children: "Lithuania"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Luxembourg",
+      children: "Luxembourg"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Macau",
+      children: "Macau"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Macedonia",
+      children: "Macedonia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Madagascar",
+      children: "Madagascar"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Malaysia",
+      children: "Malaysia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Malawi",
+      children: "Malawi"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Maldives",
+      children: "Maldives"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Mali",
+      children: "Mali"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Malta",
+      children: "Malta"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Marshall Islands",
+      children: "Marshall Islands"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Martinique",
+      children: "Martinique"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Mauritania",
+      children: "Mauritania"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Mauritius",
+      children: "Mauritius"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Mayotte",
+      children: "Mayotte"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Mexico",
+      children: "Mexico"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Midway Islands",
+      children: "Midway Islands"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Moldova",
+      children: "Moldova"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Monaco",
+      children: "Monaco"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Mongolia",
+      children: "Mongolia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Montserrat",
+      children: "Montserrat"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Morocco",
+      children: "Morocco"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Mozambique",
+      children: "Mozambique"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Myanmar",
+      children: "Myanmar"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Nambia",
+      children: "Nambia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Nauru",
+      children: "Nauru"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Nepal",
+      children: "Nepal"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Netherland Antilles",
+      children: "Netherland Antilles"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Netherlands",
+      children: "Netherlands (Holland, Europe)"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Nevis",
+      children: "Nevis"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "New Caledonia",
+      children: "New Caledonia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "New Zealand",
+      children: "New Zealand"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Nicaragua",
+      children: "Nicaragua"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Niger",
+      children: "Niger"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Nigeria",
+      children: "Nigeria"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Niue",
+      children: "Niue"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Norfolk Island",
+      children: "Norfolk Island"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Norway",
+      children: "Norway"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Oman",
+      children: "Oman"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Pakistan",
+      children: "Pakistan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Palau Island",
+      children: "Palau Island"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Palestine",
+      children: "Palestine"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Panama",
+      children: "Panama"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Papua New Guinea",
+      children: "Papua New Guinea"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Paraguay",
+      children: "Paraguay"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Peru",
+      children: "Peru"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Phillipines",
+      children: "Philippines"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Pitcairn Island",
+      children: "Pitcairn Island"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Poland",
+      children: "Poland"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Portugal",
+      children: "Portugal"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Puerto Rico",
+      children: "Puerto Rico"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Qatar",
+      children: "Qatar"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Republic of Montenegro",
+      children: "Republic of Montenegro"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Republic of Serbia",
+      children: "Republic of Serbia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Reunion",
+      children: "Reunion"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Romania",
+      children: "Romania"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Russia",
+      children: "Russia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Rwanda",
+      children: "Rwanda"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "St Barthelemy",
+      children: "St Barthelemy"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "St Eustatius",
+      children: "St Eustatius"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "St Helena",
+      children: "St Helena"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "St Kitts-Nevis",
+      children: "St Kitts-Nevis"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "St Lucia",
+      children: "St Lucia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "St Maarten",
+      children: "St Maarten"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "St Pierre & Miquelon",
+      children: "St Pierre & Miquelon"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "St Vincent & Grenadines",
+      children: "St Vincent & Grenadines"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Saipan",
+      children: "Saipan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Samoa",
+      children: "Samoa"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Samoa American",
+      children: "Samoa American"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "San Marino",
+      children: "San Marino"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Sao Tome & Principe",
+      children: "Sao Tome & Principe"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Saudi Arabia",
+      children: "Saudi Arabia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Senegal",
+      children: "Senegal"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Seychelles",
+      children: "Seychelles"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Sierra Leone",
+      children: "Sierra Leone"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Singapore",
+      children: "Singapore"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Slovakia",
+      children: "Slovakia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Slovenia",
+      children: "Slovenia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Solomon Islands",
+      children: "Solomon Islands"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Somalia",
+      children: "Somalia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "South Africa",
+      children: "South Africa"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Spain",
+      children: "Spain"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Sri Lanka",
+      children: "Sri Lanka"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Sudan",
+      children: "Sudan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Suriname",
+      children: "Suriname"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Swaziland",
+      children: "Swaziland"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Sweden",
+      children: "Sweden"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Switzerland",
+      children: "Switzerland"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Syria",
+      children: "Syria"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Tahiti",
+      children: "Tahiti"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Taiwan",
+      children: "Taiwan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Tajikistan",
+      children: "Tajikistan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Tanzania",
+      children: "Tanzania"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Thailand",
+      children: "Thailand"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Togo",
+      children: "Togo"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Tokelau",
+      children: "Tokelau"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Tonga",
+      children: "Tonga"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Trinidad & Tobago",
+      children: "Trinidad & Tobago"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Tunisia",
+      children: "Tunisia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Turkey",
+      children: "Turkey"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Turkmenistan",
+      children: "Turkmenistan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Turks & Caicos Is",
+      children: "Turks & Caicos Is"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Tuvalu",
+      children: "Tuvalu"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Uganda",
+      children: "Uganda"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "United Kingdom",
+      children: "United Kingdom"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Ukraine",
+      children: "Ukraine"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "United Arab Erimates",
+      children: "United Arab Emirates"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "United States of America",
+      children: "United States of America"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Uraguay",
+      children: "Uruguay"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Uzbekistan",
+      children: "Uzbekistan"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Vanuatu",
+      children: "Vanuatu"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Vatican City State",
+      children: "Vatican City State"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Venezuela",
+      children: "Venezuela"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Vietnam",
+      children: "Vietnam"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Virgin Islands (Brit)",
+      children: "Virgin Islands (Brit)"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Virgin Islands (USA)",
+      children: "Virgin Islands (USA)"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Wake Island",
+      children: "Wake Island"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Wallis & Futana Is",
+      children: "Wallis & Futana Is"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Yemen",
+      children: "Yemen"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Zaire",
+      children: "Zaire"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Zambia",
+      children: "Zambia"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+      className: "bg-darklight py-1 px-2",
+      value: "Zimbabwe",
+      children: "Zimbabwe"
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InputCountries);
+
+/***/ }),
+
 /***/ "./resources/js/components/Empresas/Tabla.jsx":
 /*!****************************************************!*\
   !*** ./resources/js/components/Empresas/Tabla.jsx ***!
@@ -6853,16 +8281,16 @@ function Tabla() {
       className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-12",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-3",
-        children: "CUIT"
+        children: "Empresa"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-3",
-        children: "Empresa"
+        children: "CUIT"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-3",
         children: "Contacto"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-end col-span-2",
-        children: "Pa\xEDs"
+        className: "grid col-span-2",
+        children: "Tel\xE9fono"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-end",
         children: "Opciones"
@@ -7157,21 +8585,77 @@ function DatosEscala(index) {
     children: Datos.map(function (dato) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "grid grid-cols-3 gap-y-2 p-4 border-b border-lightwhite whitespace-pre-line",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: ["Rama/Categor\xEDa:  ", dato.rama]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: ["Simple Presencia:  $", dato.presencia]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: ["Permanencia fuera Residencia:  $", dato.resid]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: ["Sueldo B\xE1sico:  $", dato.basico]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: ["Hs Extra 50%:  $", dato.extra50]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: ["Hs Extra 100%:  $", dato.extra100]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Sueldo B\xE1sico:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "ml-2 font-light",
+              children: ["$", dato.basico]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Hs Extra 50%:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "ml-2 font-light",
+              children: ["$", dato.extra50]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Hs Extra 100%:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "ml-2 font-light",
+              children: ["$", dato.extra100]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Rama/Categor\xEDa:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "ml-2 font-light",
+              children: dato.rama
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Simple Presencia:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "ml-2 font-light",
+              children: ["$", dato.presencia]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Permanencia fuera Residencia:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "ml-2 font-light",
+              children: ["$", dato.resid]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "grid place-content-start pt-4",
-          children: ["Creado por:  ", dato.firma_usuario]
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Creado por:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "ml-2 font-light",
+              children: dato.firma_usuario
+            })]
+          })
         })]
       }, dato.id);
     })
@@ -7317,12 +8801,6 @@ function Filtros() {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Filtros);
-{
-  /* <h1 className="mr-2">
-                     Agregar Escala
-                 </h1>
-                 <i className="material-symbols-outlined">add</i> */
-}
 
 /***/ }),
 
@@ -7676,7 +9154,7 @@ function DatosEscala(id) {
     id: "10",
     sueldo_basico: 0,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -7687,7 +9165,7 @@ function DatosEscala(id) {
     id: "9",
     sueldo_basico: 50000,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -7698,7 +9176,7 @@ function DatosEscala(id) {
     id: "8",
     sueldo_basico: 0,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -7709,7 +9187,7 @@ function DatosEscala(id) {
     id: "7",
     sueldo_basico: 50000,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -7720,7 +9198,7 @@ function DatosEscala(id) {
     id: "6",
     sueldo_basico: 50000,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -7731,7 +9209,7 @@ function DatosEscala(id) {
     id: "5",
     sueldo_basico: 50000,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -7742,7 +9220,7 @@ function DatosEscala(id) {
     id: "4",
     sueldo_basico: 0,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -7753,7 +9231,7 @@ function DatosEscala(id) {
     id: "3",
     sueldo_basico: 50000,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -7764,7 +9242,7 @@ function DatosEscala(id) {
     id: "2",
     sueldo_basico: 0,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -7775,7 +9253,7 @@ function DatosEscala(id) {
     id: "1",
     sueldo_basico: 50000,
     firma_usuario: "Claudio",
-    edited_time: "28 Mayo",
+    edited_time: "28 Mayo 2022",
     adicional_rama: 7750,
     antiguo: 2,
     extra50: 8450,
@@ -8371,19 +9849,19 @@ function FilaTabla() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "grid grid-cols-12 px-4 border-b border-lightwhite p-2",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-2",
-          children: empresa.idMora
+          className: "col-span-3",
+          children: empresa.company
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "col-span-3",
           children: empresa.name
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "col-span-3",
-          children: empresa.company
+          className: "grid col-span-2 place-content-end",
+          children: empresa.idMora
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid place-content-start col-span-3",
+          className: "grid place-content-end col-span-2",
           children: empresa.date
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid place-content-end",
+          className: "grid place-content-end col-span-2",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
             className: "material-symbols-outlined cursor-pointer text-red-500",
             children: "delete"
@@ -8510,19 +9988,19 @@ function Tabla() {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-12",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-start col-span-2",
-        children: "Nro de Mora"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
-        children: "Empleado"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-3",
         children: "Empresa"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-3",
-        children: "Fecha"
+        children: "Empleado"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-end",
+        className: "grid place-content-end col-span-2",
+        children: "Nro de Mora"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-end col-span-2",
+        children: "Fecha de Mora"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-end col-span-2",
         children: "Eliminar"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
@@ -8583,7 +10061,7 @@ function Aside() {
     link: "/usuario/empleados"
   }, {
     title: "Moras",
-    src: "gbadge",
+    src: "badge",
     link: "/usuario/moras"
   }, {
     title: "Escala Salarial",

@@ -4,16 +4,16 @@ import ReactDOM from 'react-dom';
 function DatosEscala(id) {
 
     const Datos = [
-        {id: "10", sueldo_basico: 0, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
-        {id: "9", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 0, simple_presencia: 5240},
-        {id: "8", sueldo_basico: 0, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
-        {id: "7", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
-        {id: "6", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 0, simple_presencia: 5240},
-        {id: "5", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 0, simple_presencia: 5240},
-        {id: "4", sueldo_basico: 0, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
-        {id: "3", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 0, simple_presencia: 5240},
-        {id: "2", sueldo_basico: 0, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
-        {id: "1", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
+        {id: "10", sueldo_basico: 0, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
+        {id: "9", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 0, simple_presencia: 5240},
+        {id: "8", sueldo_basico: 0, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
+        {id: "7", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
+        {id: "6", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 0, simple_presencia: 5240},
+        {id: "5", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 0, simple_presencia: 5240},
+        {id: "4", sueldo_basico: 0, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
+        {id: "3", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 0, simple_presencia: 5240},
+        {id: "2", sueldo_basico: 0, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
+        {id: "1", sueldo_basico: 50000, firma_usuario: "Claudio", edited_time: "28 Mayo 2022", adicional_rama: 7750, antiguo: 2, extra50: 8450, extra100: 14250, carga_descarga: 12000, simple_presencia: 5240},
     ]
     
     return(

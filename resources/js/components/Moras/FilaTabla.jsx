@@ -19,19 +19,19 @@ function FilaTabla() {
         <div className="h-80 overflow-auto scrollbar">
             {Moras.map((empresa, index) =>(
                 <div key={index} className="grid grid-cols-12 px-4 border-b border-lightwhite p-2">
-                    <div className="col-span-2">
-                        {empresa.idMora}
+                    <div className="col-span-3">
+                        {empresa.company}
                     </div>
                     <div className="col-span-3">
                         {empresa.name}
                     </div>
-                    <div className="col-span-3">
-                        {empresa.company}
+                    <div className="grid col-span-2 place-content-end">
+                        {empresa.idMora}
                     </div>
-                    <div className="grid place-content-start col-span-3">
+                    <div className="grid place-content-end col-span-2">
                         {empresa.date}
                     </div>
-                    <div className="grid place-content-end">
+                    <div className="grid place-content-end col-span-2">
                         <i className="material-symbols-outlined cursor-pointer text-red-500">delete</i>
                     </div>
                 </div>
