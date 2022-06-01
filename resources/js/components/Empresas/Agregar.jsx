@@ -19,7 +19,7 @@ export default function Agregar() {
         <button
           type="button"
           onClick={openModal}
-          className="flex items-center">
+          className="flex items-center justify-center px-4 py-2 cursor-pointer border rounded-sm border-green-800 hover:bg-green-800 transition-colors duration-300">
             <h1 className="mr-2">
                 Agregar Empresa
             </h1>
