@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Tab } from '@headlessui/react';
+import TablaHeader from './TablaHeader';
 import FilaTabla from './FilaTabla';
+import Filtros from './Filtros';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -11,33 +13,25 @@ export default function Example() {
     "Obra Social": [
       {
         id: 1,
-        title: 'Does drinking coffee make you smarter?',
+        title: 'Obra Social 1',
         date: '5h ago',
-        commentCount: 5,
-        shareCount: 2,
       },
       {
         id: 2,
-        title: "So you've bought coffee... now what?",
+        title: "2da Obra Social",
         date: '2h ago',
-        commentCount: 3,
-        shareCount: 2,
       },
     ],
     "Aporte Sindical": [
       {
         id: 1,
-        title: 'Is tech making coffee better or worse?',
+        title: 'Aporte Sindical 1',
         date: 'Jan 7',
-        commentCount: 29,
-        shareCount: 16,
       },
       {
         id: 2,
-        title: 'The most innovative things happening in coffee',
+        title: '2do Aporte Sindical',
         date: 'Mar 19',
-        commentCount: 24,
-        shareCount: 12,
       },
     ],
   })
@@ -52,39 +46,19 @@ export default function Example() {
               className={({ selected }) =>
                 classNames(
                   'w-full rounded-sm py-2.5 text-sm font-bold leading-5 text-white',
-                  selected
-                    ? 'bg-lightwhite shadow'
-                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
-                )
-              }
-            >
+                  selected ? 'bg-lightwhite shadow' : 'text-blue-100 hover:bg-white/[0.12] hover:text-white')}>
               {category}
             </Tab>
           ))}
         </Tab.List>
+        <Filtros />
         <Tab.Panels className="mt-2">
           {Object.values(categories).map((posts, idx) => (
             <Tab.Panel
               key={idx}
               className='rounded-sm bg-darklight border border-lightwhite'>
                 <div>
-                    <div className="px-4 py-2 border-b border-lightwhite bg-dark grid grid-cols-5">
-                        <div className="grid place-content-start">
-                            Empresa
-                        </div>
-                        <div className="grid place-content-start">
-                            Cantidad de moras
-                        </div>
-                        <div className="grid place-content-start">
-                            Bruto Deuda
-                        </div>
-                        <div className="grid place-content-start">
-                            Deuda Final (%)
-                        </div>
-                        <div className="grid place-content-end">
-                            Opciones
-                        </div>
-                    </div>
+                    <TablaHeader categories={categories} />
                     <FilaTabla posts={posts} />
                 </div>
             </Tab.Panel>

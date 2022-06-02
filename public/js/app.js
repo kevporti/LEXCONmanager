@@ -9162,22 +9162,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function FilaTabla(posts) {
-  {
-    console.log(posts);
-  }
-  return (
-    /*#__PURE__*/
-    // {posts.map((post) => (
-    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      // key={post.id}
-      className: "relative p-3",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-        className: "text-sm leading-5"
-      })
-    }) // ))}
 
-  );
+
+function FilaTabla(posts) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: Object.values(posts).map(function (post, idx) {
+      return post.map(function (post, idx) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "relative p-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h3", {
+            className: "text-sm leading-5",
+            children: [post.title, post.date]
+          })
+        }, idx);
+      });
+    })
+  });
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FilaTabla);
@@ -9247,10 +9247,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Navigation/NavSession */ "./resources/js/components/Navigation/NavSession.jsx");
-/* harmony import */ var _Filtros__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Filtros */ "./resources/js/components/LiqDeudas/Filtros.jsx");
-/* harmony import */ var _Tabla__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Tabla */ "./resources/js/components/LiqDeudas/Tabla.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
+/* harmony import */ var _Tabla__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Tabla */ "./resources/js/components/LiqDeudas/Tabla.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -9259,9 +9257,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: "p-8 bg-darklight h-full w-full px-20",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Filtros__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Tabla__WEBPACK_IMPORTED_MODULE_4__["default"], {})]
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Tabla__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
   });
 }
 
@@ -9281,9 +9279,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Example)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/tabs/tabs.js");
-/* harmony import */ var _FilaTabla__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FilaTabla */ "./resources/js/components/LiqDeudas/FilaTabla.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/tabs/tabs.js");
+/* harmony import */ var _TablaHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TablaHeader */ "./resources/js/components/LiqDeudas/TablaHeader.jsx");
+/* harmony import */ var _FilaTabla__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FilaTabla */ "./resources/js/components/LiqDeudas/FilaTabla.jsx");
+/* harmony import */ var _Filtros__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Filtros */ "./resources/js/components/LiqDeudas/Filtros.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -9295,6 +9295,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -9314,41 +9316,33 @@ function Example() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     "Obra Social": [{
       id: 1,
-      title: 'Does drinking coffee make you smarter?',
-      date: '5h ago',
-      commentCount: 5,
-      shareCount: 2
+      title: 'Obra Social 1',
+      date: '5h ago'
     }, {
       id: 2,
-      title: "So you've bought coffee... now what?",
-      date: '2h ago',
-      commentCount: 3,
-      shareCount: 2
+      title: "2da Obra Social",
+      date: '2h ago'
     }],
     "Aporte Sindical": [{
       id: 1,
-      title: 'Is tech making coffee better or worse?',
-      date: 'Jan 7',
-      commentCount: 29,
-      shareCount: 16
+      title: 'Aporte Sindical 1',
+      date: 'Jan 7'
     }, {
       id: 2,
-      title: 'The most innovative things happening in coffee',
-      date: 'Mar 19',
-      commentCount: 24,
-      shareCount: 12
+      title: '2do Aporte Sindical',
+      date: 'Mar 19'
     }]
   }),
       _useState2 = _slicedToArray(_useState, 1),
       categories = _useState2[0];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "w-full px-2 sm:px-0",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab.Group, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab.List, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab.Group, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab.List, {
         className: "flex space-x-1 rounded-sm bg-dark p-1",
         children: Object.keys(categories).map(function (category) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab, {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab, {
             className: function className(_ref) {
               var selected = _ref.selected;
               return classNames('w-full rounded-sm py-2.5 text-sm font-bold leading-5 text-white', selected ? 'bg-lightwhite shadow' : 'text-blue-100 hover:bg-white/[0.12] hover:text-white');
@@ -9356,31 +9350,15 @@ function Example() {
             children: category
           }, category);
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab.Panels, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Filtros__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab.Panels, {
         className: "mt-2",
         children: Object.values(categories).map(function (posts, idx) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Tab.Panel, {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab.Panel, {
             className: "rounded-sm bg-darklight border border-lightwhite",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                className: "px-4 py-2 border-b border-lightwhite bg-dark grid grid-cols-5",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "grid place-content-start",
-                  children: "Empresa"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "grid place-content-start",
-                  children: "Cantidad de moras"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "grid place-content-start",
-                  children: "Bruto Deuda"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "grid place-content-start",
-                  children: "Deuda Final (%)"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "grid place-content-end",
-                  children: "Opciones"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_1__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_TablaHeader__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                categories: categories
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_2__["default"], {
                 posts: posts
               })]
             })
@@ -9390,6 +9368,51 @@ function Example() {
     })
   });
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/LiqDeudas/TablaHeader.jsx":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/LiqDeudas/TablaHeader.jsx ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function TablaHeader(categories) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "px-4 py-2 border-b border-lightwhite bg-dark grid grid-cols-5",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "grid place-content-start",
+      children: "Empresa"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "grid place-content-start",
+      children: "Cantidad de moras"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "grid place-content-start",
+      children: "Bruto Deuda"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "grid place-content-start",
+      children: "Deuda Final (%)"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "grid place-content-end",
+      children: "Opciones"
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TablaHeader);
 
 /***/ }),
 
