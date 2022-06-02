@@ -112,12 +112,33 @@ export default function Agregar() {
                             </select>
                         </div>
                         <div className="grid grid-cols-1">
-                            <span className="mr-2">Desde:</span>
-                            <input type="month" className="bg-darklight py-1 px-2 rounded-sm" />
+                            <span className="mr-2">Mora:</span>
+                            <select className="bg-darklight py-1 px-2 rounded-sm">
+                                <option value="">04/21</option>
+                                <option value="">05/21</option>
+                                <option value="">06/21</option>
+                                <option value="">07/21</option>
+                            </select>
                         </div>
                         <div className="grid grid-cols-1">
-                            <span className="mr-2">Hasta (incluso):</span>
-                            <input type="month" className="bg-darklight rounded-sm py-1 px-2" />
+                            <span className="mr-2">Sueldo Básico:</span>
+                            <input type="number" className="bg-darklight rounded-sm py-1 px-2" value="50000" />
+                        </div>
+                        <div className="grid grid-cols-1">
+                            <span className="mr-2">Hs Extra 50%:</span>
+                            <input type="number" placeholder="Ingrese las horas extra" className="bg-darklight rounded-sm py-1 px-2" />
+                        </div>
+                        <div className="grid grid-cols-1">
+                            <span className="mr-2">Hs Extra 100%:</span>
+                            <input type="number" placeholder="Ingrese las horas extra" className="bg-darklight rounded-sm py-1 px-2" />
+                        </div>
+                        <div className="grid grid-cols-1">
+                            <span className="mr-2">Simple Presencia:</span>
+                            <input type="number" placeholder="Ingrese la cantidad" className="bg-darklight rounded-sm py-1 px-2" />
+                        </div>
+                        <div className="grid grid-cols-1">
+                            <span className="mr-2">Permanencia fuera de Residencia:</span>
+                            <input type="number" placeholder="Ingrese la cantidad" className="bg-darklight rounded-sm py-1 px-2" />
                         </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Creado por:</span>
