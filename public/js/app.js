@@ -9203,29 +9203,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function Filtros() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "flex w-full justify-between my-8",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "flex items-center",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-        className: "bg-dark p-2",
-        type: "text",
-        placeholder: "Buscar deuda"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-        className: "material-symbols-outlined p-2 rounded-r bg-dark cursor-pointer",
-        children: "search"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "flex w-full justify-between my-8",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "flex items-center",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+          className: "bg-dark p-2",
+          type: "text",
+          placeholder: "Buscar deuda"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+          className: "material-symbols-outlined p-2 rounded-r bg-dark cursor-pointer",
+          children: "search"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "flex items-center justify-center px-4 py-2 cursor-pointer border rounded-sm border-green-800 hover:bg-green-800 transition-colors duration-300",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+          className: "mr-2",
+          children: "Liquidar Deuda"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+          className: "material-symbols-outlined",
+          children: "add"
+        })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "flex items-center justify-center px-4 py-2 cursor-pointer border rounded-sm border-green-800 hover:bg-green-800 transition-colors duration-300",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-        className: "mr-2",
-        children: "Liquidar Deuda"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-        className: "material-symbols-outlined",
-        children: "add"
-      })]
-    })]
+    })
   });
 }
 
@@ -9316,26 +9319,33 @@ function Example() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     "Obra Social": [{
       id: 1,
-      title: 'Obra Social 1',
-      date: '5h ago'
+      Titulo: 'Obra Social 1',
+      Fecha: '5h ago'
     }, {
       id: 2,
-      title: "2da Obra Social",
-      date: '2h ago'
+      Titulo: "2da Obra Social",
+      Fecha: '2h ago'
     }],
     "Aporte Sindical": [{
       id: 1,
-      title: 'Aporte Sindical 1',
-      date: 'Jan 7'
+      Titulo: 'Aporte Sindical 1',
+      Fecha: 'Jan 7'
     }, {
       id: 2,
-      title: '2do Aporte Sindical',
-      date: 'Mar 19'
+      Titulo: '2do Aporte Sindical',
+      Fecha: 'Mar 19'
     }]
   }),
       _useState2 = _slicedToArray(_useState, 1),
       categories = _useState2[0];
 
+  var categorie = [{
+    id: 1,
+    title: "Obra Social"
+  }, {
+    id: 2,
+    title: "Aporte Sindical"
+  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "w-full px-2 sm:px-0",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab.Group, {
@@ -9350,23 +9360,42 @@ function Example() {
             children: category
           }, category);
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Filtros__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab.Panels, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab.Panels, {
         className: "mt-2",
         children: Object.values(categories).map(function (posts, idx) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab.Panel, {
-            className: "rounded-sm bg-darklight border border-lightwhite",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Tab.Panel, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Filtros__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "rounded-sm bg-darklight border border-lightwhite",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_TablaHeader__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                categories: categories
+                posts: posts
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_2__["default"], {
                 posts: posts
               })]
-            })
+            })]
           }, idx);
         })
       })]
     })
   });
+}
+{
+  /* <Tab.Group>
+   <Tab.List className="flex space-x-1 rounded-sm bg-dark p-1">
+     {categorie.map((category, idx) => (
+       <Tab 
+         key={category.id} 
+         className={({ selected }) =>
+           classNames(
+             'w-full rounded-sm py-2.5 text-sm font-bold leading-5 text-white',
+             selected ? 'bg-lightwhite shadow' : 'text-blue-100 hover:bg-white/[0.12] hover:text-white')}>
+       {category.title}
+       </Tab>
+     ))}
+   </Tab.List>
+   <Tab.Panels className="mt-2">
+     {}
+   </Tab.Panels>
+  </Tab.Group> */
 }
 
 /***/ }),
@@ -9390,25 +9419,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function TablaHeader(categories) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "px-4 py-2 border-b border-lightwhite bg-dark grid grid-cols-5",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "grid place-content-start",
-      children: "Empresa"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "grid place-content-start",
-      children: "Cantidad de moras"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "grid place-content-start",
-      children: "Bruto Deuda"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "grid place-content-start",
-      children: "Deuda Final (%)"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "grid place-content-end",
-      children: "Opciones"
-    })]
+
+function TablaHeader(posts) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: Object.values(posts).map(function (post, idx) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "px-4 py-2 border-b border-lightwhite bg-dark grid grid-cols-5",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid place-content-start",
+          children: "Empresa"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid place-content-start",
+          children: "Cantidad de moras"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid place-content-start",
+          children: "Bruto Deuda"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid place-content-start",
+          children: "Deuda Final (%)"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid place-content-end",
+          children: "Opciones"
+        })]
+      }, idx);
+    })
   });
 }
 
@@ -10893,7 +10927,7 @@ function Aside() {
   var gap = "flex p-2 items-center gap-x-4 cursor-pointer rounded-md mt-9 hover:bg-lightwhite";
   var noGap = "flex p-2 items-center gap-x-4 cursor-pointer rounded-md mt-2 hover:bg-lightwhite";
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: ["relative w-72 h-screen p-4 pt-8 bg-dark duration-300", open ? "w-72" : "w-20"].join(" "),
+    className: ["relative w-72 min-h-screen h-auto p-4 pt-8 bg-dark duration-300", open ? "w-72" : "w-20"].join(" "),
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
       className: ["material-symbols-outlined absolute cursor-pointer rounded-full -right-3 top-9 w-7 border-2 border-dark bg-darklight", !open && "rotate-180"].join(" "),
       onClick: function onClick() {

@@ -13,28 +13,33 @@ export default function Example() {
     "Obra Social": [
       {
         id: 1,
-        title: 'Obra Social 1',
-        date: '5h ago',
+        Titulo: 'Obra Social 1',
+        Fecha: '5h ago',
       },
       {
         id: 2,
-        title: "2da Obra Social",
-        date: '2h ago',
+        Titulo: "2da Obra Social",
+        Fecha: '2h ago',
       },
     ],
     "Aporte Sindical": [
       {
         id: 1,
-        title: 'Aporte Sindical 1',
-        date: 'Jan 7',
+        Titulo: 'Aporte Sindical 1',
+        Fecha: 'Jan 7',
       },
       {
         id: 2,
-        title: '2do Aporte Sindical',
-        date: 'Mar 19',
+        Titulo: '2do Aporte Sindical',
+        Fecha: 'Mar 19',
       },
     ],
   })
+
+  let categorie = [
+    {id: 1, title: "Obra Social"},
+    {id: 2, title: "Aporte Sindical"},
+  ]
 
   return (
     <div className="w-full px-2 sm:px-0">
@@ -51,20 +56,43 @@ export default function Example() {
             </Tab>
           ))}
         </Tab.List>
-        <Filtros />
         <Tab.Panels className="mt-2">
           {Object.values(categories).map((posts, idx) => (
-            <Tab.Panel
-              key={idx}
-              className='rounded-sm bg-darklight border border-lightwhite'>
-                <div>
-                    <TablaHeader categories={categories} />
-                    <FilaTabla posts={posts} />
-                </div>
-            </Tab.Panel>
+              <Tab.Panel
+                key={idx}>
+                  <Filtros /> 
+                  <div className="rounded-sm bg-darklight border border-lightwhite">
+                      <TablaHeader posts={posts} />
+                      <FilaTabla posts={posts} />
+                  </div>
+              </Tab.Panel>
           ))}
         </Tab.Panels>
       </Tab.Group>
     </div>
   )
 }
+
+
+{/* <Tab.Group>
+  <Tab.List className="flex space-x-1 rounded-sm bg-dark p-1">
+    {categorie.map((category, idx) => (
+      <Tab 
+        key={category.id} 
+        className={({ selected }) =>
+          classNames(
+            'w-full rounded-sm py-2.5 text-sm font-bold leading-5 text-white',
+            selected ? 'bg-lightwhite shadow' : 'text-blue-100 hover:bg-white/[0.12] hover:text-white')}>
+      {category.title}
+      </Tab>
+    ))}
+  </Tab.List>
+  <Tab.Panels className="mt-2">
+    {}
+  </Tab.Panels>
+</Tab.Group> */}
+
+
+
+
+
