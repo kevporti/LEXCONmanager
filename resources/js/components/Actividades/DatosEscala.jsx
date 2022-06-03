@@ -34,17 +34,6 @@ function DatosEscala(id) {
                     <div className="white-space-pre-line border-b pb-4 border-lightwhite">
                         <p className="font-medium mb-1">Observaciones:</p> {dato.obs}
                     </div>
-                    <div className="grid grid-cols-3 pt-4">
-                        <div>
-                            Deuda pactada:  ${dato.deuda}
-                        </div>
-                        <div>
-                            Fecha de pago:  {dato.date}
-                        </div>
-                        <div>
-                            Forma de pago:  {dato.forma}
-                        </div>
-                    </div>
                     <div className="grid grid-cols-12 mt-4">
                         <button className="flex items-center justify-center py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300">
                             Editar
