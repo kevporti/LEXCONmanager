@@ -108,7 +108,11 @@ export default function Agregar() {
                             </select>
                         </div>
                         <div className="grid grid-cols-1">
-                            <span className="mr-2">Fecha:</span>
+                            <span className="mr-2">Desde:</span>
+                            <input type="month" className="bg-darklight rounded-sm py-1 px-2 focus:outline-none" />
+                        </div>
+                        <div className="grid grid-cols-1">
+                            <span className="mr-2">Hasta (inclusive):</span>
                             <input type="month" className="bg-darklight rounded-sm py-1 px-2 focus:outline-none" />
                         </div>
                         <div className="grid grid-cols-1">

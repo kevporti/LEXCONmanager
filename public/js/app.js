@@ -10853,7 +10853,16 @@ function Agregar() {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                         className: "mr-2",
-                        children: "Fecha:"
+                        children: "Desde:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                        type: "month",
+                        className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Hasta (inclusive):"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
                         type: "month",
                         className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none"
