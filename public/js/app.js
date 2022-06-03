@@ -5728,7 +5728,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "9",
     tel_contacto: '+54 9 341 3349587',
@@ -5738,7 +5738,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "8",
     tel_contacto: '+54 9 341 3349561',
@@ -5748,7 +5748,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "7",
     tel_contacto: '+54 9 341 4456789',
@@ -5758,7 +5758,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "6",
     tel_contacto: '+54 9 341 5678495',
@@ -5768,7 +5768,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "5",
     tel_contacto: '+54 9 341 3349561',
@@ -5778,7 +5778,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "4",
     tel_contacto: '+54 9 341 3349561',
@@ -5788,7 +5788,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "3",
     tel_contacto: '+54 9 341 2264895',
@@ -5798,7 +5798,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "2",
     tel_contacto: '+54 9 341 3349561',
@@ -5808,7 +5808,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }, {
     id: "1",
     tel_contacto: '+54 9 341 6657489',
@@ -5818,7 +5818,7 @@ function DatosEscala(id) {
     date: "Agosto 2022",
     forma: "12 cuotas sin interes",
     email: "challengerenlol@gmail.com",
-    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como les pinte asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
+    obs: "Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla.Acá va a ir el texto de las observaciones que obviamente puede llegar a ser tan largo como quieran asi que estoy escribiendo esto de prueba àra ver como va a quedar el conenido dentro de la tabla."
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     children: Datos.filter(function (dato) {
@@ -12228,6 +12228,444 @@ function Agregar() {
 
 /***/ }),
 
+/***/ "./resources/js/components/ObraSocial/DatosObraSocial.jsx":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/ObraSocial/DatosObraSocial.jsx ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function DatosObraSocial(id) {
+  var Datos = [{
+    id: "10",
+    estado: 'Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }, {
+    id: "9",
+    estado: 'No Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }, {
+    id: "8",
+    estado: 'No Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }, {
+    id: "7",
+    estado: 'No Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }, {
+    id: "6",
+    estado: 'Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }, {
+    id: "5",
+    estado: 'No Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }, {
+    id: "4",
+    estado: 'No Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }, {
+    id: "3",
+    estado: 'Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }, {
+    id: "2",
+    estado: 'No Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }, {
+    id: "1",
+    estado: 'Cobrado',
+    firma_usuario: "Claudio",
+    edited_time: "28 Mayo",
+    fecha: "14/10/2021",
+    tasaint: 3.72,
+    totsueldos: 150000
+  }];
+  var Sueldos = [{
+    id: 1,
+    name: "Franco L. Duarte",
+    totremun: 30000,
+    reajuste: "Si"
+  }, {
+    id: 1,
+    name: "Franco L. Duarte",
+    totremun: 65000,
+    reajuste: "No"
+  }, {
+    id: 1,
+    name: "Franco L. Duarte",
+    totremun: 65000,
+    reajuste: "No"
+  }, {
+    id: 1,
+    name: "Franco L. Duarte",
+    totremun: 30000,
+    reajuste: "Si"
+  }, {
+    id: 1,
+    name: "Franco L. Duarte",
+    totremun: 30000,
+    reajuste: "Si"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: Datos.filter(function (dato) {
+      return dato.id == id.id;
+    }).map(function (dato) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "grid grid-cols-2 gap-y-2 p-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "border-b border-r pb-4 border-lightwhite",
+          children: Sueldos.map(function (sueldo) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: " grid grid-cols-2 py-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                className: "",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                  children: "Empleado:"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                  className: "font-light",
+                  children: sueldo.name
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                className: "",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                  children: "Reajuste:"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                  className: "font-light",
+                  children: sueldo.reajuste
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                className: "",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                  children: "Total Remunerativo:"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                  className: "font-light",
+                  children: ["$", sueldo.totremun]
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                className: "",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                  children: "Intereses:"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                  className: "font-light",
+                  children: ["$", sueldo.totremun * dato.tasaint / 100]
+                })]
+              })]
+            });
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid grid-cols-1 pl-6 border-b pb-4 border-lightwhite place-content-stretch",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "grid grid-cols-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "mb-1",
+                children: "Tasa de Interes:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                className: "font-light",
+                children: [dato.tasaint, "%"]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "grid grid-cols-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "mb-1",
+                children: "Fecha de Liquidaci\xF3n:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "font-light",
+                children: dato.fecha
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "grid grid-cols-2 mb-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "mb-1",
+                children: "Estado:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "font-light",
+                children: dato.estado
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "grid grid-cols-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "mb-1",
+                children: "Total Sueldos:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                className: "font-light",
+                children: ["$", dato.totsueldos]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "grid grid-cols-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "mb-1",
+                children: "Intereses Sueldos:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                className: "font-light",
+                children: ["$", dato.totsueldos * dato.tasaint / 100]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "grid grid-cols-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "mb-1",
+                children: "Total Aporte Patronal:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                className: "font-light",
+                children: ["$", dato.totsueldos * 2]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "grid grid-cols-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "mb-1",
+                children: "Intereses Sueldos:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                className: "font-light",
+                children: ["$", dato.totsueldos * 2 * dato.tasaint / 100]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "grid grid-cols-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "mb-1",
+                children: "Total Final:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                className: "font-light",
+                children: ["$", dato.totsueldos + dato.totsueldos * dato.tasaint / 100 + dato.totsueldos * 2 + dato.totsueldos * 2 * dato.tasaint / 100]
+              })]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-2 col-span-2 pt-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Editado:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "font-light ml-2",
+              children: [dato.firma_usuario, ", ", dato.edited_time, "."]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "flex justify-end items-end",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "mr-4",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-red-900 transition-colors duration-300",
+                children: ["Eliminar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "material-symbols-outlined ml-2 cursor-pointer",
+                  children: "delete"
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "mr-4",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
+                children: ["Editar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "material-symbols-outlined ml-2 cursor-pointer",
+                  children: "edit"
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-yellow-700 transition-colors duration-300",
+                children: ["Descargar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "material-symbols-outlined ml-2 cursor-pointer",
+                  children: "download"
+                })]
+              })
+            })]
+          })]
+        })]
+      }, dato.id);
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DatosObraSocial);
+
+/***/ }),
+
+/***/ "./resources/js/components/ObraSocial/FilaTabla.jsx":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/ObraSocial/FilaTabla.jsx ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js");
+/* harmony import */ var _DatosObraSocial__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DatosObraSocial */ "./resources/js/components/ObraSocial/DatosObraSocial.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+function FilaTabla() {
+  var Contactos = [{
+    id: "10",
+    subtot: "150000",
+    company: 'Caminos',
+    subtotpatron: "300000",
+    total: "450000"
+  }, {
+    id: "9",
+    subtot: "150000",
+    company: 'Samsung',
+    subtotpatron: "300000",
+    total: "450000"
+  }, {
+    id: "8",
+    subtot: "150000",
+    company: 'Apple',
+    subtotpatron: "300000",
+    total: "450000"
+  }, {
+    id: "7",
+    subtot: "150000",
+    company: 'Samsung',
+    subtotpatron: "300000",
+    total: "450000"
+  }, {
+    id: "6",
+    subtot: "150000",
+    company: 'Samsung',
+    subtotpatron: "300000",
+    total: "450000"
+  }, {
+    id: "5",
+    subtot: "150000",
+    company: 'Coca-Cola',
+    subtotpatron: "300000",
+    total: "450000"
+  }, {
+    id: "4",
+    subtot: "150000",
+    company: 'NASA',
+    subtotpatron: "300000",
+    total: "450000"
+  }, {
+    id: "3",
+    subtot: "150000",
+    company: 'Samsung',
+    subtotpatron: "300000",
+    total: "450000"
+  }, {
+    id: "2",
+    subtot: "150000",
+    company: 'Galaxy',
+    subtotpatron: "300000",
+    total: "450000"
+  }, {
+    id: "1",
+    subtot: "150000",
+    company: 'Samsung',
+    subtotpatron: "300000",
+    total: "450000"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    className: "h-96 overflow-auto scrollbar",
+    children: Contactos.map(function (contacto, index) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure, {
+        as: "div",
+        className: "",
+        children: function children(_ref) {
+          var open = _ref.open;
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Button, {
+              as: "div",
+              className: "transition-all duration-300 hover:bg-green-900\n                            ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                className: "grid grid-cols-12 p-4 border-b border-lightwhite",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                  className: "grid col-span-2",
+                  children: contacto.company
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                  className: "grid place-content-end col-span-3",
+                  children: ["$", contacto.subtot]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                  className: "grid place-content-end col-span-3",
+                  children: ["$", contacto.subtotpatron]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                  className: "grid place-content-end col-span-3",
+                  children: ["$", contacto.total]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                  className: "grid place-content-end",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+                    className: "material-symbols-outlined grid place-content-end ".concat(open ? 'rotate-180 transform' : '', " h-5 w-5"),
+                    children: "expand_more"
+                  })
+                })]
+              }, index)
+            }, index), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Panel, {
+              className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_DatosObraSocial__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                id: contacto.id
+              })
+            })]
+          });
+        }
+      }, contacto.id);
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FilaTabla);
+
+/***/ }),
+
 /***/ "./resources/js/components/ObraSocial/Filtros.jsx":
 /*!********************************************************!*\
   !*** ./resources/js/components/ObraSocial/Filtros.jsx ***!
@@ -12321,35 +12759,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _FilaTabla__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FilaTabla */ "./resources/js/components/ObraSocial/FilaTabla.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
- // import FilaTabla from './FilaTabla';
+
 
 
 
 
 function Tabla() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "w-full border border-lightwhite rounded",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-12",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-start col-span-2",
         children: "Empresa"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
-        children: "CUIT"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
-        children: "Contacto"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "grid col-span-2",
-        children: "Tel\xE9fono"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-end col-span-3",
+        children: "Subtotal"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-end col-span-3 mr-2",
+        children: "Subtotal Patronal"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-end col-span-3 mr-4",
+        children: "Total"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-end",
         children: "Opciones"
       })]
-    })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });
 }
 
