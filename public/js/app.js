@@ -6152,15 +6152,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Navigation/NavSession */ "./resources/js/components/Navigation/NavSession.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "p-8 bg-darklight h-full w-full px-20",
-    children: "Home Aporte Sindical"
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__["default"], {})
   });
 }
 
@@ -6281,15 +6283,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Navigation/NavSession */ "./resources/js/components/Navigation/NavSession.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "p-8 bg-darklight h-full w-full px-20",
-    children: "Home Contactos"
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__["default"], {})
   });
 }
 
@@ -11228,6 +11232,9 @@ function NavSession() {
     title: "Empresas",
     link: "/usuario/empresas"
   }, {
+    title: "Contactos",
+    link: "/usuario/contactos"
+  }, {
     title: "Empleados",
     link: "/usuario/empleados"
   }, {
@@ -11240,8 +11247,11 @@ function NavSession() {
     title: "Liquidación de Sueldo",
     link: "/usuario/liquidacion_sueldos"
   }, {
-    title: "Liquidación de Deuda",
-    link: "/usuario/liquidacion_deudas"
+    title: "Liquidación de Deuda - Obra Social",
+    link: "/usuario/liquidacion_deudas/obra_social"
+  }, {
+    title: "Liquidación de Deuda - Aporte Sindical",
+    link: "/usuario/liquidacion_deudas/aporte_sindical"
   }, {
     title: "Actividades",
     link: "/usuario/actividades"
@@ -11283,15 +11293,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Navigation/NavSession */ "./resources/js/components/Navigation/NavSession.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "p-8 bg-darklight h-full w-full px-20",
-    children: "Home Obra Social"
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__["default"], {})
   });
 }
 
