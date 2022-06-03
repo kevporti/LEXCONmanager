@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import FilaTabla from './FilaTabla';
 
-function TablaHeader(posts) {
+function Tabla() {
 
-
-    return(
-        <>
-            {Object.values(posts).map((post, idx) => (
-                <div key={idx} className="px-4 py-2 border-b border-lightwhite bg-dark grid grid-cols-5">
+    return (
+        <div className="w-full border border-lightwhite rounded">
+            <div className="px-4 py-2 border-b border-lightwhite bg-dark grid grid-cols-5">
                     <div className="grid place-content-start">
                         Empresa
                     </div>
@@ -24,9 +23,9 @@ function TablaHeader(posts) {
                         Opciones
                     </div>
                 </div>
-            ))}
-        </>
+            {/* <FilaTabla /> */}
+        </div>
     );
 }
 
-export default TablaHeader;
+export default Tabla;
