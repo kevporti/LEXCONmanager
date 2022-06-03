@@ -77,7 +77,7 @@ function DatosObraSocial(id) {
                                 <p className="font-light">${(dato.totsueldos * 2)}</p>
                             </div>
                             <div className="grid grid-cols-2">
-                                <p className="mb-1">Intereses Sueldos:</p>
+                                <p className="mb-1">Intereses Aporte Patronal:</p>
                                 <p className="font-light">${(dato.totsueldos * 2 * dato.tasaint)/100}</p>
                             </div>
                             <div className="grid grid-cols-2">
@@ -98,14 +98,8 @@ function DatosObraSocial(id) {
                                     <i className="material-symbols-outlined ml-2 cursor-pointer">delete</i>
                                 </button>
                             </div>
-                            <div className="mr-4">
-                                <button className="flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300">
-                                    Editar
-                                    <i className="material-symbols-outlined ml-2 cursor-pointer">edit</i>
-                                </button>
-                            </div>
                             <div className="">
-                                <button className="flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-yellow-700 transition-colors duration-300">
+                                <button className="flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300">
                                     Descargar
                                     <i className="material-symbols-outlined ml-2 cursor-pointer">download</i>
                                 </button>

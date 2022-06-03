@@ -12044,7 +12044,6 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
- // import InputCountries from './InputCountries';
 
 
 
@@ -12063,6 +12062,37 @@ function Agregar() {
     setIsOpen(true);
   }
 
+  var Empresas = [{
+    id: 10,
+    company: "Samsung"
+  }, {
+    id: 9,
+    company: "Apple"
+  }, {
+    id: 8,
+    company: "Microsoft"
+  }, {
+    id: 7,
+    company: "Camino"
+  }, {
+    id: 6,
+    company: "Xiaomi"
+  }, {
+    id: 5,
+    company: "Constrictor"
+  }, {
+    id: 4,
+    company: "HyperX"
+  }, {
+    id: 3,
+    company: "Sony"
+  }, {
+    id: 2,
+    company: "Visa"
+  }, {
+    id: 1,
+    company: "Liliana"
+  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "flex items-center justify-center",
@@ -12114,7 +12144,7 @@ function Agregar() {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Dialog.Title, {
                   as: "h3",
                   className: "text-lg font-medium leading-6 mb-4",
-                  children: "Liquidar Deuda"
+                  children: "Liquidar Deuda - Obra Social"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                   className: "mt-2",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
@@ -12123,77 +12153,78 @@ function Agregar() {
                       className: "grid grid-cols-1 gap-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                         className: "mr-2",
-                        children: "Nombre:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                        type: "text",
-                        className: "bg-darklight py-1 px-2",
-                        placeholder: "Ingrese un nombre"
+                        children: "Empresa:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("select", {
+                        className: "bg-darklight rounded-sm py-1 px-2",
+                        children: Empresas.map(function (empresa) {
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                            className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white",
+                            name: empresa.id,
+                            value: empresa.company,
+                            children: empresa.company
+                          });
+                        })
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                         className: "mr-2",
-                        children: "CUIT:"
+                        children: "Empleados:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("select", {
+                        className: "bg-darklight py-1 px-2 rounded-sm focus:outline-none scrollbar",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                          className: "bg-darklight py-1 px-2 focus:outline-none",
+                          value: "",
+                          children: "Marcos Ramirez"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                          className: "bg-darklight py-1 px-2 focus:outline-none",
+                          value: "",
+                          children: "Fernando Fernandez"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                          className: "bg-darklight py-1 px-2 focus:outline-none",
+                          value: "",
+                          children: "Pablo Abratte"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                          className: "bg-darklight py-1 px-2 focus:outline-none",
+                          value: "",
+                          children: "Martin Pierro"
+                        })]
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Per\xEDodo desde:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                        type: "month",
+                        className: "bg-darklight py-1 px-2"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Per\xEDodo hasta (inclusive):"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                        type: "month",
+                        className: "bg-darklight py-1 px-2"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Tasa de Interes:"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
                         type: "number",
-                        className: "bg-darklight py-1 px-2 rounded-sm",
-                        placeholder: "Ingrese un n\xFAmero de cuit"
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                      className: "grid col-span-2 grid-cols-1",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Raz\xF3n Social:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("textarea", {
-                        rows: "4",
-                        cols: "40",
-                        placeholder: "Ingrese un texto",
-                        className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none"
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                      className: "grid grid-cols-1",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Cod. Postal:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                        type: "text",
-                        placeholder: "Ingrese un c\xF3digo postal",
-                        className: "bg-darklight py-1 px-2"
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                      className: "grid grid-cols-1",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Pa\xEDs:"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                      className: "grid grid-cols-1",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Provincia:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                        type: "text",
-                        placeholder: "Ingrese la provincia",
+                        placeholder: "Ingrese un porcentaje",
                         className: "bg-darklight py-1 px-2"
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                         className: "mr-2",
-                        children: "Localidad:"
+                        children: "Fecha de Liquidaci\xF3n:"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                        type: "text",
-                        placeholder: "Ingrese la localidad",
-                        className: "bg-darklight py-1 px-2"
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                      className: "grid grid-cols-1",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Domicilio:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                        type: "text",
-                        placeholder: "Ingrese el domicilio",
+                        type: "month",
                         className: "bg-darklight py-1 px-2"
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -12214,7 +12245,7 @@ function Agregar() {
                     type: "submit",
                     className: "inline-flex justify-center rounded-sm bg-green-800 hover:bg-green-900 px-4 py-2 text-sm font-medium text-white",
                     onClick: closeModal,
-                    children: "Agregar"
+                    children: "Liquidar"
                   })
                 })]
               })
@@ -12462,7 +12493,7 @@ function DatosObraSocial(id) {
               className: "grid grid-cols-2",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                 className: "mb-1",
-                children: "Intereses Sueldos:"
+                children: "Intereses Aporte Patronal:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                 className: "font-light",
                 children: ["$", dato.totsueldos * 2 * dato.tasaint / 100]
@@ -12500,18 +12531,9 @@ function DatosObraSocial(id) {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: "mr-4",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
-                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
-                children: ["Editar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-                  className: "material-symbols-outlined ml-2 cursor-pointer",
-                  children: "edit"
-                })]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
               className: "",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
-                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-yellow-700 transition-colors duration-300",
+                className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
                 children: ["Descargar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   className: "material-symbols-outlined ml-2 cursor-pointer",
                   children: "download"
