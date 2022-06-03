@@ -6608,7 +6608,6 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
- // import InputCountries from './InputCountries';
 
 
 
@@ -6627,6 +6626,37 @@ function Agregar() {
     setIsOpen(true);
   }
 
+  var Empresas = [{
+    id: 10,
+    company: "Samsung"
+  }, {
+    id: 9,
+    company: "Apple"
+  }, {
+    id: 8,
+    company: "Microsoft"
+  }, {
+    id: 7,
+    company: "Camino"
+  }, {
+    id: 6,
+    company: "Xiaomi"
+  }, {
+    id: 5,
+    company: "Constrictor"
+  }, {
+    id: 4,
+    company: "HyperX"
+  }, {
+    id: 3,
+    company: "Sony"
+  }, {
+    id: 2,
+    company: "Visa"
+  }, {
+    id: 1,
+    company: "Liliana"
+  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "flex items-center justify-center",
@@ -6687,77 +6717,55 @@ function Agregar() {
                       className: "grid grid-cols-1 gap-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                         className: "mr-2",
-                        children: "Nombre:"
+                        children: "Empresa:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("select", {
+                        className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none",
+                        children: Empresas.map(function (empresa) {
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                            className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white",
+                            name: empresa.id,
+                            value: empresa.company,
+                            children: empresa.company
+                          });
+                        })
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                        className: "mr-2",
+                        children: "Nombre y Apellido:"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
                         type: "text",
-                        className: "bg-darklight py-1 px-2",
+                        className: "bg-darklight py-1 px-2 rounded-sm",
                         placeholder: "Ingrese un nombre"
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                         className: "mr-2",
-                        children: "CUIT:"
+                        children: "Cargo:"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                        type: "number",
-                        className: "bg-darklight py-1 px-2 rounded-sm",
-                        placeholder: "Ingrese un n\xFAmero de cuit"
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                      className: "grid col-span-2 grid-cols-1",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Raz\xF3n Social:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("textarea", {
-                        rows: "4",
-                        cols: "40",
-                        placeholder: "Ingrese un texto",
+                        placeholder: "Ingrese el cargo que representa",
                         className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none"
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                         className: "mr-2",
-                        children: "Cod. Postal:"
+                        children: "Tel\xE9fono:"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
                         type: "text",
-                        placeholder: "Ingrese un c\xF3digo postal",
-                        className: "bg-darklight py-1 px-2"
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                      className: "grid grid-cols-1",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Pa\xEDs:"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                      className: "grid grid-cols-1",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Provincia:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                        type: "text",
-                        placeholder: "Ingrese la provincia",
+                        placeholder: "Ingrese un n\xFAmero de tel\xE9fono",
                         className: "bg-darklight py-1 px-2"
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                         className: "mr-2",
-                        children: "Localidad:"
+                        children: "Email:"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                        type: "text",
-                        placeholder: "Ingrese la localidad",
-                        className: "bg-darklight py-1 px-2"
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                      className: "grid grid-cols-1",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Domicilio:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                        type: "text",
-                        placeholder: "Ingrese el domicilio",
+                        type: "email",
+                        placeholder: "Ingrese el email",
                         className: "bg-darklight py-1 px-2"
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -6789,6 +6797,135 @@ function Agregar() {
     })]
   });
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/Contactos/FilaTabla.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/Contactos/FilaTabla.jsx ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+ // import DatosEscala from './DatosEscala';
+
+
+
+
+function FilaTabla() {
+  var Contactos = [{
+    id: "10",
+    name: "Francisco P",
+    company: 'Caminos',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }, {
+    id: "9",
+    name: "Francisco P",
+    company: 'Samsung',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }, {
+    id: "8",
+    name: "Francisco P",
+    company: 'Apple',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }, {
+    id: "7",
+    name: "Francisco P",
+    company: 'Samsung',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }, {
+    id: "6",
+    name: "Francisco P",
+    company: 'Samsung',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }, {
+    id: "5",
+    name: "Francisco P",
+    company: 'Coca-Cola',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }, {
+    id: "4",
+    name: "Francisco P",
+    company: 'NASA',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }, {
+    id: "3",
+    name: "Francisco P",
+    company: 'Samsung',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }, {
+    id: "2",
+    name: "Francisco P",
+    company: 'Galaxy',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }, {
+    id: "1",
+    name: "Francisco P",
+    company: 'Samsung',
+    cargo: "Portero",
+    email: 'challengerenlolgmail.com',
+    tel: "+54 9 341 3349561"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "h-80 overflow-auto scrollbar",
+    children: Contactos.map(function (contacto, index) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "grid grid-cols-14 p-4 border-b border-lightwhite",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col-span-2",
+          children: contacto.company
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col-span-3",
+          children: contacto.name
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid col-span-2",
+          children: contacto.cargo
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid col-span-3",
+          children: contacto.tel
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid col-span-3",
+          children: contacto.email
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid place-content-end",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+            className: "material-symbols-outlined cursor-pointer text-red-500",
+            children: "delete"
+          })
+        })]
+      }, index);
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FilaTabla);
 
 /***/ }),
 
@@ -6885,35 +7022,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _FilaTabla__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FilaTabla */ "./resources/js/components/Contactos/FilaTabla.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
- // import FilaTabla from './FilaTabla';
+
 
 
 
 
 function Tabla() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "w-full border border-lightwhite rounded",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-12",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-14",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-start col-span-2",
         children: "Empresa"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
-        children: "CUIT"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-3",
         children: "Contacto"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "grid col-span-2",
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid place-content-start col-span-2",
+        children: "Cargo"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid col-span-3",
         children: "Tel\xE9fono"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "grid col-span-3",
+        children: "Email"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-end",
-        children: "Opciones"
+        children: "Borrar"
       })]
-    })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });
 }
 
@@ -8288,61 +8429,51 @@ function FilaTabla() {
     id: "10",
     name: 'Caminos',
     cuit: '20439831880',
-    contact: 'Pablo Argento',
     tel: "+54 9 341 3349561"
   }, {
     id: "9",
     name: 'Samsung',
     cuit: '20439831880',
-    contact: 'Notengoni Idea',
     tel: "+54 9 341 3349561"
   }, {
     id: "8",
     name: 'Apple',
     cuit: '20439831880',
-    contact: 'Mark Zuckerberg',
     tel: "+54 9 341 3349561"
   }, {
     id: "7",
     name: 'Samsung',
     cuit: '20439831880',
-    contact: 'Notengoni Idea',
     tel: "+54 9 341 3349561"
   }, {
     id: "6",
     name: 'Samsung',
     cuit: '20439831880',
-    contact: 'Notengoni Idea',
     tel: "+54 9 341 3349561"
   }, {
     id: "5",
     name: 'Coca-Cola',
     cuit: '20439831880',
-    contact: 'Claudio Raimundez',
     tel: "+54 9 341 3349561"
   }, {
     id: "4",
     name: 'NASA',
     cuit: '20439831880',
-    contact: 'Notengoni Idea',
     tel: "+54 9 341 3349561"
   }, {
     id: "3",
     name: 'Samsung',
     cuit: '20439831880',
-    contact: 'Notengoni Idea',
     tel: "+54 9 341 3349561"
   }, {
     id: "2",
     name: 'Galaxy',
     cuit: '20439831880',
-    contact: 'Coldplay',
     tel: "+54 9 341 3349561"
   }, {
     id: "1",
     name: 'Samsung',
     cuit: '20439831880',
-    contact: 'Agustin',
     tel: "+54 9 341 3349561"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -8356,16 +8487,13 @@ function FilaTabla() {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Button, {
               as: "div",
-              className: "grid grid-cols-12 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 \n                                ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
+              className: "grid grid-cols-9 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 \n                                ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "col-span-3",
                 children: empresa.name
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "col-span-3",
                 children: empresa.cuit
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                className: "col-span-3",
-                children: empresa.contact
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "grid col-span-2",
                 children: empresa.tel
@@ -9514,16 +9642,13 @@ function Tabla() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "w-full border border-lightwhite rounded",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-12",
+      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-9",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-3",
         children: "Empresa"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-3",
         children: "CUIT"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-start col-span-3",
-        children: "Contacto"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid col-span-2",
         children: "Tel\xE9fono"

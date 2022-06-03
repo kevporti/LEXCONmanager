@@ -5,16 +5,16 @@ import DatosEscala from './DatosEscala';
 
 function FilaTabla() {
     const Empresas = [
-        {id: "10", name: 'Caminos', cuit: '20439831880', contact: 'Pablo Argento', tel: "+54 9 341 3349561"},
-        {id: "9", name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', tel: "+54 9 341 3349561"},
-        {id: "8", name: 'Apple', cuit: '20439831880', contact: 'Mark Zuckerberg', tel: "+54 9 341 3349561"},
-        {id: "7", name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', tel: "+54 9 341 3349561"},
-        {id: "6", name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', tel: "+54 9 341 3349561"},
-        {id: "5", name: 'Coca-Cola', cuit: '20439831880', contact: 'Claudio Raimundez', tel: "+54 9 341 3349561"},
-        {id: "4", name: 'NASA', cuit: '20439831880', contact: 'Notengoni Idea', tel: "+54 9 341 3349561"},
-        {id: "3", name: 'Samsung', cuit: '20439831880', contact: 'Notengoni Idea', tel: "+54 9 341 3349561"},
-        {id: "2", name: 'Galaxy', cuit: '20439831880', contact: 'Coldplay', tel: "+54 9 341 3349561"},
-        {id: "1", name: 'Samsung', cuit: '20439831880', contact: 'Agustin', tel: "+54 9 341 3349561"},
+        {id: "10", name: 'Caminos', cuit: '20439831880', tel: "+54 9 341 3349561"},
+        {id: "9", name: 'Samsung', cuit: '20439831880', tel: "+54 9 341 3349561"},
+        {id: "8", name: 'Apple', cuit: '20439831880', tel: "+54 9 341 3349561"},
+        {id: "7", name: 'Samsung', cuit: '20439831880', tel: "+54 9 341 3349561"},
+        {id: "6", name: 'Samsung', cuit: '20439831880', tel: "+54 9 341 3349561"},
+        {id: "5", name: 'Coca-Cola', cuit: '20439831880', tel: "+54 9 341 3349561"},
+        {id: "4", name: 'NASA', cuit: '20439831880', tel: "+54 9 341 3349561"},
+        {id: "3", name: 'Samsung', cuit: '20439831880', tel: "+54 9 341 3349561"},
+        {id: "2", name: 'Galaxy', cuit: '20439831880', tel: "+54 9 341 3349561"},
+        {id: "1", name: 'Samsung', cuit: '20439831880', tel: "+54 9 341 3349561"},
     ];
 
     return (
@@ -25,16 +25,13 @@ function FilaTabla() {
                         <>
                             <Disclosure.Button 
                                 as="div" 
-                                className={`grid grid-cols-12 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 
+                                className={`grid grid-cols-9 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 
                                 ${open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'}`}>
                                 <div className="col-span-3">
                                     {empresa.name}
                                 </div>
                                 <div className="col-span-3">
                                     {empresa.cuit}
-                                </div>
-                                <div className="col-span-3">
-                                    {empresa.contact}
                                 </div>
                                 <div className="grid col-span-2">
                                     {empresa.tel}

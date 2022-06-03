@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        '14': 'repeat(14, minmax(0, 1fr))',
+      },
       colors: {
         dark: '#18191A',
         darklight: '#242526',
