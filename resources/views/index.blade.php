@@ -12,7 +12,7 @@
         
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body>
+    <body class="scrollbar">
         <div id="app"></div>
         
 
