@@ -15,6 +15,5 @@ class Usuario extends Model
       'usuario',
       'contraseña',
       'email',
-      'telefono',
-    ]
+    ];
 }

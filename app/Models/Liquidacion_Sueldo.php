@@ -24,5 +24,5 @@ class Liquidacion_Sueldo extends Model
       'mutual',
       'sueldo_neto',
       'firma_usuario',
-    ]
+    ];
 }

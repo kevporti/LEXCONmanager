@@ -21,5 +21,5 @@ class Actividad extends Model
       'fecha_de_pago',
       'forma_de_pago',
       'firma_usuario',
-    ]
+    ];
 }

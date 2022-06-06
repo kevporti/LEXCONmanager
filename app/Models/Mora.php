@@ -15,5 +15,5 @@ class Mora extends Model
       'id_empleado',
       'mes_año',
       'firma_usuario';
-    ]
+    ];
 }

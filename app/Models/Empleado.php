@@ -16,7 +16,9 @@ class Empleado extends Model
       'CUIT',
       'DNI',
       'nombre_y_apellido',
+      'fecha_alta',
+      'fecha_baja',
       'id_rama_categoria',
       'firma_usuario',
-    ]
+    ];
 }

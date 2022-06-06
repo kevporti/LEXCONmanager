@@ -23,5 +23,5 @@ class Liquidacion_Deuda extends Model
       'intereses_contr',
       'estado_cobro',
       'firma_usuario',
-    ]
+    ];
 }

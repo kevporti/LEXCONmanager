@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 
 function Input(props) {
 
+
     const [active, setActive] = React.useState(false);
 
     function handleActivation(e) {
         setActive(!!e.target.value);
+
+        props.setType(e.target.value);
       }
 
     return (

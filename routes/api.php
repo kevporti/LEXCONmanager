@@ -9,6 +9,8 @@ use App\Http\Controllers\ActividadController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\EscalaSalarialController;
 use App\Http\Controllers\MoraController;
+use App\Http\Controllers\LiquidacionSueldoController;
+use App\Http\Controllers\LiquidacionDeudaController;
 
 /*
 |--------------------------------------------------------------------------

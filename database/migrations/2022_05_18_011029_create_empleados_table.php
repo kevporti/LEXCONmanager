@@ -24,6 +24,8 @@ return new class extends Migration
             $table->integer('CUIT');
             $table->integer('DNI');
             $table->string('nombre_y_apellido');
+            $table->string('fecha_alta');
+            $table->string('fecha_baja');
             $table->integer('id_rama_categoria');
             $table->string('firma_usuario');
             $table->timestamps();

@@ -18,5 +18,5 @@ class Escala_Salarial extends Model
       'hs_extra_100',
       'id_rama_categoria',
       'firma_usuario',
-    ]
+    ];
 }

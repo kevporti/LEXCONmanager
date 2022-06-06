@@ -24,5 +24,5 @@ class Contacto extends Model
       'provincia',
       'localidad',
       'firma_usuario'
-    ]
+    ];
 }

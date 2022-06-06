@@ -22,5 +22,5 @@ class Empresa extends Model
       'pais',
       'tel_celular',
       'firma_usuario'
-    ]
+    ];
 }
