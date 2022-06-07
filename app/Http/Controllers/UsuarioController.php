@@ -22,16 +22,11 @@ class UsuarioController extends Controller
 
       //Confirmar que la contraseña es correcta
       if($usuario && Hash::check($request->Contraseña, $usuario->contraseña)) {
-        $request->session()->put('id', $usuario->id_usuario);
-        $request->save();
-        return ['hola' => 'diosito'];
+        // $request->session()->put('id', $usuario->id_usuario);
+        return ['success' => $usuario->id_usuario];
       } else {
         return ['fail' => 'Los datos ingresados son incorrectos'];
       }
-    }
-
-    public function logout(){
-
     }
 
 

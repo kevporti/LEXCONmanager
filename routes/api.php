@@ -29,7 +29,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 /*     Login/Logout       */
 Route::post('/comprobarsesion', [UsuarioController::class, 'comprobarsesion']);
-Route::post('/logout', [UsuarioController::class, 'logout']);
 
 // /*     All Routes to show data      */
 Route::get('/usuario/empresas', [EmpresaController::class, 'empresas']);

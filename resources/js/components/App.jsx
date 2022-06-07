@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Inicio from "./Login/Inicio";
 import Empresas from "./Usuario/Empresas";
 import Contactos from "./Usuario/Contactos";
@@ -15,20 +15,29 @@ import Cuenta from "./Usuario/Cuenta";
 
 
 function App() {
+    function redirect() {
+        let storage = sessionStorage.key("id");
+        if (sessionStorage.getItem("id")){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path="/" element={<Inicio />} />
-                <Route exact path="/usuario/empresas" element={<Empresas />} />
-                <Route exact path="/usuario/contactos" element={<Contactos />} />
-                <Route exact path="/usuario/empleados" element={<Empleados />} />
-                <Route exact path="/usuario/moras" element={<Moras />} />
-                <Route exact path="/usuario/escala_salarial" element={<EscalasSalariales />} />
-                <Route exact path="/usuario/liquidacion_sueldos" element={<LiqSueldos />} />
-                <Route exact path="/usuario/liquidacion_deudas/obra_social" element={<ObraSocial />} />
-                <Route exact path="/usuario/liquidacion_deudas/aporte_sindical" element={<AporteSindical />} />
-                <Route exact path="/usuario/actividades" element={<Actividades />} />
-                <Route exact path="/usuario/perfil" element={<Cuenta />} />
+                <Route exact path="/" element={redirect() == 0 ? <Inicio /> : <Navigate to="/usuario/empresas" />} />
+                <Route exact path="/usuario/empresas" element={redirect() == 1 ? <Empresas /> : <Navigate to="/" />} />
+                <Route exact path="/usuario/contactos" element={redirect() == 1 ? <Contactos /> : <Navigate to="/" />} />
+                <Route exact path="/usuario/empleados" element={redirect() == 1 ? <Empleados /> : <Navigate to="/" />} />
+                <Route exact path="/usuario/moras" element={redirect() == 1 ? <Moras /> : <Navigate to="/" />} />
+                <Route exact path="/usuario/escala_salarial" element={redirect() == 1 ? <EscalasSalariales /> : <Navigate to="/" />} />
+                <Route exact path="/usuario/liquidacion_sueldos" element={redirect() == 1 ? <LiqSueldos /> : <Navigate to="/" />} />
+                <Route exact path="/usuario/liquidacion_deudas/obra_social" element={redirect() == 1 ? <ObraSocial /> : <Navigate to="/" />} />
+                <Route exact path="/usuario/liquidacion_deudas/aporte_sindical" element={redirect() == 1 ? <AporteSindical /> : <Navigate to="/" />} />
+                <Route exact path="/usuario/actividades" element={redirect() == 1 ? <Actividades /> : <Navigate to="/" />} />
+                <Route exact path="/usuario/perfil" element={redirect() == 1 ? <Cuenta /> : <Navigate to="/" />} />
             </Routes>
         </BrowserRouter>
     );

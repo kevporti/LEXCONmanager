@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 function classNames(...classes) {
@@ -9,6 +9,16 @@ function classNames(...classes) {
 }
 
 export default function Dropdown() {
+
+  let history = useNavigate();
+
+
+  function logout(e) {
+    e.preventDefault();
+    sessionStorage.removeItem("id")
+    window.location.reload();
+  }
+
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -42,11 +52,12 @@ export default function Dropdown() {
                 </a>
               )}
             </Menu.Item>
-            <form method="POST" action="#">
+            <form action="">
               <Menu.Item>
                 {({ active }) => (
                   <button
                     type="submit"
+                    onClick={logout}
                     className={classNames(
                       active ? 'bg-lightwhite text-white font-medium' : 'text-white',
                       'block w-full text-left px-4 py-2 text-sm'

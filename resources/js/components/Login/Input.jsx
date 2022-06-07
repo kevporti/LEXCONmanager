@@ -24,7 +24,7 @@ function Input(props) {
                 type={props.type} 
             />
             <label  
-                for={props.name}
+                htmlFor={props.name}
                 className={["absolute left-1 cursor-text transition-all duration-300", 
                     active ? "-top-4 text-green-800 text-xs" : "top-1 "
                     ].join(" ")}
