@@ -13,6 +13,7 @@ class Empresa extends Model
 
     protected $fillable = [
       'id_usuario',
+      'nombre_empresa',
       'CUIT',
       'razon_social',
       'domicilio',

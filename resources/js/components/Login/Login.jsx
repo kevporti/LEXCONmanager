@@ -16,7 +16,7 @@ function Login() {
         if (w.fail) {
             setMsg(w.fail);
         } else {
-            sessionStorage.setItem("id", w);
+            sessionStorage.setItem("id", w.success);
             window.location.reload();
         }
     }

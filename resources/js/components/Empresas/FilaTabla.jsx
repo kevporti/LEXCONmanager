@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Disclosure } from '@headlessui/react';
 import DatosEscala from './DatosEscala';
+import axios from 'axios';
 
 function FilaTabla() {
     const Empresas = [
@@ -17,9 +18,19 @@ function FilaTabla() {
         {id: "1", name: 'Samsung', cuit: '20439831880', tel: "+54 9 341 3349561"},
     ];
 
+    const [Empresa, setEmpresa] = useState([]);
+
+    useEffect(() => {
+      axios.get('http://127.0.0.1:8000/api/usuario/empresas')
+      .then(response => {
+          setEmpresa(response.data);
+        });
+    }, []);
+    
+
     return (
         <div className="h-80 overflow-auto scrollbar">
-            {Empresas.map((empresa) =>(
+            {Empresa.map((empresa) =>(
                 <Disclosure key={empresa.id} as="div" className="">
                     {({ open }) => (
                         <>
@@ -28,13 +39,13 @@ function FilaTabla() {
                                 className={`grid grid-cols-9 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 
                                 ${open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'}`}>
                                 <div className="col-span-3">
-                                    {empresa.name}
+                                    {empresa.nombre_empresa}
                                 </div>
                                 <div className="col-span-3">
-                                    {empresa.cuit}
+                                    {empresa.CUIT}
                                 </div>
                                 <div className="grid col-span-2">
-                                    {empresa.tel}
+                                    {empresa.tel_celular}
                                 </div>
                                 <div className="grid place-content-end">
                                     <i
@@ -46,7 +57,7 @@ function FilaTabla() {
                                 </div>
                             </Disclosure.Button>
                             <Disclosure.Panel className="px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b">
-                                <DatosEscala id={empresa.id} />
+                                <DatosEscala id={empresa.id_empresa} />
                             </Disclosure.Panel>
                         </>
                     )}

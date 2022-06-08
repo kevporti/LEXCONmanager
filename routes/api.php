@@ -12,26 +12,17 @@ use App\Http\Controllers\MoraController;
 use App\Http\Controllers\LiquidacionSueldoController;
 use App\Http\Controllers\LiquidacionDeudaController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-/*     Login/Logout       */
+/*     Login       */
 Route::post('/comprobarsesion', [UsuarioController::class, 'comprobarsesion']);
 
-// /*     All Routes to show data      */
+/*     All Routes to show data      */
 Route::get('/usuario/empresas', [EmpresaController::class, 'empresas']);
+Route::post('/usuario/datosEmpresas', [EmpresaController::class, 'datosEmpresas']);
+Route::post('/usuario/empresas/agregar', [EmpresaController::class, 'agregarEmpresa']);
+Route::put('/usuario/empresas/modificar', [EmpresaController::class, 'modificarEmpresa']);
+Route::delete('/usuario/empresas/eliminar/{id}', [EmpresaController::class, 'eliminarEmpresa']);
+
 Route::get('/usuario/contactos', [ContactoController::class, 'contactos']);
 Route::get('/usuario/actividades', [ActividadController::class, 'actividades']);
 Route::get('/usuario/empleados', [EmpleadoController::class, 'empleados']);

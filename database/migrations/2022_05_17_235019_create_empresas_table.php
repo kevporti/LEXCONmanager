@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('empresas', function (Blueprint $table) {
             $table->increments('id_empresa');
+            $table->string('nombre_empresa');
             $table->integer('id_usuario')->unsigned();
             $table->foreign('id_usuario')
               ->references('id_usuario')
               ->on('usuarios')
               ->onUpdate('cascade')
               ->onDelete('cascade');
-            $table->integer('CUIT');
+            $table->bigInteger('CUIT');
             $table->string('razon_social');
             $table->string('domicilio');
             $table->string('cod_postal');
