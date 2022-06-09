@@ -13,16 +13,10 @@ class Contacto extends Model
 
     protected $fillable = [
       'id_empresa',
-      'CUIT',
       'nombre_y_apellido',
       'cargo',
       'tel_celular',
       'email',
-      'domicilio',
-      'cod_postal',
-      'pais',
-      'provincia',
-      'localidad',
       'firma_usuario'
     ];
 }

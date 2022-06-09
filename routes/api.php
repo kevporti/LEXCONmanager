@@ -24,6 +24,9 @@ Route::put('/usuario/empresas/modificar', [EmpresaController::class, 'modificarE
 Route::delete('/usuario/empresas/eliminar/{id}', [EmpresaController::class, 'eliminarEmpresa']);
 
 Route::get('/usuario/contactos', [ContactoController::class, 'contactos']);
+Route::post('/usuario/agregarContactos', [ContactoController::class, 'agregarContacto']);
+Route::delete('/usuario/contactos/eliminar/{id}', [ContactoController::class, 'eliminarContacto']);
+
 Route::get('/usuario/actividades', [ActividadController::class, 'actividades']);
 Route::get('/usuario/empleados', [EmpleadoController::class, 'empleados']);
 Route::get('/usuario/escala_salarial', [EscalaSalarialController::class, 'escala_salarial']);

@@ -13,12 +13,13 @@ class Empleado extends Model
 
     protected $fillable = [
       'id_empresa',
-      'CUIT',
       'DNI',
       'nombre_y_apellido',
+      'telefono',
       'fecha_alta',
       'fecha_baja',
       'id_rama_categoria',
+      'motivo_reclamo',
       'firma_usuario',
     ];
 }

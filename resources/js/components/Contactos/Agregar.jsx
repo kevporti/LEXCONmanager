@@ -1,29 +1,55 @@
 import { Dialog, Transition } from '@headlessui/react';
+import { set } from 'lodash';
 import { Fragment, useState } from 'react';
+
 
 export default function Agregar() {
   let [isOpen, setIsOpen] = useState(false)
+  const [msg, setMsg] = useState('');
 
-  function closeModal() {
+  const [Empresas, setEmpresas] = useState([]);
+  const [empresaContacto, setempresaContacto] = useState("1");
+  const [nombreContacto, setnombreContacto] = useState([]);
+  const [cargoContacto, setcargoContacto] = useState([]);
+  const [telefonoContacto, settelefonoContacto] = useState([]);
+  const [emailContacto, setemailContacto] = useState([]);
+  const [firmaUsuarioContacto, setfirmaUsuarioContacto] = useState([]);
+
+
+  function handleChangeSelect(e) {
+    setempresaContacto(e.target.value)
+  }
+
+
+  async function handleContacto(e) {
+    let item = {empresaContacto, nombreContacto, cargoContacto, telefonoContacto, emailContacto, firmaUsuarioContacto};
+    console.log(item);
+    await axios.post('http://127.0.0.1:8000/api/usuario/agregarContactos', item)
+      .then(response => {
+        setMsg(response.data.success);
+        window.location.reload();
+      });
+  }
+  
+  async function getEmpresas(e) {
+
+    await axios.get('http://127.0.0.1:8000/api/usuario/empresas')
+      .then(response => {
+        setEmpresas(response.data);
+      });
+    }
+
+  function closeModal(e) {
     setIsOpen(false)
+
+    handleContacto(e)
   }
 
-  function openModal() {
+  function openModal(e) {
     setIsOpen(true)
+    getEmpresas(e)
   }
 
-  const Empresas = [
-    { id: 10, company: "Samsung"},
-    { id: 9, company: "Apple"},
-    { id: 8, company: "Microsoft"},
-    { id: 7, company: "Camino"},
-    { id: 6, company: "Xiaomi"},
-    { id: 5, company: "Constrictor"},
-    { id: 4, company: "HyperX"},
-    { id: 3, company: "Sony"},
-    { id: 2, company: "Visa"},
-    { id: 1, company: "Liliana"},
-  ]
 
   return (
     <>
@@ -72,39 +98,39 @@ export default function Agregar() {
                     Agregar Contacto
                   </Dialog.Title>
                   <div className="mt-2">
+                  <h1 className="text-red-700 text-lg">{msg}</h1>
                     <form className="text-sm text-gray-400 grid grid-cols-2 gap-4">
                         <div className="grid grid-cols-1 gap-1">
                             <span className="mr-2">Empresa:</span>
-                            <select className="bg-darklight rounded-sm py-1 px-2 focus:outline-none">
+                            <select value={empresaContacto} onChange={handleChangeSelect} className="bg-darklight rounded-sm py-1 px-2 focus:outline-none">
                               {Empresas.map(empresa => (
                                 <option 
                                   className="bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white" 
-                                  name={empresa.id} 
-                                  value={empresa.company}>
-                                    {empresa.company}
+                                  value={empresa.id_empresa}>
+                                    {empresa.nombre_empresa}
                                 </option>
                               ))}
                             </select>
                         </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Nombre y Apellido:</span>
-                            <input type="text" className="bg-darklight py-1 px-2 rounded-sm" placeholder="Ingrese un nombre" />
+                            <input name="nombreContacto" onChange={e => setnombreContacto(e.target.value)} type="text" className="bg-darklight py-1 px-2 rounded-sm" placeholder="Ingrese un nombre" />
                         </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Cargo:</span>
-                            <input placeholder="Ingrese el cargo que representa" className="bg-darklight rounded-sm py-1 px-2 focus:outline-none" />
+                            <input onChange={e => setcargoContacto(e.target.value)} name="cargoContacto" placeholder="Ingrese el cargo que representa" className="bg-darklight rounded-sm py-1 px-2 focus:outline-none" />
                         </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Teléfono:</span>
-                            <input type="text" placeholder="Ingrese un número de teléfono" className="bg-darklight py-1 px-2" />
+                            <input onChange={e => settelefonoContacto(e.target.value)} name="telefonoContacto" type="text" placeholder="Ingrese un número de teléfono" className="bg-darklight py-1 px-2" />
                         </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Email:</span>
-                            <input type="email" placeholder="Ingrese el email" className="bg-darklight py-1 px-2" />
+                            <input onChange={e => setemailContacto(e.target.value)} name="emailContacto" type="email" placeholder="Ingrese el email" className="bg-darklight py-1 px-2" />
                         </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Creado por:</span>
-                            <input type="text" placeholder="Ingrese su nombre" className="bg-darklight py-1 px-2" />
+                            <input onChange={e => setfirmaUsuarioContacto(e.target.value)} name="firmaUsuarioContacto" type="text" placeholder="Ingrese su nombre" className="bg-darklight py-1 px-2" />
                         </div>
                     </form>
                   </div>

@@ -21,16 +21,10 @@ return new class extends Migration
               ->on('empresas')
               ->onUpdate('cascade')
               ->onDelete('cascade');
-            $table->integer('CUIT');
             $table->string('nombre_y_apellido');
             $table->string('cargo');
             $table->string('tel_celular')->nullable();
             $table->string('email')->nullable();
-            $table->string('domicilio');
-            $table->string('cod_postal');
-            $table->string('pais');
-            $table->string('provincia')->nullable();
-            $table->string('localidad');
             $table->string('firma_usuario');
             $table->timestamps();
         });

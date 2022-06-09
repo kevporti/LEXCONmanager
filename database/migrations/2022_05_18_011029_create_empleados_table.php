@@ -21,12 +21,13 @@ return new class extends Migration
               ->on('empresas')
               ->onUpdate('cascade')
               ->onDelete('cascade');
-            $table->integer('CUIT');
             $table->integer('DNI');
             $table->string('nombre_y_apellido');
+            $table->string('telefono');
             $table->string('fecha_alta');
             $table->string('fecha_baja');
             $table->integer('id_rama_categoria');
+            $table->string('motivo_reclamo');
             $table->string('firma_usuario');
             $table->timestamps();
         });
