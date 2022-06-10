@@ -1,39 +1,74 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
+import axios from 'axios';
 
 export default function Agregar() {
   let [isOpen, setIsOpen] = useState(false)
+  const [Msg, setMsg] = useState([])
+  const [Empresas, setEmpresas] = useState([])
+
+  const [EmpresaEmpleado, setEmpresaEmpleado] = useState("1")
+  const [CategoriaEmpleado, setCategoriaEmpleado] = useState("1")
+  const [NombreEmpleado, setNombreEmpleado] = useState([])
+  const [DNIEmpleado, setDNIEmpleado] = useState([])
+  const [MotivoReclamoEmpleado, setMotivoReclamoEmpleado] = useState([])
+  const [TelefonoEmpleado, setTelefonoEmpleado] = useState([])
+  const [FechaAltaEmpleado, setFechaAltaEmpleado] = useState([])
+  const [FechaBajaEmpleado, setFechaBajaEmpleado] = useState()
+  const [AutorEmpleado, setAutorEmpleado] = useState([])
 
   function closeModal() {
+    handleEmpleado();
     setIsOpen(false)
   }
 
-  function openModal() {
+  function openModal(e) {
+    getEmpresas(e);
+    
     setIsOpen(true)
   }
 
-  const Empresas = [
-    { id: 10, company: "Samsung"},
-    { id: 9, company: "Apple"},
-    { id: 8, company: "Microsoft"},
-    { id: 7, company: "Camino"},
-    { id: 6, company: "Xiaomi"},
-    { id: 5, company: "Constrictor"},
-    { id: 4, company: "HyperX"},
-    { id: 3, company: "Sony"},
-    { id: 2, company: "Visa"},
-    { id: 1, company: "Liliana"},
-  ]
+  function handleCategoriaSelect(e) {
+    setCategoriaEmpleado(e.target.value);
+  }
+
+  function handleEmpresaSelect(e) {
+    setEmpresaEmpleado(e.target.value);
+  }
+
+  function getEmpresas(e) {
+    e.preventDefault();
+
+    axios.get('http://127.0.0.1:8000/api/usuario/empresas')
+      .then(response => {
+        setEmpresas(response.data);
+      });
+  }
+
+  async function handleEmpleado() {
+    let item = {EmpresaEmpleado, CategoriaEmpleado, NombreEmpleado, DNIEmpleado, MotivoReclamoEmpleado, TelefonoEmpleado, FechaAltaEmpleado, FechaBajaEmpleado, AutorEmpleado};
+
+    await axios.post('http://127.0.0.1:8000/api/usuario/agregarEmpleados', item)
+      .then(response => {
+        if (response.data.success) {
+          setMsg(response.data.success);
+          window.location.reload();
+        } else {
+          setMsg(response.data.fail);
+          
+        }
+      })
+  }
 
   const Categorias = [
-    { id: 8, name: "Chofer 1ra"},
-    { id: 7, name: "Chofer 2da"},
-    { id: 6, name: "Chofer 3ra"},
-    { id: 5, name: "Correo"},
-    { id: 4, name: "Cereal"},
-    { id: 3, name: "Logica"},
-    { id: 2, name: "Logica 2"},
-    { id: 1, name: "Logica 3"},
+    { id: "8", name: "Chofer 1ra"},
+    { id: "7", name: "Chofer 2da"},
+    { id: "6", name: "Chofer 3ra"},
+    { id: "5", name: "Correo"},
+    { id: "4", name: "Cereal"},
+    { id: "3", name: "Logica"},
+    { id: "2", name: "Logica 2"},
+    { id: "1", name: "Logica 3"},
   ]
 
   return (
@@ -84,55 +119,93 @@ export default function Agregar() {
                   </Dialog.Title>
                   <div className="mt-2">
                     <form className="text-sm text-gray-400 grid grid-cols-2 gap-4">
-                        <div className="grid grid-cols-1 gap-1">
-                            <span className="mr-2">Nombre y Apellido:</span>
-                            <input type="text" className="bg-darklight py-1 px-2" placeholder="Ingrese un nombre" />
-                        </div>
-                        <div className="grid grid-cols-1">
-                            <span className="mr-2">DNI:</span>
-                            <input type="number" className="bg-darklight py-1 px-2 rounded-sm" placeholder="Ingrese un número de dni" />
-                        </div>
-                        <div className="grid grid-cols-1">
-                            <span className="mr-2">Teléfono:</span>
-                            <input type="text" placeholder="Ingrese un número de teléfono" className="bg-darklight rounded-sm py-1 px-2 focus:outline-none" />
-                        </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Empresa:</span>
-                            <select className="bg-darklight rounded-sm py-1 px-2 focus:outline-none">
+                            <select value={EmpresaEmpleado} onChange={handleEmpresaSelect} className="bg-darklight rounded-sm py-1 px-2 focus:outline-none">
                               {Empresas.map(empresa => (
                                 <option 
+                                  key={empresa.id_empresa}
                                   className="bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white" 
-                                  name={empresa.id} 
-                                  value={empresa.company}>
-                                    {empresa.company}
+                                  name={empresa.nombre_empresa} 
+                                  value={empresa.id_empresa}>
+                                    {empresa.nombre_empresa}
                                 </option>
                               ))}
                             </select>
                         </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Rama/Categoría:</span>
-                            <select className="bg-darklight rounded-sm py-1 px-2 focus:outline-none">
+                            <select value={CategoriaEmpleado} onChange={handleCategoriaSelect} className="bg-darklight rounded-sm py-1 px-2 focus:outline-none">
                               {Categorias.map(categoria => (
                                 <option 
+                                  key={categoria.id}
                                   className="bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white" 
-                                  name={categoria.id} 
-                                  value={categoria.name}>
+                                  name={categoria.name} 
+                                  value={categoria.id}>
                                     {categoria.name}
                                 </option>
                               ))}
                             </select>
                         </div>
+                        <div className="grid grid-cols-1 gap-1">
+                            <span className="mr-2">Nombre y Apellido:</span>
+                            <input 
+                              name="NombreEmpleado"
+                              onChange={e => setNombreEmpleado(e.target.value)}
+                              type="text" 
+                              className="bg-darklight py-1 px-2" 
+                              placeholder="Ingrese un nombre" />
+                        </div>
+                        <div className="grid grid-cols-1">
+                            <span className="mr-2">DNI:</span>
+                            <input 
+                              name="DNIEmpleado"
+                              onChange={e => setDNIEmpleado(e.target.value)}
+                              type="number" 
+                              className="bg-darklight py-1 px-2 rounded-sm" 
+                              placeholder="Ingrese un número de dni" />
+                        </div>
+                        <div className="grid grid-cols-1 col-span-2">
+                            <span className="mr-2">Motivo de Reclamo:</span>
+                            <textarea 
+                              name="MotivoReclamoEmpleado" rows="4" cols="40" 
+                              onChange={e => setMotivoReclamoEmpleado(e.target.value)}
+                              placeholder="Ingrese un texto" 
+                              className="bg-darklight rounded-sm py-1 px-2 focus:outline-none" />
+                        </div>
+                        <div className="grid grid-cols-1">
+                            <span className="mr-2">Teléfono:</span>
+                            <input 
+                              name="TelefonoEmpleado"
+                              onChange={e => setTelefonoEmpleado(e.target.value)}
+                              type="text" 
+                              placeholder="Ingrese un número de teléfono" 
+                              className="bg-darklight rounded-sm py-1 px-2 focus:outline-none" />
+                        </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Fecha de Alta:</span>
-                            <input type="date" className="bg-darklight py-1 px-2" />
+                            <input 
+                              name="FechaAltaEmpleado"
+                              onChange={e => setFechaAltaEmpleado(e.target.value)}
+                              type="date" 
+                              className="bg-darklight py-1 px-2" />
                         </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Fecha de Baja:</span>
-                            <input type="date" className="bg-darklight py-1 px-2" />
+                            <input 
+                              name="FechaBajaEmpleado"
+                              onChange={e => setFechaBajaEmpleado(e.target.value)}
+                              type="date" 
+                              className="bg-darklight py-1 px-2" />
                         </div>
                         <div className="grid grid-cols-1">
                             <span className="mr-2">Creado por:</span>
-                            <input type="text" placeholder="Ingrese su nombre" className="bg-darklight py-1 px-2" />
+                            <input 
+                              name="AutorEmpleado"
+                              onChange={e => setAutorEmpleado(e.target.value)}
+                              type="text" 
+                              placeholder="Ingrese su nombre" 
+                              className="bg-darklight py-1 px-2" />
                         </div>
                     </form>
                   </div>

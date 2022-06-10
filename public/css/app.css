@@ -701,9 +701,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-.place-content-center {
-  place-content: center;
-}
 .place-content-start {
   place-content: start;
 }
@@ -967,13 +964,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 .text-green-800 {
   --tw-text-opacity: 1;

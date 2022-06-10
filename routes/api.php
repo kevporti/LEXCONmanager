@@ -28,9 +28,18 @@ Route::post('/usuario/agregarContactos', [ContactoController::class, 'agregarCon
 Route::delete('/usuario/contactos/eliminar/{id}', [ContactoController::class, 'eliminarContacto']);
 
 Route::get('/usuario/actividades', [ActividadController::class, 'actividades']);
+
 Route::get('/usuario/empleados', [EmpleadoController::class, 'empleados']);
+Route::post('/usuario/datosEmpleados', [EmpleadoController::class, 'datosEmpleados']);
+Route::post('/usuario/agregarEmpleados', [EmpleadoController::class, 'agregarEmpleados']);
+Route::delete('/usuario/empleados/eliminar/{id}', [EmpleadoController::class, 'eliminarEmpleado']);
+
 Route::get('/usuario/escala_salarial', [EscalaSalarialController::class, 'escala_salarial']);
+
 Route::get('/usuario/moras', [MoraController::class, 'moras']);
+
 Route::get('/usuario/liquidacion_sueldos', [LiquidacionSueldoController::class, 'liquidacion_sueldos']);
+
 Route::get('/usuario/liquidacion_deudas/obrasocial', [LiquidacionDeudaController::class, 'obra_social']);
+
 Route::get('/usuario/liquidacion_deudas/aportesindical', [LiquidacionDeudaController::class, 'aporte_sindical']);
