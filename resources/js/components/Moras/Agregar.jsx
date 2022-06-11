@@ -5,16 +5,19 @@ import { get } from "lodash";
 
 export default function Agregar() {
     let [isOpen, setIsOpen] = useState(false);
+    const [Msg, setMsg] = useState("");
 
     function closeModal() {
+        setIsOpen(false);
+    }
+
+    function sendForm() {
         handleMora();
         setIsOpen(false);
     }
 
     function openModal(e) {
-        getEmpresas(e).then((response) => {
-            setEmpresas(response.data);
-        });
+        getEmpresas(e);
 
         setIsOpen(true);
     }
@@ -22,7 +25,7 @@ export default function Agregar() {
     const [Empresas, setEmpresas] = useState([]);
     const [Empleados, setEmpleados] = useState([]);
     const [EmpresaMora, setEmpresaMora] = useState(0);
-    const [EmpleadoEmpresaMora, setEmpleadoEmpresaMora] = useState([]);
+    const [EmpleadoEmpresaMora, setEmpleadoEmpresaMora] = useState();
     const [FechaDesdeMora, setFechaDesdeMora] = useState([]);
     const [FechaHastaMora, setFechaHastaMora] = useState([]);
     const [AutorMora, setAutorMora] = useState([]);
@@ -40,7 +43,7 @@ export default function Agregar() {
     }
 
     function handleSelectEmpleado(e) {
-        setEmpleadoEmpresaMora(e.target.value);
+        setEmpleadoEmpresaMora([e.target.value]);
     }
 
     useEffect(() => {
@@ -51,7 +54,7 @@ export default function Agregar() {
         });
     }, [EmpresaMora]);
 
-    function handleMora() {
+    async function handleMora() {
         let item = {
             EmpresaMora,
             EmpleadoEmpresaMora,
@@ -59,9 +62,9 @@ export default function Agregar() {
             FechaHastaMora,
             AutorMora,
         };
-        axios.post("/api/usuario/agregarMoras", item).then((response) => {
-            console.log(response.data);
-        });
+        const { data } = await axios.post("/api/usuario/agregarMoras", item);
+        setMsg(data);
+        window.location.reload();
     }
 
     return (
@@ -241,7 +244,7 @@ export default function Agregar() {
                                         <button
                                             type="submit"
                                             className="inline-flex justify-center rounded-sm bg-green-800 hover:bg-green-900 px-4 py-2 text-sm font-medium text-white"
-                                            onClick={closeModal}
+                                            onClick={sendForm}
                                         >
                                             Agregar
                                         </button>

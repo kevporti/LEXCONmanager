@@ -12107,52 +12107,59 @@ function Agregar() {
       isOpen = _useState2[0],
       setIsOpen = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      Msg = _useState4[0],
+      setMsg = _useState4[1];
+
   function closeModal() {
+    setIsOpen(false);
+  }
+
+  function sendForm() {
     handleMora();
     setIsOpen(false);
   }
 
   function openModal(e) {
-    getEmpresas(e).then(function (response) {
-      setEmpresas(response.data);
-    });
+    getEmpresas(e);
     setIsOpen(true);
   }
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      Empresas = _useState4[0],
-      setEmpresas = _useState4[1];
-
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState6 = _slicedToArray(_useState5, 2),
-      Empleados = _useState6[0],
-      setEmpleados = _useState6[1];
+      Empresas = _useState6[0],
+      setEmpresas = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState8 = _slicedToArray(_useState7, 2),
-      EmpresaMora = _useState8[0],
-      setEmpresaMora = _useState8[1];
+      Empleados = _useState8[0],
+      setEmpleados = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
       _useState10 = _slicedToArray(_useState9, 2),
-      EmpleadoEmpresaMora = _useState10[0],
-      setEmpleadoEmpresaMora = _useState10[1];
+      EmpresaMora = _useState10[0],
+      setEmpresaMora = _useState10[1];
 
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
       _useState12 = _slicedToArray(_useState11, 2),
-      FechaDesdeMora = _useState12[0],
-      setFechaDesdeMora = _useState12[1];
+      EmpleadoEmpresaMora = _useState12[0],
+      setEmpleadoEmpresaMora = _useState12[1];
 
   var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState14 = _slicedToArray(_useState13, 2),
-      FechaHastaMora = _useState14[0],
-      setFechaHastaMora = _useState14[1];
+      FechaDesdeMora = _useState14[0],
+      setFechaDesdeMora = _useState14[1];
 
   var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState16 = _slicedToArray(_useState15, 2),
-      AutorMora = _useState16[0],
-      setAutorMora = _useState16[1];
+      FechaHastaMora = _useState16[0],
+      setFechaHastaMora = _useState16[1];
+
+  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState18 = _slicedToArray(_useState17, 2),
+      AutorMora = _useState18[0],
+      setAutorMora = _useState18[1];
 
   function getEmpresas(_x) {
     return _getEmpresas.apply(this, arguments);
@@ -12190,7 +12197,7 @@ function Agregar() {
   }
 
   function handleSelectEmpleado(e) {
-    setEmpleadoEmpresaMora(e.target.value);
+    setEmpleadoEmpresaMora([e.target.value]);
   }
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -12203,16 +12210,41 @@ function Agregar() {
   }, [EmpresaMora]);
 
   function handleMora() {
-    var item = {
-      EmpresaMora: EmpresaMora,
-      EmpleadoEmpresaMora: EmpleadoEmpresaMora,
-      FechaDesdeMora: FechaDesdeMora,
-      FechaHastaMora: FechaHastaMora,
-      AutorMora: AutorMora
-    };
-    axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/usuario/agregarMoras", item).then(function (response) {
-      console.log(response.data);
-    });
+    return _handleMora.apply(this, arguments);
+  }
+
+  function _handleMora() {
+    _handleMora = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+      var item, _yield$axios$post, data;
+
+      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              item = {
+                EmpresaMora: EmpresaMora,
+                EmpleadoEmpresaMora: EmpleadoEmpresaMora,
+                FechaDesdeMora: FechaDesdeMora,
+                FechaHastaMora: FechaHastaMora,
+                AutorMora: AutorMora
+              };
+              _context2.next = 3;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/usuario/agregarMoras", item);
+
+            case 3:
+              _yield$axios$post = _context2.sent;
+              data = _yield$axios$post.data;
+              setMsg(data);
+              window.location.reload();
+
+            case 7:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+    return _handleMora.apply(this, arguments);
   }
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
@@ -12362,7 +12394,7 @@ function Agregar() {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
                     type: "submit",
                     className: "inline-flex justify-center rounded-sm bg-green-800 hover:bg-green-900 px-4 py-2 text-sm font-medium text-white",
-                    onClick: closeModal,
+                    onClick: sendForm,
                     children: "Agregar"
                   })
                 })]
@@ -12410,6 +12442,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function FilaTabla() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -12419,11 +12452,44 @@ function FilaTabla() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     axios__WEBPACK_IMPORTED_MODULE_2___default().get("/api/usuario/moras").then(function (response) {
       setMoras(response.data);
-      console.log(response.data);
     });
   }, []);
+
+  function formatDate(string) {
+    var options = {
+      year: "numeric",
+      month: "long",
+      timeZone: "UTC"
+    };
+    return new Date(string).toLocaleDateString("es-AR", options);
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    className: "h-80 overflow-auto scrollbar"
+    className: "h-80 overflow-auto scrollbar",
+    children: Moras.map(function (mora) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "grid grid-cols-12 px-4 border-b border-lightwhite p-2",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "col-span-3",
+          children: mora.nombre_empresa
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "col-span-3",
+          children: mora.nombre_y_apellido
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "grid col-span-2 place-content-end",
+          children: mora.id_mora
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "grid place-content-end col-span-2",
+          children: formatDate(mora.mes_año)
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "grid place-content-end col-span-2",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+            className: "material-symbols-outlined cursor-pointer text-red-500",
+            children: "delete"
+          })
+        })]
+      }, mora.id_mora);
+    })
   });
 }
 
