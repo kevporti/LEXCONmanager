@@ -21,6 +21,14 @@ class EmpleadoController extends Controller
         return $empleado;
     }
 
+    public function empleadosPorEmpresa(Request $request) {
+
+        $empleados = Empleado::where("id_empresa", $request->Id)
+            ->get();
+
+        return $empleados;
+    }
+
     public function agregarEmpleados(Request $request) {
 
         $request->validate([

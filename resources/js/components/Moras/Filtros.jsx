@@ -1,14 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Agregar from './Agregar';
+import React from "react";
+import ReactDOM from "react-dom";
+import Agregar from "./Agregar";
 
 function Filtros() {
-
-    return(
+    return (
         <div className="flex w-full justify-between my-8">
             <div className="flex items-center">
-                <input className="bg-dark p-2" type="text" placeholder="Buscar empleado" />
-                <i className="material-symbols-outlined p-2 rounded-r bg-dark cursor-pointer">search</i>
+                <input
+                    className="bg-dark p-2"
+                    type="text"
+                    placeholder="Buscar empleado"
+                />
+                <i className="material-symbols-outlined p-2 rounded-r bg-dark cursor-pointer">
+                    search
+                </i>
             </div>
             <div>
                 <Agregar />

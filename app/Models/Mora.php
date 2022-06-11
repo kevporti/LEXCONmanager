@@ -14,6 +14,6 @@ class Mora extends Model
     protected $fillable = [
       'id_empleado',
       'mes_año',
-      'firma_usuario';
+      'firma_usuario',
     ];
 }
