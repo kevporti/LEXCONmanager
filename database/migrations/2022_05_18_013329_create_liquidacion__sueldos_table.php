@@ -27,15 +27,12 @@ return new class extends Migration
               ->on('escala_salarial')
               ->onUpdate('cascade')
               ->onDelete('cascade');
-            $table->float('sueldo_bruto');
-            $table->float('jubilacion');
-            $table->float('aporte_sindical');
-            $table->float('obra_social');
-            $table->float('ley_4035');
-            $table->float('item_8_1_1');
-            $table->float('item_8_1_6_seguro_sepelio');
-            $table->float('mutual');
             $table->float('sueldo_neto');
+            $table->float('adicional_rama');
+            $table->float('extra_50');
+            $table->float('extra_100');
+            $table->float('simple_presencia');
+            $table->float('perm_fuera_resid');
             $table->string('firma_usuario');
             $table->timestamps();
         });

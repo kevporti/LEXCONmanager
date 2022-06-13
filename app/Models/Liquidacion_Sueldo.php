@@ -14,15 +14,13 @@ class Liquidacion_Sueldo extends Model
     protected $fillable = [
       'id_mora',
       'id_escala_s',
-      'sueldo_bruto',
-      'jubilacion',
-      'aporte_sindical',
-      'obra_social',
-      'ley_4035',
-      'item_8.1.1',
-      'item_8.1.6_seguro_sepelio',
-      'mutual',
       'sueldo_neto',
+      'adicional_rama',
+      'extra_50',
+      'extra_100',
+      'simple_presencia',
+      'perm_fuera_resid',
+      'sueldo_bruto',
       'firma_usuario',
     ];
 }
