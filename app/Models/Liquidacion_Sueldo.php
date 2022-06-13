@@ -14,6 +14,9 @@ class Liquidacion_Sueldo extends Model
     protected $fillable = [
       'id_mora',
       'id_escala_s',
+      'id_obra_social',
+      'id_aporte_sindical',
+      'reajuste',
       'sueldo_neto',
       'adicional_rama',
       'extra_50',

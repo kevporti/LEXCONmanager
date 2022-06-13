@@ -17,6 +17,8 @@ return new class extends Migration
             $table->increments('id_liq_sueldo');
             $table->integer('id_mora')->unsigned();
             $table->integer('id_escala_s')->unsigned();
+            $table->integer('id_obra_social')->unsigned();
+            $table->integer('id_aporte_sindical')->unsigned();
             $table->foreign('id_mora')
               ->references('id_mora')
               ->on('moras')
@@ -27,6 +29,17 @@ return new class extends Migration
               ->on('escala_salarial')
               ->onUpdate('cascade')
               ->onDelete('cascade');
+            $table->foreign('id_obra_social')
+              ->references('id_obra_social')
+              ->on('obra_social')
+              ->onUpdate('cascade')
+              ->onDelete('cascade');
+            $table->foreign('id_aporte_sindical')
+              ->references('id_aporte_sindical')
+              ->on('aporte_sindical')
+              ->onUpdate('cascade')
+              ->onDelete('cascade');
+            $table->integer('reajuste');
             $table->float('sueldo_neto');
             $table->float('adicional_rama');
             $table->float('extra_50');
