@@ -31,6 +31,10 @@ class MoraController extends Controller
             'AutorMora' => 'required',
         ]);
         
+        $empleado = Empleado::where('id_empleado', '=', $request->EmpleadoEmpresaMora)
+            ->get();
+
+
         $FechaDesdeMora = \Carbon\Carbon::createFromFormat('Y-m', $request->FechaDesdeMora, 'America/Argentina/Buenos_Aires')->toDateTimeString();
 
         if ($request->FechaHastaMora != [] && $request->FechaDesdeMora != $request->FechaHastaMora) {
@@ -45,7 +49,11 @@ class MoraController extends Controller
                 $dt;
                 $mora = new Mora;
                 $mora->id_empleado = $request->EmpleadoEmpresaMora;
-                $mora->mes_año = $dt;
+                if ($empleado->fecha_alta <= $dt) {
+                    $mora->mes_año = $dt;
+                } else {
+                    return "La fecha de mora no puede ser anterior a la fecha de alta del empleado.";
+                }
                 $mora->firma_usuario = $request->AutorMora;
                 $save = $mora->save();
             }
@@ -54,19 +62,24 @@ class MoraController extends Controller
             } else {
                 return 'Ups! Algo salió mal, por favor intenta más tarde.';
             }
-        }
-
-        $mora = new Mora;
-        $mora->id_empleado = $request->EmpleadoEmpresaMora;
-        $mora->mes_año = $FechaDesdeMora;
-        $mora->firma_usuario = $request->AutorMora;
-        $save = $mora->save();
-
-        if ($save) {
-            return 'La mora se ha agregado correctamente.';
         } else {
-            return 'Ups! Algo salió mal, por favor intenta más tarde.';
+            $mora = new Mora;
+            $mora->id_empleado = $request->EmpleadoEmpresaMora;
+            if ($empleado->fecha_alta <= $FechaDesdeMora) {
+                $mora->mes_año = $FechaDesdeMora;
+            } else {
+                return "La fecha de mora no puede ser anterior a la fecha de alta del empleado.";
+            }
+            $mora->firma_usuario = $request->AutorMora;
+            $save = $mora->save();
+    
+            if ($save) {
+                return 'La mora se ha agregado correctamente.';
+            } else {
+                return 'Ups! Algo salió mal, por favor intenta más tarde.';
+            }
         }
+
         
 
     }
