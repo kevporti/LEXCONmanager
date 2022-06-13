@@ -71,5 +71,13 @@ class MoraController extends Controller
 
     }
 
+    public function eliminarMoras($id) {
+
+        $mora = Mora::findOrFail($id);
+        $mora->delete();
+
+        return "La mora se ha eliminado correctamente!";
+    }
+
 
 }

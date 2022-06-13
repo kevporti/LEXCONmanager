@@ -4,12 +4,22 @@ import axios from "axios";
 
 function FilaTabla() {
     const [Moras, setMoras] = useState([]);
+    const [Msg, setMsg] = useState();
 
     useEffect(() => {
         axios.get("/api/usuario/moras").then((response) => {
             setMoras(response.data);
         });
     }, []);
+
+    async function handleDelete(id) {
+        const { data } = await axios.delete(
+            `/api/usuario/moras/eliminar/${id}`
+        );
+
+        setMsg(data);
+        window.location.reload();
+    }
 
     function formatDate(string) {
         var options = {
@@ -36,7 +46,10 @@ function FilaTabla() {
                         {formatDate(mora.mes_año)}
                     </div>
                     <div className="grid place-content-end col-span-2">
-                        <i className="material-symbols-outlined cursor-pointer text-red-500">
+                        <i
+                            onClick={() => handleDelete(mora.id_mora)}
+                            className="material-symbols-outlined cursor-pointer text-red-500"
+                        >
                             delete
                         </i>
                     </div>
