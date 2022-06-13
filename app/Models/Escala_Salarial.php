@@ -9,6 +9,7 @@ class Escala_Salarial extends Model
 {
     use HasFactory;
 
+    protected $table = 'escala_salarial';
     protected $primaryKey = 'id_escala_s';
 
     protected $fillable = [
@@ -16,6 +17,8 @@ class Escala_Salarial extends Model
       'sueldo_basico',
       'hs_extra_50',
       'hs_extra_100',
+      'simple_presencia',
+      'perm_fuera_resid',
       'id_rama_categoria',
       'firma_usuario',
     ];

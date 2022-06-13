@@ -19,6 +19,8 @@ return new class extends Migration
             $table->float('sueldo_basico');
             $table->float('hs_extra_50');
             $table->float('hs_extra_100');
+            $table->float('simple_presencia');
+            $table->float('perm_fuera_resid');
             $table->integer('id_rama_categoria');
             $table->string('firma_usuario');
             $table->timestamps();
