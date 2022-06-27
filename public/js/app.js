@@ -12394,12 +12394,12 @@ function Agregar() {
       Empleados = _useState8[0],
       setEmpleados = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState10 = _slicedToArray(_useState9, 2),
       EmpresaMora = _useState10[0],
       setEmpresaMora = _useState10[1];
 
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState12 = _slicedToArray(_useState11, 2),
       EmpleadoEmpresaMora = _useState12[0],
       setEmpleadoEmpresaMora = _useState12[1];
@@ -12409,7 +12409,7 @@ function Agregar() {
       FechaDesdeMora = _useState14[0],
       setFechaDesdeMora = _useState14[1];
 
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState16 = _slicedToArray(_useState15, 2),
       FechaHastaMora = _useState16[0],
       setFechaHastaMora = _useState16[1];
@@ -12455,7 +12455,7 @@ function Agregar() {
   }
 
   function handleSelectEmpleado(e) {
-    setEmpleadoEmpresaMora([e.target.value]);
+    setEmpleadoEmpresaMora(e.target.value);
   }
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -12572,7 +12572,7 @@ function Agregar() {
                         className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none",
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option", {
                           className: "hidden",
-                          value: "",
+                          value: "0",
                           children: "--Por favor, selecciona una empresa--"
                         }), Empresas.map(function (empresa) {
                           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option", {
@@ -12594,7 +12594,7 @@ function Agregar() {
                         className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none",
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option", {
                           className: "hidden",
-                          value: "",
+                          value: "0",
                           children: "--Por favor, selecciona un empleado--"
                         }), Empleados.map(function (empleado) {
                           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option", {

@@ -28,18 +28,16 @@ class MoraController extends Controller
             'EmpresaMora' => 'required',
             'EmpleadoEmpresaMora' => 'required',
             'FechaDesdeMora' => 'required|date_format:Y-m|before:FechaHastaMora',
-            'FechaHastaMora' => 'date_format:Y-m|after:FechaDesdeMora',
+            'FechaHastaMora' => 'nullable|date_format:Y-m|after:FechaDesdeMora',
             'AutorMora' => 'required',
         ]);
         
-        $empleado = Empleado::where('id_empleado', '=', $request->EmpleadoEmpresaMora)
-            ->get();
+        $empleado = Empleado::findOrFail($request->EmpleadoEmpresaMora);
+        
+        $FechaDesdeMora = \Carbon\Carbon::createFromFormat('Y-m', $request->FechaDesdeMora, 'America/Buenos_Aires')->toDateTimeString();
 
-
-        $FechaDesdeMora = \Carbon\Carbon::createFromFormat('Y-m', $request->FechaDesdeMora, 'America/Argentina/Buenos_Aires')->toDateTimeString();
-
-        if ($request->FechaHastaMora != [] && $request->FechaDesdeMora != $request->FechaHastaMora) {
-            $FechaHastaMora = \Carbon\Carbon::createFromFormat('Y-m', $request->FechaHastaMora, 'America/Argentina/Buenos_Aires')->toDateTimeString();
+        if ($request->FechaHastaMora != []) {
+            $FechaHastaMora = \Carbon\Carbon::createFromFormat('Y-m', $request->FechaHastaMora, 'America/Buenos_Aires')->toDateTimeString();
 
             $start    = (new DateTime($FechaDesdeMora))->modify('first day of this month');
             $end      = (new DateTime($FechaHastaMora))->modify('first day of next month');
@@ -47,10 +45,10 @@ class MoraController extends Controller
             $period   = new DatePeriod($start, $interval, $end);
 
             foreach ($period as $dt) {
-                $dt;
                 $mora = new Mora;
                 $mora->id_empleado = $request->EmpleadoEmpresaMora;
-                if ($empleado->fecha_alta <= $dt) {
+                $empAlta = \Carbon\Carbon::createFromFormat('Y-m-d', $empleado->fecha_alta, 'America/Buenos_Aires');
+                if ($empAlta->lessThanOrEqualTo($dt)) {
                     $mora->mes_año = $dt;
                 } else {
                     return "La fecha de mora no puede ser anterior a la fecha de alta del empleado.";
@@ -66,7 +64,8 @@ class MoraController extends Controller
         } else {
             $mora = new Mora;
             $mora->id_empleado = $request->EmpleadoEmpresaMora;
-            if ($empleado->fecha_alta <= $FechaDesdeMora) {
+            $empAlta = \Carbon\Carbon::createFromFormat('Y-m-d', $empleado->fecha_alta, 'America/Buenos_Aires');
+            if ($empAlta->lessThanOrEqualTo($FechaDesdeMora)) {
                 $mora->mes_año = $FechaDesdeMora;
             } else {
                 return "La fecha de mora no puede ser anterior a la fecha de alta del empleado.";

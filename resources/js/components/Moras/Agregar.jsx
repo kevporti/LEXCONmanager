@@ -24,10 +24,10 @@ export default function Agregar() {
 
     const [Empresas, setEmpresas] = useState([]);
     const [Empleados, setEmpleados] = useState([]);
-    const [EmpresaMora, setEmpresaMora] = useState(0);
-    const [EmpleadoEmpresaMora, setEmpleadoEmpresaMora] = useState();
+    const [EmpresaMora, setEmpresaMora] = useState([]);
+    const [EmpleadoEmpresaMora, setEmpleadoEmpresaMora] = useState([]);
     const [FechaDesdeMora, setFechaDesdeMora] = useState([]);
-    const [FechaHastaMora, setFechaHastaMora] = useState([]);
+    const [FechaHastaMora, setFechaHastaMora] = useState("");
     const [AutorMora, setAutorMora] = useState([]);
 
     async function getEmpresas(e) {
@@ -43,7 +43,7 @@ export default function Agregar() {
     }
 
     function handleSelectEmpleado(e) {
-        setEmpleadoEmpresaMora([e.target.value]);
+        setEmpleadoEmpresaMora(e.target.value);
     }
 
     useEffect(() => {
@@ -126,7 +126,7 @@ export default function Agregar() {
                                                 >
                                                     <option
                                                         className="hidden"
-                                                        value=""
+                                                        value="0"
                                                     >
                                                         --Por favor, selecciona
                                                         una empresa--
@@ -164,7 +164,7 @@ export default function Agregar() {
                                                 >
                                                     <option
                                                         className="hidden"
-                                                        value=""
+                                                        value="0"
                                                     >
                                                         --Por favor, selecciona
                                                         un empleado--
