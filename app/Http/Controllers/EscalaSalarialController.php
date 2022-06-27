@@ -4,18 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Escala_Salarial;
+use DateTime;
 
 class EscalaSalarialController extends Controller
 {
-    public function escala_salarial(){
-      $escala = Escala_Salarial::all();
+    public function escalas(){
+      $escala = Escala_Salarial::select("vigencia")
+        ->distinct()
+        ->get();
 
       return $escala;
     }
 
     public function crearEscalaSalarial(Request $request) {
         $request->validate([
-            'VigenciaEscala' => 'required',
+            'VigenciaEscala' => 'required|date_format:Y-m',
             'SueldoBasicoEscala' => 'required',
             'Extra50Escala' => 'required',
             'Extra100Escala' => 'required',
@@ -25,7 +28,11 @@ class EscalaSalarialController extends Controller
         ]);
 
         $escala = new Escala_Salarial;
-        $escala->vigencia = $request->VigenciaEscala;
+
+        $VigenciaEscala = \Carbon\Carbon::createFromFormat('Y-m', $request->VigenciaEscala, 'America/Buenos_Aires')->toDateTimeString();
+        $vigencia = (new DateTime($VigenciaEscala))->modify('first day of this month');
+        
+        $escala->vigencia = $vigencia;
         $escala->sueldo_basico = $request->SueldoBasicoEscala;
         $escala->hs_extra_50 = $request->Extra50Escala;
         $escala->hs_extra_100 = $request->Extra100Escala;

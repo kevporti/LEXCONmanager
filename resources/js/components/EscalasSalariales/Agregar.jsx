@@ -3,11 +3,134 @@ import { set } from "lodash";
 import { Fragment, useState } from "react";
 
 export default function Agregar() {
+    const RamaCategoria = [
+        {
+            id: 0,
+            rama: "Personal de corta distancia (menos de 100 km.)",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 1,
+            rama: "Personal de larga distancia (más de 100 km.)",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 2,
+            rama: "Personal de larga distancia (más de 100 km.) - Transporte Pesado Sistema carretón",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 3,
+            rama: "Personal de larga distancia (más de 100 km.) - Transporte de Automóviles",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 4,
+            rama: "Transporte de Caudales",
+            adicionales: 0.2,
+            antiguedad: 0.01,
+        },
+        {
+            id: 5,
+            rama: "Transporte de Clearing y Carga Postal y Empresas Privadas de Correo",
+            adicionales: 0.15,
+            antiguedad: 0.01,
+        },
+        {
+            id: 6,
+            rama: "Recolección de residuos",
+            adicionales: 0.15,
+            antiguedad: 0.01,
+        },
+        {
+            id: 7,
+            rama: "Transporte y Distribución de Diarios y Revistas",
+            adicionales: 0.12,
+            antiguedad: 0.01,
+        },
+        {
+            id: 8,
+            rama: "Transporte de Combustibles Líquidos",
+            adicionales: 0.15,
+            antiguedad: 0.01,
+        },
+        {
+            id: 9,
+            rama: "Transporte de Materiales Peligrosos",
+            adicionales: 0.2,
+            antiguedad: 0.01,
+        },
+        {
+            id: 10,
+            rama: "Transporte y/o Logística para la Actividad Petrolera",
+            adicionales: 0.4,
+            antiguedad: 0.01,
+        },
+        {
+            id: 11,
+            rama: "Transporte pesado - Especialidad de Transporte por Sistema de Arrastre",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 12,
+            rama: "Transporte pesado - Especialidad de Desarmado, Transporte y Armado de Equipos Vinculados a la Perforación Petrolífera y Actividades Afines",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 13,
+            rama: "Transporte en Zona de Zafra",
+            adicionales: 0.1,
+            antiguedad: 0.01,
+        },
+        {
+            id: 14,
+            rama: "Expreso, Mudanzas y Encomiendas",
+            adicionales: 0.1,
+            antiguedad: 0.01,
+        },
+        {
+            id: 15,
+            rama: "Transporte y Distribución de Aguas, Aguas Gaseosas y Cerveza",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 16,
+            rama: "Operaciones Logísticas, Almacenamiento y Distribución",
+            adicionales: 0.1,
+            antiguedad: 0.01,
+        },
+        {
+            id: 17,
+            rama: "Residuos Patológicos",
+            adicionales: 0.2,
+            antiguedad: 0.01,
+        },
+        {
+            id: 18,
+            rama: "Residuos Industriales Especiales",
+            adicionales: 0.2,
+            antiguedad: 0.01,
+        },
+        {
+            id: 19,
+            rama: "Residuos Industriales No Especiales",
+            adicionales: 0.15,
+            antiguedad: 0.01,
+        },
+    ];
+
     let [isOpen, setIsOpen] = useState(false);
     let [Msg, setMsg] = useState();
 
     const [VigenciaEscala, setVigenciaEscala] = useState([]);
-    const [CategoriaEscala, setCategoriaEscala] = useState("1");
+    const [CategoriaEscala, setCategoriaEscala] = useState([]);
     const [SueldoBasicoEscala, setSueldoBasicoEscala] = useState([]);
     const [Extra50Escala, setExtra50Escala] = useState([]);
     const [Extra100Escala, setExtra100Escala] = useState([]);
@@ -45,20 +168,8 @@ export default function Agregar() {
             "/api/usuario/crearEscalaSalarial",
             item
         );
-        console.log(data);
         setMsg(data);
     }
-
-    const Categorias = [
-        { id: "8", name: "Chofer 1ra" },
-        { id: "7", name: "Chofer 2da" },
-        { id: "6", name: "Chofer 3ra" },
-        { id: "5", name: "Correo" },
-        { id: "4", name: "Cereal" },
-        { id: "3", name: "Logica" },
-        { id: "2", name: "Logica 2" },
-        { id: "1", name: "Logica 3" },
-    ];
 
     return (
         <>
@@ -118,7 +229,7 @@ export default function Agregar() {
                                                             e.target.value
                                                         )
                                                     }
-                                                    type="date"
+                                                    type="month"
                                                     className="bg-darklight py-1 px-2"
                                                 />
                                             </div>
@@ -135,7 +246,14 @@ export default function Agregar() {
                                                     }
                                                     id=""
                                                 >
-                                                    {Categorias.map(
+                                                    <option
+                                                        className="hidden"
+                                                        value=""
+                                                    >
+                                                        --Por favor, selecciona
+                                                        una categoría--
+                                                    </option>
+                                                    {RamaCategoria.map(
                                                         (categoria) => (
                                                             <option
                                                                 key={
@@ -143,13 +261,13 @@ export default function Agregar() {
                                                                 }
                                                                 className="bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white"
                                                                 name={
-                                                                    categoria.name
+                                                                    categoria.rama
                                                                 }
                                                                 value={
                                                                     categoria.id
                                                                 }
                                                             >
-                                                                {categoria.name}
+                                                                {categoria.rama}
                                                             </option>
                                                         )
                                                     )}
@@ -173,7 +291,11 @@ export default function Agregar() {
                                             </div>
                                             <div className="grid grid-cols-1">
                                                 <span className="mr-2">
-                                                    Horas extras al 50%:
+                                                    {CategoriaEscala == 1 ||
+                                                    CategoriaEscala == 2 ||
+                                                    CategoriaEscala == 3
+                                                        ? "Hs x KM recorridos"
+                                                        : "Horas extras al 50%:"}
                                                 </span>
                                                 <input
                                                     name="Extra50Escala"
@@ -189,7 +311,11 @@ export default function Agregar() {
                                             </div>
                                             <div className="grid grid-cols-1">
                                                 <span className="mr-2">
-                                                    Horas extras al 100%:
+                                                    {CategoriaEscala == 1 ||
+                                                    CategoriaEscala == 2 ||
+                                                    CategoriaEscala == 3
+                                                        ? "Hs x KM recorridos 100%"
+                                                        : "Horas extras al 100%:"}
                                                 </span>
                                                 <input
                                                     name="Extra100Escala"

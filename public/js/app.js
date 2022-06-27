@@ -8060,8 +8060,6 @@ function Agregar() {
       AutorEmpleado = _useState24[0],
       setAutorEmpleado = _useState24[1];
 
-  console.log(RamaCategoria);
-
   function closeModal() {
     handleEmpleado();
     setIsOpen(false);
@@ -10587,6 +10585,108 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Agregar() {
+  var RamaCategoria = [{
+    id: 0,
+    rama: "Personal de corta distancia (menos de 100 km.)",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 1,
+    rama: "Personal de larga distancia (más de 100 km.)",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 2,
+    rama: "Personal de larga distancia (más de 100 km.) - Transporte Pesado Sistema carretón",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 3,
+    rama: "Personal de larga distancia (más de 100 km.) - Transporte de Automóviles",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 4,
+    rama: "Transporte de Caudales",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 5,
+    rama: "Transporte de Clearing y Carga Postal y Empresas Privadas de Correo",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }, {
+    id: 6,
+    rama: "Recolección de residuos",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }, {
+    id: 7,
+    rama: "Transporte y Distribución de Diarios y Revistas",
+    adicionales: 0.12,
+    antiguedad: 0.01
+  }, {
+    id: 8,
+    rama: "Transporte de Combustibles Líquidos",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }, {
+    id: 9,
+    rama: "Transporte de Materiales Peligrosos",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 10,
+    rama: "Transporte y/o Logística para la Actividad Petrolera",
+    adicionales: 0.4,
+    antiguedad: 0.01
+  }, {
+    id: 11,
+    rama: "Transporte pesado - Especialidad de Transporte por Sistema de Arrastre",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 12,
+    rama: "Transporte pesado - Especialidad de Desarmado, Transporte y Armado de Equipos Vinculados a la Perforación Petrolífera y Actividades Afines",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 13,
+    rama: "Transporte en Zona de Zafra",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 14,
+    rama: "Expreso, Mudanzas y Encomiendas",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 15,
+    rama: "Transporte y Distribución de Aguas, Aguas Gaseosas y Cerveza",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 16,
+    rama: "Operaciones Logísticas, Almacenamiento y Distribución",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 17,
+    rama: "Residuos Patológicos",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 18,
+    rama: "Residuos Industriales Especiales",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 19,
+    rama: "Residuos Industriales No Especiales",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }];
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       isOpen = _useState2[0],
@@ -10602,7 +10702,7 @@ function Agregar() {
       VigenciaEscala = _useState6[0],
       setVigenciaEscala = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("1"),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState8 = _slicedToArray(_useState7, 2),
       CategoriaEscala = _useState8[0],
       setCategoriaEscala = _useState8[1];
@@ -10678,10 +10778,9 @@ function Agregar() {
             case 4:
               _yield$axios$post = _context.sent;
               data = _yield$axios$post.data;
-              console.log(data);
               setMsg(data);
 
-            case 8:
+            case 7:
             case "end":
               return _context.stop();
           }
@@ -10691,31 +10790,6 @@ function Agregar() {
     return _handleForm.apply(this, arguments);
   }
 
-  var Categorias = [{
-    id: "8",
-    name: "Chofer 1ra"
-  }, {
-    id: "7",
-    name: "Chofer 2da"
-  }, {
-    id: "6",
-    name: "Chofer 3ra"
-  }, {
-    id: "5",
-    name: "Correo"
-  }, {
-    id: "4",
-    name: "Cereal"
-  }, {
-    id: "3",
-    name: "Logica"
-  }, {
-    id: "2",
-    name: "Logica 2"
-  }, {
-    id: "1",
-    name: "Logica 3"
-  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "flex items-center justify-center",
@@ -10782,7 +10856,7 @@ function Agregar() {
                         onChange: function onChange(e) {
                           return setVigenciaEscala(e.target.value);
                         },
-                        type: "date",
+                        type: "month",
                         className: "bg-darklight py-1 px-2"
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -10790,7 +10864,7 @@ function Agregar() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                         className: "mr-2",
                         children: "Rama/Categor\xEDa:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("select", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("select", {
                         className: "bg-darklight py-1 px-2 rounded-sm",
                         name: "CategoriaEscala",
                         value: CategoriaEscala,
@@ -10798,14 +10872,18 @@ function Agregar() {
                           return handleCategoriaEscala(e);
                         },
                         id: "",
-                        children: Categorias.map(function (categoria) {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                          className: "hidden",
+                          value: "",
+                          children: "--Por favor, selecciona una categor\xEDa--"
+                        }), RamaCategoria.map(function (categoria) {
                           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
                             className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white",
-                            name: categoria.name,
+                            name: categoria.rama,
                             value: categoria.id,
-                            children: categoria.name
+                            children: categoria.rama
                           }, categoria.id);
-                        })
+                        })]
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                       className: "grid grid-cols-1",
@@ -10825,7 +10903,7 @@ function Agregar() {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                         className: "mr-2",
-                        children: "Horas extras al 50%:"
+                        children: CategoriaEscala == 1 || CategoriaEscala == 2 || CategoriaEscala == 3 ? "Hs x KM recorridos" : "Horas extras al 50%:"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                         name: "Extra50Escala",
                         onChange: function onChange(e) {
@@ -10839,7 +10917,7 @@ function Agregar() {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                         className: "mr-2",
-                        children: "Horas extras al 100%:"
+                        children: CategoriaEscala == 1 || CategoriaEscala == 2 || CategoriaEscala == 3 ? "Hs x KM recorridos 100%" : "Horas extras al 100%:"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                         name: "Extra100Escala",
                         onChange: function onChange(e) {
@@ -11088,6 +11166,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js");
 /* harmony import */ var _DatosEscala__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatosEscala */ "./resources/js/components/EscalasSalariales/DatosEscala.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -11096,42 +11186,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function FilaTabla() {
-  var Moras = [{
-    id: "10",
-    date: "Abril 2022"
-  }, {
-    id: "9",
-    date: "Enero 2022"
-  }, {
-    id: "8",
-    date: "Octubre 2021"
-  }, {
-    id: "7",
-    date: "Julio 2021"
-  }, {
-    id: "6",
-    date: "Abril 2021"
-  }, {
-    id: "5",
-    date: "Enero 2021"
-  }, {
-    id: "4",
-    date: "Octubre 2020"
-  }, {
-    id: "3",
-    date: "Junio 2020"
-  }, {
-    id: "2",
-    date: "Abril 2020"
-  }, {
-    id: "1",
-    date: "Enero 2020"
-  }];
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      Escalas = _useState2[0],
+      setEscalas = _useState2[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios.get("/api/usuario/escalas").then(function (response) {
+      setEscalas(response.data);
+    });
+  }, []);
+
+  function formatDate(string) {
+    var options = {
+      year: "numeric",
+      month: "long",
+      timeZone: "UTC"
+    };
+    return new Date(string).toLocaleDateString("es-AR", options);
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "h-80 overflow-auto scrollbar",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "",
-      children: Moras.map(function (mora) {
+      children: Escalas.map(function (escala) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure, {
           as: "div",
           className: "",
@@ -11140,23 +11219,23 @@ function FilaTabla() {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Button, {
                 as: "div",
-                className: "flex justify-between items-center p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
+                className: "flex justify-between items-center p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? "bg-green-900 rounded-t cursor-pointer" : "cursor-pointer"),
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                   className: "font-medium",
-                  children: mora.date
+                  children: formatDate(escala.vigencia)
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-                  className: "material-symbols-outlined ".concat(open ? 'rotate-180 transform' : '', " h-5 w-5"),
+                  className: "material-symbols-outlined ".concat(open ? "rotate-180 transform" : "", " h-5 w-5"),
                   children: "expand_more"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Panel, {
                 className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_DatosEscala__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                  index: mora.id
+                  index: escala.id
                 })
               })]
             });
           }
-        }, mora.id);
+        }, escala.id);
       })
     })
   });

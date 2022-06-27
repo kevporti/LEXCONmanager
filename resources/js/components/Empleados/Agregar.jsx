@@ -140,8 +140,6 @@ export default function Agregar() {
     const [FechaBajaEmpleado, setFechaBajaEmpleado] = useState();
     const [AutorEmpleado, setAutorEmpleado] = useState([]);
 
-    console.log(RamaCategoria);
-
     function closeModal() {
         handleEmpleado();
         setIsOpen(false);
