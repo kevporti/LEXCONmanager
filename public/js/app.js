@@ -7113,7 +7113,7 @@ function Agregar() {
       isOpen = _useState2[0],
       setIsOpen = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       msg = _useState4[0],
       setMsg = _useState4[1];
@@ -7123,7 +7123,7 @@ function Agregar() {
       Empresas = _useState6[0],
       setEmpresas = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("1"),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState8 = _slicedToArray(_useState7, 2),
       empresaContacto = _useState8[0],
       setempresaContacto = _useState8[1];
@@ -7178,7 +7178,7 @@ function Agregar() {
               };
               console.log(item);
               _context.next = 4;
-              return axios.post('http://127.0.0.1:8000/api/usuario/agregarContactos', item).then(function (response) {
+              return axios.post("http://127.0.0.1:8000/api/usuario/agregarContactos", item).then(function (response) {
                 setMsg(response.data.success);
                 window.location.reload();
               });
@@ -7204,7 +7204,7 @@ function Agregar() {
           switch (_context2.prev = _context2.next) {
             case 0:
               _context2.next = 2;
-              return axios.get('http://127.0.0.1:8000/api/usuario/empresas').then(function (response) {
+              return axios.get("http://127.0.0.1:8000/api/usuario/empresas").then(function (response) {
                 setEmpresas(response.data);
               });
 
@@ -7292,17 +7292,21 @@ function Agregar() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                         className: "mr-2",
                         children: "Empresa:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("select", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("select", {
                         value: empresaContacto,
                         onChange: handleChangeSelect,
                         className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none",
-                        children: Empresas.map(function (empresa) {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                          className: "hidden",
+                          value: "",
+                          children: "--Por favor, selecciona una empresa--"
+                        }), Empresas.map(function (empresa) {
                           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
                             className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white",
                             value: empresa.id_empresa,
                             children: empresa.nombre_empresa
                           });
-                        })
+                        })]
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                       className: "grid grid-cols-1",
@@ -7894,6 +7898,108 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Agregar() {
+  var RamaCategoria = [{
+    id: 0,
+    rama: "Personal de corta distancia (menos de 100 km.)",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 1,
+    rama: "Personal de larga distancia (más de 100 km.)",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 2,
+    rama: "Personal de larga distancia (más de 100 km.) - Transporte Pesado Sistema carretón",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 3,
+    rama: "Personal de larga distancia (más de 100 km.) - Transporte de Automóviles",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 4,
+    rama: "Transporte de Caudales",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 5,
+    rama: "Transporte de Clearing y Carga Postal y Empresas Privadas de Correo",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }, {
+    id: 6,
+    rama: "Recolección de residuos",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }, {
+    id: 7,
+    rama: "Transporte y Distribución de Diarios y Revistas",
+    adicionales: 0.12,
+    antiguedad: 0.01
+  }, {
+    id: 8,
+    rama: "Transporte de Combustibles Líquidos",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }, {
+    id: 9,
+    rama: "Transporte de Materiales Peligrosos",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 10,
+    rama: "Transporte y/o Logística para la Actividad Petrolera",
+    adicionales: 0.4,
+    antiguedad: 0.01
+  }, {
+    id: 11,
+    rama: "Transporte pesado - Especialidad de Transporte por Sistema de Arrastre",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 12,
+    rama: "Transporte pesado - Especialidad de Desarmado, Transporte y Armado de Equipos Vinculados a la Perforación Petrolífera y Actividades Afines",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 13,
+    rama: "Transporte en Zona de Zafra",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 14,
+    rama: "Expreso, Mudanzas y Encomiendas",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 15,
+    rama: "Transporte y Distribución de Aguas, Aguas Gaseosas y Cerveza",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 16,
+    rama: "Operaciones Logísticas, Almacenamiento y Distribución",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 17,
+    rama: "Residuos Patológicos",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 18,
+    rama: "Residuos Industriales Especiales",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 19,
+    rama: "Residuos Industriales No Especiales",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }];
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       isOpen = _useState2[0],
@@ -7909,12 +8015,12 @@ function Agregar() {
       Empresas = _useState6[0],
       setEmpresas = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("1"),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState8 = _slicedToArray(_useState7, 2),
       EmpresaEmpleado = _useState8[0],
       setEmpresaEmpleado = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("1"),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState10 = _slicedToArray(_useState9, 2),
       CategoriaEmpleado = _useState10[0],
       setCategoriaEmpleado = _useState10[1];
@@ -7954,6 +8060,8 @@ function Agregar() {
       AutorEmpleado = _useState24[0],
       setAutorEmpleado = _useState24[1];
 
+  console.log(RamaCategoria);
+
   function closeModal() {
     handleEmpleado();
     setIsOpen(false);
@@ -7974,7 +8082,7 @@ function Agregar() {
 
   function getEmpresas(e) {
     e.preventDefault();
-    axios__WEBPACK_IMPORTED_MODULE_1___default().get('http://127.0.0.1:8000/api/usuario/empresas').then(function (response) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("http://127.0.0.1:8000/api/usuario/empresas").then(function (response) {
       setEmpresas(response.data);
     });
   }
@@ -8002,7 +8110,7 @@ function Agregar() {
                 AutorEmpleado: AutorEmpleado
               };
               _context.next = 3;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('http://127.0.0.1:8000/api/usuario/agregarEmpleados', item).then(function (response) {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://127.0.0.1:8000/api/usuario/agregarEmpleados", item).then(function (response) {
                 if (response.data.success) {
                   setMsg(response.data.success);
                   window.location.reload();
@@ -8021,31 +8129,6 @@ function Agregar() {
     return _handleEmpleado.apply(this, arguments);
   }
 
-  var Categorias = [{
-    id: "8",
-    name: "Chofer 1ra"
-  }, {
-    id: "7",
-    name: "Chofer 2da"
-  }, {
-    id: "6",
-    name: "Chofer 3ra"
-  }, {
-    id: "5",
-    name: "Correo"
-  }, {
-    id: "4",
-    name: "Cereal"
-  }, {
-    id: "3",
-    name: "Logica"
-  }, {
-    id: "2",
-    name: "Logica 2"
-  }, {
-    id: "1",
-    name: "Logica 3"
-  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "flex items-center justify-center",
@@ -8107,36 +8190,44 @@ function Agregar() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                         className: "mr-2",
                         children: "Empresa:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("select", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("select", {
                         value: EmpresaEmpleado,
                         onChange: handleEmpresaSelect,
                         className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none",
-                        children: Empresas.map(function (empresa) {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                          className: "hidden",
+                          value: "",
+                          children: "--Por favor, selecciona una empresa--"
+                        }), Empresas.map(function (empresa) {
                           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
                             className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white",
                             name: empresa.nombre_empresa,
                             value: empresa.id_empresa,
                             children: empresa.nombre_empresa
                           }, empresa.id_empresa);
-                        })
+                        })]
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                         className: "mr-2",
                         children: "Rama/Categor\xEDa:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("select", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("select", {
                         value: CategoriaEmpleado,
                         onChange: handleCategoriaSelect,
                         className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none",
-                        children: Categorias.map(function (categoria) {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                          className: "hidden",
+                          value: "",
+                          children: "--Por favor, selecciona una categor\xEDa--"
+                        }), RamaCategoria.map(function (categoria) {
                           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
                             className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none text-white",
-                            name: categoria.name,
+                            name: categoria.rama,
                             value: categoria.id,
-                            children: categoria.name
+                            children: categoria.rama
                           }, categoria.id);
-                        })
+                        })]
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                       className: "grid grid-cols-1 gap-1",

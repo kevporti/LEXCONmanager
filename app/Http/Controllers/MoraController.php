@@ -8,6 +8,7 @@ use DateTime;
 use DatePeriod;
 use DateInterval;
 use App\Models\Mora;
+use App\Models\Empleado;
 
 class MoraController extends Controller
 {
