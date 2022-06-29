@@ -24,7 +24,7 @@ function FilaTabla() {
         <div className="h-80 overflow-auto scrollbar">
             <div className="">
                 {Escalas.map((escala) => (
-                    <Disclosure key={escala.id} as="div" className="">
+                    <Disclosure key={escala.id_escala_s} as="div" className="">
                         {({ open }) => (
                             <>
                                 <Disclosure.Button
@@ -47,7 +47,7 @@ function FilaTabla() {
                                     </i>
                                 </Disclosure.Button>
                                 <Disclosure.Panel className="px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b">
-                                    <DatosEscala index={escala.id} />
+                                    <DatosEscala vigencia={escala.vigencia} />
                                 </Disclosure.Panel>
                             </>
                         )}

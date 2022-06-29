@@ -9,11 +9,19 @@ use DateTime;
 class EscalaSalarialController extends Controller
 {
     public function escalas(){
-      $escala = Escala_Salarial::select("vigencia")
-        ->distinct()
-        ->get();
+        $escala = Escala_Salarial::select('vigencia', 'id_escala_s')
+            ->get()
+            ->unique('vigencia');
 
-      return $escala;
+        return $escala;
+    }
+
+    public function datosEscalas(Request $request) {
+        $datos = Escala_Salarial::where('vigencia', $request->vig)
+            ->orderBy('id_rama_categoria', 'asc')
+            ->get();
+
+        return $datos;
     }
 
     public function crearEscalaSalarial(Request $request) {

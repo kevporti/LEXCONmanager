@@ -11002,147 +11002,230 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
 
-function DatosEscala(index) {
-  var Datos = [{
-    id: "6",
-    rama: "Conductor",
-    firma_usuario: "Claudio",
-    basico: "50000",
-    extra50: "750",
-    extra100: "1000",
-    presencia: "1500",
-    resid: "1500"
+
+
+
+function DatosEscala(vigencia) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      Dato = _useState2[0],
+      setDato = _useState2[1];
+
+  var RamaCategoria = [{
+    id: 0,
+    rama: "Personal de corta distancia (menos de 100 km.)",
+    adicionales: 0,
+    antiguedad: 0.01
   }, {
-    id: "5",
-    rama: "Conductor",
-    firma_usuario: "Claudio",
-    basico: "50000",
-    extra50: "750",
-    extra100: "1000",
-    presencia: "1500",
-    resid: "1500"
+    id: 1,
+    rama: "Personal de larga distancia (más de 100 km.)",
+    adicionales: 0,
+    antiguedad: 0.01
   }, {
-    id: "4",
-    rama: "Conductor",
-    firma_usuario: "Claudio",
-    basico: "50000",
-    extra50: "750",
-    extra100: "1000",
-    presencia: "1500",
-    resid: "1500"
+    id: 2,
+    rama: "Personal de larga distancia (más de 100 km.) - Transporte Pesado Sistema carretón",
+    adicionales: 0,
+    antiguedad: 0.01
   }, {
-    id: "3",
-    rama: "Conductor",
-    firma_usuario: "Claudio",
-    basico: "50000",
-    extra50: "750",
-    extra100: "1000",
-    presencia: "1500",
-    resid: "1500"
+    id: 3,
+    rama: "Personal de larga distancia (más de 100 km.) - Transporte de Automóviles",
+    adicionales: 0,
+    antiguedad: 0.01
   }, {
-    id: "2",
-    rama: "Conductor",
-    firma_usuario: "Claudio",
-    basico: "50000",
-    extra50: "750",
-    extra100: "1000",
-    presencia: "1500",
-    resid: "1500"
+    id: 4,
+    rama: "Transporte de Caudales",
+    adicionales: 0.2,
+    antiguedad: 0.01
   }, {
-    id: "1",
-    rama: "Conductor",
-    firma_usuario: "Claudio",
-    basico: "50000",
-    extra50: "750",
-    extra100: "1000",
-    presencia: "1500",
-    resid: "1500"
+    id: 5,
+    rama: "Transporte de Clearing y Carga Postal y Empresas Privadas de Correo",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }, {
+    id: 6,
+    rama: "Recolección de residuos",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }, {
+    id: 7,
+    rama: "Transporte y Distribución de Diarios y Revistas",
+    adicionales: 0.12,
+    antiguedad: 0.01
+  }, {
+    id: 8,
+    rama: "Transporte de Combustibles Líquidos",
+    adicionales: 0.15,
+    antiguedad: 0.01
+  }, {
+    id: 9,
+    rama: "Transporte de Materiales Peligrosos",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 10,
+    rama: "Transporte y/o Logística para la Actividad Petrolera",
+    adicionales: 0.4,
+    antiguedad: 0.01
+  }, {
+    id: 11,
+    rama: "Transporte pesado - Especialidad de Transporte por Sistema de Arrastre",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 12,
+    rama: "Transporte pesado - Especialidad de Desarmado, Transporte y Armado de Equipos Vinculados a la Perforación Petrolífera y Actividades Afines",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 13,
+    rama: "Transporte en Zona de Zafra",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 14,
+    rama: "Expreso, Mudanzas y Encomiendas",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 15,
+    rama: "Transporte y Distribución de Aguas, Aguas Gaseosas y Cerveza",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 16,
+    rama: "Operaciones Logísticas, Almacenamiento y Distribución",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 17,
+    rama: "Residuos Patológicos",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 18,
+    rama: "Residuos Industriales Especiales",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 19,
+    rama: "Residuos Industriales No Especiales",
+    adicionales: 0.15,
+    antiguedad: 0.01
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: Datos.map(function (dato) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  var vig = vigencia.vigencia;
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    var item = {
+      vig: vig
+    };
+    axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/usuario/datosEscalas", item).then(function (resp) {
+      setDato(resp.data);
+      console.log(Dato);
+    });
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: Dato.map(function (dato) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "grid grid-cols-3 gap-y-2 p-4 border-b border-lightwhite whitespace-pre-line",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "flex",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               children: "Sueldo B\xE1sico:"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
               className: "ml-2 font-light",
-              children: ["$", dato.basico]
+              children: ["$", dato.sueldo_basico]
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "flex",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               children: "Hs Extra 50%:"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
               className: "ml-2 font-light",
-              children: ["$", dato.extra50]
+              children: ["$", dato.hs_extra_50]
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "flex",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               children: "Hs Extra 100%:"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
               className: "ml-2 font-light",
-              children: ["$", dato.extra100]
+              children: ["$", dato.hs_extra_100]
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "flex",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               children: "Rama/Categor\xEDa:"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               className: "ml-2 font-light",
-              children: dato.rama
+              children: RamaCategoria.filter(function (rama) {
+                return rama.id == dato.id_rama_categoria ? rama.rama : undefined;
+              }).map(function (filtered) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+                  children: filtered.rama
+                });
+              })
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "flex",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               children: "Simple Presencia:"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
               className: "ml-2 font-light",
-              children: ["$", dato.presencia]
+              children: ["$", dato.simple_presencia]
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "flex",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               children: "Permanencia fuera Residencia:"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
               className: "ml-2 font-light",
-              children: ["$", dato.resid]
+              children: ["$", dato.perm_fuera_resid]
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "grid place-content-start pt-4",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "flex",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               children: "Creado por:"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               className: "ml-2 font-light",
               children: dato.firma_usuario
             })]
           })
         })]
-      }, dato.id);
+      }, dato.id_escala_s);
     })
   });
 }
@@ -11230,12 +11313,12 @@ function FilaTabla() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Panel, {
                 className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_DatosEscala__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                  index: escala.id
+                  vigencia: escala.vigencia
                 })
               })]
             });
           }
-        }, escala.id);
+        }, escala.id_escala_s);
       })
     })
   });

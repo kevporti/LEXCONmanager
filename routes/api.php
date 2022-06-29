@@ -40,6 +40,7 @@ Route::post('/usuario/agregarMoras', [MoraController::class, 'agregarMoras']);
 Route::delete('/usuario/moras/eliminar/{id}', [MoraController::class, 'eliminarMoras']);
 
 Route::get('/usuario/escalas', [EscalaSalarialController::class, 'escalas']);
+Route::post('/usuario/datosEscalas', [EscalaSalarialController::class, 'datosEscalas']);
 Route::post('/usuario/crearEscalaSalarial', [EscalaSalarialController::class, 'crearEscalaSalarial']);
 
 Route::get('/usuario/liquidacion_sueldos', [LiquidacionSueldoController::class, 'liquidacion_sueldos']);
