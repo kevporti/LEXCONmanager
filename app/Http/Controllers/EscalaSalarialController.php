@@ -55,8 +55,13 @@ class EscalaSalarialController extends Controller
         } else {
             return "Ups! Algo salió mal, por favor intenta más tarde.";
         }
-        
+    }
 
+    public function eliminarEscala($id) {
+        $escala = Escala_Salarial::findOrFail($id);
+        $escala->delete();
+
+        return "La escala se ha eliminado correctamente";
     }
 
 }

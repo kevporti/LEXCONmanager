@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 
 function DatosEscala(vigencia) {
     const [Dato, setDato] = useState([]);
+    const [Msg, setMsg] = useState([]);
     const RamaCategoria = [
         {
             id: 0,
@@ -137,6 +138,14 @@ function DatosEscala(vigencia) {
         });
     }, []);
 
+    async function handleDelete(id) {
+        const { data } = await axios.delete(
+            `/api/usuario/escalas/eliminarEscala/${id}`
+        );
+        setMsg(data);
+        window.location.reload();
+    }
+
     return (
         <div>
             {Dato.map((dato) => (
@@ -198,12 +207,26 @@ function DatosEscala(vigencia) {
                             </p>
                         </div>
                     </div>
-                    <div className="grid place-content-start pt-4">
-                        <div className="flex">
-                            <p>Creado por:</p>
-                            <p className="ml-2 font-light">
-                                {dato.firma_usuario}
-                            </p>
+                    <div className="grid col-span-3 pt-4">
+                        <div className="grid grid-cols-2">
+                            <div className="grid">
+                                <div className="flex items-center">
+                                    <p>Creado por:</p>
+                                    <p className="ml-2 font-light">
+                                        {dato.firma_usuario}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="grid place-content-end">
+                                <i
+                                    onClick={() =>
+                                        handleDelete(dato.id_escala_s)
+                                    }
+                                    className="material-symbols-outlined p-2 bg-red-800 hover:bg-red-900 cursor-pointer border border-sm border-lightwhite"
+                                >
+                                    close
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>

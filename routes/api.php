@@ -42,6 +42,7 @@ Route::delete('/usuario/moras/eliminar/{id}', [MoraController::class, 'eliminarM
 Route::get('/usuario/escalas', [EscalaSalarialController::class, 'escalas']);
 Route::post('/usuario/datosEscalas', [EscalaSalarialController::class, 'datosEscalas']);
 Route::post('/usuario/crearEscalaSalarial', [EscalaSalarialController::class, 'crearEscalaSalarial']);
+Route::delete('/usuario/escalas/eliminarEscala/{id}', [EscalaSalarialController::class, 'eliminarEscala']);
 
 Route::get('/usuario/liquidacion_sueldos', [LiquidacionSueldoController::class, 'liquidacion_sueldos']);
 

@@ -713,6 +713,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .place-content-stretch {
   place-content: stretch;
 }
+.place-items-center {
+  place-items: center;
+}
 .content-center {
   align-content: center;
 }
@@ -850,6 +853,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .bg-transparent {
   background-color: transparent;
+}
+.bg-red-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -1059,6 +1066,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .hover\:bg-lightwhite:hover {
   background-color: rgba(255,255,255,0.17);
+}
+
+.hover\:bg-red-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
 }
 
 .focus\:outline-none:focus {
