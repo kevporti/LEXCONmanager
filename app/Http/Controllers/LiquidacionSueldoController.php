@@ -43,30 +43,27 @@ class LiquidacionSueldoController extends Controller
                 $mora = Mora::where('mes_año', '=', $dt->format('Y-m-d'))
                     ->first();
 
-                $escalaSalarial = Escala_Salarial::where('vigencia', '<', $dt->format('Y-m-d'))
-                    ->orderBy('vigencia', 'desc')
-                    ->first();
-
-                if ($escalaSalarial) {
-                    $escala = Escala_Salarial::where('vigencia', '>=', $escalaSalarial->vigencia)
-                        ->orderBy('vigencia', 'asc')
+                if ($mora) {
+                    $escala = Escala_Salarial::where('vigencia', '<=', $mora->mes_año)
+                        ->orderBy('vigencia', 'desc')
                         ->first();
                     if ($escala) {
-                        return $escala;
+                        $liq = new Liquidacion_Sueldo;
+                        $liq->id_mora = $mora->id_mora;
+                        $liq->id_escala_s = $escala->id_escala_s;
+                        $liq->id_obra_social = 0;
+                        $liq->id_aporte_sindical = 0;
+                        $liq->reajuste = $request->Reajuste;
+                        $liq->sueldo_netp = $request->SueldoBasico;
+
+                        return "Existe escala correspondiente a esta mora";
                     } else {
-                        return "Nada";
+                        return "No existe una escala salarial correspondiente a la fecha seleccionada.";
                     }
                 }
-                
-
-                if ($mora) {
-                    $liq = new Liquidacion_Sueldo;
-                    $liq->id_mora = $mora->id_mora;
-                } else {
-                    
-                }
-                
             }
+
+            return "Las Liquidaciones de Sueldo se han agregado correctamente.";
         }
         
 
