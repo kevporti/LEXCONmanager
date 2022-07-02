@@ -10,6 +10,7 @@ class EscalaSalarialController extends Controller
 {
     public function escalas(){
         $escala = Escala_Salarial::select('vigencia', 'id_escala_s')
+            ->orderBy('vigencia', 'desc')
             ->get()
             ->unique('vigencia');
 
