@@ -8398,9 +8398,9 @@ function DatosEmpleado(id) {
 
   function formatDate(string) {
     var options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+      year: "numeric",
+      month: "long",
+      day: "numeric"
     };
     return new Date(string).toLocaleDateString([], options);
   }
@@ -8416,7 +8416,7 @@ function DatosEmpleado(id) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_2___default()["delete"]("http://127.0.0.1:8000/api/usuario/empleados/eliminar/".concat(Id)).then(function (response) {
+              return axios__WEBPACK_IMPORTED_MODULE_2___default()["delete"]("/api/usuario/empleados/eliminar/".concat(Id)).then(function (response) {
                 console.log(response.data);
                 window.location.reload();
               });
@@ -8433,7 +8433,7 @@ function DatosEmpleado(id) {
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var Id = id.id;
-    axios__WEBPACK_IMPORTED_MODULE_2___default().post("http://127.0.0.1:8000/api/usuario/datosEmpleados", {
+    axios__WEBPACK_IMPORTED_MODULE_2___default().post("/api/usuario/datosEmpleados", {
       Id: Id
     }).then(function (response) {
       setEmpleado(response.data);
@@ -8486,7 +8486,7 @@ function DatosEmpleado(id) {
             children: "Editado:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
             className: "font-light ml-2",
-            children: [Empleado.firma_usuario, ", ", formatDate(Empleado.updated_at), "."]
+            children: [Empleado.firma_usuario, ",", " ", formatDate(Empleado.updated_at), "."]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "grid col-start-3 grid-cols-4",
@@ -11960,6 +11960,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -12077,10 +12089,23 @@ function DatosEscala(id) {
     carga_descarga: 12000,
     simple_presencia: 5240
   }];
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      Dato = _useState2[0],
+      setDato = _useState2[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var Id = id.id;
+    axios.post("/api/usuario/buscarLiqSueldo", {
+      Id: Id
+    }).then(function (response) {
+      setDato(response.data);
+    });
+  }, []);
+  console.log(Dato);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: Datos.filter(function (dato) {
-      return dato.id == id.id;
-    }).map(function (dato) {
+    children: Dato.map(function (dato) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "grid grid-cols-1 gap-y-2 p-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -12088,7 +12113,7 @@ function DatosEscala(id) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Sueldo b\xE1sico:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_basico]
+            children: ["$", dato.sueldo_neto]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Adicional por rama:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -12099,18 +12124,18 @@ function DatosEscala(id) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Horas extra al 50%:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.extra50]
+            children: ["$", dato.extra_50 * dato.hs_extra_50]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Horas extra al 100%:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.extra100]
+            children: ["$", dato.extra_100 * dato.hs_extra_100]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Carga y Descarga:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.carga_descarga]
+            children: ["$", dato.sueldo_neto / 24]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Simple Presencia:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -12138,7 +12163,7 @@ function DatosEscala(id) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-2 mt-2",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["Creado:  ", dato.firma_usuario, ", ", dato.edited_time, "."]
+            children: ["Creado: ", dato.firma_usuario, ", ", dato.edited_time, "."]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             className: "grid place-content-end",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
@@ -12174,6 +12199,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js");
 /* harmony import */ var _DatosEscala__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatosEscala */ "./resources/js/components/LiqSueldos/DatosEscala.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -12182,72 +12219,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function FilaTabla() {
-  var Sueldos = [{
-    id: "10",
-    name: "Josesito",
-    reajuste: "Si",
-    company: "Samsung",
-    date: "04/22"
-  }, {
-    id: "9",
-    name: "Josesito",
-    reajuste: "No",
-    company: "Samsung",
-    date: "01/22"
-  }, {
-    id: "8",
-    name: "Josesito",
-    reajuste: "Si",
-    company: "Samsung",
-    date: "10/21"
-  }, {
-    id: "7",
-    name: "Josesito",
-    reajuste: "No",
-    company: "Samsung",
-    date: "07/21"
-  }, {
-    id: "6",
-    name: "Josesito",
-    reajuste: "No",
-    company: "Samsung",
-    date: "04/21"
-  }, {
-    id: "5",
-    name: "Josesito",
-    reajuste: "No",
-    company: "Samsung",
-    date: "01/21"
-  }, {
-    id: "4",
-    name: "Josesito",
-    reajuste: "Si",
-    company: "Samsung",
-    date: "10/20"
-  }, {
-    id: "3",
-    name: "Josesito",
-    reajuste: "No",
-    company: "Samsung",
-    date: "07/20"
-  }, {
-    id: "2",
-    name: "Josesito",
-    reajuste: "Si",
-    company: "Samsung",
-    date: "04/20"
-  }, {
-    id: "1",
-    name: "Josesito",
-    reajuste: "No",
-    company: "Samsung",
-    date: "01/20"
-  }];
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      Sueldo = _useState2[0],
+      setSueldo = _useState2[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios.get("/api/usuario/liquidacion_sueldos").then(function (response) {
+      setSueldo(response.data);
+    });
+  }, []);
+
+  function formatDate(string) {
+    var options = {
+      year: "numeric",
+      month: "long",
+      timeZone: "UTC"
+    };
+    var date = new Date(string).toLocaleDateString("es-AR", options);
+    return date.charAt(0).toUpperCase() + date.slice(1);
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "h-80 overflow-auto scrollbar",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "",
-      children: Sueldos.map(function (sueldo) {
+      children: Sueldo.map(function (sueldo) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure, {
           as: "div",
           className: "",
@@ -12256,32 +12253,32 @@ function FilaTabla() {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Button, {
                 as: "div",
-                className: "grid grid-cols-5 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? 'bg-green-900 rounded-t cursor-pointer' : 'cursor-pointer'),
+                className: "grid grid-cols-5 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ".concat(open ? "bg-green-900 rounded-t cursor-pointer" : "cursor-pointer"),
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  children: sueldo.company
+                  children: sueldo.nombre_empresa
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  children: sueldo.name
+                  children: sueldo.nombre_y_apellido
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                   children: sueldo.reajuste
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                   className: "grid place-content-end",
-                  children: sueldo.date
+                  children: formatDate(sueldo.mes_año)
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                   className: "grid place-content-end",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-                    className: "material-symbols-outlined grid place-content-end ".concat(open ? 'rotate-180 transform' : '', " h-5 w-5"),
+                    className: "material-symbols-outlined grid place-content-end ".concat(open ? "rotate-180 transform" : "", " h-5 w-5"),
                     children: "expand_more"
                   })
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_3__.Disclosure.Panel, {
                 className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_DatosEscala__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                  id: sueldo.id
+                  id: sueldo.id_liq_sueldo
                 })
               })]
             });
           }
-        }, sueldo.id);
+        }, sueldo.id_liq_sueldo);
       })
     })
   });
