@@ -15,6 +15,7 @@ class MoraController extends Controller
     public function moras(){
         $moras = Mora::join('empleados', 'moras.id_empleado', 'empleados.id_empleado')
             ->join('empresas', 'empleados.id_empresa', 'empresas.id_empresa')
+            ->orderBy('moras.mes_año', 'desc')
             ->select('empresas.nombre_empresa', 'moras.id_mora', 'empleados.nombre_y_apellido', 'moras.mes_año')
             ->get();
 
