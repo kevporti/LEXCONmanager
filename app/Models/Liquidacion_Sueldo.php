@@ -18,7 +18,6 @@ class Liquidacion_Sueldo extends Model
       'id_aporte_sindical',
       'reajuste',
       'sueldo_neto',
-      'adicional_rama',
       'extra_50',
       'extra_100',
       'simple_presencia',

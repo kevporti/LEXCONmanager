@@ -23,7 +23,6 @@ return new class extends Migration
               ->onUpdate('cascade')
               ->onDelete('cascade');
             $table->bigInteger('CUIT');
-            $table->string('razon_social');
             $table->string('domicilio');
             $table->string('cod_postal');
             $table->string('localidad');

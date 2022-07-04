@@ -41,7 +41,6 @@ return new class extends Migration
               ->onDelete('cascade');
             $table->integer('reajuste');
             $table->float('sueldo_neto');
-            $table->float('adicional_rama');
             $table->float('extra_50');
             $table->float('extra_100');
             $table->float('simple_presencia');

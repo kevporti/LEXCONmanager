@@ -29,7 +29,6 @@ class EmpresaController extends Controller
         $request->validate([
             'nombreEmpresa' => 'required',
             'cuitEmpresa' => 'required|min:11|max:11',
-            'razonSocialEmpresa' => 'required',
             'codigoPostalEmpresa' => 'required',
             'telefonoEmpresa' => 'required',
             'paisEmpresa' => 'required',
@@ -43,7 +42,6 @@ class EmpresaController extends Controller
         $empresa->nombre_empresa = $request->nombreEmpresa;
         $empresa->id_usuario = 1;
         $empresa->CUIT = $request->cuitEmpresa;
-        $empresa->razon_social = $request->razonSocialEmpresa;
         $empresa->tel_celular = $request->telefonoEmpresa;
         $empresa->cod_postal = $request->codigoPostalEmpresa;
         $empresa->pais = $request->paisEmpresa;

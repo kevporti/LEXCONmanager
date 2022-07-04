@@ -8798,7 +8798,7 @@ function Agregar() {
       isOpen = _useState2[0],
       setIsOpen = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       msg = _useState4[0],
       setMsg = _useState4[1];
@@ -8815,43 +8815,38 @@ function Agregar() {
 
   var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState10 = _slicedToArray(_useState9, 2),
-      razonSocialEmpresa = _useState10[0],
-      setrazonSocialEmpresa = _useState10[1];
+      telefonoEmpresa = _useState10[0],
+      settelefonoEmpresa = _useState10[1];
 
   var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState12 = _slicedToArray(_useState11, 2),
-      telefonoEmpresa = _useState12[0],
-      settelefonoEmpresa = _useState12[1];
+      codigoPostalEmpresa = _useState12[0],
+      setcodigoPostalEmpresa = _useState12[1];
 
   var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState14 = _slicedToArray(_useState13, 2),
-      codigoPostalEmpresa = _useState14[0],
-      setcodigoPostalEmpresa = _useState14[1];
+      paisEmpresa = _useState14[0],
+      setpaisEmpresa = _useState14[1];
 
   var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState16 = _slicedToArray(_useState15, 2),
-      paisEmpresa = _useState16[0],
-      setpaisEmpresa = _useState16[1];
+      provinciaEmpresa = _useState16[0],
+      setprovinciaEmpresa = _useState16[1];
 
   var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState18 = _slicedToArray(_useState17, 2),
-      provinciaEmpresa = _useState18[0],
-      setprovinciaEmpresa = _useState18[1];
+      localidadEmpresa = _useState18[0],
+      setlocalidadEmpresa = _useState18[1];
 
   var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState20 = _slicedToArray(_useState19, 2),
-      localidadEmpresa = _useState20[0],
-      setlocalidadEmpresa = _useState20[1];
+      domicilioEmpresa = _useState20[0],
+      setdomicilioEmpresa = _useState20[1];
 
   var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState22 = _slicedToArray(_useState21, 2),
-      domicilioEmpresa = _useState22[0],
-      setdomicilioEmpresa = _useState22[1];
-
-  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
-      _useState24 = _slicedToArray(_useState23, 2),
-      firmaUsuario = _useState24[0],
-      setfirmaUsuario = _useState24[1];
+      firmaUsuario = _useState22[0],
+      setfirmaUsuario = _useState22[1];
 
   function closeModal(e) {
     setIsOpen(false);
@@ -8871,7 +8866,6 @@ function Agregar() {
               item = {
                 nombreEmpresa: nombreEmpresa,
                 cuitEmpresa: cuitEmpresa,
-                razonSocialEmpresa: razonSocialEmpresa,
                 telefonoEmpresa: telefonoEmpresa,
                 codigoPostalEmpresa: codigoPostalEmpresa,
                 paisEmpresa: paisEmpresa,
@@ -8989,21 +8983,6 @@ function Agregar() {
                         type: "number",
                         className: "bg-darklight py-1 px-2 rounded-sm",
                         placeholder: "Ingrese un n\xFAmero de cuit"
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                      className: "grid col-span-2 grid-cols-1",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                        className: "mr-2",
-                        children: "Raz\xF3n Social:"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("textarea", {
-                        onChange: function onChange(e) {
-                          return setrazonSocialEmpresa(e.target.value);
-                        },
-                        name: "razonSocialEmpresa",
-                        rows: "4",
-                        cols: "40",
-                        placeholder: "Ingrese un texto",
-                        className: "bg-darklight rounded-sm py-1 px-2 focus:outline-none"
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                       className: "grid grid-cols-1",
@@ -9172,9 +9151,9 @@ function DatosEscala(id) {
 
   function formatDate(string) {
     var options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+      year: "numeric",
+      month: "long",
+      day: "numeric"
     };
     return new Date(string).toLocaleDateString([], options);
   }
@@ -9218,15 +9197,6 @@ function DatosEscala(id) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "grid grid-cols-1 gap-y-2 p-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "white-space-pre-line border-b pb-4 border-lightwhite",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            className: "font-medium mb-1",
-            children: "Raz\xF3n Social:"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            className: "font-light",
-            children: dato.razon_social
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "grid grid-cols-3 border-b pb-4 border-lightwhite",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "",
@@ -9261,7 +9231,7 @@ function DatosEscala(id) {
               children: "Editado:"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
               className: "font-light ml-2",
-              children: [dato.firma_usuario, ", ", formatDate(dato.updated_at), "."]
+              children: [dato.firma_usuario, ",", " ", formatDate(dato.updated_at), "."]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "grid col-start-3 grid-cols-4",

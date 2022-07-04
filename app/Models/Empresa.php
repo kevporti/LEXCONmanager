@@ -15,7 +15,6 @@ class Empresa extends Model
       'id_usuario',
       'nombre_empresa',
       'CUIT',
-      'razon_social',
       'domicilio',
       'cod_postal',
       'localidad',
