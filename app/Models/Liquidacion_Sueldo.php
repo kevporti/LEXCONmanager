@@ -11,6 +11,8 @@ class Liquidacion_Sueldo extends Model
 
     protected $primaryKey = 'id_liq_sueldo';
 
+    protected $table = "liquidacion_sueldos";
+
     protected $fillable = [
       'id_mora',
       'id_escala_s',

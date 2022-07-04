@@ -54,8 +54,7 @@ class LiquidacionSueldoController extends Controller
                     $liq = new Liquidacion_Sueldo;
                     $liq->id_mora = $mora->id_mora;
                     $liq->id_escala_s = $escala->id_escala_s;
-                    $liq->id_obra_social = 0;
-                    $liq->id_aporte_sindical = 0;
+
                     $liq->reajuste = $request->Reajuste;
                     $liq->sueldo_neto = $request->SueldoBasico;
 
@@ -97,8 +96,7 @@ class LiquidacionSueldoController extends Controller
                         $liq = new Liquidacion_Sueldo;
                         $liq->id_mora = $mora->id_mora;
                         $liq->id_escala_s = $escala->id_escala_s;
-                        $liq->id_obra_social = 0;
-                        $liq->id_aporte_sindical = 0;
+
                         $liq->reajuste = $request->Reajuste;
                         $liq->sueldo_neto = $request->SueldoBasico;
 
