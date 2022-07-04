@@ -27,7 +27,9 @@ function FilaTabla() {
             month: "long",
             timeZone: "UTC",
         };
-        return new Date(string).toLocaleDateString("es-AR", options);
+        const date = new Date(string).toLocaleDateString("es-AR", options);
+
+        return date.charAt(0).toUpperCase() + date.slice(1);
     }
 
     return (

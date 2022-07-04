@@ -13128,7 +13128,8 @@ function FilaTabla() {
       month: "long",
       timeZone: "UTC"
     };
-    return new Date(string).toLocaleDateString("es-AR", options);
+    var date = new Date(string).toLocaleDateString("es-AR", options);
+    return date.charAt(0).toUpperCase() + date.slice(1);
   }
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
