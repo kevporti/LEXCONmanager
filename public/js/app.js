@@ -12088,116 +12088,106 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function DatosEscala(id) {
-  var Datos = [{
-    id: "10",
-    sueldo_basico: 0,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 12000,
-    simple_presencia: 5240
+  var RamaCategoria = [{
+    id: 0,
+    rama: "Personal de corta distancia (menos de 100 km.)",
+    adicionales: 0,
+    antiguedad: 0.01
   }, {
-    id: "9",
-    sueldo_basico: 50000,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 0,
-    simple_presencia: 5240
+    id: 1,
+    rama: "Personal de larga distancia (más de 100 km.)",
+    adicionales: 0,
+    antiguedad: 0.01
   }, {
-    id: "8",
-    sueldo_basico: 0,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 12000,
-    simple_presencia: 5240
+    id: 2,
+    rama: "Personal de larga distancia (más de 100 km.) - Transporte Pesado Sistema carretón",
+    adicionales: 0,
+    antiguedad: 0.01
   }, {
-    id: "7",
-    sueldo_basico: 50000,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 12000,
-    simple_presencia: 5240
+    id: 3,
+    rama: "Personal de larga distancia (más de 100 km.) - Transporte de Automóviles",
+    adicionales: 0,
+    antiguedad: 0.01
   }, {
-    id: "6",
-    sueldo_basico: 50000,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 0,
-    simple_presencia: 5240
+    id: 4,
+    rama: "Transporte de Caudales",
+    adicionales: 0.2,
+    antiguedad: 0.01
   }, {
-    id: "5",
-    sueldo_basico: 50000,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 0,
-    simple_presencia: 5240
+    id: 5,
+    rama: "Transporte de Clearing y Carga Postal y Empresas Privadas de Correo",
+    adicionales: 0.15,
+    antiguedad: 0.01
   }, {
-    id: "4",
-    sueldo_basico: 0,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 12000,
-    simple_presencia: 5240
+    id: 6,
+    rama: "Recolección de residuos",
+    adicionales: 0.15,
+    antiguedad: 0.01
   }, {
-    id: "3",
-    sueldo_basico: 50000,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 0,
-    simple_presencia: 5240
+    id: 7,
+    rama: "Transporte y Distribución de Diarios y Revistas",
+    adicionales: 0.12,
+    antiguedad: 0.01
   }, {
-    id: "2",
-    sueldo_basico: 0,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 12000,
-    simple_presencia: 5240
+    id: 8,
+    rama: "Transporte de Combustibles Líquidos",
+    adicionales: 0.15,
+    antiguedad: 0.01
   }, {
-    id: "1",
-    sueldo_basico: 50000,
-    firma_usuario: "Claudio",
-    edited_time: "28 Mayo 2022",
-    adicional_rama: 7750,
-    antiguo: 2,
-    extra50: 8450,
-    extra100: 14250,
-    carga_descarga: 12000,
-    simple_presencia: 5240
+    id: 9,
+    rama: "Transporte de Materiales Peligrosos",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 10,
+    rama: "Transporte y/o Logística para la Actividad Petrolera",
+    adicionales: 0.4,
+    antiguedad: 0.01
+  }, {
+    id: 11,
+    rama: "Transporte pesado - Especialidad de Transporte por Sistema de Arrastre",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 12,
+    rama: "Transporte pesado - Especialidad de Desarmado, Transporte y Armado de Equipos Vinculados a la Perforación Petrolífera y Actividades Afines",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 13,
+    rama: "Transporte en Zona de Zafra",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 14,
+    rama: "Expreso, Mudanzas y Encomiendas",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 15,
+    rama: "Transporte y Distribución de Aguas, Aguas Gaseosas y Cerveza",
+    adicionales: 0,
+    antiguedad: 0.01
+  }, {
+    id: 16,
+    rama: "Operaciones Logísticas, Almacenamiento y Distribución",
+    adicionales: 0.1,
+    antiguedad: 0.01
+  }, {
+    id: 17,
+    rama: "Residuos Patológicos",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 18,
+    rama: "Residuos Industriales Especiales",
+    adicionales: 0.2,
+    antiguedad: 0.01
+  }, {
+    id: 19,
+    rama: "Residuos Industriales No Especiales",
+    adicionales: 0.15,
+    antiguedad: 0.01
   }];
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
@@ -12213,7 +12203,41 @@ function DatosEscala(id) {
       setDato(response.data);
     });
   }, []);
-  console.log(Dato);
+
+  function formatDate(string) {
+    var options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    };
+    return new Date(string).toLocaleDateString([], options);
+  }
+
+  function Antiguedad(date1, date2) {
+    var año1 = new Date(date1).toLocaleString([], {
+      year: "numeric"
+    });
+    var año2 = new Date(date2).toLocaleString([], {
+      year: "numeric"
+    });
+    var mes1 = new Date(date1).toLocaleString([], {
+      month: "numeric"
+    });
+    var mes2 = new Date(date2).toLocaleString([], {
+      month: "numeric"
+    });
+
+    if (año1 == año2) {
+      return 0;
+    } else {
+      if (mes1 >= mes2) {
+        return año2 - año1;
+      } else {
+        return año2 - año1 - 1;
+      }
+    }
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     children: Dato.map(function (dato) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -12255,12 +12279,12 @@ function DatosEscala(id) {
           className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "A\xF1os de Antig\xFCedad:"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.antiguo]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: Antiguedad(dato.fecha_alta, dato.updated_at)
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Extra por antig\xFCedad:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_basico * dato.antiguo / 100, " (", dato.antiguo, "%)"]
+            children: ["$", dato.sueldo_neto * Antiguedad(dato.fecha_alta, dato.updated_at) / 100, " ", "(", Antiguedad(dato.fecha_alta, dato.updated_at), "%)"]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
@@ -12268,12 +12292,12 @@ function DatosEscala(id) {
             className: "grid col-start-3",
             children: "Total Remunerativo:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_basico + dato.adicional_rama + dato.extra50 + dato.extra100 + dato.carga_descarga + dato.simple_presencia + dato.sueldo_basico * dato.antiguo / 100]
+            children: ["$", dato.sueldo_neto + dato.extra_50 * dato.hs_extra_50 + dato.extra_100 * dato.hs_extra_100 + dato.sueldo_neto / 24 + dato.simple_presencia + dato.sueldo_neto * Antiguedad(dato.fecha_alta, dato.updated_at) / 100]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-2 mt-2",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["Creado: ", dato.firma_usuario, ", ", dato.edited_time, "."]
+            children: ["Creado: ", dato.firma_usuario, ",", " ", formatDate(dato.updated_at), "."]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             className: "grid place-content-end",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
