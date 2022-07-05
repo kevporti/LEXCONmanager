@@ -1,8 +1,132 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import { filter } from "lodash";
 
 function DatosEmpleado(id) {
+    const RamaCategoria = [
+        {
+            id: 0,
+            rama: "Personal de corta distancia (menos de 100 km.)",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 1,
+            rama: "Personal de larga distancia (más de 100 km.)",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 2,
+            rama: "Personal de larga distancia (más de 100 km.) - Transporte Pesado Sistema carretón",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 3,
+            rama: "Personal de larga distancia (más de 100 km.) - Transporte de Automóviles",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 4,
+            rama: "Transporte de Caudales",
+            adicionales: 0.2,
+            antiguedad: 0.01,
+        },
+        {
+            id: 5,
+            rama: "Transporte de Clearing y Carga Postal y Empresas Privadas de Correo",
+            adicionales: 0.15,
+            antiguedad: 0.01,
+        },
+        {
+            id: 6,
+            rama: "Recolección de residuos",
+            adicionales: 0.15,
+            antiguedad: 0.01,
+        },
+        {
+            id: 7,
+            rama: "Transporte y Distribución de Diarios y Revistas",
+            adicionales: 0.12,
+            antiguedad: 0.01,
+        },
+        {
+            id: 8,
+            rama: "Transporte de Combustibles Líquidos",
+            adicionales: 0.15,
+            antiguedad: 0.01,
+        },
+        {
+            id: 9,
+            rama: "Transporte de Materiales Peligrosos",
+            adicionales: 0.2,
+            antiguedad: 0.01,
+        },
+        {
+            id: 10,
+            rama: "Transporte y/o Logística para la Actividad Petrolera",
+            adicionales: 0.4,
+            antiguedad: 0.01,
+        },
+        {
+            id: 11,
+            rama: "Transporte pesado - Especialidad de Transporte por Sistema de Arrastre",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 12,
+            rama: "Transporte pesado - Especialidad de Desarmado, Transporte y Armado de Equipos Vinculados a la Perforación Petrolífera y Actividades Afines",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 13,
+            rama: "Transporte en Zona de Zafra",
+            adicionales: 0.1,
+            antiguedad: 0.01,
+        },
+        {
+            id: 14,
+            rama: "Expreso, Mudanzas y Encomiendas",
+            adicionales: 0.1,
+            antiguedad: 0.01,
+        },
+        {
+            id: 15,
+            rama: "Transporte y Distribución de Aguas, Aguas Gaseosas y Cerveza",
+            adicionales: 0,
+            antiguedad: 0.01,
+        },
+        {
+            id: 16,
+            rama: "Operaciones Logísticas, Almacenamiento y Distribución",
+            adicionales: 0.1,
+            antiguedad: 0.01,
+        },
+        {
+            id: 17,
+            rama: "Residuos Patológicos",
+            adicionales: 0.2,
+            antiguedad: 0.01,
+        },
+        {
+            id: 18,
+            rama: "Residuos Industriales Especiales",
+            adicionales: 0.2,
+            antiguedad: 0.01,
+        },
+        {
+            id: 19,
+            rama: "Residuos Industriales No Especiales",
+            adicionales: 0.15,
+            antiguedad: 0.01,
+        },
+    ];
+
     const [Empleado, setEmpleado] = useState([]);
     const Id = id.id;
 
@@ -47,7 +171,11 @@ function DatosEmpleado(id) {
                     <div className="">
                         <p>Rama/Categoría:</p>
                         <p className="font-light">
-                            {Empleado.id_rama_categoria}
+                            {RamaCategoria.map((rama) =>
+                                rama.id == Empleado.id_rama_categoria ? (
+                                    <>{rama.rama}</>
+                                ) : undefined
+                            )}
                         </p>
                     </div>
                 </div>
