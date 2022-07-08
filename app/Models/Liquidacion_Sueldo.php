@@ -24,6 +24,7 @@ class Liquidacion_Sueldo extends Model
       'extra_100',
       'simple_presencia',
       'perm_fuera_resid',
+      'carga_desc',
       'sueldo_bruto',
       'firma_usuario',
     ];

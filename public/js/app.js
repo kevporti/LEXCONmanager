@@ -11669,7 +11669,7 @@ function Agregar() {
       FechaHasta = _useState14[0],
       setFechaHasta = _useState14[1];
 
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(),
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
       _useState16 = _slicedToArray(_useState15, 2),
       Reajuste = _useState16[0],
       setReajuste = _useState16[1];
@@ -11701,8 +11701,13 @@ function Agregar() {
 
   var _useState27 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState28 = _slicedToArray(_useState27, 2),
-      Autor = _useState28[0],
-      setAutor = _useState28[1];
+      CargaDescarga = _useState28[0],
+      setCargaDescarga = _useState28[1];
+
+  var _useState29 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+      _useState30 = _slicedToArray(_useState29, 2),
+      Autor = _useState30[0],
+      setAutor = _useState30[1];
 
   function handleLiq() {
     return _handleLiq.apply(this, arguments);
@@ -11727,6 +11732,7 @@ function Agregar() {
                 Extra100: Extra100,
                 SimplePresencia: SimplePresencia,
                 PermFueraResid: PermFueraResid,
+                CargaDescarga: CargaDescarga,
                 Autor: Autor
               };
               console.log(item);
@@ -12024,6 +12030,20 @@ function Agregar() {
                       className: "grid grid-cols-1",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                         className: "mr-2",
+                        children: "Carga y Descarga:"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                        onChange: function onChange(e) {
+                          return setCargaDescarga(e.target.value);
+                        },
+                        value: CargaDescarga,
+                        type: "number",
+                        placeholder: "Ingrese la cantidad",
+                        className: "bg-darklight rounded-sm py-1 px-2"
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "grid grid-cols-1",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                        className: "mr-2",
                         children: "Creado por:"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                         onChange: function onChange(e) {
@@ -12269,11 +12289,11 @@ function DatosEscala(id) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Carga y Descarga:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_neto / 24]
+            children: ["$", (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Simple Presencia:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.simple_presencia]
+            children: ["$", dato.simple_presencia * dato.escalaSP]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
@@ -12292,7 +12312,7 @@ function DatosEscala(id) {
             className: "grid col-start-3",
             children: "Total Remunerativo:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_neto + dato.extra_50 * dato.hs_extra_50 + dato.extra_100 * dato.hs_extra_100 + dato.sueldo_neto / 24 + dato.simple_presencia + dato.sueldo_neto * Antiguedad(dato.fecha_alta, dato.updated_at) / 100]
+            children: ["$", dato.sueldo_neto + dato.extra_50 * dato.hs_extra_50 + dato.extra_100 * dato.hs_extra_100 + (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc + dato.simple_presencia * dato.escalaSP + dato.sueldo_neto * Antiguedad(dato.fecha_alta, dato.updated_at) / 100]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-2 mt-2",
@@ -12393,7 +12413,7 @@ function FilaTabla() {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                   children: sueldo.nombre_y_apellido
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  children: sueldo.reajuste
+                  children: sueldo.reajuste == 0 ? "No" : "Si"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                   className: "grid place-content-end",
                   children: formatDate(sueldo.mes_año)

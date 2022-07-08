@@ -43,7 +43,9 @@ function FilaTabla() {
                                 >
                                     <div>{sueldo.nombre_empresa}</div>
                                     <div>{sueldo.nombre_y_apellido}</div>
-                                    <div>{sueldo.reajuste}</div>
+                                    <div>
+                                        {sueldo.reajuste == 0 ? "No" : "Si"}
+                                    </div>
                                     <div className="grid place-content-end">
                                         {formatDate(sueldo.mes_año)}
                                     </div>

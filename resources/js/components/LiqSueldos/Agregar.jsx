@@ -12,12 +12,13 @@ export default function Agregar() {
     const [Empleado, setEmpleado] = useState([]);
     const [FechaDesde, setFechaDesde] = useState([]);
     const [FechaHasta, setFechaHasta] = useState([]);
-    const [Reajuste, setReajuste] = useState();
+    const [Reajuste, setReajuste] = useState(0);
     const [SueldoBasico, setSueldoBasico] = useState([]);
     const [Extra50, setExtra50] = useState([]);
     const [Extra100, setExtra100] = useState([]);
     const [SimplePresencia, setSimplePresencia] = useState([]);
     const [PermFueraResid, setPermFueraResid] = useState([]);
+    const [CargaDescarga, setCargaDescarga] = useState([]);
     const [Autor, setAutor] = useState([]);
 
     async function handleLiq() {
@@ -32,6 +33,7 @@ export default function Agregar() {
             Extra100,
             SimplePresencia,
             PermFueraResid,
+            CargaDescarga,
             Autor,
         };
         console.log(item);
@@ -322,6 +324,22 @@ export default function Agregar() {
                                                         )
                                                     }
                                                     value={PermFueraResid}
+                                                    type="number"
+                                                    placeholder="Ingrese la cantidad"
+                                                    className="bg-darklight rounded-sm py-1 px-2"
+                                                />
+                                            </div>
+                                            <div className="grid grid-cols-1">
+                                                <span className="mr-2">
+                                                    Carga y Descarga:
+                                                </span>
+                                                <input
+                                                    onChange={(e) =>
+                                                        setCargaDescarga(
+                                                            e.target.value
+                                                        )
+                                                    }
+                                                    value={CargaDescarga}
                                                     type="number"
                                                     placeholder="Ingrese la cantidad"
                                                     className="bg-darklight rounded-sm py-1 px-2"

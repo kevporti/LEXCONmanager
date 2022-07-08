@@ -175,9 +175,13 @@ function DatosEscala(id) {
                     </div>
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
                         <div>Carga y Descarga:</div>
-                        <div>${dato.sueldo_neto / 24}</div>
+                        <div>
+                            $
+                            {(dato.sueldo_neto / 24).toFixed(2) *
+                                dato.carga_desc}
+                        </div>
                         <div>Simple Presencia:</div>
-                        <div>${dato.simple_presencia}</div>
+                        <div>${dato.simple_presencia * dato.escalaSP}</div>
                     </div>
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
                         <div>Años de Antigüedad:</div>
@@ -202,8 +206,9 @@ function DatosEscala(id) {
                             {dato.sueldo_neto +
                                 dato.extra_50 * dato.hs_extra_50 +
                                 dato.extra_100 * dato.hs_extra_100 +
-                                dato.sueldo_neto / 24 +
-                                dato.simple_presencia +
+                                (dato.sueldo_neto / 24).toFixed(2) *
+                                    dato.carga_desc +
+                                dato.simple_presencia * dato.escalaSP +
                                 (dato.sueldo_neto *
                                     Antiguedad(
                                         dato.fecha_alta,
