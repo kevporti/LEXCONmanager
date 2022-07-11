@@ -11743,7 +11743,7 @@ function Agregar() {
               _yield$axios$post = _context.sent;
               data = _yield$axios$post.data;
               console.log(data);
-              closeModal();
+              window.location.reload();
 
             case 8:
             case "end":
@@ -12258,6 +12258,15 @@ function DatosEscala(id) {
     }
   }
 
+  function adicional(dato) {
+    var hola = RamaCategoria.filter(function (rama) {
+      return rama.id == dato.id_rama_categoria ? rama : undefined;
+    }).map(function (filtered) {
+      return filtered.adicionales;
+    });
+    return hola[0] * dato.sueldo_neto;
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     children: Dato.map(function (dato) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -12271,7 +12280,7 @@ function DatosEscala(id) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Adicional por rama:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.adicional_rama]
+            children: ["$", adicional(dato)]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-4 border-b pb-4 border-lightwhite",
@@ -12312,7 +12321,7 @@ function DatosEscala(id) {
             className: "grid col-start-3",
             children: "Total Remunerativo:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_neto + dato.extra_50 * dato.hs_extra_50 + dato.extra_100 * dato.hs_extra_100 + (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc + dato.simple_presencia * dato.escalaSP + dato.sueldo_neto * Antiguedad(dato.fecha_alta, dato.updated_at) / 100]
+            children: ["$", dato.sueldo_neto + dato.extra_50 * dato.hs_extra_50 + dato.extra_100 * dato.hs_extra_100 + (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc + dato.simple_presencia * dato.escalaSP + dato.sueldo_neto * Antiguedad(dato.fecha_alta, dato.updated_at) / 100 + adicional(dato)]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-2 mt-2",

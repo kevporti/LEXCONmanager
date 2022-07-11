@@ -42,7 +42,7 @@ export default function Agregar() {
             item
         );
         console.log(data);
-        closeModal();
+        window.location.reload();
     }
 
     async function getEmpresas(e) {

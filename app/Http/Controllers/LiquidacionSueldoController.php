@@ -63,6 +63,7 @@ class LiquidacionSueldoController extends Controller
             $Desde = (new DateTime($FechaDesde))->modify('first day of this month')->format('Y-m-d');
 
             $mora = Mora::where('mes_año', '=', $Desde)
+                ->where("id_empleado", '=', $empleado->id_empleado)
                 ->first();
 
             if ($mora) {
@@ -106,6 +107,7 @@ class LiquidacionSueldoController extends Controller
 
             foreach ($period as $dt) {
                 $mora = Mora::where('mes_año', '=', $dt->format('Y-m-d'))
+                    ->where("id_empleado", '=', $empleado->id_empleado)
                     ->first();
 
                 if ($mora) {

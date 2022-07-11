@@ -157,6 +157,15 @@ function DatosEscala(id) {
         }
     }
 
+    function adicional(dato) {
+        let hola = RamaCategoria.filter((rama) =>
+            rama.id == dato.id_rama_categoria ? rama : undefined
+        ).map((filtered) => {
+            return filtered.adicionales;
+        });
+        return hola[0] * dato.sueldo_neto;
+    }
+
     return (
         <div>
             {Dato.map((dato) => (
@@ -165,7 +174,7 @@ function DatosEscala(id) {
                         <div>Sueldo básico:</div>
                         <div>${dato.sueldo_neto}</div>
                         <div>Adicional por rama:</div>
-                        <div>${dato.adicional_rama}</div>
+                        <div>${adicional(dato)}</div>
                     </div>
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
                         <div>Horas extra al 50%:</div>
@@ -194,7 +203,8 @@ function DatosEscala(id) {
                             {(dato.sueldo_neto *
                                 Antiguedad(dato.fecha_alta, dato.updated_at)) /
                                 100}{" "}
-                            ({Antiguedad(dato.fecha_alta, dato.updated_at)}%)
+                            ({Antiguedad(dato.fecha_alta, dato.updated_at)}
+                            %)
                         </div>
                     </div>
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
@@ -214,7 +224,8 @@ function DatosEscala(id) {
                                         dato.fecha_alta,
                                         dato.updated_at
                                     )) /
-                                    100}
+                                    100 +
+                                adicional(dato)}
                         </div>
                     </div>
                     <div className="grid grid-cols-2 mt-2">
