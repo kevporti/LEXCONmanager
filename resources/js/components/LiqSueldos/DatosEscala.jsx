@@ -166,10 +166,22 @@ function DatosEscala(id) {
         return hola[0] * dato.sueldo_neto;
     }
 
+    async function download() {
+        const { data } = await axios.get(`/api/usuario/descargarpdf/`, {
+            responseType: "blob",
+        });
+
+        const url = window.URL.createObjectURL(new blob([data]));
+        window.open(url, "_blank");
+    }
+
     return (
         <div>
             {Dato.map((dato) => (
-                <div key={dato.id} className="grid grid-cols-1 gap-y-2 p-4">
+                <div
+                    key={dato.id_liq_sueldo}
+                    className="grid grid-cols-1 gap-y-2 p-4"
+                >
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
                         <div>Sueldo básico:</div>
                         <div>${dato.sueldo_neto}</div>
@@ -234,7 +246,11 @@ function DatosEscala(id) {
                             {formatDate(dato.updated_at)}.
                         </div>
                         <div className="grid place-content-end">
-                            <button className="flex items-center justify-center py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300">
+                            <button
+                                onClick={() => download()}
+                                type="submit"
+                                className="flex items-center justify-center py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300"
+                            >
                                 Descargar
                                 <i className="material-symbols-outlined ml-2 cursor-pointer">
                                     download

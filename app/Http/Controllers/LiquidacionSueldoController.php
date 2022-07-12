@@ -11,6 +11,7 @@ use App\Models\Empresa;
 use App\Models\Empleado;
 use App\Models\Mora;
 use App\Models\Escala_Salarial;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class LiquidacionSueldoController extends Controller
 {
@@ -32,7 +33,7 @@ class LiquidacionSueldoController extends Controller
             ->join('moras', 'liquidacion_sueldos.id_mora', 'moras.id_mora')
             ->join('empleados', 'moras.id_empleado', 'empleados.id_empleado')
             ->join('escala_salarial', 'liquidacion_sueldos.id_escala_s', 'escala_salarial.id_escala_s')
-            ->select('empleados.fecha_alta', 'empleados.id_empleado', 'empleados.id_rama_categoria', 'moras.id_mora', 'escala_salarial.id_escala_s', 'escala_salarial.hs_extra_50', 'escala_salarial.hs_extra_100', 'escala_salarial.simple_presencia as escalaSP', 'escala_salarial.perm_fuera_resid as escalaPFR', 'liquidacion_sueldos.sueldo_neto', 'liquidacion_sueldos.extra_50', 'liquidacion_sueldos.extra_100', 'liquidacion_sueldos.simple_presencia', 'liquidacion_sueldos.carga_desc', 'liquidacion_sueldos.perm_fuera_resid', 'liquidacion_sueldos.firma_usuario', 'liquidacion_sueldos.updated_at')
+            ->select('empleados.fecha_alta', 'empleados.id_empleado', 'empleados.id_rama_categoria', 'moras.id_mora', 'escala_salarial.id_escala_s', 'escala_salarial.hs_extra_50', 'escala_salarial.hs_extra_100', 'escala_salarial.simple_presencia as escalaSP', 'escala_salarial.perm_fuera_resid as escalaPFR', 'liquidacion_sueldos.id_liq_sueldo', 'liquidacion_sueldos.sueldo_neto', 'liquidacion_sueldos.extra_50', 'liquidacion_sueldos.extra_100', 'liquidacion_sueldos.simple_presencia', 'liquidacion_sueldos.carga_desc', 'liquidacion_sueldos.perm_fuera_resid', 'liquidacion_sueldos.firma_usuario', 'liquidacion_sueldos.updated_at')
             ->get();
 
         return $liq;
@@ -139,4 +140,21 @@ class LiquidacionSueldoController extends Controller
             return "Las Liquidaciones de Sueldo se han agregado correctamente.";
         }
     }
+
+    public function descargarpdf() {
+        // $liq = Liquidacion_Sueldo::findOrFail($id);
+
+        // $liqSueldo = Liquidacion_Sueldo::where('id_liq_sueldo', '=', $liq->id_liq_sueldo)
+        //     ->join('moras', 'liquidacion_sueldos.id_mora', 'moras.id_mora')
+        //     ->join('empleados', 'moras.id_empleado', 'empleados.id_empleado')
+        //     ->join('escala_salarial', 'liquidacion_sueldos.id_escala_s', 'escala_salarial.id_escala_s')
+        //     ->select('empleados.fecha_alta', 'empleados.id_empleado', 'empleados.id_rama_categoria', 'moras.id_mora', 'escala_salarial.id_escala_s', 'escala_salarial.hs_extra_50', 'escala_salarial.hs_extra_100', 'escala_salarial.simple_presencia as escalaSP', 'escala_salarial.perm_fuera_resid as escalaPFR', 'liquidacion_sueldos.id_liq_sueldo', 'liquidacion_sueldos.sueldo_neto', 'liquidacion_sueldos.extra_50', 'liquidacion_sueldos.extra_100', 'liquidacion_sueldos.simple_presencia', 'liquidacion_sueldos.carga_desc', 'liquidacion_sueldos.perm_fuera_resid', 'liquidacion_sueldos.firma_usuario', 'liquidacion_sueldos.updated_at')
+        //     ->get();
+
+        $pdf = PDF::loadView('LiqSueldo');
+
+        return $pdf->stream();
+
+    }
+
 }
