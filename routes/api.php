@@ -10,7 +10,8 @@ use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\EscalaSalarialController;
 use App\Http\Controllers\MoraController;
 use App\Http\Controllers\LiquidacionSueldoController;
-use App\Http\Controllers\LiquidacionDeudaController;
+use App\Http\Controllers\ObraSocialController;
+use App\Http\Controllers\AporteSindicalController;
 
 
 /*     Login       */
@@ -48,6 +49,7 @@ Route::get('/usuario/liquidacion_sueldos', [LiquidacionSueldoController::class, 
 Route::post('/usuario/agregarLiqSueldo', [LiquidacionSueldoController::class, 'agregarLiqSueldo']);
 Route::post('/usuario/buscarLiqSueldo', [LiquidacionSueldoController::class, 'buscarLiqSueldo']);
 
-Route::get('/usuario/liquidacion_deudas/obrasocial', [LiquidacionDeudaController::class, 'obra_social']);
+Route::get('/usuario/liquidacion_deudas/obraSocial', [ObraSocialController::class, 'obraSocial']);
+Route::post('/usuario/liquidacion_deudas/agregarObraSocial', [ObraSocialController::class, 'agregarObraSocial']);
 
-Route::get('/usuario/liquidacion_deudas/aportesindical', [LiquidacionDeudaController::class, 'aporte_sindical']);
+Route::get('/usuario/liquidacion_deudas/aporteSindical', [AporteSindicalController::class, 'aporteSindical']);
