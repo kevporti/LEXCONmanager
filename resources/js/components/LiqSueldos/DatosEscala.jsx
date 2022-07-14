@@ -167,12 +167,13 @@ function DatosEscala(id) {
     }
 
     async function download() {
-        const { data } = await axios.get(`/api/usuario/descargarpdf/`, {
-            responseType: "blob",
-        });
+        // const { data } = await axios.get(`/api/usuario/descargarpdf/`, {
+        //     responseType: "blob",
+        // });
 
-        const url = window.URL.createObjectURL(new blob([data]));
-        window.open(url, "_blank");
+        // const url = window.URL.createObjectURL(new blob([data]));
+        // window.open(url, "_blank");
+        window.print();
     }
 
     return (
@@ -180,7 +181,7 @@ function DatosEscala(id) {
             {Dato.map((dato) => (
                 <div
                     key={dato.id_liq_sueldo}
-                    className="grid grid-cols-1 gap-y-2 p-4"
+                    className="grid grid-cols-1 gap-y-2 p-4 print:text-black"
                 >
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
                         <div>Sueldo básico:</div>
@@ -249,7 +250,7 @@ function DatosEscala(id) {
                             <button
                                 onClick={() => download()}
                                 type="submit"
-                                className="flex items-center justify-center py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300"
+                                className="print:hidden flex items-center justify-center py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300"
                             >
                                 Descargar
                                 <i className="material-symbols-outlined ml-2 cursor-pointer">

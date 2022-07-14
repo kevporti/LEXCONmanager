@@ -7,7 +7,7 @@ import Tabla from './Tabla';
 function Home() {
 
     return(
-        <div className="p-8 bg-darklight h-full w-full px-20">
+        <div className="p-8 bg-darklight h-full w-full px-20 print:px-2 print:text-black">
             <NavSession />
             <Filtros />
             <Tabla />

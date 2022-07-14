@@ -10,7 +10,7 @@ function Tabla() {
                 <div className="grid place-content-start">Empleado</div>
                 <div className="grid place-content-start">Reajuste</div>
                 <div className="grid place-content-end">Fecha Liquidada</div>
-                <div className="grid place-content-end">Opciones</div>
+                <div className="print:hidden grid place-content-end">Opciones</div>
             </div>
             <FilaTabla />
         </div>

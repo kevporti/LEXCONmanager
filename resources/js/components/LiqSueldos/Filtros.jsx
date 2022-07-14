@@ -5,7 +5,7 @@ import Agregar from './Agregar';
 function Filtros() {
 
     return(
-        <div className="flex w-full justify-between my-8">
+        <div className="flex w-full justify-between my-8 print:hidden">
             <div className="flex items-center">
                 <input className="bg-dark p-2" type="text" placeholder="Buscar sueldo" />
                 <i className="material-symbols-outlined p-2 rounded-r bg-dark cursor-pointer">search</i>

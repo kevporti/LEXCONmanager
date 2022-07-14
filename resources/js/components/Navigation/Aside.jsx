@@ -31,7 +31,7 @@ function Aside() {
 
     return (
         <div 
-            className={["relative w-72 min-h-screen h-auto p-4 pt-8 bg-dark duration-300",
+            className={["relative w-72 min-h-screen h-auto p-4 pt-8 bg-dark duration-300 print:hidden",
             op ? "w-72" : "w-20"]
             .join(" ")}>
 

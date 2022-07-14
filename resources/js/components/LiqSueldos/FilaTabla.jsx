@@ -23,7 +23,7 @@ function FilaTabla() {
     }
 
     return (
-        <div className="h-80 overflow-auto scrollbar">
+        <div className="h-80 overflow-auto scrollbar print:h-full">
             <div className="">
                 {Sueldo.map((sueldo) => (
                     <Disclosure
@@ -38,7 +38,7 @@ function FilaTabla() {
                                     className={`grid grid-cols-5 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ${
                                         open
                                             ? "bg-green-900 rounded-t cursor-pointer"
-                                            : "cursor-pointer"
+                                            : "cursor-pointer print:hidden"
                                     }`}
                                 >
                                     <div>{sueldo.nombre_empresa}</div>
@@ -49,7 +49,7 @@ function FilaTabla() {
                                     <div className="grid place-content-end">
                                         {formatDate(sueldo.mes_año)}
                                     </div>
-                                    <div className="grid place-content-end">
+                                    <div className="grid place-content-end print:hidden">
                                         <i
                                             className={`material-symbols-outlined grid place-content-end ${
                                                 open
