@@ -167,12 +167,6 @@ function DatosEscala(id) {
     }
 
     async function download() {
-        // const { data } = await axios.get(`/api/usuario/descargarpdf/`, {
-        //     responseType: "blob",
-        // });
-
-        // const url = window.URL.createObjectURL(new blob([data]));
-        // window.open(url, "_blank");
         window.print();
     }
 
@@ -183,19 +177,19 @@ function DatosEscala(id) {
                     key={dato.id_liq_sueldo}
                     className="grid grid-cols-1 gap-y-2 p-4 print:text-black"
                 >
-                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
+                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                         <div>Sueldo básico:</div>
                         <div>${dato.sueldo_neto}</div>
                         <div>Adicional por rama:</div>
                         <div>${adicional(dato)}</div>
                     </div>
-                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
+                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                         <div>Horas extra al 50%:</div>
                         <div>${dato.extra_50 * dato.hs_extra_50}</div>
                         <div>Horas extra al 100%:</div>
                         <div>${dato.extra_100 * dato.hs_extra_100}</div>
                     </div>
-                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
+                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                         <div>Carga y Descarga:</div>
                         <div>
                             $
@@ -205,7 +199,7 @@ function DatosEscala(id) {
                         <div>Simple Presencia:</div>
                         <div>${dato.simple_presencia * dato.escalaSP}</div>
                     </div>
-                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
+                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                         <div>Años de Antigüedad:</div>
                         <div>
                             {Antiguedad(dato.fecha_alta, dato.updated_at)}
@@ -220,7 +214,7 @@ function DatosEscala(id) {
                             %)
                         </div>
                     </div>
-                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite">
+                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                         <div className="grid col-start-3">
                             Total Remunerativo:
                         </div>

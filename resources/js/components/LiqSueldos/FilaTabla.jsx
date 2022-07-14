@@ -37,7 +37,7 @@ function FilaTabla() {
                                     as="div"
                                     className={`grid grid-cols-5 p-4 border-b border-lightwhite transition-all duration-300 hover:bg-green-900 ${
                                         open
-                                            ? "bg-green-900 rounded-t cursor-pointer"
+                                            ? "bg-green-900 rounded-t cursor-pointer print:border-b print:border-black print:grid print:grid-cols-4"
                                             : "cursor-pointer print:hidden"
                                     }`}
                                 >

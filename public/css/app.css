@@ -1077,6 +1077,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media print {
 
+  .print\:grid {
+    display: grid;
+  }
+
   .print\:hidden {
     display: none;
   }
@@ -1085,14 +1089,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 100%;
   }
 
-  .print\:bg-red-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+  .print\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .print\:bg-red-200 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+  .print\:border {
+    border-width: 1px;
+  }
+
+  .print\:border-b {
+    border-bottom-width: 1px;
+  }
+
+  .print\:border-black {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
   }
 
   .print\:px-2 {
@@ -1100,9 +1111,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding-right: 0.5rem;
   }
 
-  .print\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .print\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .print\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .print\:font-medium {
+    font-weight: 500;
   }
 
   .print\:text-black {
