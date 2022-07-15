@@ -85,6 +85,7 @@ class LiquidacionSueldoController extends Controller
                     $liq->simple_presencia = $request->SimplePresencia;
                     $liq->perm_fuera_resid = $request->PermFueraResid;
                     $liq->carga_desc = $request->CargaDescarga;
+                    $liq->totalRemunerativo = 0;
                     $liq->firma_usuario = $request->Autor;
                     $save = $liq->save();
 
@@ -129,6 +130,7 @@ class LiquidacionSueldoController extends Controller
                         $liq->simple_presencia = $request->SimplePresencia;
                         $liq->perm_fuera_resid = $request->PermFueraResid;
                         $liq->carga_desc = $request->CargaDescarga;
+                        $liq->totalRemunerativo = 0;
                         $liq->firma_usuario = $request->Autor;
                         $save = $liq->save();
                     } else {
