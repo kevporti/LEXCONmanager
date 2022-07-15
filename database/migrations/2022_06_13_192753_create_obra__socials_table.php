@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('obra_social', function (Blueprint $table) {
             $table->increments('id_obra_social');
+            $table->float('tasaInteresObra');
+            $table->date('fechaLiquidacionObra');
+            $table->string('statusObra');
+            $table->string('firma_usuario');
             $table->timestamps();
         });
     }

@@ -46,6 +46,7 @@ return new class extends Migration
             $table->float('simple_presencia');
             $table->float('perm_fuera_resid');
             $table->float('carga_desc');
+            $table->float('totalRemunerativo');
             $table->string('firma_usuario');
             $table->timestamps();
         });
