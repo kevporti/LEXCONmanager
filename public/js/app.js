@@ -11735,17 +11735,15 @@ function Agregar() {
                 CargaDescarga: CargaDescarga,
                 Autor: Autor
               };
-              console.log(item);
-              _context.next = 4;
+              _context.next = 3;
               return axios.post("/api/usuario/agregarLiqSueldo", item);
 
-            case 4:
+            case 3:
               _yield$axios$post = _context.sent;
               data = _yield$axios$post.data;
-              console.log(data);
-              window.location.reload();
+              console.log(data); // window.location.reload();
 
-            case 8:
+            case 6:
             case "end":
               return _context.stop();
           }
@@ -12339,11 +12337,18 @@ function DatosEscala(id) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "A\xF1os de Antig\xFCedad:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            children: Antiguedad(dato.fecha_alta, dato.updated_at)
+            children: !dato.fecha_baja ? Antiguedad(dato.fecha_alta, dato.updated_at) : Antiguedad(dato.fecha_alta, dato.fecha_baja)
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Extra por antig\xFCedad:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_neto * Antiguedad(dato.fecha_alta, dato.updated_at) / 100, " ", "(", Antiguedad(dato.fecha_alta, dato.updated_at), "%)"]
+            children: ["$", dato.sueldo_neto * (!dato.fecha_baja ? Antiguedad(dato.fecha_alta, dato.updated_at) : Antiguedad(dato.fecha_alta, dato.fecha_baja)) / 100, " ", "(", Antiguedad(dato.fecha_alta, dato.updated_at), "%)"]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "Permanencia Fuera de Residencia:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: dato.perm_fuera_resid * dato.escalaPFR
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black",
@@ -12351,7 +12356,7 @@ function DatosEscala(id) {
             className: "grid col-start-3",
             children: "Total Remunerativo:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_neto + dato.extra_50 * dato.hs_extra_50 + dato.extra_100 * dato.hs_extra_100 + (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc + dato.simple_presencia * dato.escalaSP + dato.sueldo_neto * Antiguedad(dato.fecha_alta, dato.updated_at) / 100 + adicional(dato)]
+            children: ["$", dato.sueldo_neto + dato.extra_50 * dato.hs_extra_50 + dato.extra_100 * dato.hs_extra_100 + (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc + dato.simple_presencia * dato.escalaSP + dato.perm_fuera_resid * dato.escalaPFR + dato.sueldo_neto * (!dato.fecha_baja ? Antiguedad(dato.fecha_alta, dato.updated_at) : Antiguedad(dato.fecha_alta, dato.fecha_baja)) / 100 + adicional(dato)]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-2 mt-2",

@@ -36,13 +36,13 @@ export default function Agregar() {
             CargaDescarga,
             Autor,
         };
-        console.log(item);
+
         const { data } = await axios.post(
             "/api/usuario/agregarLiqSueldo",
             item
         );
         console.log(data);
-        window.location.reload();
+        // window.location.reload();
     }
 
     async function getEmpresas(e) {

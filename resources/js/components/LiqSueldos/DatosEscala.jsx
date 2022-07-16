@@ -202,17 +202,31 @@ function DatosEscala(id) {
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                         <div>Años de Antigüedad:</div>
                         <div>
-                            {Antiguedad(dato.fecha_alta, dato.updated_at)}
+                            {!dato.fecha_baja
+                                ? Antiguedad(dato.fecha_alta, dato.updated_at)
+                                : Antiguedad(dato.fecha_alta, dato.fecha_baja)}
                         </div>
                         <div>Extra por antigüedad:</div>
                         <div>
                             $
                             {(dato.sueldo_neto *
-                                Antiguedad(dato.fecha_alta, dato.updated_at)) /
+                                (!dato.fecha_baja
+                                    ? Antiguedad(
+                                          dato.fecha_alta,
+                                          dato.updated_at
+                                      )
+                                    : Antiguedad(
+                                          dato.fecha_alta,
+                                          dato.fecha_baja
+                                      ))) /
                                 100}{" "}
                             ({Antiguedad(dato.fecha_alta, dato.updated_at)}
                             %)
                         </div>
+                    </div>
+                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
+                        <div>Permanencia Fuera de Residencia:</div>
+                        <div>{dato.perm_fuera_resid * dato.escalaPFR}</div>
                     </div>
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                         <div className="grid col-start-3">
@@ -226,11 +240,17 @@ function DatosEscala(id) {
                                 (dato.sueldo_neto / 24).toFixed(2) *
                                     dato.carga_desc +
                                 dato.simple_presencia * dato.escalaSP +
+                                dato.perm_fuera_resid * dato.escalaPFR +
                                 (dato.sueldo_neto *
-                                    Antiguedad(
-                                        dato.fecha_alta,
-                                        dato.updated_at
-                                    )) /
+                                    (!dato.fecha_baja
+                                        ? Antiguedad(
+                                              dato.fecha_alta,
+                                              dato.updated_at
+                                          )
+                                        : Antiguedad(
+                                              dato.fecha_alta,
+                                              dato.fecha_baja
+                                          ))) /
                                     100 +
                                 adicional(dato)}
                         </div>
