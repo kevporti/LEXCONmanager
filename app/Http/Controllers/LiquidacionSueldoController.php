@@ -140,7 +140,7 @@ class LiquidacionSueldoController extends Controller
                     $hoy = \Carbon\Carbon::createFromFormat('Y-m', $ahora, 'America/Buenos_Aires')->toDateString();
                     $datos['antiguedad'] = ($empleado->fecha_baja ? Antiguedad($empleado->fecha_alta, $empleado_fecha_baja) : Antiguedad($empleado->fecha_alta, (new DateTime($hoy))->format('Y-m-d')));
 
-                    /* Calculando el total */
+                    /* Calculando el total sin adicionales */
                     $totalRemun = $datos['basico'] + $datos['extra50'] + $datos['extra100'] + $datos['simpleP'] + $datos['PermFuera'] + $datos['cargaDesc'] + $datos['antiguedad'];
 
                     $liq->totalRemunerativo = $totalRemun;
@@ -157,6 +157,10 @@ class LiquidacionSueldoController extends Controller
             }
         /* Segundo caso, con las fechas distintas */
         } else {
+            /* Creando un elemento guía a través del guardado para determinar un Total Remunerativo */
+            $datos = ['basico' => 0, 'extra50' => 0, 'extra100' => 0, 'simpleP' => 0, 'PermFuera' => 0, 'cargaDesc' => 0, 'antiguedad' => 0];
+
+            /* Creando fechas guardables para la DB y creando el período seleccionado mes a mes */
             $FechaDesde = \Carbon\Carbon::createFromFormat('Y-m', $request->FechaDesde, 'America/Buenos_Aires')->toDateTimeString();
             $FechaHasta = \Carbon\Carbon::createFromFormat('Y-m', $request->FechaHasta, 'America/Buenos_Aires')->toDateTimeString();
 
@@ -165,34 +169,63 @@ class LiquidacionSueldoController extends Controller
             $interval = DateInterval::createFromDateString('1 month');
             $period   = new DatePeriod($start, $interval, $end);
 
+            /* Recorriendo el período encontrado */
             foreach ($period as $dt) {
+                /* Buscando la mora correspondiente a los períodos */
                 $mora = Mora::where('mes_año', '=', $dt->format('Y-m-d'))
-                    ->where("id_empleado", '=', $empleado->id_empleado)
+                    ->where("moras.id_empleado", '=', $empleado->id_empleado)
+                    ->join('empleados', 'empleados.id_empleado', '=', 'moras.id_empleado')
+                    ->select('moras.mes_año', 'moras.id_mora', 'moras.id_empleado', 'empleados.id_empleado', 'empleados.id_rama_categoria')
                     ->first();
 
+                /* Dividiendo caso si existe la mora, porque no se puede guardar información de una mora que no existe */
                 if ($mora) {
+                    /* Buscando la Escala Salarial correspondiente a la mora encontrada según fecha más reciente y id de la rama/categoría del Empleado */
                     $escala = Escala_Salarial::where('vigencia', '<=', $mora->mes_año)
+                        ->where('id_rama_categoria', '=', $mora->id_rama_categoria)
                         ->orderBy('vigencia', 'desc')
                         ->first();
 
+                    /* Separando casos si la escala existe. Generalmente si existe una escala para la primer fecha de mora y solo existe esa,
+                     todas las moras se van a regisr en base a esa única Escala, sino el usuario debería agregar al menos una Escala */
                     if ($escala) {
+                        /* Guardando datos de la Liquidación de Sueldo */
                         $liq = new Liquidacion_Sueldo;
                         $liq->id_mora = $mora->id_mora;
                         $liq->id_escala_s = $escala->id_escala_s;
 
-                        $liq->reajuste = $request->Reajuste;
-                        $liq->sueldo_neto = $request->SueldoBasico;
+                        /* Seccionando casos dependiendo si la Liquidación es un Reajuste de una Liquidación previamente hecha */
+                        if ($request->Reajuste == 1) {
+                            $liq->sueldo_neto == 0;
+                        } else {
+                            /* Seccionando casos para determinar si utilizar el monto de Sueldo de la Liquidación o utilizar el ingresado por el usuario */
+                            if ($request->SueldoBasico == 0) {
+                                $liq->sueldo_neto = $escala->sueldo_basico;
+                            } else {
+                                $liq->sueldo_neto = $request->SueldoBasico;
+                            }
+                        }
 
+                        /* Terminando de guardar datos de la Liquidación */
                         $liq->extra_50 = $request->Extra50;
                         $liq->extra_100 = $request->Extra100;
                         $liq->simple_presencia = $request->SimplePresencia;
                         $liq->perm_fuera_resid = $request->PermFueraResid;
                         $liq->carga_desc = $request->CargaDescarga;
-                        $liq->totalRemunerativo = 0;
+
+                        /* Calculando la antiguedad del Empleado */
+                        $ahora = now()->format('Y-m');
+                        $hoy = \Carbon\Carbon::createFromFormat('Y-m', $ahora, 'America/Buenos_Aires')->toDateString();
+                        $datos['antiguedad'] = ($empleado->fecha_baja ? Antiguedad($empleado->fecha_alta, $empleado_fecha_baja) : Antiguedad($empleado->fecha_alta, (new DateTime($hoy))->format('Y-m-d')));
+
+                        /* Calculando el total sin adicionales */
+                        $totalRemun = $datos['basico'] + $datos['extra50'] + $datos['extra100'] + $datos['simpleP'] + $datos['PermFuera'] + $datos['cargaDesc'] + $datos['antiguedad'];
+
+                        $liq->totalRemunerativo = $totalRemun;
                         $liq->firma_usuario = $request->Autor;
                         $save = $liq->save();
                     } else {
-                        return "No existe una escala salarial correspondiente a la fecha seleccionada.";
+                        return "No existe una escala salarial correspondiente a la fecha seleccionada o al tipo de rama/categoría del Empleado.";
                     }
                 }
             }
