@@ -12113,6 +12113,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function DatosEscala(id) {
   var RamaCategoria = [{
     id: 0,
@@ -12240,28 +12241,24 @@ function DatosEscala(id) {
   }
 
   function Antiguedad(date1, date2) {
-    var año1 = new Date(date1).toLocaleString([], {
-      year: "numeric"
-    });
-    var año2 = new Date(date2).toLocaleString([], {
-      year: "numeric"
-    });
-    var mes1 = new Date(date1).toLocaleString([], {
-      month: "numeric"
-    });
-    var mes2 = new Date(date2).toLocaleString([], {
-      month: "numeric"
-    });
+    var start = date1.split("-");
+    var end = date2.split("-");
+    var startYear = parseInt(start[0]);
+    var endYear = parseInt(end[0]);
+    var dates = [];
 
-    if (año1 == año2) {
-      return 0;
-    } else {
-      if (mes1 >= mes2) {
-        return año2 - año1;
-      } else {
-        return año2 - año1 - 1;
+    for (var i = startYear; i <= endYear; i++) {
+      var endMonth = i != endYear ? 11 : parseInt(end[1]) - 1;
+      var startMon = i === startYear ? parseInt(start[1]) - 1 : 0;
+
+      for (var j = startMon; j <= endMonth; j = j > 12 ? j % 12 || 11 : j + 1) {
+        var month = j + 1;
+        var displayMonth = month < 10 ? "0" + month : month;
+        dates.push([i, displayMonth, "01"].join("-"));
       }
     }
+
+    return Math.floor((dates.length - 1) / 12);
   }
 
   function adicional(dato) {
@@ -12321,34 +12318,38 @@ function DatosEscala(id) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             children: ["$", dato.extra_100 * dato.hs_extra_100]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        }), (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc != 0 || dato.simple_presencia * dato.escalaSP != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black",
+          children: [(dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              children: "Carga y Descarga:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: ["$", (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc]
+            })]
+          }) : null, dato.simple_presencia * dato.escalaSP != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              children: "Simple Presencia:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: ["$", dato.simple_presencia * dato.escalaSP]
+            })]
+          }) : null]
+        }) : null, dato.perm_fuera_resid * dato.escalaPFR != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            children: "Carga y Descarga:"
+            children: "Permanencia Fuera de Residencia:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            children: "Simple Presencia:"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.simple_presencia * dato.escalaSP]
+            children: ["$", dato.perm_fuera_resid * dato.escalaPFR]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "A\xF1os de Antig\xFCedad:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            children: !dato.fecha_baja ? Antiguedad(dato.fecha_alta, dato.updated_at) : Antiguedad(dato.fecha_alta, dato.fecha_baja)
+            children: Antiguedad(dato.fecha_alta, dato.mes_año)
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: "Extra por antig\xFCedad:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_neto * (!dato.fecha_baja ? Antiguedad(dato.fecha_alta, dato.updated_at) : Antiguedad(dato.fecha_alta, dato.fecha_baja)) / 100, " ", "(", Antiguedad(dato.fecha_alta, dato.updated_at), "%)"]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            children: "Permanencia Fuera de Residencia:"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            children: dato.perm_fuera_resid * dato.escalaPFR
+            children: ["$", dato.sueldo_neto * Antiguedad(dato.fecha_alta, dato.mes_año) / 100, " ", "(", Antiguedad(dato.fecha_alta, dato.mes_año), "%)"]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black",
@@ -12356,7 +12357,7 @@ function DatosEscala(id) {
             className: "grid col-start-3",
             children: "Total Remunerativo:"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["$", dato.sueldo_neto + dato.extra_50 * dato.hs_extra_50 + dato.extra_100 * dato.hs_extra_100 + (dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc + dato.simple_presencia * dato.escalaSP + dato.perm_fuera_resid * dato.escalaPFR + dato.sueldo_neto * (!dato.fecha_baja ? Antiguedad(dato.fecha_alta, dato.updated_at) : Antiguedad(dato.fecha_alta, dato.fecha_baja)) / 100 + adicional(dato)]
+            children: ["$", dato.totalRemunerativo]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "grid grid-cols-2 mt-2",

@@ -141,20 +141,26 @@ function DatosEscala(id) {
     }
 
     function Antiguedad(date1, date2) {
-        let año1 = new Date(date1).toLocaleString([], { year: "numeric" });
-        let año2 = new Date(date2).toLocaleString([], { year: "numeric" });
-        let mes1 = new Date(date1).toLocaleString([], { month: "numeric" });
-        let mes2 = new Date(date2).toLocaleString([], { month: "numeric" });
+        var start = date1.split("-");
+        var end = date2.split("-");
+        var startYear = parseInt(start[0]);
+        var endYear = parseInt(end[0]);
+        var dates = [];
 
-        if (año1 == año2) {
-            return 0;
-        } else {
-            if (mes1 >= mes2) {
-                return año2 - año1;
-            } else {
-                return año2 - año1 - 1;
+        for (var i = startYear; i <= endYear; i++) {
+            var endMonth = i != endYear ? 11 : parseInt(end[1]) - 1;
+            var startMon = i === startYear ? parseInt(start[1]) - 1 : 0;
+            for (
+                var j = startMon;
+                j <= endMonth;
+                j = j > 12 ? j % 12 || 11 : j + 1
+            ) {
+                var month = j + 1;
+                var displayMonth = month < 10 ? "0" + month : month;
+                dates.push([i, displayMonth, "01"].join("-"));
             }
         }
+        return Math.floor((dates.length - 1) / 12);
     }
 
     function adicional(dato) {
@@ -189,71 +195,55 @@ function DatosEscala(id) {
                         <div>Horas extra al 100%:</div>
                         <div>${dato.extra_100 * dato.hs_extra_100}</div>
                     </div>
-                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
-                        <div>Carga y Descarga:</div>
-                        <div>
-                            $
+                    {(dato.sueldo_neto / 24).toFixed(2) * dato.carga_desc !=
+                        0 || dato.simple_presencia * dato.escalaSP != 0 ? (
+                        <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                             {(dato.sueldo_neto / 24).toFixed(2) *
-                                dato.carga_desc}
+                                dato.carga_desc !=
+                            0 ? (
+                                <>
+                                    <div>Carga y Descarga:</div>
+                                    <div>
+                                        $
+                                        {(dato.sueldo_neto / 24).toFixed(2) *
+                                            dato.carga_desc}
+                                    </div>
+                                </>
+                            ) : null}
+                            {dato.simple_presencia * dato.escalaSP != 0 ? (
+                                <>
+                                    <div>Simple Presencia:</div>
+                                    <div>
+                                        ${dato.simple_presencia * dato.escalaSP}
+                                    </div>
+                                </>
+                            ) : null}
                         </div>
-                        <div>Simple Presencia:</div>
-                        <div>${dato.simple_presencia * dato.escalaSP}</div>
-                    </div>
+                    ) : null}
+                    {dato.perm_fuera_resid * dato.escalaPFR != 0 ? (
+                        <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
+                            <div>Permanencia Fuera de Residencia:</div>
+                            <div>${dato.perm_fuera_resid * dato.escalaPFR}</div>
+                        </div>
+                    ) : null}
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                         <div>Años de Antigüedad:</div>
-                        <div>
-                            {!dato.fecha_baja
-                                ? Antiguedad(dato.fecha_alta, dato.updated_at)
-                                : Antiguedad(dato.fecha_alta, dato.fecha_baja)}
-                        </div>
+                        <div>{Antiguedad(dato.fecha_alta, dato.mes_año)}</div>
                         <div>Extra por antigüedad:</div>
                         <div>
                             $
                             {(dato.sueldo_neto *
-                                (!dato.fecha_baja
-                                    ? Antiguedad(
-                                          dato.fecha_alta,
-                                          dato.updated_at
-                                      )
-                                    : Antiguedad(
-                                          dato.fecha_alta,
-                                          dato.fecha_baja
-                                      ))) /
+                                Antiguedad(dato.fecha_alta, dato.mes_año)) /
                                 100}{" "}
-                            ({Antiguedad(dato.fecha_alta, dato.updated_at)}
+                            ({Antiguedad(dato.fecha_alta, dato.mes_año)}
                             %)
                         </div>
-                    </div>
-                    <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
-                        <div>Permanencia Fuera de Residencia:</div>
-                        <div>{dato.perm_fuera_resid * dato.escalaPFR}</div>
                     </div>
                     <div className="grid grid-cols-4 border-b pb-4 border-lightwhite print:border-b print:border-black">
                         <div className="grid col-start-3">
                             Total Remunerativo:
                         </div>
-                        <div>
-                            $
-                            {dato.sueldo_neto +
-                                dato.extra_50 * dato.hs_extra_50 +
-                                dato.extra_100 * dato.hs_extra_100 +
-                                (dato.sueldo_neto / 24).toFixed(2) *
-                                    dato.carga_desc +
-                                dato.simple_presencia * dato.escalaSP +
-                                dato.perm_fuera_resid * dato.escalaPFR +
-                                (dato.sueldo_neto *
-                                    (!dato.fecha_baja
-                                        ? Antiguedad(
-                                              dato.fecha_alta,
-                                              dato.updated_at
-                                          )
-                                        : Antiguedad(
-                                              dato.fecha_alta,
-                                              dato.fecha_baja
-                                          ))) /
-                                    100 +
-                                adicional(dato)}
-                        </div>
+                        <div>${dato.totalRemunerativo}</div>
                     </div>
                     <div className="grid grid-cols-2 mt-2">
                         <div>

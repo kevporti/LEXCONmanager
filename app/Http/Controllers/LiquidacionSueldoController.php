@@ -33,13 +33,136 @@ class LiquidacionSueldoController extends Controller
             ->join('moras', 'liquidacion_sueldos.id_mora', 'moras.id_mora')
             ->join('empleados', 'moras.id_empleado', 'empleados.id_empleado')
             ->join('escala_salarial', 'liquidacion_sueldos.id_escala_s', 'escala_salarial.id_escala_s')
-            ->select('empleados.fecha_alta', 'empleados.id_empleado', 'empleados.id_rama_categoria', 'moras.id_mora', 'escala_salarial.id_escala_s', 'escala_salarial.hs_extra_50', 'escala_salarial.hs_extra_100', 'escala_salarial.simple_presencia as escalaSP', 'escala_salarial.perm_fuera_resid as escalaPFR', 'liquidacion_sueldos.id_liq_sueldo', 'liquidacion_sueldos.sueldo_neto', 'liquidacion_sueldos.extra_50', 'liquidacion_sueldos.extra_100', 'liquidacion_sueldos.simple_presencia', 'liquidacion_sueldos.carga_desc', 'liquidacion_sueldos.perm_fuera_resid', 'liquidacion_sueldos.firma_usuario', 'liquidacion_sueldos.updated_at')
+            ->select('empleados.fecha_alta', 'empleados.id_empleado', 'empleados.id_rama_categoria', 'moras.id_mora', 'moras.mes_año', 'escala_salarial.id_escala_s', 'escala_salarial.hs_extra_50', 'escala_salarial.hs_extra_100', 'escala_salarial.simple_presencia as escalaSP', 'escala_salarial.perm_fuera_resid as escalaPFR', 'liquidacion_sueldos.id_liq_sueldo', 'liquidacion_sueldos.sueldo_neto', 'liquidacion_sueldos.extra_50', 'liquidacion_sueldos.extra_100', 'liquidacion_sueldos.simple_presencia', 'liquidacion_sueldos.carga_desc', 'liquidacion_sueldos.perm_fuera_resid', 'liquidacion_sueldos.totalRemunerativo', 'liquidacion_sueldos.firma_usuario', 'liquidacion_sueldos.updated_at')
             ->get();
 
         return $liq;
     }
 
     public function agregarLiqSueldo(Request $request) {
+        global $RamaCategoria;
+        $RamaCategoria = ([
+            [
+                'id' => 0,
+                'rama' => "Personal de corta distancia (menos de 100 km.)",
+                'adicionales' => 0,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 1,
+                'rama' => "Personal de larga distancia (más de 100 km.)",
+                'adicionales' => 0,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 2,
+                'rama' => "Personal de larga distancia (más de 100 km.) - Transporte Pesado Sistema carretón",
+                'adicionales' => 0,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 3,
+                'rama' => "Personal de larga distancia (más de 100 km.) - Transporte de Automóviles",
+                'adicionales' => 0,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 4,
+                'rama' => "Transporte de Caudales",
+                'adicionales' => 0.2,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 5,
+                'rama' => "Transporte de Clearing y Carga Postal y Empresas Privadas de Correo",
+                'adicionales' => 0.15,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 6,
+                'rama' => "Recolección de residuos",
+                'adicionales' => 0.15,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 7,
+                'rama' => "Transporte y Distribución de Diarios y Revistas",
+                'adicionales' => 0.12,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 8,
+                'rama' => "Transporte de Combustibles Líquidos",
+                'adicionales' => 0.15,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 9,
+                'rama' => "Transporte de Materiales Peligrosos",
+                'adicionales' => 0.2,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 10,
+                'rama' => "Transporte y/o Logística para la Actividad Petrolera",
+                'adicionales' => 0.4,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 11,
+                'rama' => "Transporte pesado - Especialidad de Transporte por Sistema de Arrastre",
+                'adicionales' => 0,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 12,
+                'rama' => "Transporte pesado - Especialidad de Desarmado, Transporte y Armado de Equipos Vinculados a la Perforación Petrolífera y Actividades Afines",
+                'adicionales' => 0,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 13,
+                'rama' => "Transporte en Zona de Zafra",
+                'adicionales' => 0.1,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 14,
+                'rama' => "Expreso, Mudanzas y Encomiendas",
+                'adicionales' => 0.1,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 15,
+                'rama' => "Transporte y Distribución de Aguas, Aguas Gaseosas y Cerveza",
+                'adicionales' => 0,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 16,
+                'rama' => "Operaciones Logísticas, Almacenamiento y Distribución",
+                'adicionales' => 0.1,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 17,
+                'rama' => "Residuos Patológicos",
+                'adicionales' => 0.2,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 18,
+                'rama' => "Residuos Industriales Especiales",
+                'adicionales' => 0.2,
+                'antiguedad' => 0.01,
+            ],
+            [
+                'id' => 19,
+                'rama' => "Residuos Industriales No Especiales",
+                'adicionales' => 0.15,
+                'antiguedad' => 0.01,
+            ],
+        ]);
 
         /* Validando la entrada del formulario */
         $request->validate([
@@ -56,23 +179,29 @@ class LiquidacionSueldoController extends Controller
             'Autor' => 'required',
         ]);
 
-        /* Función auxiliar para determinar la antiguedad del Empleado */
         function Antiguedad($date1, $date2) {
-            $año1 = (new DateTime($date1))->format('Y');
-            $año2 = (new DateTime($date2))->format('Y');
-            $mes1 = (new DateTime($date1))->format('m');
-            $mes2 = (new DateTime($date2))->format('m');
-    
-            if ($año1 == $año2) {
-                return 0;
-            } else {
-                if ($mes1 >= $mes2) {
-                    return $año2 - $año1;
-                } else {
-                    return $año2 - $año1 - 1;
+            $counter = 0;
+
+            $start    = (new DateTime($date1))->modify('first day of this month');
+            $end      = (new DateTime($date2))->modify('first day of next month');
+            $interval = DateInterval::createFromDateString('1 month');
+            $period   = new DatePeriod($start, $interval, $end);
+            
+            foreach ($period as $dt) {
+                $counter ++;
+            }
+            return floor(($counter - 1) / 12);
+        };
+
+        function Adicionales($id) {
+            global $RamaCategoria;
+            foreach ($RamaCategoria as $rama){
+                if ($rama['id'] == $id) {
+                    $adic = $rama['adicionales'];
                 }
             }
-        }
+            return $adic;
+        };
 
         /* Extrayendo información adicional de la DB */
         $empresa = Empresa::findOrFail($request->Empresa);
@@ -100,7 +229,7 @@ class LiquidacionSueldoController extends Controller
                 /* Separando casos dependiendo si la Escala Salarial existe o no  */
                 if ($escala) {
                     /* Creando un elemento guía a través del guardado para determinar un Total Remunerativo */
-                    $datos = ['basico' => 0, 'extra50' => 0, 'extra100' => 0, 'simpleP' => 0, 'PermFuera' => 0, 'cargaDesc' => 0, 'antiguedad' => 0];
+                    $datos = ['basico' => 0, 'extra50' => 0, 'extra100' => 0, 'simpleP' => 0, 'PermFuera' => 0, 'cargaDesc' => 0, 'antiguedad' => 0, 'adicionales' => 0];
 
                     /* Creando y guardando los datos de la Liquidación de Sueldo */
                     $liq = new Liquidacion_Sueldo;
@@ -128,21 +257,17 @@ class LiquidacionSueldoController extends Controller
                     $liq->carga_desc = $request->CargaDescarga;
 
                     /* Determinando montos remunerativos de la Liquidación */
-                    $datos['basico'] = $liq->sueldo_neto;
+                    $datos['basico'] = $liq->sueldo_neto * 1;
                     $datos['extra50'] = $liq->extra_50 * $escala->hs_extra_50;
                     $datos['extra100'] = $liq->extra_100 * $escala->hs_extra_100;
                     $datos['simpleP'] = $liq->simple_presencia * $escala->simple_presencia;
                     $datos['PermFuera'] = $liq->perm_fuera_resid * $escala->perm_fuera_resid;
-                    $datos['cargaDesc'] = $liq->carga_desc * ($liq->sueldo_neto / 24);
-
-                    /* Calculando la antiguedad del Empleado */
-                    $ahora = now()->format('Y-m');
-                    $hoy = \Carbon\Carbon::createFromFormat('Y-m', $ahora, 'America/Buenos_Aires')->toDateString();
-                    $datos['antiguedad'] = ($empleado->fecha_baja ? Antiguedad($empleado->fecha_alta, $empleado_fecha_baja) : Antiguedad($empleado->fecha_alta, (new DateTime($hoy))->format('Y-m-d')));
-
-                    /* Calculando el total sin adicionales */
-                    $totalRemun = $datos['basico'] + $datos['extra50'] + $datos['extra100'] + $datos['simpleP'] + $datos['PermFuera'] + $datos['cargaDesc'] + $datos['antiguedad'];
-
+                    $datos['cargaDesc'] = round(($liq->carga_desc * ($liq->sueldo_neto / 24)), 2);
+                    $datos['antiguedad'] = $liq->sueldo_neto * (Antiguedad($empleado->fecha_alta, $mora->mes_año) / 100);
+                    $datos['adicionales'] = $liq->sueldo_neto * Adicionales($empleado->id_rama_categoria);
+                    
+                    /* Calculando el total */
+                    $totalRemun = $datos['basico'] + $datos['extra50'] + $datos['extra100'] + $datos['simpleP'] + $datos['PermFuera'] + $datos['cargaDesc'] + $datos['antiguedad'] + $datos['adicionales'];
                     $liq->totalRemunerativo = $totalRemun;
                     $liq->firma_usuario = $request->Autor;
                     $save = $liq->save();
@@ -158,7 +283,7 @@ class LiquidacionSueldoController extends Controller
         /* Segundo caso, con las fechas distintas */
         } else {
             /* Creando un elemento guía a través del guardado para determinar un Total Remunerativo */
-            $datos = ['basico' => 0, 'extra50' => 0, 'extra100' => 0, 'simpleP' => 0, 'PermFuera' => 0, 'cargaDesc' => 0, 'antiguedad' => 0];
+            $datos = ['basico' => 0, 'extra50' => 0, 'extra100' => 0, 'simpleP' => 0, 'PermFuera' => 0, 'cargaDesc' => 0, 'antiguedad' => 0, 'adicionales' => 0];
 
             /* Creando fechas guardables para la DB y creando el período seleccionado mes a mes */
             $FechaDesde = \Carbon\Carbon::createFromFormat('Y-m', $request->FechaDesde, 'America/Buenos_Aires')->toDateTimeString();
@@ -193,6 +318,7 @@ class LiquidacionSueldoController extends Controller
                         $liq = new Liquidacion_Sueldo;
                         $liq->id_mora = $mora->id_mora;
                         $liq->id_escala_s = $escala->id_escala_s;
+                        $liq->reajuste = $request->Reajuste;
 
                         /* Seccionando casos dependiendo si la Liquidación es un Reajuste de una Liquidación previamente hecha */
                         if ($request->Reajuste == 1) {
@@ -213,13 +339,18 @@ class LiquidacionSueldoController extends Controller
                         $liq->perm_fuera_resid = $request->PermFueraResid;
                         $liq->carga_desc = $request->CargaDescarga;
 
-                        /* Calculando la antiguedad del Empleado */
-                        $ahora = now()->format('Y-m');
-                        $hoy = \Carbon\Carbon::createFromFormat('Y-m', $ahora, 'America/Buenos_Aires')->toDateString();
-                        $datos['antiguedad'] = ($empleado->fecha_baja ? Antiguedad($empleado->fecha_alta, $empleado_fecha_baja) : Antiguedad($empleado->fecha_alta, (new DateTime($hoy))->format('Y-m-d')));
+                        /* Determinando montos remunerativos de la Liquidación */
+                        $datos['basico'] = $liq->sueldo_neto * 1;
+                        $datos['extra50'] = $liq->extra_50 * $escala->hs_extra_50;
+                        $datos['extra100'] = $liq->extra_100 * $escala->hs_extra_100;
+                        $datos['simpleP'] = $liq->simple_presencia * $escala->simple_presencia;
+                        $datos['PermFuera'] = $liq->perm_fuera_resid * $escala->perm_fuera_resid;
+                        $datos['cargaDesc'] = round(($liq->carga_desc * ($liq->sueldo_neto / 24)), 2);
+                        $datos['antiguedad'] = $liq->sueldo_neto * (Antiguedad($empleado->fecha_alta, $mora->mes_año) / 100);
+                        $datos['adicionales'] = $liq->sueldo_neto * Adicionales($empleado->id_rama_categoria);
 
-                        /* Calculando el total sin adicionales */
-                        $totalRemun = $datos['basico'] + $datos['extra50'] + $datos['extra100'] + $datos['simpleP'] + $datos['PermFuera'] + $datos['cargaDesc'] + $datos['antiguedad'];
+                        /* Calculando el total */
+                        $totalRemun = $datos['basico'] + $datos['extra50'] + $datos['extra100'] + $datos['simpleP'] + $datos['PermFuera'] + $datos['cargaDesc'] + $datos['antiguedad'] + $datos['adicionales'];
 
                         $liq->totalRemunerativo = $totalRemun;
                         $liq->firma_usuario = $request->Autor;
