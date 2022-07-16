@@ -14,8 +14,12 @@ class Obra_Social extends Model
     protected $primaryKey = 'id_obra_social';
 
     protected $fillable = [
+        'id_empresa',
         'tasaInteresObra',
         'fechaLiquidacionObra',
+        'subtotalObra',
+        'subtotalPatronalObra',
+        'totalFinalObra',
         'statusObra',
         'firma_usuario',
     ];

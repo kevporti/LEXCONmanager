@@ -15,8 +15,18 @@ return new class extends Migration
     {
         Schema::create('obra_social', function (Blueprint $table) {
             $table->increments('id_obra_social');
+            $table->integer('id_empresa')->unsigned()->nullable();
+            $table->foreign('id_empresa')
+              ->references('id_empresa')
+              ->on('empresas')
+              ->onUpdate('cascade')
+              ->onDelete('cascade')
+              ->nullable();
             $table->float('tasaInteresObra');
             $table->date('fechaLiquidacionObra');
+            $table->float('subtotalObra');
+            $table->float('subtotalPatronalObra');
+            $table->float('totalFinalObra');
             $table->string('statusObra');
             $table->string('firma_usuario');
             $table->timestamps();

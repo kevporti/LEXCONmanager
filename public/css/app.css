@@ -1093,10 +1093,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .print\:border {
-    border-width: 1px;
-  }
-
   .print\:border-b {
     border-bottom-width: 1px;
   }
@@ -1109,11 +1105,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .print\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-  }
-
-  .print\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 
   .print\:text-lg {

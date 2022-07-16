@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DateTime;
 use DateInterval;
 use DatePeriod;
+use App\Models\Obra_Social;
 use App\Models\Empresa;
 use App\Models\Empleado;
 use App\Models\Liquidacion_Sueldo;
@@ -14,7 +15,9 @@ use App\Models\Mora;
 class ObraSocialController extends Controller
 {
     public function obraSocial() {
+        $obraSocial = Obra_Social::all();
 
+        return $obraSocial;
     }
 
     public function agregarObraSocial(Request $request) {
@@ -84,22 +87,23 @@ class ObraSocialController extends Controller
 
 
             foreach ($period as $dt) {
-                $mora = Mora::where('mes_año', '=', $dt)
+                $mora = Mora::where('mes_año', '=', $dt->format('Y-m-d'))
                     ->where("id_empleado", '=', $empleado->id_empleado)
                     ->first();
-                $liqSueldo = Liquidacion_Sueldo::where('id_mora', '=', $mora->id_mora)
-                    ->first();
 
-                if ($liqSueldo && !$liqSueldo->id_obra_social) {
-                    $liq = Obra_Social::orderBy('created_at', 'desc')
+                if ($mora) {
+                    $liqSueldo = Liquidacion_Sueldo::where('id_mora', '=', $mora->id_mora)
                         ->first();
 
-                    $liqSueldo->id_obra_social = $liq->id_obra_social;
-                    $liqSueldo->save();
+                    if ($liqSueldo && $liqSueldo->id_obra_social == null) {
+                        $liq = Obra_Social::orderBy('created_at', 'desc')
+                            ->first();
+                        $liqSueldo->id_obra_social = $liq->id_obra_social;
+                        $liqSueldo->save();
+                    }
                 }
-                
             }
-            return "Foreach terminado";
+            return "Se ha creado la Liquidación de Deuda - Obra Social correspondiente.";
         }
         
     }
