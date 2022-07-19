@@ -13932,50 +13932,55 @@ function Agregar() {
       isOpen = _useState2[0],
       setIsOpen = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
       _useState4 = _slicedToArray(_useState3, 2),
-      Empresas = _useState4[0],
-      setEmpresas = _useState4[1];
+      Msg = _useState4[0],
+      setMsg = _useState4[1];
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState6 = _slicedToArray(_useState5, 2),
-      Empleados = _useState6[0],
-      setEmpleados = _useState6[1];
+      Empresas = _useState6[0],
+      setEmpresas = _useState6[1];
 
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState8 = _slicedToArray(_useState7, 2),
-      Empresa = _useState8[0],
-      setEmpresa = _useState8[1];
+      Empleados = _useState8[0],
+      setEmpleados = _useState8[1];
 
   var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState10 = _slicedToArray(_useState9, 2),
-      Empleado = _useState10[0],
-      setEmpleado = _useState10[1];
+      Empresa = _useState10[0],
+      setEmpresa = _useState10[1];
 
   var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState12 = _slicedToArray(_useState11, 2),
-      PeriodoDesde = _useState12[0],
-      setPeriodoDesde = _useState12[1];
+      Empleado = _useState12[0],
+      setEmpleado = _useState12[1];
 
   var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState14 = _slicedToArray(_useState13, 2),
-      PeriodoHasta = _useState14[0],
-      setPeriodoHasta = _useState14[1];
+      PeriodoDesde = _useState14[0],
+      setPeriodoDesde = _useState14[1];
 
   var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState16 = _slicedToArray(_useState15, 2),
-      TasaInteres = _useState16[0],
-      setTasaInteres = _useState16[1];
+      PeriodoHasta = _useState16[0],
+      setPeriodoHasta = _useState16[1];
 
   var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState18 = _slicedToArray(_useState17, 2),
-      FechaLiq = _useState18[0],
-      setFechaLiq = _useState18[1];
+      TasaInteres = _useState18[0],
+      setTasaInteres = _useState18[1];
 
   var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState20 = _slicedToArray(_useState19, 2),
-      Autor = _useState20[0],
-      setAutor = _useState20[1];
+      FechaLiq = _useState20[0],
+      setFechaLiq = _useState20[1];
+
+  var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState22 = _slicedToArray(_useState21, 2),
+      Autor = _useState22[0],
+      setAutor = _useState22[1];
 
   function closeModal() {
     setIsOpen(false);
@@ -14061,9 +14066,10 @@ function Agregar() {
             case 3:
               _yield$axios$post = _context2.sent;
               data = _yield$axios$post.data;
-              console.log(data); // window.location.reload();
+              setMsg(data);
+              console.log(data); //window.location.reload();
 
-            case 6:
+            case 7:
             case "end":
               return _context2.stop();
           }

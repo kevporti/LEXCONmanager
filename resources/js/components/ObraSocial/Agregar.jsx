@@ -3,6 +3,7 @@ import { Fragment, useState, useEffect } from "react";
 
 export default function Agregar() {
     let [isOpen, setIsOpen] = useState(false);
+    const [Msg, setMsg] = useState();
     const [Empresas, setEmpresas] = useState([]);
     const [Empleados, setEmpleados] = useState([]);
 
@@ -59,8 +60,9 @@ export default function Agregar() {
             "/api/usuario/liquidacion_deudas/agregarObraSocial",
             item
         );
+        setMsg(data);
         console.log(data);
-        // window.location.reload();
+        //window.location.reload();
     }
 
     return (

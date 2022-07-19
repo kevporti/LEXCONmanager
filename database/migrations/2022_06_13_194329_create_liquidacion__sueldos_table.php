@@ -33,12 +33,14 @@ return new class extends Migration
               ->references('id_obra_social')
               ->on('obra_social')
               ->onUpdate('cascade')
-              ->onDelete('cascade')->nullable();
+              ->nullOnDelete()
+              ->nullable();
             $table->foreign('id_aporte_sindical')
               ->references('id_aporte_sindical')
               ->on('aporte_sindical')
               ->onUpdate('cascade')
-              ->onDelete('cascade')->nullable();
+              ->nullOnDelete()
+              ->nullable();
             $table->integer('reajuste');
             $table->float('sueldo_neto');
             $table->float('extra_50');
