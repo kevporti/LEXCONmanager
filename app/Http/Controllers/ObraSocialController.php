@@ -174,7 +174,21 @@ class ObraSocialController extends Controller
         }
     }
 
+    public function datosLiqObra(Request $request) {
+        $liqObraSocial = Liquidacion_Sueldo::where('id_obra_social', '=', $request->Id)
+            ->join('moras', 'liquidacion_sueldos.id_mora', 'moras.id_mora')
+            ->join('empleados', 'moras.id_empleado', 'empleados.id_empleado')
+            ->select('liquidacion_sueldos.reajuste', 'liquidacion_sueldos.totalRemunerativo', 'empleados.nombre_y_apellido', 'moras.mes_año')
+            ->get();
 
+        return $liqObraSocial;
+    }
+
+    public function datosObra(Request $request) {
+        $Obra = Obra_Social::findOrFail($request->Id);
+
+        return [$Obra];
+    }
 
 
 }

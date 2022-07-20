@@ -14282,6 +14282,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -14290,7 +14302,7 @@ __webpack_require__.r(__webpack_exports__);
 function DatosObraSocial(id) {
   var Datos = [{
     id: "10",
-    estado: 'Cobrado',
+    estado: "Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14298,7 +14310,7 @@ function DatosObraSocial(id) {
     totsueldos: 150000
   }, {
     id: "9",
-    estado: 'No Cobrado',
+    estado: "No Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14306,7 +14318,7 @@ function DatosObraSocial(id) {
     totsueldos: 150000
   }, {
     id: "8",
-    estado: 'No Cobrado',
+    estado: "No Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14314,7 +14326,7 @@ function DatosObraSocial(id) {
     totsueldos: 150000
   }, {
     id: "7",
-    estado: 'No Cobrado',
+    estado: "No Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14322,7 +14334,7 @@ function DatosObraSocial(id) {
     totsueldos: 150000
   }, {
     id: "6",
-    estado: 'Cobrado',
+    estado: "Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14330,7 +14342,7 @@ function DatosObraSocial(id) {
     totsueldos: 150000
   }, {
     id: "5",
-    estado: 'No Cobrado',
+    estado: "No Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14338,7 +14350,7 @@ function DatosObraSocial(id) {
     totsueldos: 150000
   }, {
     id: "4",
-    estado: 'No Cobrado',
+    estado: "No Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14346,7 +14358,7 @@ function DatosObraSocial(id) {
     totsueldos: 150000
   }, {
     id: "3",
-    estado: 'Cobrado',
+    estado: "Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14354,7 +14366,7 @@ function DatosObraSocial(id) {
     totsueldos: 150000
   }, {
     id: "2",
-    estado: 'No Cobrado',
+    estado: "No Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14362,7 +14374,7 @@ function DatosObraSocial(id) {
     totsueldos: 150000
   }, {
     id: "1",
-    estado: 'Cobrado',
+    estado: "Cobrado",
     firma_usuario: "Claudio",
     edited_time: "28 Mayo",
     fecha: "14/10/2021",
@@ -14395,24 +14407,91 @@ function DatosObraSocial(id) {
     totremun: 30000,
     reajuste: "Si"
   }];
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      DatosObra = _useState2[0],
+      setDatosObra = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      DatosLiqObra = _useState4[0],
+      setDatosLiqObra = _useState4[1];
+
+  var Id = id.id;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios.post("/api/usuario/liquidacion_deudas/datosLiqObra", {
+      Id: Id
+    }).then(function (response) {
+      console.log(response.data);
+      setDatosLiqObra(response.data);
+    });
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios.post("/api/usuario/liquidacion_deudas/datosObra", {
+      Id: Id
+    }).then(function (response) {
+      console.log(response.data);
+      setDatosObra(response.data);
+    });
+  }, []);
+
+  function ContadorMeses(date1, date2) {
+    var start = date1.split("-");
+    var end = date2.split("-");
+    var startYear = parseInt(start[0]);
+    var endYear = parseInt(end[0]);
+    var dates = [];
+
+    for (var i = startYear; i <= endYear; i++) {
+      var endMonth = i != endYear ? 11 : parseInt(end[1]) - 1;
+      var startMon = i === startYear ? parseInt(start[1]) - 1 : 0;
+
+      for (var j = startMon; j <= endMonth; j = j > 12 ? j % 12 || 11 : j + 1) {
+        var month = j + 1;
+        var displayMonth = month < 10 ? "0" + month : month;
+        dates.push([i, displayMonth, "01"].join("-"));
+      }
+    }
+
+    return dates.length;
+  }
+
+  function InteresSueldo(dato) {
+    var contador = 0;
+    var result = DatosLiqObra.map(function (sueldo) {
+      contador = ContadorMeses(sueldo.mes_año, dato.fechaLiquidacionObra) * dato.tasaInteresObra * sueldo.totalRemunerativo * 0.03 / 100 + contador;
+      contador = Math.round((contador + Number.EPSILON) * 100) / 100;
+    });
+    return contador;
+  }
+
+  function formatDate(string) {
+    var options = {
+      year: "numeric",
+      month: "long",
+      timeZone: "UTC"
+    };
+    var date = new Date(string).toLocaleDateString("es-AR", options);
+    return date.charAt(0).toUpperCase() + date.slice(1);
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: Datos.filter(function (dato) {
-      return dato.id == id.id;
-    }).map(function (dato) {
+    children: DatosObra.map(function (dato) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "grid grid-cols-2 gap-y-2 p-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "border-b border-r pb-4 border-lightwhite",
-          children: Sueldos.map(function (sueldo) {
+          children: DatosLiqObra.map(function (sueldo) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              className: " grid grid-cols-2 py-2",
+              className: "grid grid-cols-2 py-2",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                 className: "",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                   children: "Empleado:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                   className: "font-light",
-                  children: sueldo.name
+                  children: sueldo.nombre_y_apellido
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                 className: "",
@@ -14420,7 +14499,7 @@ function DatosObraSocial(id) {
                   children: "Reajuste:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                   className: "font-light",
-                  children: sueldo.reajuste
+                  children: sueldo.reajuste == 0 ? "No" : "Si"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                 className: "",
@@ -14428,7 +14507,7 @@ function DatosObraSocial(id) {
                   children: "Total Remunerativo:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                   className: "font-light",
-                  children: ["$", sueldo.totremun]
+                  children: ["$", (sueldo.totalRemunerativo * 0.03).toFixed(2)]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                 className: "",
@@ -14436,8 +14515,13 @@ function DatosObraSocial(id) {
                   children: "Intereses:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                   className: "font-light",
-                  children: ["$", sueldo.totremun * dato.tasaint / 100]
+                  children: ["$", (sueldo.totalRemunerativo * 0.03 * (dato.tasaInteresObra / 100) * ContadorMeses(sueldo.mes_año, dato.fechaLiquidacionObra)).toFixed(2)]
                 })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                children: "Fecha deuda:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                className: "font-light",
+                children: formatDate(sueldo.mes_año)
               })]
             });
           })
@@ -14451,7 +14535,7 @@ function DatosObraSocial(id) {
                 children: "Tasa de Interes:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                 className: "font-light",
-                children: [dato.tasaint, "%"]
+                children: [dato.tasaInteresObra, "%"]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "grid grid-cols-2",
@@ -14460,7 +14544,7 @@ function DatosObraSocial(id) {
                 children: "Fecha de Liquidaci\xF3n:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                 className: "font-light",
-                children: dato.fecha
+                children: dato.fechaLiquidacionObra
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "grid grid-cols-2 mb-4",
@@ -14469,7 +14553,7 @@ function DatosObraSocial(id) {
                 children: "Estado:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                 className: "font-light",
-                children: dato.estado
+                children: dato.statusObra
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "grid grid-cols-2",
@@ -14478,7 +14562,7 @@ function DatosObraSocial(id) {
                 children: "Total Sueldos:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                 className: "font-light",
-                children: ["$", dato.totsueldos]
+                children: ["$", dato.subtotalObra]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "grid grid-cols-2",
@@ -14487,7 +14571,7 @@ function DatosObraSocial(id) {
                 children: "Intereses Sueldos:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                 className: "font-light",
-                children: ["$", dato.totsueldos * dato.tasaint / 100]
+                children: ["$", InteresSueldo(dato)]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "grid grid-cols-2",
@@ -14496,7 +14580,7 @@ function DatosObraSocial(id) {
                 children: "Total Aporte Patronal:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                 className: "font-light",
-                children: ["$", dato.totsueldos * 2]
+                children: ["$", dato.subtotalPatronalObra]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "grid grid-cols-2",
@@ -14505,7 +14589,7 @@ function DatosObraSocial(id) {
                 children: "Intereses Aporte Patronal:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                 className: "font-light",
-                children: ["$", dato.totsueldos * 2 * dato.tasaint / 100]
+                children: ["$", InteresSueldo(dato) * 2]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "grid grid-cols-2",
@@ -14514,7 +14598,7 @@ function DatosObraSocial(id) {
                 children: "Total Final:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                 className: "font-light",
-                children: ["$", dato.totsueldos + dato.totsueldos * dato.tasaint / 100 + dato.totsueldos * 2 + dato.totsueldos * 2 * dato.tasaint / 100]
+                children: ["$", dato.totalFinalObra + InteresSueldo(dato) * 3]
               })]
             })]
           })
@@ -14551,7 +14635,7 @@ function DatosObraSocial(id) {
             })]
           })]
         })]
-      }, dato.id);
+      }, dato.id_obra_social);
     })
   });
 }
@@ -14597,68 +14681,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function FilaTabla() {
-  var Contactos = [{
-    id: "10",
-    subtot: "150000",
-    company: "Caminos",
-    subtotpatron: "300000",
-    total: "450000"
-  }, {
-    id: "9",
-    subtot: "150000",
-    company: "Samsung",
-    subtotpatron: "300000",
-    total: "450000"
-  }, {
-    id: "8",
-    subtot: "150000",
-    company: "Apple",
-    subtotpatron: "300000",
-    total: "450000"
-  }, {
-    id: "7",
-    subtot: "150000",
-    company: "Samsung",
-    subtotpatron: "300000",
-    total: "450000"
-  }, {
-    id: "6",
-    subtot: "150000",
-    company: "Samsung",
-    subtotpatron: "300000",
-    total: "450000"
-  }, {
-    id: "5",
-    subtot: "150000",
-    company: "Coca-Cola",
-    subtotpatron: "300000",
-    total: "450000"
-  }, {
-    id: "4",
-    subtot: "150000",
-    company: "NASA",
-    subtotpatron: "300000",
-    total: "450000"
-  }, {
-    id: "3",
-    subtot: "150000",
-    company: "Samsung",
-    subtotpatron: "300000",
-    total: "450000"
-  }, {
-    id: "2",
-    subtot: "150000",
-    company: "Galaxy",
-    subtotpatron: "300000",
-    total: "450000"
-  }, {
-    id: "1",
-    subtot: "150000",
-    company: "Samsung",
-    subtotpatron: "300000",
-    total: "450000"
-  }];
-
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       ObraSocial = _useState2[0],
@@ -14671,7 +14693,7 @@ function FilaTabla() {
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "h-96 overflow-auto scrollbar",
-    children: ObraSocial.map(function (contacto, index) {
+    children: ObraSocial.map(function (obraSocial, index) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure, {
         as: "div",
         className: "",
@@ -14685,16 +14707,16 @@ function FilaTabla() {
                 className: "grid grid-cols-12 p-4 border-b border-lightwhite",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                   className: "grid col-span-2",
-                  children: contacto.nombre_empresa
+                  children: obraSocial.nombre_empresa
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                   className: "grid place-content-end col-span-3",
-                  children: ["$", contacto.subtotalObra]
+                  children: ["$", obraSocial.subtotalObra]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                   className: "grid place-content-end col-span-3",
-                  children: ["$", contacto.subtotalPatronalObra]
+                  children: ["$", obraSocial.subtotalPatronalObra]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                   className: "grid place-content-end col-span-3",
-                  children: ["$", contacto.totalFinalObra]
+                  children: ["$", obraSocial.totalFinalObra]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                   className: "grid place-content-end",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
@@ -14706,12 +14728,12 @@ function FilaTabla() {
             }, index), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Panel, {
               className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_DatosObraSocial__WEBPACK_IMPORTED_MODULE_2__["default"], {
-                id: contacto.id
+                id: obraSocial.id_obra_social
               })
             })]
           });
         }
-      }, contacto.id);
+      }, obraSocial.id_obra_social);
     })
   });
 }

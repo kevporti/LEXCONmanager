@@ -50,6 +50,8 @@ Route::post('/usuario/agregarLiqSueldo', [LiquidacionSueldoController::class, 'a
 Route::post('/usuario/buscarLiqSueldo', [LiquidacionSueldoController::class, 'buscarLiqSueldo']);
 
 Route::get('/usuario/liquidacion_deudas/obraSocial', [ObraSocialController::class, 'obraSocial']);
+Route::post('/usuario/liquidacion_deudas/datosLiqObra', [ObraSocialController::class, 'datosLiqObra']);
+Route::post('/usuario/liquidacion_deudas/datosObra', [ObraSocialController::class, 'datosObra']);
 Route::post('/usuario/liquidacion_deudas/agregarObraSocial', [ObraSocialController::class, 'agregarObraSocial']);
 
 Route::get('/usuario/liquidacion_deudas/aporteSindical', [AporteSindicalController::class, 'aporteSindical']);

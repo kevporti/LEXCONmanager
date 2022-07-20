@@ -4,78 +4,6 @@ import { Disclosure } from "@headlessui/react";
 import DatosObraSocial from "./DatosObraSocial";
 
 function FilaTabla() {
-    const Contactos = [
-        {
-            id: "10",
-            subtot: "150000",
-            company: "Caminos",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-        {
-            id: "9",
-            subtot: "150000",
-            company: "Samsung",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-        {
-            id: "8",
-            subtot: "150000",
-            company: "Apple",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-        {
-            id: "7",
-            subtot: "150000",
-            company: "Samsung",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-        {
-            id: "6",
-            subtot: "150000",
-            company: "Samsung",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-        {
-            id: "5",
-            subtot: "150000",
-            company: "Coca-Cola",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-        {
-            id: "4",
-            subtot: "150000",
-            company: "NASA",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-        {
-            id: "3",
-            subtot: "150000",
-            company: "Samsung",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-        {
-            id: "2",
-            subtot: "150000",
-            company: "Galaxy",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-        {
-            id: "1",
-            subtot: "150000",
-            company: "Samsung",
-            subtotpatron: "300000",
-            total: "450000",
-        },
-    ];
     const [ObraSocial, setObraSocial] = useState([]);
 
     useEffect(() => {
@@ -88,8 +16,12 @@ function FilaTabla() {
 
     return (
         <div className="h-96 overflow-auto scrollbar">
-            {ObraSocial.map((contacto, index) => (
-                <Disclosure key={contacto.id} as="div" className="">
+            {ObraSocial.map((obraSocial, index) => (
+                <Disclosure
+                    key={obraSocial.id_obra_social}
+                    as="div"
+                    className=""
+                >
                     {({ open }) => (
                         <>
                             <Disclosure.Button
@@ -107,16 +39,16 @@ function FilaTabla() {
                                     className="grid grid-cols-12 p-4 border-b border-lightwhite"
                                 >
                                     <div className="grid col-span-2">
-                                        {contacto.nombre_empresa}
+                                        {obraSocial.nombre_empresa}
                                     </div>
                                     <div className="grid place-content-end col-span-3">
-                                        ${contacto.subtotalObra}
+                                        ${obraSocial.subtotalObra}
                                     </div>
                                     <div className="grid place-content-end col-span-3">
-                                        ${contacto.subtotalPatronalObra}
+                                        ${obraSocial.subtotalPatronalObra}
                                     </div>
                                     <div className="grid place-content-end col-span-3">
-                                        ${contacto.totalFinalObra}
+                                        ${obraSocial.totalFinalObra}
                                     </div>
                                     <div className="grid place-content-end">
                                         <i
@@ -132,7 +64,9 @@ function FilaTabla() {
                                 </div>
                             </Disclosure.Button>
                             <Disclosure.Panel className="px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b">
-                                <DatosObraSocial id={contacto.id} />
+                                <DatosObraSocial
+                                    id={obraSocial.id_obra_social}
+                                />
                             </Disclosure.Panel>
                         </>
                     )}
