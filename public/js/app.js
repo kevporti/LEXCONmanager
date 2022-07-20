@@ -14481,7 +14481,7 @@ function DatosObraSocial(id) {
     return date.charAt(0).toUpperCase() + date.slice(1);
   }
 
-  function formatDate(string) {
+  function formatFullDate(string) {
     var options = {
       year: "numeric",
       month: "long",
@@ -14520,17 +14520,69 @@ function DatosObraSocial(id) {
     return _deleteObra.apply(this, arguments);
   }
 
+  function download() {
+    return _download.apply(this, arguments);
+  }
+
+  function _download() {
+    _download = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              window.print();
+
+            case 1:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+    return _download.apply(this, arguments);
+  }
+
+  function cambiarEstadoObra() {
+    return _cambiarEstadoObra.apply(this, arguments);
+  }
+
+  function _cambiarEstadoObra() {
+    _cambiarEstadoObra = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+      var _yield$axios$put, data;
+
+      return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              _context3.next = 2;
+              return axios.put("/api/usuario/liquidacion_deudas/cambiarEstadoObra/".concat(Id));
+
+            case 2:
+              _yield$axios$put = _context3.sent;
+              data = _yield$axios$put.data;
+              console.log(data); //window.location.reload();
+
+            case 5:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+    return _cambiarEstadoObra.apply(this, arguments);
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     children: DatosObra.map(function (dato) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "grid grid-cols-2 gap-y-2 p-4",
+        className: "grid grid-cols-2 gap-y-2 p-4 print:py-2",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "border-b border-r pb-4 border-lightwhite",
           children: DatosLiqObra.map(function (sueldo) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              className: "grid grid-cols-2 py-2",
+              className: "grid grid-cols-2 py-2 print:gap-y-2 print:py-0",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                className: "",
+                className: "print:font-medium",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                   children: "Empleado:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
@@ -14538,7 +14590,7 @@ function DatosObraSocial(id) {
                   children: sueldo.nombre_y_apellido
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                className: "",
+                className: "print:font-medium",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                   children: "Reajuste:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
@@ -14546,7 +14598,7 @@ function DatosObraSocial(id) {
                   children: sueldo.reajuste == 0 ? "No" : "Si"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                className: "",
+                className: "print:font-medium",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                   children: "Total Remunerativo:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
@@ -14554,7 +14606,7 @@ function DatosObraSocial(id) {
                   children: ["$", (sueldo.totalRemunerativo * 0.03).toFixed(2)]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                className: "",
+                className: "print:font-medium",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                   children: "Intereses:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
@@ -14562,6 +14614,7 @@ function DatosObraSocial(id) {
                   children: ["$", (sueldo.totalRemunerativo * 0.03 * (dato.tasaInteresObra / 100) * ContadorMeses(sueldo.mes_año, dato.fechaLiquidacionObra)).toFixed(2)]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                className: "print:font-medium",
                 children: "Fecha deuda:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                 className: "font-light",
@@ -14570,7 +14623,7 @@ function DatosObraSocial(id) {
             });
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid grid-cols-1 pl-6 border-b pb-4 border-lightwhite place-content-stretch",
+          className: "grid grid-cols-1 pl-6 border-b pb-4 border-lightwhite place-content-stretch print:font-medium",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "grid grid-cols-2",
@@ -14598,6 +14651,18 @@ function DatosObraSocial(id) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                 className: "font-light",
                 children: dato.statusObra
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                className: "print:hidden",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                  onClick: function onClick() {
+                    cambiarEstadoObra();
+                  },
+                  className: "flex items-center cursor-pointer border border-lightwhite rounded-sm py-2 px-4 hover:bg-green-800 hover:font-medium",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                    className: "material-symbols-outlined flex mr-2",
+                    children: "check"
+                  }), "Cambiar estado"]
+                })
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "grid grid-cols-2",
@@ -14647,17 +14712,17 @@ function DatosObraSocial(id) {
             })]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "grid grid-cols-2 col-span-2 pt-4",
+          className: "grid grid-cols-2 col-span-2 pt-4 print:grid-cols-1",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             className: "flex",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
               children: "Editado:"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
               className: "font-light ml-2",
-              children: [dato.firma_usuario, ",", " ", formatDate(dato.updated_at), "."]
+              children: [dato.firma_usuario, ",", " ", formatFullDate(dato.updated_at), "."]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "flex justify-end items-end",
+            className: "flex justify-end items-end print:hidden",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
               className: "mr-4",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
@@ -14673,6 +14738,9 @@ function DatosObraSocial(id) {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
               className: "",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+                onClick: function onClick() {
+                  return download();
+                },
                 className: "flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300",
                 children: ["Descargar", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   className: "material-symbols-outlined ml-2 cursor-pointer",
@@ -14739,7 +14807,7 @@ function FilaTabla() {
     });
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    className: "h-96 overflow-auto scrollbar",
+    className: "h-96 overflow-auto scrollbar print:h-full print:text-black",
     children: ObraSocial.map(function (obraSocial, index) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure, {
         as: "div",
@@ -14749,9 +14817,9 @@ function FilaTabla() {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Button, {
               as: "div",
-              className: "transition-all duration-300 hover:bg-green-900\n                            ".concat(open ? "bg-green-900 rounded-t cursor-pointer" : "cursor-pointer"),
+              className: "transition-all duration-300 hover:bg-green-900\n                            ".concat(open ? "bg-green-900 rounded-t cursor-pointer print:border-y print:rounded-none print:border-black" : "cursor-pointer print:hidden"),
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                className: "grid grid-cols-12 p-4 border-b border-lightwhite",
+                className: "grid grid-cols-12 p-4 border-b border-lightwhite print:grid-cols-11",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                   className: "grid col-span-2",
                   children: obraSocial.nombre_empresa
@@ -14765,7 +14833,7 @@ function FilaTabla() {
                   className: "grid place-content-end col-span-3",
                   children: ["$", obraSocial.totalFinalObra]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                  className: "grid place-content-end",
+                  className: "grid place-content-end print:hidden",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
                     className: "material-symbols-outlined grid place-content-end ".concat(open ? "rotate-180 transform" : "", " h-5 w-5"),
                     children: "expand_more"
@@ -14773,7 +14841,7 @@ function FilaTabla() {
                 })]
               }, index)
             }, index), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Panel, {
-              className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b",
+              className: "px-4 pt-4 pb-2 text-white bg-lightwhite rounded-b print:text-black",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_DatosObraSocial__WEBPACK_IMPORTED_MODULE_2__["default"], {
                 id: obraSocial.id_obra_social
               })
@@ -14812,7 +14880,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Flitros() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    className: "flex w-full justify-between my-8",
+    className: "flex w-full justify-between my-8 print:hidden",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "flex items-center",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
@@ -14860,7 +14928,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Home() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-    className: "p-8 bg-darklight h-full w-full px-20",
+    className: "p-8 bg-darklight h-full w-full px-20 print:px-2",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Navigation_NavSession__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Filtros__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Tabla__WEBPACK_IMPORTED_MODULE_4__["default"], {})]
   });
 }
@@ -14894,7 +14962,7 @@ function Tabla() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "w-full border border-lightwhite rounded",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-12",
+      className: "px-4 py-2 border-b-2 border-lightwhite bg-dark grid grid-cols-12 print:text-black print:text-lg print:grid print:grid-cols-11 print:font-medium",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "grid place-content-start col-span-2",
         children: "Empresa"
@@ -14905,10 +14973,10 @@ function Tabla() {
         className: "grid place-content-end col-span-3 mr-2",
         children: "Subtotal Patronal"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-end col-span-3 mr-4",
-        children: "Total"
+        className: "grid place-content-end col-span-3 mr-4 print:mr-0",
+        children: "Total sin Intereses"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "grid place-content-end",
+        className: "grid place-content-end print:hidden",
         children: "Opciones"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FilaTabla__WEBPACK_IMPORTED_MODULE_2__["default"], {})]

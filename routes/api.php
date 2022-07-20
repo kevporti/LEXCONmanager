@@ -54,5 +54,6 @@ Route::post('/usuario/liquidacion_deudas/datosLiqObra', [ObraSocialController::c
 Route::post('/usuario/liquidacion_deudas/datosObra', [ObraSocialController::class, 'datosObra']);
 Route::post('/usuario/liquidacion_deudas/agregarObraSocial', [ObraSocialController::class, 'agregarObraSocial']);
 Route::delete('/usuario/liquidacion_deudas/eliminarObra/{id}', [ObraSocialController::class, 'eliminarObra']);
+Route::put('/usuario/liquidacion_deudas/cambiarEstadoObra/{id}', [ObraSocialController::class, 'cambiarEstadoObra']);
 
 Route::get('/usuario/liquidacion_deudas/aporteSindical', [AporteSindicalController::class, 'aporteSindical']);

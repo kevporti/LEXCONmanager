@@ -173,7 +173,7 @@ function DatosObraSocial(id) {
         return date.charAt(0).toUpperCase() + date.slice(1);
     }
 
-    function formatDate(string) {
+    function formatFullDate(string) {
         var options = { year: "numeric", month: "long", day: "numeric" };
         return new Date(string).toLocaleDateString([], options);
     }
@@ -185,29 +185,41 @@ function DatosObraSocial(id) {
         window.location.reload();
     }
 
+    async function download() {
+        window.print();
+    }
+
+    async function cambiarEstadoObra() {
+        const { data } = await axios.put(
+            `/api/usuario/liquidacion_deudas/cambiarEstadoObra/${Id}`
+        );
+        console.log(data);
+        //window.location.reload();
+    }
+
     return (
         <div>
             {DatosObra.map((dato) => (
                 <div
                     key={dato.id_obra_social}
-                    className="grid grid-cols-2 gap-y-2 p-4"
+                    className="grid grid-cols-2 gap-y-2 p-4 print:py-2"
                 >
                     <div className="border-b border-r pb-4 border-lightwhite">
                         {DatosLiqObra.map((sueldo) => (
-                            <div className="grid grid-cols-2 py-2">
-                                <div className="">
+                            <div className="grid grid-cols-2 py-2 print:gap-y-2 print:py-0">
+                                <div className="print:font-medium">
                                     <p>Empleado:</p>
                                     <p className="font-light">
                                         {sueldo.nombre_y_apellido}
                                     </p>
                                 </div>
-                                <div className="">
+                                <div className="print:font-medium">
                                     <p>Reajuste:</p>
                                     <p className="font-light">
                                         {sueldo.reajuste == 0 ? "No" : "Si"}
                                     </p>
                                 </div>
-                                <div className="">
+                                <div className="print:font-medium">
                                     <p>Total Remunerativo:</p>
                                     <p className="font-light">
                                         $
@@ -216,7 +228,7 @@ function DatosObraSocial(id) {
                                         ).toFixed(2)}
                                     </p>
                                 </div>
-                                <div className="">
+                                <div className="print:font-medium">
                                     <p>Intereses:</p>
                                     <p className="font-light">
                                         $
@@ -231,14 +243,16 @@ function DatosObraSocial(id) {
                                         ).toFixed(2)}
                                     </p>
                                 </div>
-                                <div>Fecha deuda:</div>
+                                <div className="print:font-medium">
+                                    Fecha deuda:
+                                </div>
                                 <div className="font-light">
                                     {formatDate(sueldo.mes_año)}
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className="grid grid-cols-1 pl-6 border-b pb-4 border-lightwhite place-content-stretch">
+                    <div className="grid grid-cols-1 pl-6 border-b pb-4 border-lightwhite place-content-stretch print:font-medium">
                         <div>
                             <div className="grid grid-cols-2">
                                 <p className="mb-1">Tasa de Interes:</p>
@@ -255,6 +269,19 @@ function DatosObraSocial(id) {
                             <div className="grid grid-cols-2 mb-4">
                                 <p className="mb-1">Estado:</p>
                                 <p className="font-light">{dato.statusObra}</p>
+                                <div className="print:hidden">
+                                    <div
+                                        onClick={() => {
+                                            cambiarEstadoObra();
+                                        }}
+                                        className="flex items-center cursor-pointer border border-lightwhite rounded-sm py-2 px-4 hover:bg-green-800 hover:font-medium"
+                                    >
+                                        <i className="material-symbols-outlined flex mr-2">
+                                            check
+                                        </i>
+                                        Cambiar estado
+                                    </div>
+                                </div>
                             </div>
                             <div className="grid grid-cols-2">
                                 <p className="mb-1">Total Sueldos:</p>
@@ -292,15 +319,15 @@ function DatosObraSocial(id) {
                             </div>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 col-span-2 pt-4">
+                    <div className="grid grid-cols-2 col-span-2 pt-4 print:grid-cols-1">
                         <div className="flex">
                             <p>Editado:</p>
                             <p className="font-light ml-2">
                                 {dato.firma_usuario},{" "}
-                                {formatDate(dato.updated_at)}.
+                                {formatFullDate(dato.updated_at)}.
                             </p>
                         </div>
-                        <div className="flex justify-end items-end">
+                        <div className="flex justify-end items-end print:hidden">
                             <div className="mr-4">
                                 <button
                                     onClick={() =>
@@ -315,7 +342,10 @@ function DatosObraSocial(id) {
                                 </button>
                             </div>
                             <div className="">
-                                <button className="flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300">
+                                <button
+                                    onClick={() => download()}
+                                    className="flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-green-900 transition-colors duration-300"
+                                >
                                     Descargar
                                     <i className="material-symbols-outlined ml-2 cursor-pointer">
                                         download

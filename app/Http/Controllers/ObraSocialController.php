@@ -197,5 +197,17 @@ class ObraSocialController extends Controller
         return "Se ha eliminado la Liquidación de Deuda - Obra Social correctamente.";
     }
 
+    public function cambiarEstadoObra($id) {
+        $Obra = Obra_Social::findOrFail($id);
+        if ($Obra->statusObra == "No Cobrado") {
+            $Obra->statusObra = "Cobrado";
+            $Obra->save();
+        } elseif ($Obra->statusObra == "Cobrado") {
+            $Obra->statusObra = "No Cobrado";
+        }
+
+        return "El Estado se ha cambiado correctamente.";
+    }
+
 
 }
