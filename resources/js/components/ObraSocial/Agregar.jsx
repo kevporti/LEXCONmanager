@@ -61,8 +61,7 @@ export default function Agregar() {
             item
         );
         setMsg(data);
-        console.log(data);
-        //window.location.reload();
+        window.location.reload();
     }
 
     return (

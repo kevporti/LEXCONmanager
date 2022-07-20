@@ -134,7 +134,6 @@ function DatosEscala(vigencia) {
         let item = { vig };
         axios.post("/api/usuario/datosEscalas", item).then((resp) => {
             setDato(resp.data);
-            console.log(Dato);
         });
     }, []);
 

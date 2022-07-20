@@ -111,7 +111,6 @@ function DatosObraSocial(id) {
         axios
             .post("/api/usuario/liquidacion_deudas/datosLiqObra", { Id })
             .then((response) => {
-                console.log(response.data);
                 setDatosLiqObra(response.data);
             });
     }, []);
@@ -120,7 +119,6 @@ function DatosObraSocial(id) {
         axios
             .post("/api/usuario/liquidacion_deudas/datosObra", { Id })
             .then((response) => {
-                console.log(response.data);
                 setDatosObra(response.data);
             });
     }, []);
@@ -173,6 +171,18 @@ function DatosObraSocial(id) {
         const date = new Date(string).toLocaleDateString("es-AR", options);
 
         return date.charAt(0).toUpperCase() + date.slice(1);
+    }
+
+    function formatDate(string) {
+        var options = { year: "numeric", month: "long", day: "numeric" };
+        return new Date(string).toLocaleDateString([], options);
+    }
+
+    async function deleteObra(id) {
+        const { data } = await axios.delete(
+            `/api/usuario/liquidacion_deudas/eliminarObra/${id}`
+        );
+        window.location.reload();
     }
 
     return (
@@ -286,12 +296,18 @@ function DatosObraSocial(id) {
                         <div className="flex">
                             <p>Editado:</p>
                             <p className="font-light ml-2">
-                                {dato.firma_usuario}, {dato.edited_time}.
+                                {dato.firma_usuario},{" "}
+                                {formatDate(dato.updated_at)}.
                             </p>
                         </div>
                         <div className="flex justify-end items-end">
                             <div className="mr-4">
-                                <button className="flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-red-900 transition-colors duration-300">
+                                <button
+                                    onClick={() =>
+                                        deleteObra(dato.id_obra_social)
+                                    }
+                                    className="flex items-center justify-end py-2 px-4 cursor-pointer rounded-sm bg-red-900 transition-colors duration-300"
+                                >
                                     Eliminar
                                     <i className="material-symbols-outlined ml-2 cursor-pointer">
                                         delete

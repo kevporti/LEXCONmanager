@@ -190,5 +190,12 @@ class ObraSocialController extends Controller
         return [$Obra];
     }
 
+    public function eliminarObra($id) {
+        $Liq = Obra_Social::findOrFail($id);
+        $Liq->delete();
+
+        return "Se ha eliminado la Liquidación de Deuda - Obra Social correctamente.";
+    }
+
 
 }
