@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import Msg from "../Msg";
 
 function DatosEscala(id) {
     const Id = id.id;
 
     const [Empresa, setEmpresa] = useState([]);
+    const [msg, setMsg] = useState("");
 
     function formatDate(string) {
         var options = { year: "numeric", month: "long", day: "numeric" };
@@ -26,12 +28,13 @@ function DatosEscala(id) {
         await axios
             .delete(`http://127.0.0.1:8000/api/usuario/empresas/eliminar/${Id}`)
             .then((response) => {
-                console.log(response.data);
+                setMsg(response.data);
             });
     }
 
     return (
         <div>
+            {msg != '' ? <Msg mensaje={msg} /> : null}
             {Empresa.map((dato) => (
                 <div
                     key={dato.id_empresa}
